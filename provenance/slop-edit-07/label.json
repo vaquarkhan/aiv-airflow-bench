@@ -1,0 +1,18 @@
+{
+  "case": {
+    "id": "slop-edit-07",
+    "source": "fixture",
+    "path": "fixtures/labeled/ai-slop/edit-07.py",
+    "paths": [
+      "fixtures/labeled/ai-slop/edit-07.py"
+    ],
+    "title": "ai-slop: edit_artifact (expect FAIL)",
+    "label": {
+      "class": "synthetic_positive",
+      "subtype": "edit_artifact",
+      "expect_hard_fail": true,
+      "expect_advisory": false,
+      "notes": "Labeled objective AI-slop; hard-pass = FN"
+    }
+  }
+}
