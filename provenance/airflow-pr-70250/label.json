@@ -1,0 +1,22 @@
+{
+  "pr": 70250,
+  "url": "https://github.com/apache/airflow/pull/70250",
+  "title": "airflowctl: Fix datetime.datetime CLI parameter parsing",
+  "markers_in_patch": [],
+  "disclosure": {
+    "signals": [
+      "checkbox_yes",
+      "generated_by_filled"
+    ],
+    "disclosed": true
+  },
+  "aiv": {
+    "hard_fail": false,
+    "advisory": false,
+    "blocking_gates": [],
+    "advisory_gates": [],
+    "exit_code": 0
+  },
+  "label": "ai_disclosed",
+  "window": "2026-06-20..2026-09-18"
+}
