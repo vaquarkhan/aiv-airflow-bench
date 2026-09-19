@@ -1,0 +1,18 @@
+{
+  "case": {
+    "id": "mixed-soft-02",
+    "source": "fixture",
+    "path": "fixtures/labeled/mixed/soft/soft-02.py",
+    "paths": [
+      "fixtures/labeled/mixed/soft/soft-02.py"
+    ],
+    "title": "mixed: verbose clean code #2 (expect PASS hard)",
+    "label": {
+      "class": "mixed_sample",
+      "subtype": "verbose_clean",
+      "expect_hard_fail": false,
+      "expect_advisory": false,
+      "notes": "May trip density advisory; hard-fail = FP"
+    }
+  }
+}
