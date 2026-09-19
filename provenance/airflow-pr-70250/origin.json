@@ -1,0 +1,6 @@
+{
+  "origin_url": "https://github.com/apache/airflow/pull/70250",
+  "title": "airflowctl: Fix datetime.datetime CLI parameter parsing",
+  "merged": false,
+  "note": "Real Airflow PR snapshot for AIV live validation"
+}
