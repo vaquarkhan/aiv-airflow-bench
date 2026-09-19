@@ -1,0 +1,18 @@
+{
+  "case": {
+    "id": "proper-05",
+    "source": "fixture",
+    "path": "fixtures/labeled/proper/proper-05_redis.py",
+    "paths": [
+      "fixtures/labeled/proper/proper-05_redis.py"
+    ],
+    "title": "proper: clean Redis helper (expect PASS)",
+    "label": {
+      "class": "synthetic_negative",
+      "subtype": "clean_control",
+      "expect_hard_fail": false,
+      "expect_advisory": false,
+      "notes": "Hand-written clean control; hard-fail = FP"
+    }
+  }
+}
