@@ -1,0 +1,36 @@
+{
+  "origin_url": "https://github.com/apache/airflow/pull/70053",
+  "title": "feat: per-component enableBuiltInSecretEnvVars for workers and scheduler",
+  "label": {
+    "class": "closed_unmerged_sample",
+    "expect_hard_fail": false,
+    "expect_advisory": null,
+    "rationale": "Closed unmerged; no objective AIV hard markers in patches. Not labeled as AI authorship."
+  },
+  "discovery": {
+    "markers_in_patch": [],
+    "marker_files": [],
+    "scanned_at": "2026-09-19T17:47:55.547037+00:00"
+  },
+  "pr_meta": {
+    "number": 70053,
+    "title": "feat: per-component enableBuiltInSecretEnvVars for workers and scheduler",
+    "html_url": "https://github.com/apache/airflow/pull/70053",
+    "state": "closed",
+    "merged": false,
+    "user": "anmolxlight",
+    "created_at": "2026-07-17T20:37:36Z",
+    "closed_at": "2026-07-18T21:08:47Z",
+    "merged_at": null,
+    "base_sha": "5820c02124d4c47e5386268385893180c395a9ac",
+    "head_sha": "d8109caa0ccf93470c910e8affa1d59c31718c01",
+    "additions": 2410630,
+    "deletions": 0,
+    "changed_files": 13534,
+    "author_association": "CONTRIBUTOR",
+    "labels": [
+      "area:helm-chart"
+    ]
+  },
+  "note": "Snapshot for live AIV CI; patch-reconstructed files."
+}
