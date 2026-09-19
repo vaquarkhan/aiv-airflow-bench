@@ -1,0 +1,18 @@
+{
+  "case": {
+    "id": "slop-ph-04",
+    "source": "fixture",
+    "path": "fixtures/labeled/ai-slop/placeholder-04.py",
+    "paths": [
+      "fixtures/labeled/ai-slop/placeholder-04.py"
+    ],
+    "title": "ai-slop: placeholder (expect FAIL)",
+    "label": {
+      "class": "synthetic_positive",
+      "subtype": "placeholder",
+      "expect_hard_fail": true,
+      "expect_advisory": false,
+      "notes": "Labeled objective AI-slop; hard-pass = FN"
+    }
+  }
+}
