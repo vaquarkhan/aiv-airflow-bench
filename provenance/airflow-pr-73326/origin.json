@@ -1,0 +1,36 @@
+{
+  "origin_url": "https://github.com/apache/airflow/pull/73326",
+  "title": "Add deprecation for the moved DeadlineCallbackTrigger classpath",
+  "label": {
+    "class": "closed_unmerged_sample",
+    "expect_hard_fail": false,
+    "expect_advisory": null,
+    "rationale": "Closed unmerged; no objective AIV hard markers in patches. Not labeled as AI authorship."
+  },
+  "discovery": {
+    "markers_in_patch": [],
+    "marker_files": [],
+    "scanned_at": "2026-09-19T17:33:42.839460+00:00"
+  },
+  "pr_meta": {
+    "number": 73326,
+    "title": "Add deprecation for the moved DeadlineCallbackTrigger classpath",
+    "html_url": "https://github.com/apache/airflow/pull/73326",
+    "state": "closed",
+    "merged": false,
+    "user": "vatsrahul1001",
+    "created_at": "2026-09-18T12:58:51Z",
+    "closed_at": "2026-09-18T14:02:30Z",
+    "merged_at": null,
+    "base_sha": "f3faf90ff69a92054474de2bc70a4875a7ee36cd",
+    "head_sha": "b6bf0108f78a64bfdfccd757916fe7562b1d00b8",
+    "additions": 25,
+    "deletions": 0,
+    "changed_files": 2,
+    "author_association": "CONTRIBUTOR",
+    "labels": [
+      "backport-to-v3-3-test"
+    ]
+  },
+  "note": "Snapshot for live AIV CI; patch-reconstructed files."
+}
