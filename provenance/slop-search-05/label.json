@@ -1,0 +1,18 @@
+{
+  "case": {
+    "id": "slop-search-05",
+    "source": "fixture",
+    "path": "fixtures/labeled/ai-slop/search-05.py",
+    "paths": [
+      "fixtures/labeled/ai-slop/search-05.py"
+    ],
+    "title": "ai-slop: search_replace (expect FAIL)",
+    "label": {
+      "class": "synthetic_positive",
+      "subtype": "search_replace",
+      "expect_hard_fail": true,
+      "expect_advisory": false,
+      "notes": "Labeled objective AI-slop; hard-pass = FN"
+    }
+  }
+}
