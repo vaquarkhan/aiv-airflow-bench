@@ -1,0 +1,19 @@
+{
+  "pr": 73072,
+  "url": "https://github.com/apache/airflow/pull/73072",
+  "title": "[v3-3-test] Clarify that AccessView.JOBS is the Edge worker management permission (#72627)",
+  "markers_in_patch": [],
+  "disclosure": {
+    "signals": [],
+    "disclosed": false
+  },
+  "aiv": {
+    "hard_fail": false,
+    "advisory": false,
+    "blocking_gates": [],
+    "advisory_gates": [],
+    "exit_code": 0
+  },
+  "label": "abandoned_clean",
+  "window": "2026-06-20..2026-09-18"
+}
