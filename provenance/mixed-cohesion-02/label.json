@@ -1,0 +1,22 @@
+{
+  "case": {
+    "id": "mixed-cohesion-02",
+    "source": "fixture",
+    "path": "fixtures/labeled/mixed/cohesion-02/tree/.github/workflows/wf-2.yml",
+    "paths": [
+      "fixtures/labeled/mixed/cohesion-02/tree/.github/workflows/wf-2.yml",
+      "fixtures/labeled/mixed/cohesion-02/tree/scripts/ci/setup_2.py",
+      "fixtures/labeled/mixed/cohesion-02/tree/scripts/tests/test_2.py",
+      "fixtures/labeled/mixed/cohesion-02/tree/scripts/tools/tool_2.sh"
+    ],
+    "inject_tree": "fixtures/labeled/mixed/cohesion-02/tree",
+    "title": "mixed: multi-area sprawl #2 (expect PASS hard, advisory cohesion)",
+    "label": {
+      "class": "mixed_sample",
+      "subtype": "cohesion_warn",
+      "expect_hard_fail": false,
+      "expect_advisory": true,
+      "notes": "Should trigger cohesion warn+label, not hard-fail"
+    }
+  }
+}
