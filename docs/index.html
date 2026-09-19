@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AIV Integrity Gate — Airflow Bench Report</title>
+  <meta name="description" content="Independent, reproducible AIV product benchmark: labeled 50-case fixtures, abandoned Airflow PR labels, and live GitHub recreation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/report.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap inner">
+      <a class="brand" href="./">AIV <span>Integrity Gate</span></a>
+      <nav class="nav">
+        <a href="#proof">Proof</a>
+        <a href="#abandoned">Abandoned</a>
+        <a href="#validate">Validate</a>
+        <a href="data/">Raw JSON</a>
+        <a href="https://github.com/vaquarkhan/aiv-airflow-bench">Repo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Product benchmark · VERIFIED</div>
+      <h1>Prove the gate. <em>Not the rumor.</em></h1>
+      <p class="lede">
+        Honest claims from labeled ground truth and real abandoned Airflow PRs —
+        recreated live on this repo so anyone can re-run the checks, open the Actions logs,
+        and audit every number against the published JSON.
+      </p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#validate">Validate independently</a>
+        <a class="btn btn-ghost" href="https://github.com/vaquarkhan/aiv-airflow-bench/pull/72" target="_blank" rel="noopener">Example: bench PR #72</a>
+        <a class="btn btn-ghost" href="https://github.com/vaquarkhan/aiv-integrity-gate" target="_blank" rel="noopener">Gate source</a>
+      </div>
+      <div class="metric-row" id="hero-metrics">
+        <div class="metric">
+          <div class="label">Labeled recall</div>
+          <div class="value" id="m-recall">—</div>
+          <div class="hint">35/35 expected-fail</div>
+        </div>
+        <div class="metric">
+          <div class="label">False positives</div>
+          <div class="value" id="m-fp">—</div>
+          <div class="hint">0/15 expected-pass</div>
+        </div>
+        <div class="metric">
+          <div class="label">Abandoned clean</div>
+          <div class="value" id="m-clean">—</div>
+          <div class="hint">most are not marker slop</div>
+        </div>
+        <div class="metric">
+          <div class="label">Hard-fail in sample</div>
+          <div class="value" id="m-hard">—</div>
+          <div class="hint">head + full AIV config</div>
+        </div>
+      </div>
+      <p class="loading" id="load-status" style="margin-top:1rem">Loading verified datasets…</p>
+      <p class="loading" id="generated-at"></p>
+    </section>
+
+    <section class="block" id="proof">
+      <h2>1) Labeled 50-case fixtures <span class="tag tag-verified">VERIFIED</span></h2>
+      <p class="section-lead" id="labeled-statement">Primary product proof on known ground truth.</p>
+      <div class="grid-2">
+        <div>
+          <p><strong>Cohorts</strong></p>
+          <ul class="tight" id="labeled-breakdown"></ul>
+          <p style="margin-top:1rem">
+            Precision: <strong id="m-precision">—</strong> · Cases: <strong id="m-n">—</strong>
+          </p>
+          <p>
+            Raw: <a href="data/labeled-latest.json"><code>labeled-latest.json</code></a>
+            · Live PRs: <a href="https://github.com/vaquarkhan/aiv-airflow-bench/pulls?q=is%3Apr+label%3A">this repo</a>
+          </p>
+        </div>
+        <div class="callout">
+          <strong>Why this matters.</strong>
+          Census catch-rates on unlabeled abandoned volume are not product claims.
+          This layer answers: when we know the answer, does AIV get it right?
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="abandoned">
+      <h2>2) Abandoned Airflow PRs → labels → AIV</h2>
+      <p class="section-lead" id="abandoned-statement">Same diffs, labeled and pushed through AIV.</p>
+      <div class="grid-2">
+        <div>
+          <div class="bars" id="label-bars"></div>
+          <ul class="tight" id="abandoned-bullets" style="margin-top:1rem"></ul>
+          <p style="margin-top:1rem">
+            Among <code>ai_disclosed</code>: hard-caught
+            <strong id="m-disclosed">—</strong>
+            (disclosure alone is not a block reason).
+          </p>
+        </div>
+        <div class="callout">
+          <strong>Example recreation:</strong>
+          <a href="https://github.com/vaquarkhan/aiv-airflow-bench/pull/72">PR #72</a>
+          recreates
+          <a href="https://github.com/apache/airflow/pull/73096">apache/airflow#73096</a>
+          under label <code>ai_disclosed</code> — markers empty, local AIV hard=false.
+          Open Actions on that PR to see the live gate run.
+        </div>
+      </div>
+
+      <h3 style="margin:1.5rem 0 0.6rem;font-family:var(--font-display);font-size:1.15rem">Per-PR ledger</h3>
+      <div class="filters" id="filters">
+        <button class="chip active" data-filter="all" type="button">all</button>
+        <button class="chip" data-filter="abandoned_clean" type="button">abandoned_clean</button>
+        <button class="chip" data-filter="ai_disclosed" type="button">ai_disclosed</button>
+        <button class="chip" data-filter="ai_signal_advisory" type="button">ai_signal_advisory</button>
+      </div>
+      <p class="loading" id="abandoned-count"></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Origin</th>
+              <th>Label</th>
+              <th>Hard</th>
+              <th>Block</th>
+              <th>Advisory</th>
+              <th>Disclosed</th>
+              <th>Bench</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody id="abandoned-body"></tbody>
+        </table>
+      </div>
+      <p style="margin-top:0.75rem">
+        Scoring note: hard column prefers <code>aiv_head_full</code> (head materialize + full config).
+        Raw: <a href="data/abandoned-labeled-latest.json"><code>abandoned-labeled-latest.json</code></a>
+      </p>
+    </section>
+
+    <section class="block" id="chatgpt">
+      <h2>3) Confirmed ChatGPT gold set <span class="tag tag-verified">VERIFIED</span></h2>
+      <p class="section-lead" id="chatgpt-statement">Tiny confirmed-disclosure cohort.</p>
+      <p>Raw: <a href="data/airflow-chatgpt-true-latest.json"><code>airflow-chatgpt-true-latest.json</code></a></p>
+    </section>
+
+    <section class="block" id="not-claimed">
+      <h2>NOT CLAIMED <span class="tag tag-not">policy</span></h2>
+      <ul class="tight" id="not-claimed"></ul>
+    </section>
+
+    <section class="block" id="validate">
+      <h2>Validate independently</h2>
+      <p class="section-lead">
+        Everything on this page is backed by JSON in <code>/docs/data</code>.
+        Live CI is the open PRs on this repository. Gate source and scripts live in
+        <a href="https://github.com/vaquarkhan/aiv-integrity-gate">aiv-integrity-gate</a>.
+      </p>
+      <div class="links" style="margin-bottom:1.2rem">
+        <a class="link-card" href="data/product-benchmark-latest.json">
+          Master claims JSON
+          <small>product-benchmark-latest.json</small>
+        </a>
+        <a class="link-card" href="data/labeled-latest.json">
+          Labeled 50 results
+          <small>TP/FP/TN per case</small>
+        </a>
+        <a class="link-card" href="data/abandoned-labeled-latest.json">
+          Abandoned ledger
+          <small>labels + bench PR links</small>
+        </a>
+        <a class="link-card" href="PROOF-CLAIMS.md">
+          Claim policy
+          <small>what we will / won't say</small>
+        </a>
+      </div>
+      <pre class="cmd"># From aiv-integrity-gate
+python benchmarks/airflow/scripts/generate-labeled-corpus.py
+python benchmarks/airflow/scripts/run-labeled-benchmark.py
+python benchmarks/airflow/scripts/benchmark-abandoned-labeled.py --limit 60 --inject --inject-clean 8
+python benchmarks/airflow/scripts/rescore-ai-signal-head.py
+# Compare outputs to docs/data/*.json on this Pages site</pre>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap inner">
+      <div>
+        AIV Integrity Gate · Airflow bench report ·
+        <a href="https://github.com/vaquarkhan/aiv-airflow-bench">vaquarkhan/aiv-airflow-bench</a>
+      </div>
+      <div>
+        Not affiliated with the Apache Software Foundation · Apache Airflow® is a trademark of the ASF
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/report.js"></script>
+</body>
+</html>
