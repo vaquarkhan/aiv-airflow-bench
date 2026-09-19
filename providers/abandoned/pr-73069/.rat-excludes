@@ -1,0 +1,7 @@
+scripts/*
+images/*
+dev/*
+**/*.iml
+out/*
+airflow-build-dockerfile*
+
