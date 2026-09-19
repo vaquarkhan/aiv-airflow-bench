@@ -1,0 +1,24 @@
+{
+  "pr": 73124,
+  "url": "https://github.com/apache/airflow/pull/73124",
+  "title": "Optimize CI hot-path setup without reducing coverage",
+  "markers_in_patch": [],
+  "disclosure": {
+    "signals": [
+      "checkbox_yes",
+      "generated_by_filled"
+    ],
+    "disclosed": true
+  },
+  "aiv": {
+    "hard_fail": false,
+    "advisory": true,
+    "blocking_gates": [],
+    "advisory_gates": [
+      "cohesion"
+    ],
+    "exit_code": 0
+  },
+  "label": "ai_disclosed",
+  "window": "2026-06-20..2026-09-18"
+}
