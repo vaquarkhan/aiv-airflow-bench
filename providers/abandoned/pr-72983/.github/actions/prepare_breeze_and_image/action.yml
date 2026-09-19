@@ -1,0 +1,21 @@
+      shell: bash
+      run: ./scripts/ci/make_mnt_writeable.sh
+      if: inputs.make-mnt-writeable-and-cleanup == 'true'
+    - name: "Free up disk space"
+      shell: bash
+      run: ./scripts/tools/free_up_disk_space.sh
+    - name: "Install Breeze"
+      uses: ./.github/actions/breeze
+      id: breeze
+        echo "Checking free space!"
+        df -H
+    - name: "Restore ${{ inputs.image-type }} docker image ${{ inputs.platform }}:${{ inputs.python }}"
+      uses: apache/infrastructure-actions/stash/restore@49df447b39b18354895520e0a63731b7cad7cbec
+      with:
+        key: ${{ inputs.image-type }}-image-save-v3-${{ inputs.platform }}-${{ inputs.python }}
+        path: "/mnt/"
+        only-current-branch: 'true'
+        fail-on-download: 'true'
+    - name: "Load ${{ inputs.image-type }} image ${{ inputs.platform }}:${{ inputs.python }}"
+      env:
+        PLATFORM: ${{ inputs.platform }}

@@ -1,0 +1,7 @@
+    default: "3.10"
+  uv-version:
+    description: 'uv version to use'
+    default: "0.11.8"  # Keep this comment to allow automatic replacement of uv version
+outputs:
+  host-python-version:
+    description: Python version used in host
