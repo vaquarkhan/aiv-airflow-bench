@@ -1,0 +1,21 @@
+{
+  "pr": 73195,
+  "url": "https://github.com/apache/airflow/pull/73195",
+  "title": "[v3-3-test] Mark task-group aggregate bars on Gantt with a diagonal stripe (#72894)",
+  "markers_in_patch": [],
+  "disclosure": {
+    "signals": [],
+    "disclosed": false
+  },
+  "aiv": {
+    "hard_fail": false,
+    "advisory": true,
+    "blocking_gates": [],
+    "advisory_gates": [
+      "density"
+    ],
+    "exit_code": 0
+  },
+  "label": "ai_signal_advisory",
+  "window": "2026-06-20..2026-09-18"
+}
