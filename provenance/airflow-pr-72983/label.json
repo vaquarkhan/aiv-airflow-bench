@@ -1,0 +1,21 @@
+{
+  "pr": 72983,
+  "url": "https://github.com/apache/airflow/pull/72983",
+  "title": "Backport 3817ee6 chart/v1 2x test",
+  "markers_in_patch": [],
+  "disclosure": {
+    "signals": [],
+    "disclosed": false
+  },
+  "aiv": {
+    "hard_fail": false,
+    "advisory": true,
+    "blocking_gates": [],
+    "advisory_gates": [
+      "cohesion"
+    ],
+    "exit_code": 0
+  },
+  "label": "ai_signal_advisory",
+  "window": "2026-06-20..2026-09-18"
+}

@@ -1,0 +1,14 @@
+/airflow-core/src/airflow/dag_processing @jedcunningham @ephraimbuddy
+
+# Helm Chart
+/chart/ @jedcunningham @hussein-awala @jscheffl @bugraoz93 @Miretpl
+/helm-tests/ @jedcunningham @hussein-awala @jscheffl @bugraoz93 @Miretpl
+
+# Docs
+/docs/*.py @potiuk @ashb @gopidesupavan @amoghrajesh @jscheffl @bugraoz93 @jason810496
+/dev/react-plugin-tools/ @pierrejeambrun @bbovenzi
+/docker-tests/ @potiuk @ashb @gopidesupavan @jason810496
+/kubernetes-tests/ @potiuk @ashb @gopidesupavan @jason810496
+/scripts/ @potiuk @ashb @gopidesupavan @amoghrajesh @jscheffl @bugraoz93 @jason810496
+Dockerfile @potiuk @ashb @gopidesupavan @amoghrajesh @jscheffl @bugraoz93 @jason810496
+Dockerfile.ci @potiuk @ashb @gopidesupavan @amoghrajesh @jscheffl @bugraoz93 @jason810496

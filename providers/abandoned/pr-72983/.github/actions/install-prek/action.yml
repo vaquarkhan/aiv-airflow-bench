@@ -1,0 +1,21 @@
+    default: "3.10"
+  uv-version:
+    description: 'uv version to use'
+    default: "0.11.8"  # Keep this comment to allow automatic replacement of uv version
+  prek-version:
+    description: 'prek version to use'
+    default: "0.3.6"  # Keep this comment to allow automatic replacement of prek version
+        echo
+      shell: bash
+    - name: "Restore prek cache"
+      uses: apache/infrastructure-actions/stash/restore@49df447b39b18354895520e0a63731b7cad7cbec
+      with:
+        # yamllint disable rule:line-length
+        key: cache-prek-v9-${{ inputs.platform }}-python${{ inputs.python-version }}-uv${{ inputs.uv-version }}-${{ hashFiles('**/.pre-commit-config.yaml') }}
+      shell: bash
+      if: inputs.save-cache == 'true'
+    - name: "Save prek cache"
+      uses: apache/infrastructure-actions/stash/save@49df447b39b18354895520e0a63731b7cad7cbec
+      with:
+        # yamllint disable rule:line-length
+        key: cache-prek-v9-${{ inputs.platform }}-python${{ inputs.python-version }}-uv${{ inputs.uv-version }}-${{ hashFiles('**/.pre-commit-config.yaml') }}
