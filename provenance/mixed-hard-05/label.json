@@ -1,0 +1,18 @@
+{
+  "case": {
+    "id": "mixed-hard-05",
+    "source": "fixture",
+    "path": "fixtures/labeled/mixed/hard/mixed-hard-05.py",
+    "paths": [
+      "fixtures/labeled/mixed/hard/mixed-hard-05.py"
+    ],
+    "title": "mixed: otherwise-ok + edit-artifact #5 (expect FAIL)",
+    "label": {
+      "class": "mixed_sample",
+      "subtype": "clean_plus_artifact",
+      "expect_hard_fail": true,
+      "expect_advisory": false,
+      "notes": "Hard marker present; hard-pass = FN"
+    }
+  }
+}
