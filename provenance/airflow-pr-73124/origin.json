@@ -1,0 +1,6 @@
+{
+  "origin_url": "https://github.com/apache/airflow/pull/73124",
+  "title": "Optimize CI hot-path setup without reducing coverage",
+  "merged": false,
+  "note": "Real Airflow PR snapshot for AIV live validation"
+}
