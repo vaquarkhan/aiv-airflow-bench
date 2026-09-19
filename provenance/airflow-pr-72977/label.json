@@ -1,0 +1,21 @@
+{
+  "pr": 72977,
+  "url": "https://github.com/apache/airflow/pull/72977",
+  "title": "Depend on httpx2 instead of httpx in the Task SDK",
+  "markers_in_patch": [],
+  "disclosure": {
+    "signals": [],
+    "disclosed": false
+  },
+  "aiv": {
+    "hard_fail": false,
+    "advisory": true,
+    "blocking_gates": [],
+    "advisory_gates": [
+      "cohesion"
+    ],
+    "exit_code": 0
+  },
+  "label": "ai_signal_advisory",
+  "window": "2026-06-20..2026-09-18"
+}
