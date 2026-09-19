@@ -1,0 +1,19 @@
+        with:
+          node-version: 24
+          cache: 'pnpm'
+          cache-dependency-path: |
+            airflow-core/src/airflow/ui/pnpm-lock.yaml
+            airflow-core/src/airflow/api_fastapi/auth/managers/simple/ui/pnpm-lock.yaml
+      # setup-node already caches pnpm's package store. Recreate node_modules rather than
+      # transferring another archive that excludes pnpm's hidden .pnpm directory by default.
+      - run: cd airflow-core/src/airflow/ui && pnpm install --frozen-lockfile
+      - run: cd airflow-core/src/airflow/ui && pnpm test
+        env:
+          FORCE_COLOR: 2
+      - run: cd airflow-core/src/airflow/api_fastapi/auth/managers/simple/ui && pnpm install --frozen-lockfile
+      - run: cd airflow-core/src/airflow/api_fastapi/auth/managers/simple/ui && pnpm test
+        env:
+          FORCE_COLOR: 2
+
+  check-translation-completness:
+    timeout-minutes: 15
