@@ -1,0 +1,24 @@
+{
+  "pr": 73056,
+  "url": "https://github.com/apache/airflow/pull/73056",
+  "title": "Carry the lint/type config for the ruff 0.16.6 and mypy 2.3.1 bump",
+  "markers_in_patch": [],
+  "disclosure": {
+    "signals": [
+      "checkbox_yes",
+      "generated_by_filled"
+    ],
+    "disclosed": true
+  },
+  "aiv": {
+    "hard_fail": false,
+    "advisory": true,
+    "blocking_gates": [],
+    "advisory_gates": [
+      "cohesion"
+    ],
+    "exit_code": 0
+  },
+  "label": "ai_disclosed",
+  "window": "2026-06-20..2026-09-18"
+}

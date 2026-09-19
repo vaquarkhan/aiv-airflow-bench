@@ -1,0 +1,7 @@
+      AIRFLOW_VERSION: ${{ inputs.airflow-version || '' }}
+      APPLY_COMMITS: ${{ inputs.apply-commits || '' }}
+    outputs:
+      include-docs: ${{ case(inputs.include-docs == 'all', '', inputs.include-docs) }}
+      destination-location: ${{ steps.parameters.outputs.destination-location }}
+      destination: ${{ steps.parameters.outputs.destination }}
+      extra-build-options: ${{ steps.parameters.outputs.extra-build-options }}
