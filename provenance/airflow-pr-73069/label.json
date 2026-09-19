@@ -1,0 +1,21 @@
+{
+  "pr": 73069,
+  "url": "https://github.com/apache/airflow/pull/73069",
+  "title": "[v3-3-test] Fix the RAT licence check excludes and move it to Apache RAT 0.18 (#73064)",
+  "markers_in_patch": [],
+  "disclosure": {
+    "signals": [
+      "generated_by_filled"
+    ],
+    "disclosed": true
+  },
+  "aiv": {
+    "hard_fail": false,
+    "advisory": false,
+    "blocking_gates": [],
+    "advisory_gates": [],
+    "exit_code": 0
+  },
+  "label": "ai_disclosed",
+  "window": "2026-06-20..2026-09-18"
+}
