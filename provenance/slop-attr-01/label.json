@@ -1,0 +1,18 @@
+{
+  "case": {
+    "id": "slop-attr-01",
+    "source": "fixture",
+    "path": "fixtures/labeled/ai-slop/attr-01.py",
+    "paths": [
+      "fixtures/labeled/ai-slop/attr-01.py"
+    ],
+    "title": "ai-slop: attribution (expect FAIL)",
+    "label": {
+      "class": "synthetic_positive",
+      "subtype": "attribution",
+      "expect_hard_fail": true,
+      "expect_advisory": false,
+      "notes": "Labeled objective AI-slop; hard-pass = FN"
+    }
+  }
+}
