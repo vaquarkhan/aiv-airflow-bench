@@ -1,0 +1,19 @@
+{
+  "pr": 73155,
+  "url": "https://github.com/apache/airflow/pull/73155",
+  "title": "Fix BigQueryHook.create_table table_resource type handling (#73091)",
+  "markers_in_patch": [],
+  "disclosure": {
+    "signals": [],
+    "disclosed": false
+  },
+  "aiv": {
+    "hard_fail": false,
+    "advisory": false,
+    "blocking_gates": [],
+    "advisory_gates": [],
+    "exit_code": 0
+  },
+  "label": "abandoned_clean",
+  "window": "2026-06-20..2026-09-18"
+}
