@@ -22,7 +22,8 @@ GitHub Actions in this repo publishes the Pages report (`.github/workflows/pages
 | [`docs/data/abandoned-labeled-latest.json`](docs/data/abandoned-labeled-latest.json) | 61 closed-unmerged Airflow diffs, labeled and scored. 1 hard fail ([#73124](https://github.com/apache/airflow/pull/73124)) |
 | [`docs/data/airflow-chatgpt-true-latest.json`](docs/data/airflow-chatgpt-true-latest.json) | 5 Airflow PRs with a confirmed ChatGPT disclosure. 1 of 2 closed-unmerged hard-failed; 0 of 3 merged hard-failed |
 | [`docs/data/airflow-real-disclosure-latest.json`](docs/data/airflow-real-disclosure-latest.json) | 7 disclosed Airflow PRs scored in the Jun–Sep 2026 window. 1 hard fail. 0 objective markers |
-| [`docs/data/e2e-proof-latest.json`](docs/data/e2e-proof-latest.json) | Bench 1 summary: 555 Airflow PRs. Full rows and patches in `corpus/e2e-proof/` |
+| [`docs/data/airflow-all-latest.json`](docs/data/airflow-all-latest.json) | Every Airflow pull request in the year: **15,575** rows. Bodies, labels, and head SHAs in `corpus/airflow-all/prs.jsonl` |
+| [`docs/data/e2e-proof-latest.json`](docs/data/e2e-proof-latest.json) | Bench 1 patch sample: 555 Airflow PRs with the diff stored. Patches in `corpus/e2e-proof/` |
 | [`docs/data/ai-year-latest.json`](docs/data/ai-year-latest.json) | Airflow issue and dev-list index for the year. Raw files in `corpus/ai-year/` |
 | [`docs/data/multi-bench-latest.json`](docs/data/multi-bench-latest.json) | Index of benches 1–7 |
 | [`docs/data/flink-bench-latest.json`](docs/data/flink-bench-latest.json) | Bench 2, 51 Flink PRs. Patches in `corpus/benchmarks/flink/` |
@@ -41,7 +42,7 @@ Both windows are in [`docs/data/windows-latest.json`](docs/data/windows-latest.j
 
 | Project | PRs, 6 months | PRs, 1 year | `Generated-by` search, 6 months | `Generated-by` search, 1 year | Stored sample, 6 months | Stored sample, 1 year |
 |---|---:|---:|---:|---:|---:|---:|
-| Airflow | 8,552 | 15,573 | 5,174 | 7,474 | 305 | 555 |
+| Airflow | 8,552 | 15,575 | 5,174 | 7,474 | 305 of 8,552 | 555 of 15,575 |
 | Flink | 1,584 | 2,441 | 986 | 1,012 | 32 | 51 |
 | Kafka | 1,813 | 3,181 | 43 | 55 | 32 | 38 |
 | curl | 1,894 | 3,853 | 322 | 657 | 13 | 18 |
@@ -49,7 +50,7 @@ Both windows are in [`docs/data/windows-latest.json`](docs/data/windows-latest.j
 | Ghostty | 1,192 | 2,492 | 10 | 27 | 32 | 53 |
 | COSMIC compositor | 242 | 425 | 6 | 7 | 20 | 41 |
 
-Airflow’s filled tool trailers in the 6-month search: Claude 2,922, Codex 442, Copilot 112, Gemini 34, ChatGPT 23. Over the year: Claude 3,563, Codex 480, Copilot 174, Gemini 66, ChatGPT 45. Airflow issues in the stored index: 1,100 in the last 6 months, 2,427 in the year. Dev-list messages: 1,965 and 4,377. `Generated-by` on Flink and curl still includes template text. The stored sample is the labeled patch set, not every pull request in the window.
+The Airflow row above is now a complete index, not only the 555-row patch sample. Reading every stored body gives **4,329** filled disclosures in the year (**3,666** of them in the last 6 months) and **3,527** filled `Generated-by` trailers: Claude 2,776, Codex 429, Cursor 65, Copilot 61, Antigravity 47, Gemini 41, other 108. The other disclosed rows checked the AI box and left the `[Tool Name]` placeholder. The search total of 7,474 `Generated-by` hits is higher because GitHub also matches that placeholder and comments. Airflow issues in the stored index: 1,100 in the last 6 months, 2,427 in the year. Dev-list messages: 1,965 and 4,377. `Generated-by` on Flink and curl still includes template text.
 
 The window for every real-history count below is **22 Oct 2025 through 22 Oct 2026**. Counts were taken on 22 Oct 2026 with `gh` against the GitHub search API and, for Apache lists, the Pony Mail API at `lists.apache.org`. A search `total_count` is the number GitHub returned for that query. It is a sample frame, not a census of AI-authored changes.
 
@@ -108,15 +109,36 @@ Collectors (re-runnable, rate-limited at about 30 GitHub searches per minute):
 | `corpus/collect_e2e_proof.py`, `corpus/fill_claude_gaps.py` | Bench 1, the stratified Airflow pull-request sample |
 | `corpus/collect_slop_benches.py`, `corpus/repair_slop_benches.py` | Benches 2–4. The repair pass dropped template-only “AI generated” hits |
 | `corpus/collect_hit_benches.py` | Benches 5–7, after a maintainer had publicly described an AI pull-request problem |
+| `corpus/collect_airflow_all.py` | Every Airflow pull request in the window: body, label, and head SHA |
 | `corpus/check_inbox_threads.py` | Lookup of the Sep–Oct 2026 `dev@airflow.apache.org` inbox screenshots |
 
 Apache mail used `https://lists.apache.org/api/stream.json` (`list=dev`, project domain). A thread URL is `https://lists.apache.org/thread/{tid}`.
 
-## Bench 1 — Airflow pull requests
+## Airflow — every pull request in the year
 
-Repo: [apache/airflow](https://github.com/apache/airflow). Artifact: [`docs/data/e2e-proof-latest.json`](docs/data/e2e-proof-latest.json). Patches: `corpus/e2e-proof/prs/`.
+Repo: [apache/airflow](https://github.com/apache/airflow). Index: [`docs/data/airflow-all-latest.json`](docs/data/airflow-all-latest.json). Rows: `corpus/airflow-all/prs.jsonl` (73.9 MB).
 
-**555 runnable cases.**
+The earlier bench kept 555 diffs because each month stored only the latest search page, and diffs over 4,000 additions or 50 files were skipped. That sample is still the set with patches on disk. The index below is every pull request GitHub returned for the window: **15,575**, against a search total of 15,573. Each row has the title, body, author, merge state, additions, changed-file count, label, and `head_sha`. **15,050** are small enough to score (at most 5,000 additions and 40 files). The patch itself is not in the file; the gate checks out `head_sha` when it runs.
+
+| Label | Full year | Last 6 months |
+|---|---:|---:|
+| `ai_disclosed` | 4,329 | 3,666 |
+| `ai_tool_mention` | 1,526 | 969 |
+| `ai_slop_discussion` | 25 | 17 |
+| `merged` | 7,265 | 2,781 |
+| `closed_unmerged` | 2,182 | 883 |
+| `open` | 248 | 236 |
+| **Total** | **15,575** | **8,552** |
+
+`expect_hard_fail` is false on every index row. A hard fail still requires a marker in the diff, and the diffs are fetched at score time.
+
+Monthly pull-request counts: 2025-10 551, 2025-11 1,000, 2025-12 882, 2026-01 1,020, 2026-02 1,083, 2026-03 1,582, 2026-04 1,355, 2026-05 1,382, 2026-06 1,174, 2026-07 1,490, 2026-08 1,297, 2026-09 1,486, 2026-10 1,273.
+
+## Bench 1 — Airflow patch sample
+
+Artifact: [`docs/data/e2e-proof-latest.json`](docs/data/e2e-proof-latest.json). Patches: `corpus/e2e-proof/prs/`.
+
+**555 cases with the diff stored.**
 
 | Class | Count |
 |---|---|

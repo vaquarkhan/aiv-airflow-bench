@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-23T03:53:17.688431+00:00",
+  "repo": "apache/airflow",
+  "window": "2025-10-22..2026-10-22",
+  "six_months": "2026-04-22..2026-10-22",
+  "rows": 15575,
+  "by_class": {
+    "open": 248,
+    "ai_tool_mention": 1526,
+    "ai_disclosed": 4329,
+    "merged": 7265,
+    "closed_unmerged": 2182,
+    "ai_slop_discussion": 25
+  },
+  "six_month_rows": 8552,
+  "six_month_by_class": {
+    "open": 236,
+    "ai_tool_mention": 969,
+    "ai_disclosed": 3666,
+    "merged": 2781,
+    "closed_unmerged": 883,
+    "ai_slop_discussion": 17
+  },
+  "by_month": {
+    "2025-10": 551,
+    "2025-11": 1000,
+    "2025-12": 882,
+    "2026-01": 1020,
+    "2026-02": 1083,
+    "2026-03": 1582,
+    "2026-04": 1355,
+    "2026-05": 1382,
+    "2026-06": 1174,
+    "2026-07": 1490,
+    "2026-08": 1297,
+    "2026-09": 1486,
+    "2026-10": 1273
+  },
+  "runnable_size": 15050,
+  "generated_by_top": [
+    [
+      "Claude Code (Opus 4.8)",
+      436
+    ],
+    [
+      "Claude Code (Opus 5)",
+      362
+    ],
+    [
+      "Claude Code (Opus 5.5)",
+      237
+    ],
+    [
+      "Claude Code (Opus 4.7)",
+      223
+    ],
+    [
+      "Claude Code",
+      203
+    ],
+    [
+      "Codex (GPT-5)",
+      96
+    ],
+    [
+      "Claude Opus 4.7 (1M context)",
+      87
+    ],
+    [
+      "Claude Opus 5",
+      82
+    ],
+    [
+      "Claude Code (Fable 5)",
+      81
+    ],
+    [
+      "Claude Code (Claude Opus 4.6)",
+      81
+    ],
+    [
+      "Claude Code (Fable 5.1)",
+      80
+    ],
+    [
+      "Claude Opus 4.6",
+      79
+    ],
+    [
+      "Claude Code (Sonnet 5)",
+      78
+    ],
+    [
+      "Claude",
+      72
+    ],
+    [
+      "Codex (GPT-6)",
+      68
+    ],
+    [
+      "OpenAI Codex",
+      63
+    ],
+    [
+      "Claude Opus 5 (1M context)",
+      41
+    ],
+    [
+      "Claude Code (Opus 4.6)",
+      40
+    ],
+    [
+      "Claude Sonnet 4.6",
+      39
+    ],
+    [
+      "Antigravity",
+      36
+    ],
+    [
+      "Claude Opus 4.6 (1M context)",
+      29
+    ],
+    [
+      "Claude Code (claude-opus-4-6)",
+      26
+    ],
+    [
+      "Codex",
+      25
+    ],
+    [
+      "Cursor",
+      25
+    ],
+    [
+      "Claude Code (claude-sonnet-4-6)",
+      23
+    ],
+    [
+      "GitHub Copilot CLI",
+      23
+    ],
+    [
+      "GitHub Copilot",
+      21
+    ],
+    [
+      "Claude Code (Claude Opus 5.5)",
+      19
+    ],
+    [
+      "Claude Code (Sonnet 4.6)",
+      18
+    ],
+    [
+      "Claude Opus 4.8 (1M context)",
+      16
+    ]
+  ],
+  "artifact": "corpus/airflow-all/prs.jsonl",
+  "note": "Every pull request created in the window. expect_hard_fail is false because patches are not stored in this index; head_sha is the input the gate uses to materialize the diff. Generated-by counts here are filled trailers, not the raw search total."
+}
