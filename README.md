@@ -1,12 +1,42 @@
 # aiv-airflow-bench
 
-Public corpus and product bench for **[AIV Integrity Gate](https://github.com/vaquarkhan/aiv-integrity-gate)**.
+This repo holds the public data for **[AIV Integrity Gate](https://github.com/vaquarkhan/aiv-integrity-gate)**: real pull-request patches from projects whose maintainers reported an AI-contribution problem, plus the smaller fixture set the gate has already been scored on.
 
 **Live report:** https://vaquarkhan.github.io/aiv-airflow-bench/
 
-This repository is not apache/airflow. Apache Airflow® is a trademark of the ASF.
+It is a benchmark corpus. It is not the Airflow source tree, and it does not contain the gate itself. The gate, the `aiv-cli` JAR, and `run-e2e-benchmark.py` live in [aiv-integrity-gate](https://github.com/vaquarkhan/aiv-integrity-gate). Apache Airflow® is a trademark of the ASF.
 
-The window for every count below is **22 Oct 2025 through 22 Oct 2026**. Counts were taken on 22 Oct 2026 with `gh` against the GitHub search API and, for Apache lists, the Pony Mail API at `lists.apache.org`. A search `total_count` is the number GitHub returned for that query. It is a sample frame, not a census of AI-authored changes.
+Two kinds of data are checked in:
+
+1. **Scored product bench.** Hand-labeled fixtures and 61 real abandoned Airflow diffs that already ran through AIV. Results are on GitHub Pages. Claim rules are in [`docs/PROOF-CLAIMS.md`](docs/PROOF-CLAIMS.md).
+2. **One-year real-history corpus (22 Oct 2025 – 22 Oct 2026).** Issues, mailing-list threads, and stored patches for seven benches. These rows are labeled and ready to score. They have not been run through `aiv-cli` here, because no JAR was present when they were collected.
+
+GitHub Actions in this repo publishes the Pages report (`.github/workflows/pages.yml`) and runs the gate on recreated pull requests (`.github/workflows/aiv.yml`) using `.aiv/`.
+
+## Data in this repo
+
+| Path | What it is |
+|---|---|
+| [`docs/data/product-benchmark-latest.json`](docs/data/product-benchmark-latest.json) | Combined scored report: labeled 50 and abandoned 61 |
+| [`docs/data/labeled-latest.json`](docs/data/labeled-latest.json) | 50 fixtures: 5 proper, 30 objective slop, 15 mixed. Recall 35/35, false positives 0 |
+| [`docs/data/abandoned-labeled-latest.json`](docs/data/abandoned-labeled-latest.json) | 61 closed-unmerged Airflow diffs, labeled and scored. 1 hard fail ([#73124](https://github.com/apache/airflow/pull/73124)) |
+| [`docs/data/airflow-chatgpt-true-latest.json`](docs/data/airflow-chatgpt-true-latest.json) | 5 Airflow PRs with a confirmed ChatGPT disclosure. 1 of 2 closed-unmerged hard-failed; 0 of 3 merged hard-failed |
+| [`docs/data/airflow-real-disclosure-latest.json`](docs/data/airflow-real-disclosure-latest.json) | 7 disclosed Airflow PRs scored in the Jun–Sep 2026 window. 1 hard fail. 0 objective markers |
+| [`docs/data/e2e-proof-latest.json`](docs/data/e2e-proof-latest.json) | Bench 1 summary: 555 Airflow PRs. Full rows and patches in `corpus/e2e-proof/` |
+| [`docs/data/ai-year-latest.json`](docs/data/ai-year-latest.json) | Airflow issue and dev-list index for the year. Raw files in `corpus/ai-year/` |
+| [`docs/data/multi-bench-latest.json`](docs/data/multi-bench-latest.json) | Index of benches 1–7 |
+| [`docs/data/flink-bench-latest.json`](docs/data/flink-bench-latest.json) | Bench 2, 51 Flink PRs. Patches in `corpus/benchmarks/flink/` |
+| [`docs/data/kafka-bench-latest.json`](docs/data/kafka-bench-latest.json) | Bench 3, 38 Kafka PRs. Patches in `corpus/benchmarks/kafka/` |
+| [`docs/data/curl-bench-latest.json`](docs/data/curl-bench-latest.json) | Bench 4, 18 curl cases (17 runnable). Patches in `corpus/benchmarks/curl/` |
+| [`docs/data/godot-bench-latest.json`](docs/data/godot-bench-latest.json) | Bench 5, 62 Godot cases (58 runnable). Patches in `corpus/benchmarks/godot/` |
+| [`docs/data/ghostty-bench-latest.json`](docs/data/ghostty-bench-latest.json) | Bench 6, 53 Ghostty cases (52 runnable). Patches in `corpus/benchmarks/ghostty/` |
+| [`docs/data/cosmic-bench-latest.json`](docs/data/cosmic-bench-latest.json) | Bench 7, 41 COSMIC compositor PRs. Patches in `corpus/benchmarks/cosmic/` |
+| `corpus/ai-year/inbox-review.json` | Sep–Oct 2026 Airflow dev-list inbox, classified as agent policy or ordinary mail |
+| `corpus/*.py` | Collectors that rebuilt the year corpus from GitHub and lists.apache.org |
+
+Each stored pull request file has the GitHub number, URL, title, head SHA, body, label, and the patch text the gate would score. A case expects a hard fail only when that patch contains an objective marker. On this real-history corpus that happens once: [apache/airflow#59957](https://github.com/apache/airflow/pull/59957).
+
+The window for every real-history count below is **22 Oct 2025 through 22 Oct 2026**. Counts were taken on 22 Oct 2026 with `gh` against the GitHub search API and, for Apache lists, the Pony Mail API at `lists.apache.org`. A search `total_count` is the number GitHub returned for that query. It is a sample frame, not a census of AI-authored changes.
 
 ## How a benchmark case is scored
 
