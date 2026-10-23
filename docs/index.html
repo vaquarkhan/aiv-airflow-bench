@@ -17,6 +17,7 @@
       <nav class="nav">
         <a href="#proof">Proof</a>
         <a href="#abandoned">Abandoned</a>
+        <a href="#windows">6 months / 1 year</a>
         <a href="#validate">Validate</a>
         <a href="data/">Raw JSON</a>
         <a href="https://github.com/vaquarkhan/aiv-airflow-bench">Repo</a>
@@ -145,6 +146,44 @@
       <h2>3) Confirmed ChatGPT gold set <span class="tag tag-verified">VERIFIED</span></h2>
       <p class="section-lead" id="chatgpt-statement">Tiny confirmed-disclosure cohort.</p>
       <p>Raw: <a href="data/airflow-chatgpt-true-latest.json"><code>airflow-chatgpt-true-latest.json</code></a></p>
+    </section>
+
+    <section class="block" id="windows">
+      <h2>4) Last 6 months and full year</h2>
+      <p class="section-lead">
+        GitHub search totals for 22 Apr 2026–22 Oct 2026 and 22 Oct 2025–22 Oct 2026,
+        next to the labeled sample stored in this repo. Search totals are not a census,
+        and <code>Generated-by</code> on Flink and curl includes template text.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>PRs, 6 months</th>
+              <th>PRs, 1 year</th>
+              <th>Generated-by, 6 months</th>
+              <th>Generated-by, 1 year</th>
+              <th>Sample, 6 months</th>
+              <th>Sample, 1 year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Airflow</td><td>8,552</td><td>15,573</td><td>5,174</td><td>7,474</td><td>305</td><td>555</td></tr>
+            <tr><td>Flink</td><td>1,584</td><td>2,441</td><td>986</td><td>1,012</td><td>32</td><td>51</td></tr>
+            <tr><td>Kafka</td><td>1,813</td><td>3,181</td><td>43</td><td>55</td><td>32</td><td>38</td></tr>
+            <tr><td>curl</td><td>1,894</td><td>3,853</td><td>322</td><td>657</td><td>13</td><td>18</td></tr>
+            <tr><td>Godot</td><td>3,668</td><td>7,589</td><td>47</td><td>79</td><td>39</td><td>62</td></tr>
+            <tr><td>Ghostty</td><td>1,192</td><td>2,492</td><td>10</td><td>27</td><td>32</td><td>53</td></tr>
+            <tr><td>COSMIC compositor</td><td>242</td><td>425</td><td>6</td><td>7</td><td>20</td><td>41</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:0.75rem">
+        Airflow issues stored: 1,100 in 6 months, 2,427 in the year.
+        Dev-list messages: 1,965 and 4,377.
+        Raw: <a href="data/windows-latest.json"><code>windows-latest.json</code></a>
+      </p>
     </section>
 
     <section class="block" id="not-claimed">

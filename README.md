@@ -31,10 +31,25 @@ GitHub Actions in this repo publishes the Pages report (`.github/workflows/pages
 | [`docs/data/godot-bench-latest.json`](docs/data/godot-bench-latest.json) | Bench 5, 62 Godot cases (58 runnable). Patches in `corpus/benchmarks/godot/` |
 | [`docs/data/ghostty-bench-latest.json`](docs/data/ghostty-bench-latest.json) | Bench 6, 53 Ghostty cases (52 runnable). Patches in `corpus/benchmarks/ghostty/` |
 | [`docs/data/cosmic-bench-latest.json`](docs/data/cosmic-bench-latest.json) | Bench 7, 41 COSMIC compositor PRs. Patches in `corpus/benchmarks/cosmic/` |
+| [`docs/data/windows-latest.json`](docs/data/windows-latest.json) | Same corpus split into the last 6 months (22 Apr 2026 – 22 Oct 2026) and the full year, plus GitHub search totals for both windows |
 | `corpus/ai-year/inbox-review.json` | Sep–Oct 2026 Airflow dev-list inbox, classified as agent policy or ordinary mail |
 | `corpus/*.py` | Collectors that rebuilt the year corpus from GitHub and lists.apache.org |
 
 Each stored pull request file has the GitHub number, URL, title, head SHA, body, label, and the patch text the gate would score. A case expects a hard fail only when that patch contains an objective marker. On this real-history corpus that happens once: [apache/airflow#59957](https://github.com/apache/airflow/pull/59957).
+
+Both windows are in [`docs/data/windows-latest.json`](docs/data/windows-latest.json). The last 6 months are **22 Apr 2026 through 22 Oct 2026**. The full year is **22 Oct 2025 through 22 Oct 2026**.
+
+| Project | PRs, 6 months | PRs, 1 year | `Generated-by` search, 6 months | `Generated-by` search, 1 year | Stored sample, 6 months | Stored sample, 1 year |
+|---|---:|---:|---:|---:|---:|---:|
+| Airflow | 8,552 | 15,573 | 5,174 | 7,474 | 305 | 555 |
+| Flink | 1,584 | 2,441 | 986 | 1,012 | 32 | 51 |
+| Kafka | 1,813 | 3,181 | 43 | 55 | 32 | 38 |
+| curl | 1,894 | 3,853 | 322 | 657 | 13 | 18 |
+| Godot | 3,668 | 7,589 | 47 | 79 | 39 | 62 |
+| Ghostty | 1,192 | 2,492 | 10 | 27 | 32 | 53 |
+| COSMIC compositor | 242 | 425 | 6 | 7 | 20 | 41 |
+
+Airflow’s filled tool trailers in the 6-month search: Claude 2,922, Codex 442, Copilot 112, Gemini 34, ChatGPT 23. Over the year: Claude 3,563, Codex 480, Copilot 174, Gemini 66, ChatGPT 45. Airflow issues in the stored index: 1,100 in the last 6 months, 2,427 in the year. Dev-list messages: 1,965 and 4,377. `Generated-by` on Flink and curl still includes template text. The stored sample is the labeled patch set, not every pull request in the window.
 
 The window for every real-history count below is **22 Oct 2025 through 22 Oct 2026**. Counts were taken on 22 Oct 2026 with `gh` against the GitHub search API and, for Apache lists, the Pony Mail API at `lists.apache.org`. A search `total_count` is the number GitHub returned for that query. It is a sample frame, not a census of AI-authored changes.
 
