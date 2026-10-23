@@ -1,0 +1,107 @@
+{
+  "source": "dev@airflow.apache.org inbox screenshots, Sep-Oct 2026",
+  "checked": "2026-10-22",
+  "note": "Opening posts fetched from lists.apache.org. Threads with archive_hit false are classified from the visible inbox snippet only.",
+  "ai_or_pr_flood": [
+    {
+      "subject": "[DISCUSS] Merging \"almost\" ready PRs with maintainer-fixups from contributors",
+      "url": "https://lists.apache.org/thread/zpv8f6gsokomrw2f516cxhwkvqkx1sxh",
+      "verdict": "Agent workflow. Jarek changed how almost-ready PRs (conflicts, typos, comment nits) get maintainer fixups, to improve agentic AI workflows. 28 replies."
+    },
+    {
+      "subject": "[LAZY CONSENSUS] Human Summary section in agent-drafted PR descriptions",
+      "url": "https://lists.apache.org/thread/6n9z98hlt3q78yf02m0yxlh6dod2lrd1",
+      "verdict": "Agent PR text. Asked for a human-written summary above the agent draft. Ash objected. #73660 was reverted in #73669."
+    },
+    {
+      "subject": "[DISCUSS] Human Summary section in agent-drafted PR descriptions",
+      "url": "https://lists.apache.org/thread/5k06417wrbb10hkfk8ogz8py7qgcbpqz",
+      "verdict": "Follow-up discussion after the lazy consensus failed."
+    },
+    {
+      "subject": "[RESULT][LAZY CONSENSUS] Limiting number of opened pull requests for users without write access",
+      "url": "https://lists.apache.org/thread/901dt9qdqjtqrh7ow5cdnd8sp0dl3llp",
+      "verdict": "PR-flood policy. Passed 24 Sep 2026. Cap of 5 open PRs for users without write access. Discussion: https://lists.apache.org/thread/76hg4lnyhnlz1v21vvr60bc98rf7ox5n"
+    },
+    {
+      "subject": "[ANNOUNCE] Open pull request limit is temporarily a soft limit",
+      "url": "https://lists.apache.org/thread/pbry9otfdbkr1n85scq3v9mdlp15fgg2",
+      "verdict": "Same policy. One-time closure of 210 PRs from 21 contributors, then the cap was made a soft limit."
+    },
+    {
+      "subject": "[DISCUSS] Next step after the PR limit: \"your PR, your CI\"",
+      "url": "https://lists.apache.org/thread/ky392mrrcmj312y1r276r30p584n804c",
+      "verdict": "Follow-up 10 days after the cap. Run external CI in the contributor fork."
+    },
+    {
+      "subject": "[LAZY CONSENSUS] AIP-120 Run CI for external contributions in contributor forks",
+      "url": "https://lists.apache.org/thread/nfno4r1jqx5dj75v867prjjgg6o77odx",
+      "verdict": "Formalizes the fork-CI discussion above."
+    },
+    {
+      "subject": "[CONTRIBUTION OPPORTUNITY] llms.txt and Markdown docs for coding agents for Airflow site",
+      "url": "https://lists.apache.org/thread/bb0kvht96mw9n6h92rxyvvgco18fb79x",
+      "verdict": "Docs for coding agents (Claude Code, Cursor, Copilot, Codex). Kaxil. 9 replies."
+    },
+    {
+      "subject": "[DISCUSS] Requiring real GCP testing evidence for Google Provider PRs",
+      "url": "https://lists.apache.org/thread/7z1q39d8fq6ny9jj6omxkrk9o1mogmk7",
+      "verdict": "Names AI tooling. Contributors often have no GCP project, so provider PRs arrive untested. 14 replies."
+    },
+    {
+      "subject": "Re: [DISCUSS] \"scheduled\" triaging and security issues - with Airflow as engine",
+      "url": "https://lists.apache.org/thread/f8jnjonpf8kbr25jwz67q5vo07h62wws",
+      "verdict": "WIP AIP-124, Airflow-Powered Agentic Workflows for Project Operations. 7 replies."
+    },
+    {
+      "subject": "Re: Proposal: let the Incubator and ComDev own the governance values Maggie's onboarding skill needs",
+      "url": null,
+      "archive_hit": false,
+      "verdict": "Inbox snippet says the draft was written with AI assistance (Claude Opus 4.5). Topic is incubator governance, not a slop rule. Pony Mail search returned no thread."
+    }
+  ],
+  "adjacent_not_slop": [
+    {
+      "subject": "[LAZY CONSENSUS] AIP-118 Self-hosted runners for Apache Airflow CI",
+      "url": "https://lists.apache.org/thread/lfgvvffhtzgpbyy3dm197vftsg448qpx",
+      "verdict": "CI capacity and merge-queue speed. Discuss: https://lists.apache.org/thread/4m7s5dlvxyyy4t9ljr8o76cy1glow76g"
+    },
+    {
+      "subject": "[PROPOSAL] / [LAZY CONSENSUS] Enable auto-merge for PRs to main",
+      "url": "https://lists.apache.org/thread/5nr3ngh1vjbgfn8frf8j5tsf4r051ms1",
+      "verdict": "Committer auto-merge. Change is apache/airflow#75142. Consensus thread: https://lists.apache.org/thread/5x43zx0xtwokvm0o7jm9yw5lyhmgqxm8"
+    },
+    {
+      "subject": "[RESULT][VOTE] Airflow Providers - release preparation date 2026-10-17",
+      "url": "https://lists.apache.org/thread/722g6o3qzdqq49mlvglcp9h5wc7fxwn1",
+      "verdict": "Ordinary release vote. The package that passed is common.ai 1.0.0, first stable of that provider."
+    }
+  ],
+  "ordinary": [
+    {"subject": "[REMINDER] Airflow Contributor Day in Glasgow", "url": "https://lists.apache.org/thread/6q2r04hbhsyx6mx2dbj39pksdmzgvt0o"},
+    {"subject": "[DISCUSS] and [LAZY CONSENSUS] Airflow 3.4.0 hardened trixie PROD images", "url": "https://lists.apache.org/thread/y0mlxsx36kzc84tn31q1kyl4rdvgv1xx", "note": "Groundwork PR #73038. Consensus: https://lists.apache.org/thread/h0sxvd5g4drxfrph35dvlrk46zomsk0y"},
+    {"subject": "[DISCUSS] / [LAZY CONSENSUS] Python 3.10 dropped", "url": "https://lists.apache.org/thread/30s10g2k93gb4rvvqpf0y40m5xtwv4xw", "note": "Issue #74148. Consensus: https://lists.apache.org/thread/hw7gj54hv2g0rbd7ng740vcbok22m9s2"},
+    {"subject": "[VOTE] / [RESULT] AIP-104 Iterable Tasks and Task Spreading", "url": "https://lists.apache.org/thread/7c1nwwl0rm047hc19fkz6ql2rgbz5chh"},
+    {"subject": "Re: Discuss: new option [secrets]backend_order", "url": "https://lists.apache.org/thread/6p05co5hvrl1p33jv6d38fqxmmm5trfr"},
+    {"subject": "MLH Fellowship on Airflow, Fall 2026", "url": "https://lists.apache.org/thread/mtmjsgoqhfxjkxkf2lz8czhm2wdtbc5h"},
+    {"subject": "Preparing for Airflow 3.4.0 Release", "url": "https://lists.apache.org/thread/fg54s1qkz648svn04b26b6ghv8yvtoq6"},
+    {"subject": "[DISCUSS] Native asset-event emission from tasks, callbacks, and notifiers", "url": "https://lists.apache.org/thread/5999hbp077prc8m17p2hjkmlgh8oz22w"},
+    {"subject": "[LAZY CONSENSUS] Newsfragments: when to add one", "url": "https://lists.apache.org/thread/bvbdk0bw1wysn8v067xzg8szgdmt3srb"},
+    {"subject": "[LAZY CONSENSUS] Deprecate cyclic TaskGroup dependencies in 3.4, reject them in 3.5", "url": "https://lists.apache.org/thread/b6h120jw7tv1l1zf1ovwrok2zk4hyvwc"},
+    {"subject": "[VOTE] September 2026 PR of the Month", "url": "https://lists.apache.org/thread/hywhpdtqp8ott22ylgfd31l8lqp8oqd5"},
+    {"subject": "[VOTE] September 2026 Rookie PR of the Month", "url": "https://lists.apache.org/thread/vhm66823z05jd93y9b9z5brf60ghxmt3"},
+    {"subject": "Airflow Open Spaces at PyCon TW 2026", "url": "https://lists.apache.org/thread/k2pdnm3odr98sj1ogx23fsmqk5z3tbld"},
+    {"subject": "Apache Airflow & Magpie Meetup 2026 in Seoul", "url": "https://lists.apache.org/thread/kdgwyqm18skk6ddb48t7hg2qv4cx842v"},
+    {"subject": "Re: [VOTE] AIP-109 DAG Version Pinning", "url": "https://lists.apache.org/thread/nzd1mvg5d7cgqbtqv0sj3h276kohw2s9", "note": "Inbox subject says Version Picking. Archive hit is the AIP-109 pinning vote."},
+    {"subject": "Provider release votes and announces for 2026-10-02, 2026-10-06, 2026-10-14", "url": "https://lists.apache.org/thread/t58ppv8qkxncpyt1r6nwjx8lhbskv783", "note": "Same pattern on the other dates. Release governance."}
+  ],
+  "archive_miss_screenshot_only": [
+    {"subject": "asf incubator logo", "verdict": "Logo talk (Acorn vs egg). Not AI."},
+    {"subject": "[DISCUSS] A release candidate checker", "verdict": "Visible reply is praise. No AI language in the snippet."},
+    {"subject": "Re: [DISCUSS] Separate dag bundle discovery and import roots", "verdict": "Dag loading layout. Not AI."},
+    {"subject": "[RESULT][VOTE] Release Airflow 3.3.2 from 3.3.2rc1", "verdict": "Release result. Not AI."},
+    {"subject": "[DISCUSS] Apache Trusted Releases platform and overlapping release votes", "verdict": "Release tooling. Not AI."},
+    {"subject": "[DISCUSS] Anomaly monitoring and guardrails for the Airflow AWS account", "verdict": "AWS account monitoring. Not AI."},
+    {"subject": "[DISCUSS] Microsoft Fabric Provider", "verdict": "New provider. Visible reply is approval. Not AI."}
+  ]
+}

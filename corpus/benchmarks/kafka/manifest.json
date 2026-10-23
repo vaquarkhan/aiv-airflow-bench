@@ -1,0 +1,21 @@
+{
+  "bench": 3,
+  "repo": "apache/kafka",
+  "generated_at": "2026-10-22T16:53:59.993784+00:00",
+  "stats": {
+    "cases": 38,
+    "runnable_prs": 38,
+    "by_class": {
+      "merged_control": 22,
+      "ai_tool_mention": 7,
+      "ai_disclosed": 9
+    },
+    "objective_slop": 0,
+    "ai_slop_discussion": 0,
+    "ai_disclosed": 9,
+    "merged_control": 22,
+    "mail_threads": 0,
+    "mail_slop_language": 0
+  },
+  "why": "Kafka dev list and pull requests are the third bench, parallel to Airflow and Flink."
+}

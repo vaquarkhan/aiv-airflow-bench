@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "bench": 4,
+  "project": "curl",
+  "repo": "curl/curl",
+  "window": "2025-10-22..2026-10-22",
+  "generated_at": "2026-10-22T16:54:37.231360+00:00",
+  "why": "Maintainers ended the curl bug bounty on 31 Jan 2026 after AI-generated reports overwhelmed the security team.",
+  "stats": {
+    "cases": 18,
+    "runnable_prs": 17,
+    "by_class": {
+      "merged_control": 15,
+      "ai_slop_discussion": 3
+    },
+    "objective_slop": 0,
+    "ai_slop_discussion": 3,
+    "ai_disclosed": 0,
+    "merged_control": 15,
+    "mail_threads": 0,
+    "mail_slop_language": 0
+  },
+  "not_claimed": [
+    "A tool mention or filled Generated-by line is not proof the change should fail.",
+    "Slop language in discussion is not proof the attached patch is slop.",
+    "Search totals are not the percent of the project that is AI-authored."
+  ],
+  "cases": [
+    {
+      "number": 19469,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/19469",
+      "title": "docs: Line endings are no longer significant in test files",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 19995,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/19995",
+      "title": "tests: add a standard log line for alloc failures",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 20545,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/20545",
+      "title": "digest: escape double quotes and backslashes in the realm",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 20813,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/20813",
+      "title": "socks: ensure DNS is freed in failure cases.",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 21018,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/21018",
+      "title": "tests/unit/README: describe how to unit test static functions",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 21486,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/21486",
+      "title": "lib: drop support for CURLAUTH_DIGEST_IE",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 21734,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/21734",
+      "title": "KNOWN_BUGS: remove stale Threads::Threads entry",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 21735,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/21735",
+      "title": "mailmap: cmeister2@gmail is primary for Max Dymond",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 21858,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/21858",
+      "title": "tests: add `cookies` feature to some tests",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 22469,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/22469",
+      "title": "lib1560: add CURLU_NO_GUESS_SCHEME tests",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 22804,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/22804",
+      "title": "multi_ntfy: replace enabled bitset with inline flags",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 23007,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/23007",
+      "title": "mqtt: drain queued output before advancing the state machine",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 23017,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/23017",
+      "title": "base64: avoid repeated input loads when encoding",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 23019,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/23019",
+      "title": "mprintf: avoid scanning strings twice for unbounded %s",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 23021,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/23021",
+      "title": "escape: use hex-pair lookup in curl_easy_escape",
+      "label": "merged_control",
+      "expect_hard_fail": false,
+      "merged": true,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": []
+    },
+    {
+      "number": 23206,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/23206",
+      "title": "GHA/linux: bump Slackware container, re-enable SSL via GnuTLS",
+      "label": "ai_slop_discussion",
+      "expect_hard_fail": false,
+      "merged": false,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": [
+        "vibe-coded"
+      ]
+    },
+    {
+      "number": 23349,
+      "kind": "issue",
+      "url": "https://github.com/curl/curl/issues/23349",
+      "title": "X509 cert store cache never engages on builds with `CURL_CA_PATH` defined",
+      "label": "ai_slop_discussion",
+      "expect_hard_fail": false,
+      "merged": false,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": [
+        "ai slop"
+      ]
+    },
+    {
+      "number": 23564,
+      "kind": "pull_request",
+      "url": "https://github.com/curl/curl/pull/23564",
+      "title": "GHA: Bump the pip-dependencies group across 2 directories with 4 updates",
+      "label": "ai_slop_discussion",
+      "expect_hard_fail": false,
+      "merged": false,
+      "markers_in_patch": [],
+      "generated_by": null,
+      "slop_terms": [
+        "ai slop"
+      ]
+    }
+  ],
+  "mail_threads": []
+}

@@ -1,0 +1,24 @@
+{
+  "tid": "c3ovw1z28mgk5k5k98p80n07k6vf432y",
+  "subject": "Re: [PR] MINOR: Add 4.4 release [kafka-site]",
+  "epoch": 1792433953,
+  "last_epoch": 1792488967,
+  "date": "2026-10-19T18:19:13+00:00",
+  "last_date": "2026-10-20T09:36:07+00:00",
+  "replies": 2,
+  "list": "dev@kafka.apache.org",
+  "url": "https://lists.apache.org/thread/c3ovw1z28mgk5k5k98p80n07k6vf432y",
+  "query": "Claude",
+  "flags": {
+    "slop_terms": [],
+    "tool_terms": [],
+    "slop": false,
+    "tool": false
+  },
+  "disclosure": {
+    "signals": [],
+    "disclosed": false,
+    "generated_by": null
+  },
+  "starter_excerpt": "\nOmniaGM commented on PR #925:\nURL: https://github.com/apache/kafka-site/pull/925#issuecomment-6274148423\n\n   I found more wrong version reference in the docs here https://github.com/apache/kafka-site/pull/925/commits/c5f662c52ee42da321e0fcd71d56376a"
+}

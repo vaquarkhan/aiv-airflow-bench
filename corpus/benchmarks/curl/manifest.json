@@ -1,0 +1,20 @@
+{
+  "bench": 4,
+  "repo": "curl/curl",
+  "generated_at": "2026-10-22T16:54:37.231360+00:00",
+  "stats": {
+    "cases": 18,
+    "runnable_prs": 17,
+    "by_class": {
+      "merged_control": 15,
+      "ai_slop_discussion": 3
+    },
+    "objective_slop": 0,
+    "ai_slop_discussion": 3,
+    "ai_disclosed": 0,
+    "merged_control": 15,
+    "mail_threads": 0,
+    "mail_slop_language": 0
+  },
+  "why": "Maintainers ended the curl bug bounty on 31 Jan 2026 after AI-generated reports overwhelmed the security team."
+}

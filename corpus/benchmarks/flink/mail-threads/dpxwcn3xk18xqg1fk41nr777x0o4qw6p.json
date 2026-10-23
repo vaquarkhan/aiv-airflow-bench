@@ -1,0 +1,24 @@
+{
+  "tid": "dpxwcn3xk18xqg1fk41nr777x0o4qw6p",
+  "subject": "[PR] [FLINK-41049][ci] Make pre-downloaded Maven usable by the only-script Maven wrapper [flink-ci-docker]",
+  "epoch": 1792611358,
+  "last_epoch": 1792611358,
+  "date": "2026-10-21T19:35:58+00:00",
+  "last_date": "2026-10-21T19:35:58+00:00",
+  "replies": 0,
+  "list": "dev@flink.apache.org",
+  "url": "https://lists.apache.org/thread/dpxwcn3xk18xqg1fk41nr777x0o4qw6p",
+  "query": "generative",
+  "flags": {
+    "slop_terms": [],
+    "tool_terms": [],
+    "slop": false,
+    "tool": true
+  },
+  "disclosure": {
+    "signals": [],
+    "disclosed": false,
+    "generated_by": null
+  },
+  "starter_excerpt": "\nsnuyanzin opened a new pull request, #9:\nURL: https://github.com/apache/flink-ci-docker/pull/9\n\n   … \n   <!--\n   Licensed to the Apache Software Foundation (ASF) under one\n   or more contributor license agreements.  See the NOTICE file\n   distribute"
+}

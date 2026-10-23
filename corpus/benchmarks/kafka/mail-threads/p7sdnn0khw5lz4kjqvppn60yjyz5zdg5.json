@@ -1,0 +1,24 @@
+{
+  "tid": "p7sdnn0khw5lz4kjqvppn60yjyz5zdg5",
+  "subject": "[jira] [Resolved] (KAFKA-21280) SslTransportLayer.transferFrom sends stale buffer contents after a failed file read",
+  "epoch": 1792519920,
+  "last_epoch": 1792519920,
+  "date": "2026-10-20T18:12:00+00:00",
+  "last_date": "2026-10-20T18:12:00+00:00",
+  "replies": 0,
+  "list": "dev@kafka.apache.org",
+  "url": "https://lists.apache.org/thread/p7sdnn0khw5lz4kjqvppn60yjyz5zdg5",
+  "query": "generative",
+  "flags": {
+    "slop_terms": [],
+    "tool_terms": [],
+    "slop": false,
+    "tool": true
+  },
+  "disclosure": {
+    "signals": [],
+    "disclosed": false,
+    "generated_by": null
+  },
+  "starter_excerpt": "\n     [ https://issues.apache.org/jira/browse/KAFKA-21280?page=com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel ]\n\nJun Rao resolved KAFKA-21280.\n-----------------------------\n    Fix Version/s: 4.5.0\n       Resolution: Fixed\n\nmerged the P"
+}

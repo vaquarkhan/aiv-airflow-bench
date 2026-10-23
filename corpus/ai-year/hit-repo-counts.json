@@ -1,0 +1,154 @@
+{
+  "repos": [
+    {
+      "repo": "ghostty-org/ghostty",
+      "prs": 2492,
+      "closed_unmerged": 447,
+      "slop_language": 9,
+      "generated_by": 27
+    },
+    {
+      "repo": "pop-os/cosmic-epoch",
+      "prs": 23,
+      "closed_unmerged": 7,
+      "slop_language": 2,
+      "generated_by": 0
+    },
+    {
+      "repo": "godotengine/godot",
+      "prs": 7589,
+      "closed_unmerged": 1094,
+      "slop_language": 32,
+      "generated_by": 79
+    },
+    {
+      "repo": "apache/logging-log4j2",
+      "prs": 330,
+      "closed_unmerged": 89,
+      "slop_language": 2,
+      "generated_by": 52
+    },
+    {
+      "repo": "nodejs/node",
+      "prs": 4996,
+      "closed_unmerged": 1614,
+      "slop_language": 9,
+      "generated_by": 540
+    },
+    {
+      "repo": "ziglang/zig",
+      "prs": 185,
+      "closed_unmerged": 64,
+      "slop_language": 0,
+      "generated_by": 1
+    },
+    {
+      "repo": "django/django",
+      "prs": 2194,
+      "closed_unmerged": 1061,
+      "slop_language": 8,
+      "generated_by": 192
+    },
+    {
+      "repo": "OWASP/CheatSheetSeries",
+      "prs": 759,
+      "closed_unmerged": 109,
+      "slop_language": 11,
+      "generated_by": 15
+    },
+    {
+      "repo": "qemu/qemu",
+      "prs": 0,
+      "closed_unmerged": 0,
+      "slop_language": 0,
+      "generated_by": 0
+    }
+  ],
+  "org": {
+    "pop-os prs": 4363,
+    "pop-os slop language": 9
+  },
+  "ai_slop_search_total": 62391,
+  "ai_slop_top_in_latest_50": [
+    [
+      "sudosubin/agents.nix",
+      3
+    ],
+    [
+      "Ylianst/MeshCentral",
+      2
+    ],
+    [
+      "viell-dev/slop-markdown-tools",
+      2
+    ],
+    [
+      "Prism-Shadow/penguin-harness",
+      2
+    ],
+    [
+      "Danathar/tududi",
+      2
+    ],
+    [
+      "bhimrazy/mohar",
+      2
+    ],
+    [
+      "HuggerHustle/ai-radar",
+      1
+    ],
+    [
+      "digithings-ai/digithings",
+      1
+    ],
+    [
+      "ritacompany/portfolio",
+      1
+    ],
+    [
+      "Cybertron-HNG/zedu-desktop",
+      1
+    ],
+    [
+      "nobaksan/cr-parity-lab",
+      1
+    ],
+    [
+      "Pal-AI-Lab/Cortico",
+      1
+    ],
+    [
+      "dcm-c/catboy",
+      1
+    ],
+    [
+      "vivarium-collective/viva-template",
+      1
+    ],
+    [
+      "Vendicated/Vencord",
+      1
+    ],
+    [
+      "For-Hives/my-makeup",
+      1
+    ],
+    [
+      "compactly8274/popping",
+      1
+    ],
+    [
+      "Pietruszkaa/DwargonMC-launcher",
+      1
+    ],
+    [
+      "python-attrs/attrs",
+      1
+    ],
+    [
+      "boyuan99/three-maze",
+      1
+    ]
+  ]
+}

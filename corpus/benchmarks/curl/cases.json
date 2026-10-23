@@ -1,0 +1,706 @@
+{
+  "schema_version": 1,
+  "bench": 4,
+  "project": "curl",
+  "repo": "curl/curl",
+  "window": "2025-10-22..2026-10-22",
+  "generated_at": "2026-10-22T16:54:37.231360+00:00",
+  "why": "Maintainers ended the curl bug bounty on 31 Jan 2026 after AI-generated reports overwhelmed the security team.",
+  "sampling": "Up to a fixed number of latest matches per quarter. Not a census. A zero-hit quarter is split before it is trusted.",
+  "not_claimed": [
+    "A tool mention or filled Generated-by line is not proof the change should fail.",
+    "Slop language in discussion is not proof the attached patch is slop.",
+    "Search totals are not the percent of the project that is AI-authored."
+  ],
+  "stats": {
+    "cases": 18,
+    "runnable_prs": 17,
+    "by_class": {
+      "merged_control": 15,
+      "ai_slop_discussion": 3
+    },
+    "objective_slop": 0,
+    "ai_slop_discussion": 3,
+    "ai_disclosed": 0,
+    "merged_control": 15,
+    "mail_threads": 0,
+    "mail_slop_language": 0
+  },
+  "cases": [
+    {
+      "id": "curl-19469",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 19469,
+      "url": "https://github.com/curl/curl/pull/19469",
+      "title": "docs: Line endings are no longer significant in test files",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-11-11T18:07:59Z",
+      "user": "dfandrich",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "f544eb97da73870dcc3e29b73337bc24c384d8d3",
+      "additions": 3,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Since commit f477f3efc, CR/LF characters in test files are no longer\nsignificant, making the files a little more XML-like.\n\nCloses #19469",
+      "patch_file": "prs/19469.json"
+    },
+    {
+      "id": "curl-19995",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 19995,
+      "url": "https://github.com/curl/curl/pull/19995",
+      "title": "tests: add a standard log line for alloc failures",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-12-16T08:32:58Z",
+      "user": "dfandrich",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "fe91d5d52bbb0b1376ea9e2b7726d3cb1fcbd19a",
+      "additions": 4,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "This type of test failure requires a test status line in order to be\nconsistent with other failures and to be parsed properly by Test Clutch.\nThis is the same style as an exit or postcheck failure.\n\nCloses #19995",
+      "patch_file": "prs/19995.json"
+    },
+    {
+      "id": "curl-20545",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 20545,
+      "url": "https://github.com/curl/curl/pull/20545",
+      "title": "digest: escape double quotes and backslashes in the realm",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-08T11:36:34Z",
+      "user": "bagder",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "950c7bb174c283bf202626ee32ebc21fa501f757",
+      "additions": 19,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Fixes #20482\r\nReported-by: cooldadpresident on github",
+      "patch_file": "prs/20545.json"
+    },
+    {
+      "id": "curl-20813",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 20813,
+      "url": "https://github.com/curl/curl/pull/20813",
+      "title": "socks: ensure DNS is freed in failure cases.",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-04T10:27:49Z",
+      "user": "cmeister2",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "a05120f479ab142f9a4f9f134fbc4ab038ece080",
+      "additions": 3,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "In several error cases in socks.c the DNS struct is not freed, which leads to memory leaks.\r\n\r\nFound by: OSS-Fuzz: 447858136\r\n\r\nCloses #20813",
+      "patch_file": "prs/20813.json"
+    },
+    {
+      "id": "curl-21018",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 21018,
+      "url": "https://github.com/curl/curl/pull/21018",
+      "title": "tests/unit/README: describe how to unit test static functions",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-19T22:06:41Z",
+      "user": "bagder",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "2b3332e749cd35607a6201cfcc70e60fd4e9518a",
+      "additions": 32,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "UNITTEST explained",
+      "patch_file": "prs/21018.json"
+    },
+    {
+      "id": "curl-21486",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 21486,
+      "url": "https://github.com/curl/curl/pull/21486",
+      "title": "lib: drop support for CURLAUTH_DIGEST_IE",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-05-02T20:52:24Z",
+      "user": "bagder",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "37b2403f48959c632c8dd1dac688087237410ea2",
+      "additions": 9,
+      "changed_files": 5,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "This bit was used to do Digest authentication like Internet Explorer before version 7 (released on October 18, 2006). Presumably no one uses this anymore and since it is hard to use and does broken auth, starting in 8.21.0 this bit does nothing (except setting the actual Digest bit).",
+      "patch_file": "prs/21486.json"
+    },
+    {
+      "id": "curl-21734",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 21734,
+      "url": "https://github.com/curl/curl/pull/21734",
+      "title": "KNOWN_BUGS: remove stale Threads::Threads entry",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-05-24T08:03:51Z",
+      "user": "cmeister2",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "2ac22570f95b97e96b5d02474fefd4ce2bc5e08b",
+      "additions": 0,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "The old CMake bug about exporting -lpthread instead of Threads::Threads \r\nno longer matches current master. As of\r\n2d546d239ecd455b6459e68b85ef8d4b045c0a00 (\"cmake: use Threads::Threads\r\nimported target for POSIX Threads\"), the build now uses Threads::Threads\r\nand the generated CMake package config resolves the dependency\r\nexplicitly, so this KNOWN_BUGS entry is stale.\r\n\r\nRef: 2d546d239ecd455b6459e68b85ef8d4b045c0a00 #21163\r\n",
+      "patch_file": "prs/21734.json"
+    },
+    {
+      "id": "curl-21735",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 21735,
+      "url": "https://github.com/curl/curl/pull/21735",
+      "title": "mailmap: cmeister2@gmail is primary for Max Dymond",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-05-24T09:23:45Z",
+      "user": "cmeister2",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "67a45b91f4753a91bbafd5b8a0a9f8f76d01ed2a",
+      "additions": 2,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "I'd rather all my commits be attributed to cmeister2@gmail.com instead of anything else; especially not my old Microsoft email address!",
+      "patch_file": "prs/21735.json"
+    },
+    {
+      "id": "curl-21858",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 21858,
+      "url": "https://github.com/curl/curl/pull/21858",
+      "title": "tests: add `cookies` feature to some tests",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-06-03T10:44:26Z",
+      "user": "MarcelRaad",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "75a94f3cd80d2dec5d6532137436bb553d27d3f5",
+      "additions": 7,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "These fail without cookie support.\r\n\r\nThis fixes my autobuilds.",
+      "patch_file": "prs/21858.json"
+    },
+    {
+      "id": "curl-22469",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 22469,
+      "url": "https://github.com/curl/curl/pull/22469",
+      "title": "lib1560: add CURLU_NO_GUESS_SCHEME tests",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-08-03T10:51:44Z",
+      "user": "bagder",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "1f860394e611e937b02d5ac72d4622583ec50e84",
+      "additions": 87,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "",
+      "patch_file": "prs/22469.json"
+    },
+    {
+      "id": "curl-22804",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 22804,
+      "url": "https://github.com/curl/curl/pull/22804",
+      "title": "multi_ntfy: replace enabled bitset with inline flags",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-09-02T15:58:00Z",
+      "user": "cmeister2",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "e82ae665a326bb11d03ba49330aed4a966a82442",
+      "additions": 22,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Store enabled notification types in the low bits of a uint32_t and use the high bit for the pending-entry state.\r\n\r\nThis reduces curl_multi_ntfy to 40 bytes and removes an allocation from multi-handle initialization.",
+      "patch_file": "prs/22804.json"
+    },
+    {
+      "id": "curl-23007",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 23007,
+      "url": "https://github.com/curl/curl/pull/23007",
+      "title": "mqtt: drain queued output before advancing the state machine",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-09-20T15:16:46Z",
+      "user": "cmeister2",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "b1949e81062f4f26747e3341fd6c0fc76d731bb3",
+      "additions": 546,
+      "changed_files": 10,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "A successful send can leave unsent bytes queued. Poll for writable events and drain those bytes before processing another packet. Wait for PUBLISH to drain before sending DISCONNECT, and for DISCONNECT to drain before completing the transfer.\r\n\r\nSeparate sending new packets from flushing queued bytes. Add unit coverage for partial, blocked and failed sends, plus MQTT/MQTTS integration tests. Update the test broker to handle fragmented reads.\r\n\r\nReported-by: OSS-Fuzz\r\nBug: https://issues.oss-fuzz.com/issues/563679840, https://issues.oss-fuzz.com/issues/559825608",
+      "patch_file": "prs/23007.json"
+    },
+    {
+      "id": "curl-23017",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 23017,
+      "url": "https://github.com/curl/curl/pull/23017",
+      "title": "base64: avoid repeated input loads when encoding",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-09-21T09:38:02Z",
+      "user": "cmeister2",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "acec0de5ac26a67625e60dd60007b8576c27aef4",
+      "additions": 33,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "This patch loads each three-byte input group into a `uint32_t` before writing the four encoded characters. Both standard and URL-safe base64 use this loop.\r\n\r\nThe ordering matters: it lets the compiler reuse the input in registers without proving that output stores cannot alias the input. The added comment documents that reason for the packed value.\r\n\r\n## Assembly changes\r\n\r\nThe September 21 benchmark report includes before/after x86-64 disassembly from GCC 11.5.0 with `-O2 -DNDEBUG`. In that build, the original loop loads each input byte twice. These excerpts preserve instruction order but omit intervening instructions, as marked.\r\n\r\nBefore, input loads are interleaved with output stores:\r\n\r\n```asm\r\nmovzx eax,BYTE PTR [r14]           ; input[0], first load\r\n; ... advance pointers, calculate index 0, look up alphabet\r\nmov   BYTE PTR [rdx-0x4],al        ; write output[0]\r\nmovzx eax,BYTE PTR [r14-0x3]       ; reload input[0]\r\nmovzx esi,BYTE PTR [r14-0x2]       ; input[1], first load\r\n; ... calculate index 1, look up alphabet, write output[1]\r\nmovzx eax,BYTE PTR [r14-0x2]       ; reload input[1]\r\nmovzx esi,BYTE PTR [r14-0x1]       ; input[2], first load\r\n; ... calculate index 2, look up alphabet, write output[2]\r\nmovzx eax,BYTE PTR [r14-0x1]       ; reload input[2]\r\n```\r\n\r\nAfter, each input byte is loaded once, before the first output store:\r\n\r\n```asm\r\nmovzx eax,BYTE PTR [r14]           ; input[0], only load\r\n; ... advance pointers and update remaining length\r\nmovzx edx,BYTE PTR [r14-0x2]       ; input[1], only load\r\nshl   eax,0x10                    ; input[0] << 16\r\nshl   edx,0x8                     ; input[1] << 8\r\nor    eax,edx                     ; combine upper two bytes\r\nmovzx edx,BYTE PTR [r14-0x1]       ; input[2], only load\r\nmov   edi,eax\r\nshr   edi,0x12                    ; index 0\r\nor    edx,eax                     ; complete 24-bit packed value\r\n; ... calculate index 1 and look up alphabet[index 0]\r\nmov   BYTE PTR [rsi-0x4],dil       ; first output store\r\n```\r\n\r\nThe negative offsets refer to the current triplet because the loop advances the pointers early. The remaining indices come from register shifts and masks instead of further input loads. The first index does not need the third byte, so GCC calculates it before the final `or`. The old loop's two `cdqe` sign-extension instructions also disappear.\r\n\r\n| Per complete input triplet | Before | After |\r\n| --- | ---: | ---: |\r\n| Input-byte loads | 6 | 3 |\r\n| Alphabet-table loads | 4 | 4 |\r\n| Output-byte stores | 4 | 4 |\r\n| Total load instructions | 10 | 7 |\r\n| x86 instructions, including loop control | 34 | 28 |\r\n| Loop machine-code size | 128 bytes | 101 bytes |\r\n\r\nFor the benchmark's 256-byte input, the loop processes 85 triplets; the unchanged tail handles the last byte. That removes 255 input-load instructions and 510 x86 instructions per call. These are instruction counts, not cycle counts or reductions in bytes fetched from RAM.\r\n\r\n## Why the reloads?\r\n\r\nThe generated code is consistent with conservative alias analysis. Character-pointer accesses can alias, and allocation in the measured build goes through `Curl_cmalloc`, an indirect call that does not provide the compiler with the usual direct-`malloc` non-aliasing information.\r\n\r\nWithout proving that the output stores cannot affect the input, the compiler must preserve the original read-after-write behavior. Loading the triplet first makes reuse explicit in the C source. This explanation fits the disassembly; it was not verified with a compiler alias-analysis dump.\r\n\r\n## Measured result\r\n\r\nThe report measured 153.359 ns before and 120.116 ns after: **21.68% less time**, with the after binary faster in all five paired rounds. Measurements used a static GCC build on an Intel Core Ultra 7 165H under WSL2, pinned to CPU 2, with compilation paused. Allocation and free remained part of the workload.\r\n\r\nThose binaries included the report's other optimizations, so this is not an isolated measurement of this PR. Timings also shifted in unchanged routines. The disassembly demonstrates less work in this loop, but neither establishes a portable 22% gain nor attributes the timing improvement to individual instruction changes.\r\n\r\n## Safety and tests\r\n\r\nThe implementation still performs three individual byte reads, avoiding alignment requirements, endian dependence, and reading beyond the triplet. Input bounds, allocation size, alphabets, padding, and one-/two-byte tail handling are unchanged. The loop remains scalar.\r\n\r\nThe added `unit1302` coverage checks binary prefixes of lengths 1–256, round-trip correctness, output lengths, and NUL termination. Existing vectors cover both alphabets and all remainder lengths. Local test 1302, source-style checks, and whitespace checks passed; the runner emitted missing-helper warnings for `curlinfo` and the server executable. The full suite and cross-platform checks were not run for this patch.",
+      "patch_file": "prs/23017.json"
+    },
+    {
+      "id": "curl-23019",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 23019,
+      "url": "https://github.com/curl/curl/pull/23019",
+      "title": "mprintf: avoid scanning strings twice for unbounded %s",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-09-21T10:17:09Z",
+      "user": "cmeister2",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "acec0de3921d2e5eb435410dbe4b2171b5097e9a",
+      "additions": 9,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "## Summary\r\n\r\nAvoid scanning ordinary `%s` arguments twice in the shared formatter.\r\n\r\nWhen precision is unspecified, `out_string()` already knows the exact string length, normally from `strlen()`. Previously, it passed that length to `stream_zrun()`, which scanned the same bytes again before forwarding them to `stream_run()`.\r\n\r\nThis patch sends known-length strings directly to `stream_run()`. Explicit precision still uses the existing bounded, NUL-aware scan. A flow comment explains why the two paths differ. This is one shared change benefiting `snprintf`, `maprintf`, and `simpleformat`, not three separate optimizations.\r\n\r\n## Assembly justification\r\n\r\nThe September 21 benchmark report contains x86-64 disassembly from GCC 11.5.0 with `-O2 -DNDEBUG`. GCC inlined `out_string()` and `stream_zrun()` into `formatf()`. Both versions still call `strlen()` for nonempty strings with unspecified precision; the optimization removes the subsequent scan.\r\n\r\nBefore, the following consecutive instructions scan the string again. `r14` points to the string, `r10` holds its already-known length, and `r8` is the scan index:\r\n\r\n```asm\r\n40df8a: test  r10,r10                  ; zero length?\r\n40df8d: je    40e302                   ; use an empty run\r\n40df93: movzx eax,BYTE PTR [r14]        ; reread first byte after strlen\r\n40df97: xor   r8d,r8d                  ; scan index = 0\r\n40df9a: jmp   40dfae\r\n40df9c: nop   DWORD PTR [rax+0x0]       ; alignment\r\n40dfa0: add   r8,0x1\r\n40dfa4: cmp   r10,r8                   ; reached the already-known length?\r\n40dfa7: jbe   40dfb2                   ; proceed to output\r\n40dfa9: movzx eax,BYTE PTR [r14+r8*1]   ; reread next string byte\r\n40dfae: test  al,al                    ; redundant NUL check\r\n40dfb0: jne   40dfa0\r\n```\r\n\r\nAfter, a precision check bypasses that scan. In this version, `r11d` holds precision, `r13` holds length, and `r10` points to the string. The explicit-precision scan is omitted from this excerpt, as marked:\r\n\r\n```asm\r\n40df4c: cmp   r11d,0xffffffff          ; precision == -1?\r\n40df50: je    40df73                   ; yes: skip the scan\r\n; ... bounded, NUL-aware scan for explicit precision ...\r\n40df73: mov   r8,r13                   ; pass the known length\r\n40df76: mov   rcx,r10                  ; string\r\n40df79: mov   rdx,r14                  ; block-output callback\r\n40df7c: mov   rsi,rbx                  ; byte-output callback\r\n40df7f: mov   rdi,r15                  ; sink state\r\n40df82: mov   QWORD PTR [rsp+0x30],r9\r\n40df87: call  40c970                   ; existing stream_run()\r\n```\r\n\r\nFor each eligible string of length N, this removes N redundant byte reads, their NUL tests, and the associated scan-loop work, at the cost of a precision check. Width-only formats such as `%*s` also take this path: width does not impose a precision bound.\r\n\r\nThe initial length calculation and actual output copy remain. Fixed-buffer output still clamps writes to available space; allocating output retains its staging, size limits, and allocation handling. This does not introduce SIMD formatting or change the output callbacks.\r\n\r\n## Recorded performance\r\n\r\nThe report measured five alternating before/after rounds pinned to CPU 2 on an Intel Core Ultra 7 165H under WSL2, with compilation paused. Both binaries used upstream revision `1ac826a1e064b94000820adc9ac187421ce4f0db` and a static GCC 11.5.0 `-O2 -DNDEBUG` build. Benchmark programs and inputs were unchanged.\r\n\r\n| Benchmark | Before, ns/op | After, ns/op | Less time | Redundant byte reads removed/call |\r\n| --- | ---: | ---: | ---: | ---: |\r\n| `snprintf` | 327.640 | 306.017 | 6.60% | 23 |\r\n| `maprintf` | 187.262 | 157.936 | 15.66% | 32 |\r\n| `simpleformat` | 151.608 | 134.567 | 11.24% | 6 |\r\n\r\nEach workload was faster in four of five paired rounds. The removed reads correspond to unspecified-precision string arguments only; they exclude `strlen()`, output copying, and literal-format handling. Allocation and free remain included in the allocating benchmark.\r\n\r\nThese are the report's measurements, not a new benchmark of this branch. The measured candidate also included base64 changes, and timings shifted in unchanged routines. The disassembly demonstrates elimination of the redundant scan, but the exact percentages are not isolated to this PR or guaranteed across compilers and platforms.\r\n\r\n## Safety and validation\r\n\r\nExplicit precision is a bound, not necessarily the string length. Its scan must stop at either NUL or the precision limit, preserving both short terminated strings and non-NUL-terminated `%.*s` buffers. Width, padding, truncation, NULL-string handling, positional arguments, and `%n` accounting remain unchanged.\r\n\r\nThe build and existing formatter tests **557 and 1398** passed. Their coverage includes precision limits, non-NUL-terminated input, padding, truncation, and the `va_list` variants, including allocating output. `checksrc` and `git diff --check` also passed. No additional tests were needed for these already-covered behaviors; the full suite, sanitizers, and cross-platform checks were not run for this patch.",
+      "patch_file": "prs/23019.json"
+    },
+    {
+      "id": "curl-23021",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 23021,
+      "url": "https://github.com/curl/curl/pull/23021",
+      "title": "escape: use hex-pair lookup in curl_easy_escape",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-09-21T14:09:53Z",
+      "user": "cmeister2",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "acec0defbcb354bd88e5efd04725f49ed27fe2a0",
+      "additions": 106,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "## Summary\r\n\r\nUse a precomputed uppercase hex-pair table in `curl_easy_escape()`,\r\nreplacing two separate digit lookups with a two-byte `memcpy`.\r\n\r\nPreserve literal-run batching, allocation bounds, character classification,\r\nand NUL termination. The table adds 513 bytes before alignment. Using\r\n`memcpy` avoids alignment, aliasing, and endianness assumptions.\r\n\r\nAdd regression coverage for all 256 byte values, checking exact encoded\r\noutput and decoded bytes, length, and termination.\r\n\r\n## Performance\r\n\r\nSaved measurements of this encoder change against baseline\r\n`acec0de3921d2e5eb435410dbe4b2171b5097e9a`:\r\n\r\n- GCC 11.5.0, `-O2 -DNDEBUG`, static libcurl, Intel Core Ultra 7 165H, WSL2.\r\n- Five alternating baseline/candidate rounds, 3,000,000 calls each, pinned\r\n  to CPU 2. Allocation and freeing remain inside the timed loop.\r\n- Input contains all 256 byte values: 190 require escaping.\r\n- Median `urlencode`: **248.942 → 186.344 ns/call**, **25.15% less time**.\r\n  The candidate was faster in all five pairs.\r\n\r\nThese are earlier measurements, not a fresh benchmark of this branch.\r\n\r\n**Caveat:** The unchanged `urldecode` benchmark was **8.69% slower**\r\n(228.330 → 248.172 ns/call) in the same comparison. Code and table placement\r\nchanged, but the cause remains unproven. Further measurements on a native\r\nhost or with other compiler/link layouts are needed before claiming a net\r\nperformance improvement.\r\n\r\n## Generated Assembly\r\n\r\nGCC's x86-64 escaped-byte block, including loop-end control. Classification,\r\nliteral-run flushing, allocation, and termination are outside these excerpts.\r\nAt entry, `r12` holds the input byte and `rcx` points to its output slot.\r\n\r\n### Before\r\n\r\n```asm\r\nmov   eax,r12d\r\nand   r12d,0xf\r\nmov   BYTE PTR [rcx],0x25\r\nmov   rsi,rbx\r\nshr   al,0x4\r\nadd   rcx,0x3\r\nxor   r13d,r13d\r\nand   eax,0xf\r\nmovzx eax,BYTE PTR [rax+0x4b5cc0]\r\nmov   BYTE PTR [rcx-0x2],al\r\nmovzx eax,BYTE PTR [r12+0x4b5cc0]\r\nmov   BYTE PTR [rcx-0x1],al\r\ncmp   rbx,rbp\r\njne   40c389\r\n```\r\n\r\n### After\r\n\r\n```asm\r\nmov   BYTE PTR [rcx],0x25\r\nmov   rsi,rbx\r\nadd   rcx,0x3\r\nxor   r13d,r13d\r\nmovzx eax,WORD PTR [r12+r12*1+0x4b5640]\r\nmov   WORD PTR [rcx-0x2],ax\r\ncmp   rbx,rbp\r\njne   40c389\r\n```\r\n\r\nThe block shrinks from **14 to 8 instructions**, with one table load instead\r\nof two and two output stores instead of three. The two-byte `memcpy` is\r\ninlined; output size is unchanged. These are instruction counts, not cycles.\r\n\r\n## Validation\r\n\r\n- Local Debug build and tests **543, 1396, 1560, and 1675** pass.\r\n- Source-style and patch-whitespace checks pass.\r\n- Full suite, fresh release benchmarks, and sanitizers were not run for this branch.",
+      "patch_file": "prs/23021.json"
+    },
+    {
+      "id": "curl-23206",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 23206,
+      "url": "https://github.com/curl/curl/pull/23206",
+      "title": "GHA/linux: bump Slackware container, re-enable SSL via GnuTLS",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-01T07:38:46Z",
+      "user": "vszakats",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "c281e5cc6ca4d858dba118505d9987330d4cc161",
+      "additions": 5,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "vibe-coded"
+        ],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": true,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or vibe-coding language outside the project template."
+      },
+      "body": "Container still lacks modern OpenSSL; to make this CI job more useful,\r\nuse GnuTLS as a TLS backend.\r\n\r\nRef: https://hub.docker.com/layers/andy5995/slackware-build-essential/15.0/images/sha256-c5aeede463b4a52b5f4650078418718f2447bdb23f9a4cac0d5fb262e7b8dc84\r\n\r\n---\r\n\r\nSome packages removed, vibe-coded commits, still lacks modern OpenSSL.\r\n\r\n~~Or perhaps drop? For a 3 minute job, it seems to offer IMO limited usefulness\r\ndue to lack of SSL. There isn't much development happening upstream besides\r\na few Claude and Dependabot commits.~~\r\n",
+      "patch_file": "prs/23206.json"
+    },
+    {
+      "id": "curl-23349",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "issue",
+      "number": 23349,
+      "url": "https://github.com/curl/curl/issues/23349",
+      "title": "X509 cert store cache never engages on builds with `CURL_CA_PATH` defined",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-11T04:35:47Z",
+      "user": "nigolatesla00",
+      "cohort": "slop_search",
+      "runnable": false,
+      "head_sha": null,
+      "additions": null,
+      "changed_files": null,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "ai slop"
+        ],
+        "tool_terms": [],
+        "slop": true,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or vibe-coding language outside the project template."
+      },
+      "body": "### I did this\n\nI have an app that uses the multi interface to send requests to 100–200 distinct hosts. For context, I was building curl myself with the BoringSSL backend and was using the multi interface with `CURLMOPT_MAXCONNECTS = 512`. Since I was just playing around at the time, I was using `CURLOPT_SSL_VERIFYPEER = 0`.\n\nI was seeing stable memory usage of 10–20 MB throughout the run. Then I set `CURLOPT_SSL_VERIFYPEER = 1` back and added a CA using `CURLOPT_CAINFO`, and memory usage went up to ~200 MB with the same workflow as before. I then asked AI to debug it for me, and it found out that this happens because curl only caches the CA bundle when it comes from `CURL_CA_PATH` (which is picked up automatically when building curl) and never checks for cases like `CURLOPT_CAINFO`.\n\nBelow is the AI slop version of this bug report (there's a minimal reproducer there):\n\n<details>\n<summary>Click to expand</summary>\n\n## Summary\n\nOn builds where `CURL_CA_PATH` is defined (effectively every OpenSSL-based\nLinux distro build), libcurl **re-parses the entire CA bundle into a private\n`X509_STORE` on every new TLS connection**, because:\n\n1. `vtls/vtls_config.c` (`Curl_ssl_filter_config_tmp_init()`) auto-fills the\n   configure-time default `CURL_CA_PATH` into `ssl_filter_config.CApath`\n   whenever the application has not called `CURLOPT_CAPATH` — *regardless of\n   whether the application supplied its own CA via `CURLOPT_CAINFO` /\n   `CURLOPT_CAINFO_BLOB` or relies on the build default CAfile*; and\n2. `vtls/openssl.c` (`Curl_ssl_setup_x509_store()`) only caches the parsed\n   `X509_STORE` in the multi handle if the config \"comes exclusively from a\n   CAfile\", requiring `conn_config->CApath == NULL`.\n\nBecause the autofill makes `CApath` non-NULL for every connection, the cache\ncriteria can never be satisfied, and the X509 store cache — added specifically\nto eliminate per-connection bundle parsing (commit `3c16697ebd`, \"openssl:\nreduce CA certificate bundle reparsing by caching\", curl 7.86.0, closes #9620)\n— is silently dead on default builds.\n\n## Impact\n\n- **Performance**: every connection re-reads and re-parses the full CA bundle\n  (the Mozilla bundle is ~120–150 certificates). With connection pools\n  holding hundreds of connections, this is the dominant setup cost.\n- **Memory**: each idle connection retains its own parsed bundle\n  (~500 KB/connection for a 189 KB PEM with 121 certs, measured with\n  valgrind/massif). An application with 512 pooled connections to 512\n  distinct hosts was measured at **562 MB RSS**; with the cache actually\n  working, the same workload measured **52.6 MB RSS** (10.7x lower). The\n  difference was almost entirely per-connection `X509`/`ASN1`/`RSA`\n  allocations under `PEM_X509_INFO_read_bio`.\n- **Not a security/correctness bug**: certificate verification always used a\n  correct CA set; only redundancy is wasted.\n\n## Reproduce\n\nThe store is cached in the **multi handle**, so the repro must use a single\nmulti with multiple concurrent connections:\n\n```c\n/* repro.c — two transfers, one multi handle */\n#include <string.h>\n#include <curl/curl.h>\n\nstatic size_t write_cb(void *p, size_t s, size_t n, void *u) {\n    (void)p; (void)u; return s * n;\n}\n\nint main(void) {\n    const char *urls[2] = {\"https://example.com/\", \"https://httpbin.org/get\"};\n    CURL *e[2];\n    CURLM *m = curl_multi_init();\n    int still = 0, i;\n\n    for(i = 0; i < 2; i++) {\n        e[i] = curl_easy_init();\n        curl_easy_setopt(e[i], CURLOPT_URL, urls[i]);\n        curl_easy_setopt(e[i], CURLOPT_WRITEFUNCTION, write_cb);\n        curl_easy_setopt(e[i], CURLOPT_CAINFO,\n                         \"/etc/ssl/certs/ca-certificates.crt\");\n        curl_multi_add_handle(m, e[i]);\n    }\n\n    do {\n        curl_multi_perform(m, &still);\n        if(still)\n            curl_multi_poll(m, NULL, 0, 1000, NULL);\n        do {\n            int left;\n            CURLMsg *msg = curl_multi_info_read(m, &left);\n            if(!msg) break;\n            if(msg->msg == CURLMSG_DONE)\n                curl_multi_remove_handle(m, msg->easy_handle);\n        } while(1);\n    } while(still);\n\n    for(i = 0; i < 2; i++)\n        curl_easy_cleanup(e[i]);\n    curl_multi_cleanup(m);\n    return 0;\n}\n```\n\nCount how often the CA bundle file is opened:\n\n```\n$ gcc repro.c -lcurl -o repro\n$ strace -f -e trace=openat -o trace.log ./repro\n$ grep -c \"openat.*ca-certificates.crt\" trace.log\n2                       # actual: parsed once per connection\n```\n\nExpected: **1** — the second connection should reuse the cached store from\nthe shared multi handle.\n\n## Verified on\n\n| Build | CA set by app | Bundle parses (2 conns, 1 multi) |\n|---|---|---|\n| curl master 8.23.0-DEV (2026-10-11, CMake defaults: `CURL_CA_PATH=\"/etc/ssl/certs\"`) | `CURLOPT_CAINFO` | **2** |\n| curl master 8.23.0-DEV, + fix option 2 below | `CURLOPT_CAINFO` | **1** |\n| curl master 8.23.0-DEV, + fix option 2 below | default (autofilled CAfile) | **2** (option 2 does not cover this case) |\n| Ubuntu curl 8.18.0 (OpenSSL/3.5.5, stock distro build) | `CURLOPT_CAINFO` | **2** |\n| Ubuntu curl 8.18.0 (stock distro build) | default | **2** |\n\n## Root cause\n\n`lib/vtls/vtls_config.c`, `Curl_ssl_filter_config_tmp_init()` — autofill only\nchecks whether *this particular option* was customized by the app:\n\n```c\n#ifdef CURL_CA_PATH\n    if(!sslc->custom_capath && !CURL_EASY_STR(data, STRING_SSL_CAPATH)) {\n      result = Curl_setstropt(data, STRING_SSL_CAPATH, CURL_CA_PATH);\n```\n\n`lib/vtls/openssl.c`, `Curl_ssl_setup_x509_store()` — cache requires the\nconfig to come exclusively from a CAfile:\n\n```c\n  cache_criteria_met = (data->set.ssl_ca_cache_timeout != 0) &&\n    conn_config->verifypeer &&\n    !conn_config->CApath &&          /* <-- always false after autofill */\n    !conn_config->ca_info_blob &&\n    !conn_config->CRLfile &&\n    !conn_config->native_ca_store;\n```\n\nRuntime confirmation on master (temporary `infof` added to the criteria\nevaluation, two transfers on one multi):\n\n```\n* x509cache: met=0 timeout=86400 verifypeer=1 CApath=0x5dfc61940510 blob=(nil) ...\n* x509cache: met=0 timeout=86400 verifypeer=1 CApath=0x5dfc619411e0 blob=(nil) ...\n```\n\n(the same `CURLOPT_CAINFO` on every handle; `CApath` autofilled per\nconnection, criteria never met). With the autofill suppressed, the same\nrun shows `met=1`, the second connection picks up the cached store, and the\nbundle is read once.\n\nNote `CURLOPT_CAINFO_BLOB` is excluded from caching for a separate, sensible\nreason (blobs have no comparable identity for the cache key, and a\n`NULL == NULL` CAfile match would falsely equate *different* blobs). This\nreport is about the `CApath` autofill defeating the cache — including the\ndefault-config case where the app relies on the build default CAfile, which\nis the common case.\n\n## Suggested fixes\n\nTwo possible directions:\n\n1. **Include `CApath` in the cache identity** (recommended — no behavior\n   change, covers all cases): store `CApath` alongside `CAfile` in\n   `ossl_x509_share`, compare both in `ossl_cached_x509_store_different()`,\n   and drop the `!conn_config->CApath` term from the criteria. The store\n   remains shared for connections whose `(CAfile, CApath)` pair matches —\n   which is the normal case, since both come from the same configure-time\n   defaults. The reason for the strict exclusivity (CA directory contents can\n   change without the path string changing) can be handled by the existing\n   `CURLOPT_CA_CACHE_TIMEOUT` expiry, same as it already handles a CAfile\n   whose contents change on disk.\n2. **Skip the `CURL_CA_PATH` autofill when the app supplied any custom CA**\n   (small behavior change): mirror the existing\n   `USE_APPLE_SECTRUST`/`CURL_CA_NATIVE` guard:\n\n   ```c\n   if(!sslc->custom_capath && !sslc->custom_cafile && !sslc->custom_cablob &&\n      !CURL_EASY_STR(data, STRING_SSL_CAPATH)) {\n   ```\n\n   Applications that set `CURLOPT_CAINFO` then verify exclusively against\n   the CA they specified (arguably matching intent), and the cache engages.\n   Verified working on master for the app-supplied-CAINFO case (table above),\n   but it does not help the default-CA configuration, which is why option 1\n   is preferred.\n\n## Environment\n\n- curl master 8.23.0-DEV (2026-10-11), CMake default build, OpenSSL/3.5.5,\n  `CURL_CA_PATH=\"/etc/ssl/certs\"` — reproduced and root-caused with runtime\n  instrumentation\n- Ubuntu stock curl 8.18.0 (libcurl/8.18.0 OpenSSL/3.5.5) — reproduced\n\n</details>\n\n\n### I expected the following\n\nProper CA bundle reuse.\n\n### curl/libcurl version\n\ncurl 8.23.0-DEV (b8f71d6e1199701352c498467c17847237d1c43e)\n\n### operating system\n\nLinux localhost 7.0.0-1012 #12-Ubuntu SMP PREEMPT Thu Aug  6 19:23:26 UTC 2026 x86_64 GNU/Linux                                       ",
+      "patch_file": null
+    },
+    {
+      "id": "curl-23564",
+      "source": "github",
+      "repo": "curl/curl",
+      "kind": "pull_request",
+      "number": 23564,
+      "url": "https://github.com/curl/curl/pull/23564",
+      "title": "GHA: Bump the pip-dependencies group across 2 directories with 4 updates",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-22T14:38:33Z",
+      "user": "dependabot[bot]",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "2acd40fe737cdf5ed0be443a9e77fb5c7db7059a",
+      "additions": 4,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "ai slop"
+        ],
+        "tool_terms": [],
+        "slop": true,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or vibe-coding language outside the project template."
+      },
+      "body": "Bumps the pip-dependencies group with 1 update in the /.github/scripts directory: [ruff](https://github.com/astral-sh/ruff).\nBumps the pip-dependencies group with 3 updates in the /tests directory: [cryptography](https://github.com/pyca/cryptography), [filelock](https://github.com/tox-dev/py-filelock) and [websockets](https://github.com/python-websockets/websockets).\n\nUpdates `ruff` from 0.17.0 to 0.17.1\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/astral-sh/ruff/releases\">ruff's releases</a>.</em></p>\n<blockquote>\n<h2>0.17.1</h2>\n<h2>Release Notes</h2>\n<p>Released on 2026-10-15.</p>\n<h3>Preview features</h3>\n<ul>\n<li>[<code>pycodestyle</code>] Don't treat <code>None</code>, <code>True</code>, or <code>False</code> as keywords (<code>E271</code>-<code>E274</code>) (<a href=\"https://redirect.github.com/astral-sh/ruff/pull/29322\">#29322</a>)</li>\n</ul>\n<h3>Bug fixes</h3>\n<ul>\n<li>Fix dedent with multiple leading comments (<a href=\"https://redirect.github.com/astral-sh/ruff/pull/29382\">#29382</a>)</li>\n<li>[<code>flake8-pyi</code>] Detect legacy positional-only parameters in <code>__new__</code> methods (<code>PYI063</code>) (<a href=\"https://redirect.github.com/astral-sh/ruff/pull/28502\">#28502</a>)</li>\n<li>[<code>flake8-pyi</code>] Fix false positives on quoted annotations (<code>PYI036</code>) (<a href=\"https://redirect.github.com/astral-sh/ruff/pull/29274\">#29274</a>)</li>\n<li>[<code>perflint</code>] Avoid invalid comprehension suggestions (<code>PERF401</code>, <code>PERF403</code>) (<a href=\"https://redirect.github.com/astral-sh/ruff/pull/29366\">#29366</a>)</li>\n</ul>\n<h3>Rule changes</h3>\n<ul>\n<li>Treat more <code>collections</code> and <code>weakref</code> containers as mutable (<a href=\"https://redirect.github.com/astral-sh/ruff/pull/29213\">#29213</a>)</li>\n</ul>\n<h3>Documentation</h3>\n<ul>\n<li>[<code>flake8-import-conventions</code>] Update default and example <code>aliases</code> (<a href=\"https://redirect.github.com/astral-sh/ruff/pull/29333\">#29333</a>)</li>\n</ul>\n<h3>Contributors</h3>\n<ul>\n<li><a href=\"https://github.com/fixfon\"><code>@​fixfon</code></a></li>\n<li><a href=\"https://github.com/mmaxjr\"><code>@​mmaxjr</code></a></li>\n<li><a href=\"https://github.com/joshuavetos\"><code>@​joshuavetos</code></a></li>\n<li><a href=\"https://github.com/nekomario28\"><code>@​nekomario28</code></a></li>\n<li><a href=\"https://github.com/ntBre\"><code>@​ntBre</code></a></li>\n<li><a href=\"https://github.com/shan3520\"><code>@​shan3520</code></a></li>\n</ul>\n<h2>Install ruff 0.17.1</h2>\n<h3>Install prebuilt binaries via shell script</h3>\n<pre lang=\"sh\"><code>curl --proto '=https' --tlsv1.2 -LsSf https://releases.astral.sh/github/ruff/releases/download/0.17.1/ruff-installer.sh | sh\n</code></pre>\n<h3>Install prebuilt binaries via powershell script</h3>\n<pre lang=\"sh\"><code>powershell -ExecutionPolicy Bypass -c &quot;irm https://releases.astral.sh/github/ruff/releases/download/0.17.1/ruff-installer.ps1 | iex&quot;\n</code></pre>\n<h2>Download ruff 0.17.1</h2>\n<p>|  File  | Platform | Checksum |</p>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md\">ruff's changelog</a>.</em></p>\n<blockquote>\n<h2>0.17.1</h2>\n<p>Released on 2026-10-15.</p>\n<h3>Preview features</h3>\n<ul>\n<li>[<code>pycodestyle</code>] Don't treat <code>None</code>, <code>True</code>, or <code>False</code> as keywords (<code>E271</code>-<code>E274</code>) (<a href=\"https://redirect.github.com/astral-sh/ruff/pull/29322\">#29322</a>)</li>\n</ul>\n<h3>Bug fixes</h3>\n<ul>\n<li>Fix dedent with multiple leading comments (<a href=\"https://redirect.github.com/astral-sh/ruff/pull/29382\">#29382</a>)</li>\n<li>[<code>flake8-pyi</code>] Detect legacy positional-only parameters in <code>__new__</code> methods (<code>PYI063</code>) (<a href=\"https://redirect.github.com/astral-sh/ruff/pull/28502\">#28502</a>)</li>\n<li>[<code>flake8-pyi</code>] Fix false positives on quoted annotations (<code>PYI036</code>) (<a href=\"https://redirect.github.com/astral-sh/ruff/pull/29274\">#29274</a>)</li>\n<li>[<code>perflint</code>] Avoid invalid comprehension suggestions (<code>PERF401</code>, <code>PERF403</code>) (<a href=\"https://redirect.github.com/astral-sh/ruff/pull/29366\">#29366</a>)</li>\n</ul>\n<h3>Rule changes</h3>\n<ul>\n<li>Treat more <code>collections</code> and <code>weakref</code> containers as mutable (<a href=\"https://redirect.github.com/astral-sh/ruff/pull/29213\">#29213</a>)</li>\n</ul>\n<h3>Documentation</h3>\n<ul>\n<li>[<code>flake8-import-conventions</code>] Update default and example <code>aliases</code> (<a href=\"https://redirect.github.com/astral-sh/ruff/pull/29333\">#29333</a>)</li>\n</ul>\n<h3>Contributors</h3>\n<ul>\n<li><a href=\"https://github.com/fixfon\"><code>@​fixfon</code></a></li>\n<li><a href=\"https://github.com/mmaxjr\"><code>@​mmaxjr</code></a></li>\n<li><a href=\"https://github.com/joshuavetos\"><code>@​joshuavetos</code></a></li>\n<li><a href=\"https://github.com/nekomario28\"><code>@​nekomario28</code></a></li>\n<li><a href=\"https://github.com/ntBre\"><code>@​ntBre</code></a></li>\n<li><a href=\"https://github.com/shan3520\"><code>@​shan3520</code></a></li>\n</ul>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/astral-sh/ruff/commit/4683270c69cbdaf6ad64d3f983fc458d5a43b41f\"><code>4683270</code></a> Bump version to 0.17.1 (<a href=\"https://redirect.github.com/astral-sh/ruff/issues/29420\">#29420</a>)</li>\n<li><a href=\"https://github.com/astral-sh/ruff/commit/3514027edb659bbc3c787d355be9d130e5587f15\"><code>3514027</code></a> [ty] Update typing conformance suite pin (<a href=\"https://redirect.github.com/astral-sh/ruff/issues/29417\">#29417</a>)</li>\n<li><a href=\"https://github.com/astral-sh/ruff/commit/829455624d78f2e89669e4b4b14af2b96abdb1ae\"><code>8294556</code></a> Update referenced PR security-review workflow (<a href=\"https://redirect.github.com/astral-sh/ruff/issues/29237\">#29237</a>)</li>\n<li><a href=\"https://github.com/astral-sh/ruff/commit/d1e1b1f69b511df4385f64b510eeec4da01c1a0e\"><code>d1e1b1f</code></a> [ty] Preserve recursive aliases when rebuilding intersections (<a href=\"https://redirect.github.com/astral-sh/ruff/issues/29057\">#29057</a>)</li>\n<li><a href=\"https://github.com/astral-sh/ruff/commit/93526150df078af7dd8fc4226cdcc469539d2001\"><code>9352615</code></a> [<code>perflint</code>] Avoid invalid comprehension suggestions (<code>PERF401</code>, <code>PERF403</code>) (...</li>\n<li><a href=\"https://github.com/astral-sh/ruff/commit/83a3afc3156d73ae4296f3fa74ede28e4c72bfcd\"><code>83a3afc</code></a> Fix dedent with multiple leading comments (<a href=\"https://redirect.github.com/astral-sh/ruff/issues/29382\">#29382</a>)</li>\n<li><a href=\"https://github.com/astral-sh/ruff/commit/b42a8734410230f4529151782cae951b99bed858\"><code>b42a873</code></a> [ty] Clarify object attribute write-contract rationale (<a href=\"https://redirect.github.com/astral-sh/ruff/issues/29384\">#29384</a>)</li>\n<li><a href=\"https://github.com/astral-sh/ruff/commit/d01678ebf594c97a7767d4372061c1f80ae5b5bb\"><code>d01678e</code></a> [ty] Clarify object attribute write-contract rationale (<a href=\"https://redirect.github.com/astral-sh/ruff/issues/29384\">#29384</a>)</li>\n<li><a href=\"https://github.com/astral-sh/ruff/commit/355b42a7719d8a555e3ee50c89848b42d8a11eb5\"><code>355b42a</code></a> [ty] Avoid writable override contracts from object (<a href=\"https://redirect.github.com/astral-sh/ruff/issues/29373\">#29373</a>)</li>\n<li><a href=\"https://github.com/astral-sh/ruff/commit/e26e6d2a54ac2c5e1f5b1945042de3ff3885bf8e\"><code>e26e6d2</code></a> [ty] Collect intersection inference through constraint relations (<a href=\"https://redirect.github.com/astral-sh/ruff/issues/28677\">#28677</a>)</li>\n<li>Additional commits viewable in <a href=\"https://github.com/astral-sh/ruff/compare/0.17.0...0.17.1\">compare view</a></li>\n</ul>\n</details>\n<br />\n\nUpdates `cryptography` from 50.0.1 to 50.0.2\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst\">cryptography's changelog</a>.</em></p>\n<blockquote>\n<p>50.0.2 - 2026-09-30</p>\n<pre><code>\n* Updated Windows, macOS, and Linux wheels to be compiled with OpenSSL 4.0.3.\n* Added ``abi3.abi3t`` wheels for free-threaded CPython 3.15 and later.\n* Updated to PyO3 0.29.2, which fixes building ``cryptography`` on Cygwin and\n  MSYS2.\n<p>.. _v50-0-1:\n</code></pre></p>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/pyca/cryptography/commit/4dda5c7fe4ae71b8925f2551910a0ef959df9c7a\"><code>4dda5c7</code></a> [50.0.x] Bump for 50.0.2 release + changelog (<a href=\"https://redirect.github.com/pyca/cryptography/issues/15733\">#15733</a>)</li>\n<li><a href=\"https://github.com/pyca/cryptography/commit/70c881cd7ea97d38df09f57c1117470cd1a5a2f7\"><code>70c881c</code></a> [50.0.x] Bump pyo3 to 0.29.2 (<a href=\"https://redirect.github.com/pyca/cryptography/issues/15731\">#15731</a>)</li>\n<li><a href=\"https://github.com/pyca/cryptography/commit/a8c45c449b8d29908a14561afd45fee8bf27d044\"><code>a8c45c4</code></a> [50.0.x] Build abi3.abi3t wheels for CPython 3.15+ (<a href=\"https://redirect.github.com/pyca/cryptography/issues/15496\">#15496</a>) (<a href=\"https://redirect.github.com/pyca/cryptography/issues/15732\">#15732</a>)</li>\n<li>See full diff in <a href=\"https://github.com/pyca/cryptography/compare/50.0.1...50.0.2\">compare view</a></li>\n</ul>\n</details>\n<br />\n\nUpdates `filelock` from 3.32.7 to 4.0.12\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/tox-dev/py-filelock/releases\">filelock's releases</a>.</em></p>\n<blockquote>\n<h2>4.0.12</h2>\n<ul>\n<li>Fix read-lock acquisition on SQLite versions older than 3.33.0 by using <code>sqlite_master</code> for the schema probe. <a href=\"https://redirect.github.com/tox-dev/py-filelock/issues/769\">#769</a></li>\n</ul>\n<p><a href=\"https://pypi.org/project/filelock/4.0.12/\">PyPI release</a></p>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/tox-dev/filelock/compare/4.0.11...4.0.12\">https://github.com/tox-dev/filelock/compare/4.0.11...4.0.12</a></p>\n<h2>4.0.11</h2>\n<ul>\n<li><code>ReadWriteLock</code> and <code>AsyncReadWriteLock</code> use a validated private hard link when <code>/dev/fd</code> has no entry for the\ndatabase descriptor, supporting NetBSD's static descriptor directory beyond descriptor 63. The temporary location must\nshare a filesystem with the database. The symlink refusal test accepts NetBSD's error wording.</li>\n</ul>\n<p><a href=\"https://pypi.org/project/filelock/4.0.11/\">PyPI release</a></p>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/tox-dev/filelock/compare/4.0.10...4.0.11\">https://github.com/tox-dev/filelock/compare/4.0.10...4.0.11</a></p>\n<h2>4.0.10</h2>\n<ul>\n<li>Reusing a singleton <code>AsyncFileLock</code> with another <code>loop</code>, <code>executor</code> or <code>run_in_executor</code>, or a singleton\n<code>SoftFileLease</code> with another <code>lease_duration</code>, <code>heartbeat_interval</code> or <code>on_compromise</code>, now raises\n<code>ValueError</code> instead of returning the lock with its original options. <a href=\"https://redirect.github.com/tox-dev/py-filelock/issues/765\">#765</a></li>\n</ul>\n<p><a href=\"https://pypi.org/project/filelock/4.0.10/\">PyPI release</a></p>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/tox-dev/filelock/compare/4.0.9...4.0.10\">https://github.com/tox-dev/filelock/compare/4.0.9...4.0.10</a></p>\n<h2>4.0.9</h2>\n<ul>\n<li><code>ReadWriteLock</code> and <code>AsyncReadWriteLock</code> close the descriptor that checks the database path once SQLite has\nconnected, so on PyPy a dropped lock leaves no descriptor open until garbage collection runs. <a href=\"https://redirect.github.com/tox-dev/py-filelock/issues/763\">#763</a></li>\n<li><code>ReadWriteLock</code> and <code>AsyncReadWriteLock</code> refuse a symlink at the database path instead of following it, so a\nuser who can create names in a shared lock directory cannot point the lock at another file (GHSA-j8f7-rjxc-mr56).</li>\n</ul>\n<p><a href=\"https://pypi.org/project/filelock/4.0.9/\">PyPI release</a></p>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/tox-dev/filelock/compare/4.0.8...4.0.9\">https://github.com/tox-dev/filelock/compare/4.0.8...4.0.9</a></p>\n<h2>4.0.8</h2>\n<ul>\n<li><code>ReadWriteLock.release()</code> and <code>SoftReadWriteLock.release()</code> from a thread that does not hold the write lock now\nraise <code>RuntimeError</code> instead of dropping the holder's lock and letting a second writer in. <a href=\"https://redirect.github.com/tox-dev/py-filelock/issues/761\">#761</a></li>\n</ul>\n<p><a href=\"https://pypi.org/project/filelock/4.0.8/\">PyPI release</a></p>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/tox-dev/filelock/compare/4.0.7...4.0.8\">https://github.com/tox-dev/filelock/compare/4.0.7...4.0.8</a></p>\n<h2>4.0.7</h2>\n<ul>\n<li>File locks now raise <code>ValueError</code> at construction when <code>mode</code> denies the owner read or write, such as\n<code>mode=0o444</code>, instead of failing on a later acquire and staying broken until someone deletes the lock file. <a href=\"https://redirect.github.com/tox-dev/py-filelock/issues/760\">#760</a></li>\n</ul>\n<p><a href=\"https://pypi.org/project/filelock/4.0.7/\">PyPI release</a></p>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/tox-dev/filelock/compare/4.0.6...4.0.7\">https://github.com/tox-dev/filelock/compare/4.0.6...4.0.7</a></p>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/tox-dev/filelock/blob/main/docs/changelog.rst\">filelock's changelog</a>.</em></p>\n<blockquote>\n<p>###########\nChangelog\n###########</p>\n<p>.. towncrier-draft-entries:: Unreleased</p>\n<p>.. towncrier release notes start</p>\n<hr />\n<p>4.2.4 (2026-10-19)</p>\n<hr />\n<ul>\n<li>Keep GitHub Release notes free of extra blank lines while retaining the PyPI and version comparison links. :pr:<code>863</code></li>\n</ul>\n<hr />\n<p>4.2.3 (2026-10-19)</p>\n<hr />\n<ul>\n<li>Creating a lock on a Python 3.15 interpreter without <code>types.LazyImportType</code> no longer triggers <code>AttributeError</code> at\nexit. :pr:<code>860</code></li>\n<li>Handle <code>EFTYPE</code> when a no-follow open refuses a symlink in a soft reader/writer lock's protocol tree, so heartbeat\nreports lost ownership rather than a transient refresh error.</li>\n</ul>\n<hr />\n<p>4.2.2 (2026-10-18)</p>\n<hr />\n<ul>\n<li>Fix a lock on a relative path that stayed held after a later <code>with lock:</code> ended, when an earlier <code>acquire()</code> had\nfailed because the working directory no longer exists. That call still raises :class:<code>FileNotFoundError</code>, and it now\nleaves the lock's hold count unchanged. :pr:<code>856</code></li>\n</ul>\n<hr />\n<p>4.2.1 (2026-10-17)</p>\n<hr />\n<ul>\n<li>On a singleton wrapper, :meth:<code>AsyncReadWriteLock.close() &lt;filelock.AsyncReadWriteLock.close&gt;</code> and\n:meth:<code>AsyncSoftReadWriteLock.close() &lt;filelock.AsyncSoftReadWriteLock.close&gt;</code> end only the holds that tasks acquired\nthrough that wrapper. A reader that arrives during <code>close()</code> gets the closed error instead of joining the ending hold.\nAfter synchronous code closes or force-releases the shared lock, the wrappers refuse to admit readers into the ended\nhold, and <code>close()</code> on such a wrapper returns.\nClosing one wrapper no longer ends a task's nested hold taken through another wrapper on the same path. :pr:<code>832</code></li>\n<li>:class:<code>~filelock.ReadWriteLock</code> locks again after a <code>release()</code> that an exception from a signal handler interrupted.\nThe async read-write wrappers stop admitting readers into such a level. The async read-write locks forget a hold whose\nbackend release failed after the backend let go, and they free the memory of each acquire that times out or is canceled.\n:class:<code>~filelock.AsyncFileLock</code> returns from <code>release()</code> after a few hundred acquires gave up behind a waiting one. An exception from a signal handler delivered while an :class:<code>~filelock.AsyncFileLock</code> call joins\nits queue no longer blocks every later call on that lock. :pr:<code>833</code></li>\n<li>Fix :class:<code>~filelock.ReadWriteLock</code> acting on <code>-journal</code>, <code>-wal</code> or <code>-shm</code> files another process puts beside its\ndatabase: a write could land in another file, a reader could get in beside a writer, and an acquire could fail. SQLite\nnow opens the database by name only in a directory no other account can write, and through a private hard link\nelsewhere. On Windows the directory's access control list decides. Where hard links are unavailable, keep the database</li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/tox-dev/filelock/commit/09b36c4741b0062df7c7cc149ed415c255034409\"><code>09b36c4</code></a> Release 4.0.12</li>\n<li><a href=\"https://github.com/tox-dev/filelock/commit/33e2d11b61894d7f71f2211cfdae9550e85029f4\"><code>33e2d11</code></a> fix: support older SQLite read locks</li>\n<li><a href=\"https://github.com/tox-dev/filelock/commit/822d32b54d70027311e2190a86cb7f3c58439be4\"><code>822d32b</code></a> Release 4.0.11</li>\n<li><a href=\"https://github.com/tox-dev/filelock/commit/47f036daea8f54e7b9b54b067e3122a05c4f5662\"><code>47f036d</code></a> fix(read-write): handle NetBSD fd limits</li>\n<li><a href=\"https://github.com/tox-dev/filelock/commit/2e0abe5b915fbadbb1b21bc094800feb7e2b8e09\"><code>2e0abe5</code></a> docs: select an existing tox environment in contributing guide (<a href=\"https://redirect.github.com/tox-dev/py-filelock/issues/767\">#767</a>)</li>\n<li><a href=\"https://github.com/tox-dev/filelock/commit/1f0632b6bc047cf3481bbe740475be813013208e\"><code>1f0632b</code></a> Release 4.0.10</li>\n<li><a href=\"https://github.com/tox-dev/filelock/commit/c9c65abadf1832d22e5901d6cd0e7010bd00db5c\"><code>c9c65ab</code></a> 🐛 fix(singleton): reject conflicting async and lease options (<a href=\"https://redirect.github.com/tox-dev/py-filelock/issues/765\">#765</a>)</li>\n<li><a href=\"https://github.com/tox-dev/filelock/commit/bc2405b882657b649fff86fe86ddd7883510393f\"><code>bc2405b</code></a> ♻️ refactor(util): test helpers via public locks (<a href=\"https://redirect.github.com/tox-dev/py-filelock/issues/764\">#764</a>)</li>\n<li><a href=\"https://github.com/tox-dev/filelock/commit/7b00bb81d41039f05173fb67876db196b9d8b007\"><code>7b00bb8</code></a> Release 4.0.9</li>\n<li><a href=\"https://github.com/tox-dev/filelock/commit/49446241829b40fa2d156cae58a8433fec57f791\"><code>4944624</code></a> 🐛 fix(read-write): close db fd after connect (<a href=\"https://redirect.github.com/tox-dev/py-filelock/issues/763\">#763</a>)</li>\n<li>Additional commits viewable in <a href=\"https://github.com/tox-dev/py-filelock/compare/3.32.7...4.0.12\">compare view</a></li>\n</ul>\n</details>\n<br />\n\nUpdates `websockets` from 17.1 to 17.2\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/python-websockets/websockets/releases\">websockets's releases</a>.</em></p>\n<blockquote>\n<h2>17.2</h2>\n<p>See <a href=\"https://websockets.readthedocs.io/en/stable/project/changelog.html\">https://websockets.readthedocs.io/en/stable/project/changelog.html</a> for details.</p>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/python-websockets/websockets/commit/a1664f4c5a7c71bf5391ad0c3c518e431f6261fb\"><code>a1664f4</code></a> Release version 17.2.</li>\n<li><a href=\"https://github.com/python-websockets/websockets/commit/d2060d803d131ed535b55e0837e3ee60eb0f7716\"><code>d2060d8</code></a> Test against latest PyPy.</li>\n<li><a href=\"https://github.com/python-websockets/websockets/commit/2af0aff9950903f0957803d47eabdbbc999eb648\"><code>2af0aff</code></a> Bump pypa/cibuildwheel from 4.2.0 to 4.2.1</li>\n<li><a href=\"https://github.com/python-websockets/websockets/commit/603dd9830d23a35fbc356354d36c8b6ddc5f352c\"><code>603dd98</code></a> Document how to wait for clients to disconnect.</li>\n<li><a href=\"https://github.com/python-websockets/websockets/commit/f78b0b315bd53cb94e4d5b4e628af157e28695a7\"><code>f78b0b3</code></a> mypy is getting smarter.</li>\n<li><a href=\"https://github.com/python-websockets/websockets/commit/32504a802e6aab619f4beb33c40b65ea8d7f027b\"><code>32504a8</code></a> Prevent suprious log when proxy rejects connection.</li>\n<li><a href=\"https://github.com/python-websockets/websockets/commit/7db6ba3ead2bcfa7c914a9dfdba313b82a64b5dd\"><code>7db6ba3</code></a> Decode credentials in WebSocket and proxy URIs.</li>\n<li><a href=\"https://github.com/python-websockets/websockets/commit/a591d620fd002a8800e840c7a3fdf556ac0e5ec6\"><code>a591d62</code></a> Tighten heuristics for representing control frames.</li>\n<li><a href=\"https://github.com/python-websockets/websockets/commit/5b63a4c34da3735d57e0e96c909584ab4b576d43\"><code>5b63a4c</code></a> Fix flaky tests.</li>\n<li><a href=\"https://github.com/python-websockets/websockets/commit/b8cfbfbf03bca110b375d76d77673a0d6737fb83\"><code>b8cfbfb</code></a> Add deterrence against AI slop.</li>\n<li>Additional commits viewable in <a href=\"https://github.com/python-websockets/websockets/compare/17.1...17.2\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\nDependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency\n- `@dependabot ignore <dependency name> major version` will close this group update PR and stop Dependabot creating any more for the specific dependency's major version (unless you unignore this specific dependency's major version or upgrade to it yourself)\n- `@dependabot ignore <dependency name> minor version` will close this group update PR and stop Dependabot creating any more for the specific dependency's minor version (unless you unignore this specific dependency's minor version or upgrade to it yourself)\n- `@dependabot ignore <dependency name>` will close this group update PR and stop Dependabot creating any more for the specific dependency (unless you unignore this specific dependency or upgrade to it yourself)\n- `@dependabot unignore <dependency name>` will remove all of the ignore conditions of the specified dependency\n- `@dependabot unignore <dependency name> <ignore condition>` will remove the ignore condition of the specified dependency and ignore conditions\n\n\n</details>",
+      "patch_file": "prs/23564.json"
+    }
+  ],
+  "mail_threads": []
+}

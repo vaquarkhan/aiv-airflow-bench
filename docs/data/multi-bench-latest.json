@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-23T02:06:35.955998+00:00",
+  "window": "2025-10-22..2026-10-22",
+  "benches": [
+    {
+      "bench": 1,
+      "project": "airflow",
+      "repo": "apache/airflow",
+      "artifact": "docs/data/e2e-proof-latest.json"
+    },
+    {
+      "bench": 2,
+      "project": "flink",
+      "repo": "apache/flink",
+      "stats": {
+        "cases": 51,
+        "runnable_prs": 51,
+        "by_class": {
+          "merged_control": 21,
+          "ai_disclosed": 24,
+          "ai_tool_mention": 6
+        },
+        "objective_slop": 0,
+        "ai_slop_discussion": 0,
+        "ai_disclosed": 24,
+        "merged_control": 21,
+        "mail_threads": 2,
+        "mail_slop_language": 0
+      },
+      "why": "Dev list discussed AI-assisted contributions, AGENTS.md, and a disclosure checkbox in 2026."
+    },
+    {
+      "bench": 3,
+      "project": "kafka",
+      "repo": "apache/kafka",
+      "stats": {
+        "cases": 38,
+        "runnable_prs": 38,
+        "by_class": {
+          "merged_control": 22,
+          "ai_tool_mention": 7,
+          "ai_disclosed": 9
+        },
+        "objective_slop": 0,
+        "ai_slop_discussion": 0,
+        "ai_disclosed": 9,
+        "merged_control": 22,
+        "mail_threads": 0,
+        "mail_slop_language": 0
+      },
+      "why": "Kafka dev list and pull requests are the third bench, parallel to Airflow and Flink."
+    },
+    {
+      "bench": 4,
+      "project": "curl",
+      "repo": "curl/curl",
+      "stats": {
+        "cases": 18,
+        "runnable_prs": 17,
+        "by_class": {
+          "merged_control": 15,
+          "ai_slop_discussion": 3
+        },
+        "objective_slop": 0,
+        "ai_slop_discussion": 3,
+        "ai_disclosed": 0,
+        "merged_control": 15,
+        "mail_threads": 0,
+        "mail_slop_language": 0
+      },
+      "why": "Maintainers ended the curl bug bounty on 31 Jan 2026 after AI-generated reports overwhelmed the security team."
+    },
+    {
+      "bench": 5,
+      "project": "godot",
+      "repo": "godotengine/godot",
+      "stats": {
+        "cases": 62,
+        "runnable_prs": 58,
+        "by_class": {
+          "merged_control": 24,
+          "closed_unmerged_sample": 24,
+          "ai_slop_discussion": 10,
+          "ai_tool_mention": 4
+        },
+        "objective_slop": 0,
+        "ai_slop_discussion": 10,
+        "ai_disclosed": 0,
+        "merged_control": 24,
+        "mail_threads": 0,
+        "mail_slop_language": 0
+      },
+      "why": "On 30 Jun 2026 the Godot Foundation said review was overwhelmed by AI-agent and AI-written pull requests, that vibe-coded submissions are already an auto-ban, and that new contributors need permission before a feature or large refactor. https://godotengine.org/article/contribution-policy-2026/",
+      "population_search": {
+        "prs": 7589,
+        "closed_unmerged": 1094,
+        "slop_language": 32,
+        "generated_by": 79
+      }
+    },
+    {
+      "bench": 6,
+      "project": "ghostty",
+      "repo": "ghostty-org/ghostty",
+      "stats": {
+        "cases": 53,
+        "runnable_prs": 52,
+        "by_class": {
+          "closed_unmerged_sample": 24,
+          "merged_control": 24,
+          "ai_disclosed": 1,
+          "ai_slop_discussion": 4
+        },
+        "objective_slop": 0,
+        "ai_slop_discussion": 4,
+        "ai_disclosed": 1,
+        "merged_control": 24,
+        "mail_threads": 0,
+        "mail_slop_language": 0
+      },
+      "why": "On 22 Jan 2026 Mitchell Hashimoto restricted AI-written contributions to accepted issues and maintainers, and banned repeat low-effort submissions, after saying bad content was up by about 10x. https://github.com/ghostty-org/ghostty/pull/10412",
+      "population_search": {
+        "prs": 2492,
+        "closed_unmerged": 447,
+        "slop_language": 9,
+        "generated_by": 27
+      }
+    },
+    {
+      "bench": 7,
+      "project": "cosmic",
+      "repo": "pop-os/cosmic-comp",
+      "stats": {
+        "cases": 41,
+        "runnable_prs": 41,
+        "by_class": {
+          "closed_unmerged_sample": 22,
+          "merged_control": 18,
+          "ai_slop_discussion": 1
+        },
+        "objective_slop": 0,
+        "ai_slop_discussion": 1,
+        "ai_disclosed": 0,
+        "merged_control": 18,
+        "mail_threads": 0,
+        "mail_slop_language": 0
+      },
+      "why": "On 30 Sep 2026 Jeremy Soller said COSMIC would no longer accept LLM-written code, comments, or PR text because first-time LLM submissions were unplanned and rarely accepted. cosmic-epoch itself had 23 PRs in the year; cosmic-comp is the compositor and had 425. The pop-os org had 4363 PRs in the same window.",
+      "population_search": {
+        "prs": 425,
+        "org_prs": 4363
+      }
+    }
+  ],
+  "not_a_pr_bench": [
+    {
+      "repo": "apache/logging-log4j2",
+      "why": "Piotr Karwasz, 25 Feb 2026: YesWeHack reports jumped to 17, 20, and 13 in Dec 2025-Feb 2026, against about 20 ordinary Log4j bugs in that quarter. The reports are not GitHub pull requests. https://github.com/apache/logging-log4j2/discussions/4052"
+    },
+    {
+      "repo": "nodejs/node",
+      "why": "Security team, Jan 2026: more than 30 HackerOne reports between 15 Dec 2025 and 15 Jan 2026, then a Signal 1.0 bar. The reported flood is the bounty inbox. https://nodejs.org/en/blog/announcements/hackerone-signal-requirement"
+    }
+  ],
+  "note": "Template checklist text is scrubbed before labeling. A raw GitHub search for the phrase AI slop is not a list of affected projects."
+}

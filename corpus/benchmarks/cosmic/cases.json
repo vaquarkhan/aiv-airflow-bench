@@ -1,0 +1,1571 @@
+{
+  "schema_version": 1,
+  "bench": 7,
+  "project": "cosmic",
+  "repo": "pop-os/cosmic-comp",
+  "window": "2025-10-22..2026-10-22",
+  "generated_at": "2026-10-23T02:06:35.916986+00:00",
+  "why": "On 30 Sep 2026 Jeremy Soller said COSMIC would no longer accept LLM-written code, comments, or PR text because first-time LLM submissions were unplanned and rarely accepted. cosmic-epoch itself had 23 PRs in the year; cosmic-comp is the compositor and had 425. The pop-os org had 4363 PRs in the same window.",
+  "sampling": "Up to a fixed number of latest matches per quarter. Not a census. A zero-hit quarter is split before it is trusted.",
+  "not_claimed": [
+    "A tool mention or filled Generated-by line is not proof the change should fail.",
+    "Slop language in discussion is not proof the attached patch is slop.",
+    "Search totals are not the percent of the project that is AI-authored."
+  ],
+  "stats": {
+    "cases": 41,
+    "runnable_prs": 41,
+    "by_class": {
+      "closed_unmerged_sample": 22,
+      "merged_control": 18,
+      "ai_slop_discussion": 1
+    },
+    "objective_slop": 0,
+    "ai_slop_discussion": 1,
+    "ai_disclosed": 0,
+    "merged_control": 18,
+    "mail_threads": 0,
+    "mail_slop_language": 0
+  },
+  "cases": [
+    {
+      "id": "cosmic-comp-1932",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 1932,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/1932",
+      "title": "fix: prevent protocol error for unparented popups (#2827)",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2025-12-26T17:49:41Z",
+      "user": "ZeusCraft10",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "33920d861bb432fdef8f11315de2a1b0b19232bc",
+      "additions": 8,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "This PR fixes a crash in Telegram (and potentially other clients) where creating a popup without a resolvable parent caused a Wayland protocol error. fix #2827 https://github.com/pop-os/cosmic-comp/issues/1816\r\n    \r\n    Change:\r\n    - Modified src/wayland/handlers/xdg_shell/mod.rs to always configure and track popups, even if unconstrain_popup is skipped due to a missing parent.\r\n    \r\n    Fixes #2827",
+      "patch_file": "prs/1932.json"
+    },
+    {
+      "id": "cosmic-comp-1934",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 1934,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/1934",
+      "title": "fix(grab): prevent window jump on late drag start",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2025-12-26T22:55:15Z",
+      "user": "ZeusCraft10",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "e0a3bfdb48f76a82054cc7d247fcd1105311c9af",
+      "additions": 50,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Updates MoveGrab initialization to use the current pointer location if the client initiates the move request after a threshold. This prevents windows from jumping to the original click position when there is a delay between the click and the move request. Fixes #1645.",
+      "patch_file": "prs/1934.json"
+    },
+    {
+      "id": "cosmic-comp-1969",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 1969,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/1969",
+      "title": "adding ShowDesktop action: show/hide all windows of a workspace",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-07T16:07:00Z",
+      "user": "Areopagitics",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "73eb0b7460defe97c8df27475414feaec5822e2e",
+      "additions": 313,
+      "changed_files": 17,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Simple initial working ShowDesktop shortcut that either hides all windows if any are showing or unminimizes all; pending possible upgrade to save hidden windows to Workspace and then restore them from shortcut and clear them if another window is opened",
+      "patch_file": "prs/1969.json"
+    },
+    {
+      "id": "cosmic-comp-1986",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 1986,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/1986",
+      "title": "shell: Only clear tiling position on move",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-13T15:45:01Z",
+      "user": "Drakulix",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "fc71d6ffd594b34bb162e88a8d83f9bad57cb924",
+      "additions": 2,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Fixes #1972 ",
+      "patch_file": "prs/1986.json"
+    },
+    {
+      "id": "cosmic-comp-1995",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 1995,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/1995",
+      "title": "WIP Use image-copy-capture helper from `smithay`",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-14T21:54:03Z",
+      "user": "ids1024",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "d309c1b1901ede233ed61eb68c965b7f2ba8fbcd",
+      "additions": 298,
+      "changed_files": 18,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "https://github.com/Smithay/smithay/pull/1902",
+      "patch_file": "prs/1995.json"
+    },
+    {
+      "id": "cosmic-comp-1996",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 1996,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/1996",
+      "title": "Cosink",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-15T03:59:53Z",
+      "user": "0xcccd",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "2409cfaf89df1e4ba1dc847ecebbfe74b41c99e8",
+      "additions": 290,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "",
+      "patch_file": "prs/1996.json"
+    },
+    {
+      "id": "cosmic-comp-1998",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 1998,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/1998",
+      "title": "fix: only move the grabbed window if a new zone is chosen",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-16T01:04:37Z",
+      "user": "hojjatabdollahi",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "24141ebee8e64492a59e213e3af8dbef9b2c7ae4",
+      "additions": 10,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "This should fix super+click on a tiled window popping it out of the tree and tiling it to the right half of the screen (default drop window behavior).\r\n\r\nBefore:\r\n\r\nhttps://github.com/user-attachments/assets/5173492b-cc63-4582-8fe3-a6e8d9561b75\r\n\r\nAfter:\r\n\r\nhttps://github.com/user-attachments/assets/b81281db-0c30-47c0-a73d-ed97db55a588\r\n",
+      "patch_file": "prs/1998.json"
+    },
+    {
+      "id": "cosmic-comp-1999",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 1999,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/1999",
+      "title": "fix: windows are clipped in overview mode causing visual artifact",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-16T01:10:31Z",
+      "user": "hojjatabdollahi",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "21c049cad2d8ec1681b7b212b37126ba50d67b3f",
+      "additions": 9,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "If you hold super and drag a window (overview mode) all the windows other than the grabbed window will shrink to the top left corner of their region clipping the right and bottom part of those windows. Causing the SSDs to stick out too. This should fix that.\r\n\r\nbefore:\r\n\r\nhttps://github.com/user-attachments/assets/bdd1752b-80a8-421d-b28e-e32bf6341684\r\n\r\nafter:\r\n\r\nhttps://github.com/user-attachments/assets/e6b19530-4cf6-4bd1-adfd-d155520de455\r\n\r\n\r\n",
+      "patch_file": "prs/1999.json"
+    },
+    {
+      "id": "cosmic-comp-2001",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2001,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2001",
+      "title": "Translations update from Hosted Weblate",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-16T10:03:00Z",
+      "user": "weblate",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "a453ba29441191ce1abf6fa1d34e2c94dee29e25",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Translations update from [Hosted Weblate](https://hosted.weblate.org) for [Pop OS/COSMIC Comp](https://hosted.weblate.org/projects/pop-os/cosmic-comp/).\n\n\n\nCurrent translation status:\n\n![Weblate translation status](https://hosted.weblate.org/widget/pop-os/cosmic-comp/horizontal-auto.svg)",
+      "patch_file": "prs/2001.json"
+    },
+    {
+      "id": "cosmic-comp-2002",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2002,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2002",
+      "title": "Translations update from Hosted Weblate",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-16T16:08:23Z",
+      "user": "weblate",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "8e54ef2460f9e3600ab9df57bb1aefabda2706ae",
+      "additions": 1,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Translations update from [Hosted Weblate](https://hosted.weblate.org) for [Pop OS/COSMIC Comp](https://hosted.weblate.org/projects/pop-os/cosmic-comp/).\n\n\n\nCurrent translation status:\n\n![Weblate translation status](https://hosted.weblate.org/widget/pop-os/cosmic-comp/horizontal-auto.svg)",
+      "patch_file": "prs/2002.json"
+    },
+    {
+      "id": "cosmic-comp-2009",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2009,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2009",
+      "title": "Handle TileWindow action for keyboard window snapping",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-20T22:28:38Z",
+      "user": "jlaustill",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "70759a188f3b3d033b782a91c425906fa0c185a8",
+      "additions": 89,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Summary\r\n- Add handler for `TileWindow(TilingZone)` action that snaps floating windows to screen edges and corners\r\n- Maps `TilingZone` from cosmic-settings-config to existing `TiledCorners` enum\r\n- Adds `Shell::tile_window()` and `FloatingLayout::tile_window()` methods\r\n- Reuses existing animation system for smooth 200ms ease-in-out transitions\r\n\r\n## Dependencies\r\n- Requires pop-os/cosmic-settings-daemon#124 to be merged first\r\n\r\n## Test plan\r\n- [x] Build succeeds\r\n- [x] Tested all 8 zones with custom keybindings:\r\n  - Halves: Top, Bottom, Left, Right\r\n  - Corners: TopLeft, TopRight, BottomLeft, BottomRight\r\n- [x] Animation plays correctly\r\n- [x] Works only on floating windows (as expected)\r\n\r\n## Example keybindings\r\n```ron\r\n{\r\n    (modifiers: [Super, Ctrl], key: \"Left\"): TileWindow(Left),\r\n    (modifiers: [Super, Ctrl], key: \"Right\"): TileWindow(Right),\r\n    (modifiers: [Super, Ctrl], key: \"Up\"): TileWindow(Top),\r\n    (modifiers: [Super, Ctrl], key: \"Down\"): TileWindow(Bottom),\r\n    (modifiers: [Ctrl, Shift], key: \"Left\"): TileWindow(TopLeft),\r\n    (modifiers: [Ctrl, Shift], key: \"Right\"): TileWindow(TopRight),\r\n    (modifiers: [Ctrl, Super, Alt], key: \"Left\"): TileWindow(BottomLeft),\r\n    (modifiers: [Ctrl, Super, Alt], key: \"Right\"): TileWindow(BottomRight),\r\n}\r\n```\r\n\r\n🤖 Generated with [Claude Code](https://claude.ai/code)\r\n[Kooha-2026-01-20-15-32-59.webm](https://github.com/user-attachments/assets/674fbe17-86d9-4b00-8221-80e23378073d)\r\n\r\n",
+      "patch_file": "prs/2009.json"
+    },
+    {
+      "id": "cosmic-comp-2012",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2012,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2012",
+      "title": "Translations update from Hosted Weblate",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-21T10:23:21Z",
+      "user": "weblate",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "eaf265aaaea4097203ef0d44c6bda2f861664e4c",
+      "additions": 28,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Translations update from [Hosted Weblate](https://hosted.weblate.org) for [Pop OS/COSMIC Comp](https://hosted.weblate.org/projects/pop-os/cosmic-comp/).\n\n\n\nCurrent translation status:\n\n![Weblate translation status](https://hosted.weblate.org/widget/pop-os/cosmic-comp/horizontal-auto.svg)",
+      "patch_file": "prs/2012.json"
+    },
+    {
+      "id": "cosmic-comp-2134",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2134,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2134",
+      "title": "Add Center zone for keyboard window snapping",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-02-24T16:55:08Z",
+      "user": "leonbreukelman",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "83d38ad25674e1289fe78de53aba8121802990c3",
+      "additions": 108,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Summary\n\n- Adds `TiledCorners::Center` — a horizontally centered, full-height column (50% width)\n- Geometry: positioned at 25% from left edge, full height minus gaps\n- Direction transitions from Center: Left → Left, Right → Right, Up → Maximize, Down → Bottom\n- Maps `TilingZone::Center` from cosmic-settings-config to the new variant\n\nPrimarily useful on ultrawide monitors where the existing left/right halves are too wide for focused single-window work (terminals, editors, reading).\n\n## Dependencies\n\n- Builds on #2009 (`TileWindow` handler)\n- Companion PR: pop-os/cosmic-settings-daemon#130 (Center variant in TilingZone enum)\n\n## Example keybinding\n\n```ron\n(modifiers: [Super, Ctrl], key: \"c\"): TileWindow(Center),\n```\n\n## Test plan\n\n- [ ] Build succeeds\n- [ ] Center zone positions window at horizontal center with 50% width, full height\n- [ ] Direction keys from Center transition correctly (Left/Right to halves, Up to maximize, Down to bottom)\n- [ ] Existing 8-zone behavior unchanged",
+      "patch_file": "prs/2134.json"
+    },
+    {
+      "id": "cosmic-comp-2205",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2205,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2205",
+      "title": "fix: handle destroyed image capture sources gracefully",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-03-18T04:06:21Z",
+      "user": "Aethelos-Mneia",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "10f1ca64952012544037651b2d7cd366cb58b14c",
+      "additions": 11,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Summary\n\nWhen a capture source (output, workspace, or toplevel) is destroyed before a session interacts with it, the `Destroyed` variant is reached in `ImageCopyCaptureHandler` methods. Previously this triggered `unreachable!()`, crashing the compositor.\n\nThis patch handles the `Destroyed` case gracefully:\n- `new_session` / `new_cursor_session`: return without setup\n- `session_destroyed` / `cursor_session_destroyed`: return without cleanup  \n- `frame`: explicitly fail the frame with `CaptureFailureReason::Unknown` to notify the client rather than silently dropping\n\n## Architectural note\n\nThe `Output` variant already handles lifecycle races cleanly via `WeakOutput` — when the output is gone, `weak.upgrade()` returns `None` and the handler returns gracefully. The `Workspace` and `Toplevel` variants use strong references, which is why the `Destroyed` fallback variant exists.\n\nA deeper fix would be to use weak references for `Workspace` and `Toplevel` as well, making the `Destroyed` variant unnecessary. This has broader implications across the codebase, so it is left as a recommendation for maintainers to evaluate.\n\n## Test plan\n\n- [ ] Reproduce by destroying a capture source while a session is active\n- [ ] Verify compositor no longer crashes on `unreachable!()`\n- [ ] Verify client receives frame failure notification",
+      "patch_file": "prs/2205.json"
+    },
+    {
+      "id": "cosmic-comp-2213",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2213,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2213",
+      "title": "Translations update from Hosted Weblate",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-20T15:10:05Z",
+      "user": "weblate",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "8c5742b03f55c6c0fd9535748981810e32bba855",
+      "additions": 22,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Translations update from [Hosted Weblate](https://hosted.weblate.org) for [Pop OS/COSMIC Comp](https://hosted.weblate.org/projects/pop-os/cosmic-comp/).\n\n\n\nCurrent translation status:\n\n![Weblate translation status](https://hosted.weblate.org/widget/pop-os/cosmic-comp/horizontal-auto.svg)",
+      "patch_file": "prs/2213.json"
+    },
+    {
+      "id": "cosmic-comp-2223",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2223,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2223",
+      "title": "Translations update from Hosted Weblate",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-25T12:10:14Z",
+      "user": "weblate",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "20b65541c1f87fa2ed81dcbddc48374e1582bb06",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Translations update from [Hosted Weblate](https://hosted.weblate.org) for [Pop OS/COSMIC Comp](https://hosted.weblate.org/projects/pop-os/cosmic-comp/).\n\n\n\nCurrent translation status:\n\n![Weblate translation status](https://hosted.weblate.org/widget/pop-os/cosmic-comp/horizontal-auto.svg)",
+      "patch_file": "prs/2223.json"
+    },
+    {
+      "id": "cosmic-comp-2233",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2233,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2233",
+      "title": "Translations update from Hosted Weblate",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-29T14:09:59Z",
+      "user": "weblate",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "7f79cbe1e3a409c667430c68e9d34d0364497ab9",
+      "additions": 2,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Translations update from [Hosted Weblate](https://hosted.weblate.org) for [Pop OS/COSMIC Comp](https://hosted.weblate.org/projects/pop-os/cosmic-comp/).\n\n\n\nCurrent translation status:\n\n![Weblate translation status](https://hosted.weblate.org/widget/pop-os/cosmic-comp/horizontal-auto.svg)",
+      "patch_file": "prs/2233.json"
+    },
+    {
+      "id": "cosmic-comp-2237",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2237,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2237",
+      "title": "fix: remove double slashes from cosmic-protocols patch URLs",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-03-30T21:20:55Z",
+      "user": "MasterofNull",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "85587d2e382d9f9fb6b49e5b1b0413296c86cdf8",
+      "additions": 147,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Summary\n\nFixes double slashes in the Cargo.toml patch section URLs that were causing cargo to fail when resolving dependencies.\n\n## Changes\n\n- Fixed `https://github.com/pop-os//cosmic-protocols` → `https://github.com/pop-os/cosmic-protocols`\n- Fixed `https://github.com/pop-os//cosmic-text` → `https://github.com/pop-os/cosmic-text`\n\n## Testing\n\n- Verified cargo fetch succeeds after the fix\n- Nix flake build completes without URL resolution errors\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+      "patch_file": "prs/2237.json"
+    },
+    {
+      "id": "cosmic-comp-2239",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2239,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2239",
+      "title": "Translations update from Hosted Weblate",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-31T15:11:33Z",
+      "user": "weblate",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "a9547ce88c037603771f3d12bc67000e74927f02",
+      "additions": 5,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Translations update from [Hosted Weblate](https://hosted.weblate.org) for [Pop OS/COSMIC Comp](https://hosted.weblate.org/projects/pop-os/cosmic-comp/).\n\n\n\nCurrent translation status:\n\n![Weblate translation status](https://hosted.weblate.org/widget/pop-os/cosmic-comp/horizontal-auto.svg)",
+      "patch_file": "prs/2239.json"
+    },
+    {
+      "id": "cosmic-comp-2243",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2243,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2243",
+      "title": "fix: remove keyboard grab serial check that blocks popup menus",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-01T21:56:56Z",
+      "user": "akelmanson",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "e334a29cc2a3bae0b13cd4668a22a72ea20a9229",
+      "additions": 5,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Summary\n\n- Remove the keyboard grab serial validation in the `xdg_popup` grab handler that incorrectly rejects popup grabs when an unrelated keyboard grab is active\n- The check was blocking dropdown menus and context menus in apps using input methods (IBus, Fcitx) or after a previous popup was closed\n\n## Root Cause\n\nThe keyboard grab serial check (`keyboard.is_grabbed() && !keyboard.has_grab(serial)`) rejects popup grabs whenever **any** keyboard grab is active with a non-matching serial. Two common scenarios trigger this:\n\n1. **Input method keyboard grab** (`zwp_input_method_v2::GrabKeyboard`): Always active when an IME is running. Its serial never matches the popup's button-press serial, so every popup grab is rejected.\n\n2. **Stale `PopupKeyboardGrab`**: After a popup is closed, the `PopupKeyboardGrab` lingers on the keyboard until the next keyboard event (Smithay only cleans it up on `input()` or `set_focus()`). Any subsequent popup grab is rejected because the stale grab's serial doesn't match.\n\n## Why this is safe\n\nSmithay's `grab_popup()` already validates the popup chain (parent hierarchy, topmost popup check, dismissed parent check) **before** this code runs. The keyboard grab state is orthogonal to popup validity — it controls keyboard event routing, not whether a popup should open. The new `PopupKeyboardGrab` replaces whatever keyboard grab was active.\n\nOther compositors (wlroots, niri) do not perform this check. wlroots disabled serial validation entirely ([wlroots#755](https://gitlab.freedesktop.org/wlroots/wlroots/-/issues/755)).\n\n## Affected apps\n\n- Any app when an input method is active (Qt, GTK, wxWidgets)\n- LibreOffice Writer, Calc, Math (menus stop working after first use)\n- OrcaSlicer and other wxWidgets apps with focusable child widgets\n- Any app where menus work once then fail on subsequent attempts\n\n## Reproducer\n\n```cpp\n// wxWidgets minimal reproducer — menus fail after first open\n#include <wx/wx.h>\nclass App : public wxApp {\npublic:\n    bool OnInit() override {\n        auto *f = new wxFrame(nullptr, wxID_ANY, \"Test\", wxDefaultPosition, wxSize(800, 600));\n        auto *mb = new wxMenuBar;\n        auto *fm = new wxMenu;\n        fm->Append(wxID_EXIT, \"Exit\");\n        mb->Append(fm, \"&File\");\n        f->SetMenuBar(mb);\n        new wxWindow(f, wxID_ANY);  // focusable child triggers the bug\n        f->Bind(wxEVT_MENU, [f](wxCommandEvent&) { f->Close(); }, wxID_EXIT);\n        f->Show();\n        return true;\n    }\n};\nwxIMPLEMENT_APP(App);\n```\n\n## Test plan\n\n- [x] wxWidgets reproducer — File menu opens reliably on repeated attempts\n- [x] LibreOffice Writer — dropdown menus work with IME active\n- [x] Click-outside-to-dismiss still works (pointer grab check is unchanged)\n- [x] `cargo clippy --all-features -- -D warnings` passes\n- [ ] Nested submenus (File → Recent Documents → ...) work correctly\n- [ ] Native COSMIC app menus still work\n\nFixes #1211\nFixes #1763",
+      "patch_file": "prs/2243.json"
+    },
+    {
+      "id": "cosmic-comp-2281",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2281,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2281",
+      "title": "Translations update from Hosted Weblate",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-12T16:50:58Z",
+      "user": "weblate",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "edd056eeaa024dd78d8e234a900f131bf155395c",
+      "additions": 1,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Translations update from [Hosted Weblate](https://hosted.weblate.org) for [Pop OS/COSMIC Comp](https://hosted.weblate.org/projects/pop-os/cosmic-comp/).\n\n\n\nCurrent translation status:\n\n![Weblate translation status](https://hosted.weblate.org/widget/pop-os/cosmic-comp/horizontal-auto.svg)",
+      "patch_file": "prs/2281.json"
+    },
+    {
+      "id": "cosmic-comp-2314",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2314,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2314",
+      "title": "Translations update from Hosted Weblate",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T23:30:08Z",
+      "user": "weblate",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "f2ed842988099f6e3dbca4b32fd81be708a7756a",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Translations update from [Hosted Weblate](https://hosted.weblate.org) for [Pop OS/COSMIC Comp](https://hosted.weblate.org/projects/pop-os/cosmic-comp/).\n\n\n\nCurrent translation status:\n\n![Weblate translation status](https://hosted.weblate.org/widget/pop-os/cosmic-comp/horizontal-auto.svg)",
+      "patch_file": "prs/2314.json"
+    },
+    {
+      "id": "cosmic-comp-2449",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2449,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2449",
+      "title": "fix: handle missing element geometry in floating layout set_output",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-06-08T15:17:23Z",
+      "user": "sajadinmaker",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "2e5b349d83e68d2243a2fb60d1a90aa84d0d2c39",
+      "additions": 2,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Replace .unwrap() with if let Some to avoid panic when a mapped window has no geometry during output reconfiguration. This can occur during KVM switches, monitor hotplug, or suspend/resume where the window's geometry may not yet be available.\n\nFixes #2286 where cosmic-comp crashes with:\ncalled Option::unwrap() on a None value\nat src/shell/layout/floating/mod.rs:312\r\n",
+      "patch_file": "prs/2449.json"
+    },
+    {
+      "id": "cosmic-comp-2457",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2457,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2457",
+      "title": "Respect cursor_follows_focus when activating a window on another output",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-06-11T07:15:54Z",
+      "user": "severine-akki",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "85ff584482887d1ace910e3896dbdf69b0be2b32",
+      "additions": 5,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "cursor"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Problem\n\nWhen clicking an app in the dock/panel while its window is on a **different output**, the pointer is warped to the center of that window — even when **Cursor follows focus** is disabled in Settings. This is surprising and disruptive on multi-monitor setups (you click on monitor A, the window focuses on monitor B, and your cursor is yanked to B).\n\nThis is the root cause behind several reports:\n- #930 (moving focus between monitors centers the cursor)\n- pop-os/cosmic-settings#1269\n- pop-os/cosmic-epoch#3121\n\n## Cause\n\nIn `src/wayland/handlers/toplevel_management.rs`, the `activate` handler warps the pointer whenever `switching_output` is true, without checking the `cursor_follows_focus` config. Every other focus path in the compositor (`shell::focus::update_focus_state` at `focus/mod.rs`, and `input::actions`) already gates the warp on `cursor_follows_focus`; this path was missed.\n\n## Fix\n\nGate the pointer warp on `self.common.config.cosmic_conf.cursor_follows_focus`. Keyboard focus and `set_active_output` are unchanged — only the pointer warp becomes conditional, consistent with the rest of the codebase.\n\nWhen `cursor_follows_focus` is **enabled**, behavior is unchanged (cursor still follows to the window on the other output). When **disabled**, the cursor stays where it is.\n\n## Testing\n\n- Two monitors, `cursor_follows_focus` disabled: click an app in the dock whose window is on the other monitor → cursor no longer jumps. ✅\n- `cursor_follows_focus` enabled: cursor still follows to the activated window. ✅\n",
+      "patch_file": "prs/2457.json"
+    },
+    {
+      "id": "cosmic-comp-2552",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2552,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2552",
+      "title": "dbus: expose active Wayland idle-inhibitors over the session bus",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-11T07:54:22Z",
+      "user": "lxp-git",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "5ef52a546c5eac952c088597bd322dd553d4e06b",
+      "additions": 93,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Problem\n\nOnly the compositor knows which clients hold a Wayland idle-inhibitor\n(`zwp_idle_inhibitor_v1`). Nothing else can enumerate them, so a tray/applet\ncannot tell the user which application is currently preventing the session from\ngoing idle / suspending — most commonly a browser playing video.\n\n## Change\n\nExpose the active idle-inhibitors over a small session-bus interface:\n\n- Name `com.system76.CosmicComp`, path `/com/system76/CosmicComp`\n- Interface `com.system76.CosmicComp.IdleInhibit`\n- Method `ListInhibitors() -> a(us)` — `(pid, app_id)` per inhibiting surface\n\n## Implementation\n\n- A shared `Arc<Mutex<HashMap<surface_id, (pid, app_id)>>>` is updated in the\n  `IdleInhibitHandler::inhibit`/`uninhibit` handlers (client pid resolved from\n  the surface at inhibit time).\n- A dedicated thread runs a blocking zbus server reading that map. It is fully\n  decoupled from the calloop loop and every failure only logs, so it can never\n  affect the compositor.\n- No new dependencies (zbus is already used).\n\n## Motivation\n\nEnables a \"what's keeping the system awake\" applet\n(https://github.com/lxp-git/cosmic-ext-applet-inhibit-status), which merges this\nwith logind inhibitors and a companion cosmic-idle change that exposes\n`org.freedesktop.ScreenSaver` inhibitors. Related: pop-os/cosmic-idle#4.\n\n## Testing\n\nBuilt and run on 1.2.0: the applet lists e.g. Chrome's Wayland idle-inhibitor\nwith its pid while a video plays, and the entry clears when released. Cherry-picks\ncleanly onto `master` (the touched handlers are unchanged).\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+      "patch_file": "prs/2552.json"
+    },
+    {
+      "id": "cosmic-comp-2555",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2555,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2555",
+      "title": "feat: add Grid workspace layout",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-11T18:45:44Z",
+      "user": "AldenDana",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "6fcfd55285dd910c7a8ce621156298469e4cfbbc",
+      "additions": 497,
+      "changed_files": 6,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Implements the compositor half of pop-os/cosmic-workspaces-epoch#51 (grid-arranged workspaces).\n\n- New `WorkspaceLayout::Grid` variant plus `workspace_grid_columns` / `workspace_grid_rows` (serde defaults 3/2, backward compatible) in `cosmic-comp-config`\n- Grid mode keeps a fixed `columns x rows` workspace count (padded up, never destroying occupied workspaces) instead of the dynamic trailing-empty behavior; supported in both `OutputBound` and `Global` modes\n- `Next/Previous/MoveTo/SendToWorkspace` become direction-aware in Grid mode via the binding's inferred direction: Left/Right move within the row, Up/Down move by a full row, both wrapping row/column-locally (respecting `workspace_wraparound`); `Focus`/`Move` at grid edges stay in the grid instead of falling through to `SwitchOutput`/`MoveToOutput`\n- 4-finger swipes navigate in all four directions (`SwipeAction::GridMove`), honoring natural scrolling; swipe-end velocity normalizes against the axis of the move\n- The switch animation slides along the axis of the actual move\n- Workspace protocol coordinates are published as 2D `[column, row]` while Grid is active, so clients (e.g. the workspaces overview) can lay out the real grid; linear coordinates are restored when leaving Grid\n- Grid math is unit-tested (`grid_tests`, 9 cases incl. wraparound + degenerate dimensions)\n\nVertical/Horizontal behavior is unchanged; existing config files parse unmodified.\n\nCompanion PRs: pop-os/cosmic-settings#2073 (Grid option UI) and pop-os/cosmic-workspaces-epoch#318 (grid overview).\n",
+      "patch_file": "prs/2555.json"
+    },
+    {
+      "id": "cosmic-comp-2556",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2556,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2556",
+      "title": "feat: per-application workspace assignment rules",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-11T18:46:30Z",
+      "user": "AldenDana",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "b5a6da2e687208b0be15621c7cd8cb42e8206684",
+      "additions": 205,
+      "changed_files": 9,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Implements pop-os/cosmic-epoch#1395 / pop-os/cosmic-workspaces-epoch#186: opening an app always places it on a chosen workspace.\n\nAdds a `workspace_assignments` config to `com.system76.CosmicComp` — a list of `(app_id, workspace)` rules (workspace numbers 1-based, matching the UI). When a new window's `app_id` matches, it maps to that workspace instead of the active one, regardless of launch origin; the target workspace is flagged urgent rather than stealing focus (same behavior as other windows mapped to inactive workspaces). Rules hot-reload like other compositor settings.\n\nRules can be managed from the **window context menu**: right-click a titlebar → *Always open on this workspace* toggles a rule for that app on the window's current workspace (the entry then shows *Always opens on workspace N* with a checkmark). The menu writes through cosmic-config, so the config file stays the single source of truth:\n\n```ron\n// ~/.config/cosmic/com.system76.CosmicComp/v1/workspace_assignments\n[\n    (app_id: \"code\", workspace: 5),\n]\n```\n\n**Alt+Space opens the window menu.** Not every window has a compositor-drawn titlebar to right-click — client-side-decorated windows (most GTK4/Qt6/Electron/libcosmic apps, including COSMIC's own Files) have none, so there was previously no way to reach the context menu (and therefore the workspace-assignment toggle) for them at all. Alt+Space is added as a hardcoded, non-configurable compositor shortcut (`PrivateAction::OpenWindowMenu`) that opens the menu for the currently focused window regardless of decoration mode — chosen because it's unused by default and is the traditional \"window system menu\" shortcut on other desktops (Super+M was the first attempt, but that's already bound to Maximize by default, so it's Alt+Space instead).\n\n**Rename support.** The `zcosmic_workspace_handle_v2::rename` request was defined in the protocol but never handled compositor-side; this wires it up (advertises the `Rename` capability, applies the name, and persists it for pinned workspaces) so clients can let users rename workspaces.\n\nHappy to follow up with a cosmic-settings page for bulk management if the config shape is acceptable.\n",
+      "patch_file": "prs/2556.json"
+    },
+    {
+      "id": "cosmic-comp-2588",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2588,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2588",
+      "title": "Implement wp_tearing_control_v1 (composited tearing)",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-17T06:32:50Z",
+      "user": "s0kil",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "4835a8b12a562ee668b09e75cad8468ccd581d38",
+      "additions": 551,
+      "changed_files": 8,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "cursor"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## What\n\nImplements `wp_tearing_control_v1` with **composited tearing** — async page flips of the compositor's own composited buffer. Addresses #248.\n\n- Protocol: `wp_tearing_control_manager_v1` (v1) global; per-surface double-buffered presentation hint (promoted on commit, `tearing_control_exists` error on duplicate controls, destroy resets pending to vsync).\n- Policy: an output enters tearing mode iff an opt-in toggle is set (`COSMIC_ALLOW_TEARING=1` env for now), the output is not mirroring, and the focused fullscreen toplevel's committed hint is `async`.\n- Frame clock: in tearing mode the estimated-vblank throttle is bypassed — composite is driven by client commits (rate-ceiled ~500fps) and submitted with `FrameFlags::ALLOW_ASYNC_PAGE_FLIP`; frame callbacks are sent immediately, so clients run uncapped.\n- Cursor plane is disabled in tearing mode (cursor composites instead): kernel atomic async flips may only change the primary plane FB, so this keeps every async commit valid.\n- Depends on smithay async-flip support: Smithay/smithay#2099 (Cargo patch currently points at that branch).\n\n## Why composited tearing\n\nOn muxless hybrid laptops (game renders on the dGPU, iGPU scans out the internal panel) direct scanout of client buffers is impossible — the classic \"tearing only for direct-scanout fullscreen\" design delivers nothing on such machines. Async-flipping the composited buffer does: validated end-to-end on an i915-scanout + NVIDIA-render laptop, CS2 (native Wayland, fullscreen) runs 240fps on a 144Hz eDP with visible tearing, where it was previously FIFO-capped at 144. Compositor cost went *down* (composite-per-commit at ~240/s measured cheaper than the previous 144Hz vsync path in CPU time). Zero rejected async flips observed on i915.\n\n## Current limitations (draft status — seeking direction)\n\n- Composited-tearing only; the direct-scanout fullscreen path does not async-flip yet (planned follow-up — needed for single-GPU desktops).\n- Single-output policy; no VRR interaction handling yet.\n- Toggle is an env var; should become cosmic-config + Settings UI.\n- Xwayland (24.1.12) did not forward tearing hints for an X11 Vulkan IMMEDIATE client on the NVIDIA stack during testing — under investigation whether that's driver- or Xwayland-side; native Wayland clients work.\n- No `DRM_CAP_ATOMIC_ASYNC_PAGE_FLIP` gating yet (tracked in the smithay PR).\n\nImplementation was developed with AI assistance and human review/testing on real hardware; happy to iterate per maintainer direction and split/reshape as preferred.\n",
+      "patch_file": "prs/2588.json"
+    },
+    {
+      "id": "cosmic-comp-2780",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2780,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2780",
+      "title": "Add synthetic panel-fit fallback modes",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-08-25T16:59:29Z",
+      "user": "inducer",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "2c967686c3ee33b62e4c9d53900fbc4b01e04ad8",
+      "additions": 407,
+      "changed_files": 5,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "ai generated",
+          "vibe-coded"
+        ],
+        "tool_terms": [
+          "llm"
+        ],
+        "slop": true,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "### A word of Warning/an Apology\r\n\r\nVibe-coded PR ahead. In preparing this, the AI used the Mutter source code (also GPL-3) as a reference.\r\n\r\nI'm submitting it because it may solve a real issue for someone else, and it works for me. The code itself may be iffy. For example, it seems odd that it has to \"reach around\" smithay's KMS interaction code by going directly to `drm-ffi`. Buyer beware, OK to close if you don't like it; it'll still be discoverable. If you do close it, I will likely come back with a bug report requesting the same feature.\r\n\r\n### What is being fixed here\r\n\r\nI have a high-resolution laptop panel (3840x2400). As part of my work, I need to share my full screen on which an inking app runs. Both the screen sharing and the note taking app bog down and become too slow to be usable at the full panel resolution. Half-resolution meanwhile (1920x1200) is no problem. My panel does not offer a native 1920x1200 mode, but it does support upscaling. Gnome offers a synthetic mode along those lines. Cosmic settings only provides the full panel resolution.\r\n\r\nI made this by having an AI investigate what Mutter does and cloning the relevant behavior in cosmic-comp. I'm using it now, and it seems to do what I need.\r\n\r\n### Checklist\r\n\r\n- [x] I have disclosed use of any AI generated code in my commit messages.\r\n  - If you are using an LLM, and do not fully understand the changes it is making to the code base, do not create a PR.\r\n  - In our experience, AI generated code often results in overly complex code that lacks enough context for a proper fix or feature inclusion. This results in considerably longer code reviews. Due to this, AI authored or partially authored PRs may be closed without comment.\r\n- **MAYBE** I understand these changes in full and will be able to respond to review comments.\r\n- **I THINK** My change is accurately described in the commit message.\r\n- [x] My contribution is tested and working as described.\r\n- [x] I have read the [Developer Certificate of Origin](https://developercertificate.org/) and certify my contribution under its conditions.\r\n\r\n",
+      "patch_file": "prs/2780.json"
+    },
+    {
+      "id": "cosmic-comp-2912",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2912,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2912",
+      "title": "fix: unmap windows from the backup set while no output is connected",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-03T14:15:32Z",
+      "user": "mayakwd",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "fcf2862776f556a3e53706ddd940fb90dbeaa762",
+      "additions": 6,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "**Issue**\r\nWhile no ouput is connected, windows live in the `workspaces.backup_set`, but `Shell:unmap_surface` searches only `workspace.sets`. So, a window unmapped in that state will never be removed from the shell and never reach `remove_toplevel`. \r\n\r\nIt leads to two discrepancies:\r\n- it stays listed as toplevel - a \"ghost\" in the dock and launcher (switcher)\r\n- it's being added again one an output is reconnected\r\n\r\n**The fix**\r\nJust unmap surface from `backup_set` as well.\r\n\r\n---\r\n\r\n- I have not included any LLM (also known as AI) generated content in this PR, including code, comments, and descriptions.\r\n- I understand these changes in full and will be able to respond to review comments.\r\n- My change is accurately described in the commit message.\r\n- My contribution is tested and working as described.\r\n- I have read the [Developer Certificate of Origin](https://developercertificate.org/) and certify my contribution under its conditions.\r\n- [x] I have read and followed all of the above requirements. For more information, see our [contributor guide](https://github.com/pop-os/pop/blob/master/CONTRIBUTING.md).\r\n",
+      "patch_file": "prs/2912.json"
+    },
+    {
+      "id": "cosmic-comp-2914",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2914,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2914",
+      "title": "support xdg toplevel icon protocol",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-05T06:38:01Z",
+      "user": "LinuxBoy-96",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "d75f237259f3903ba08ec5773efdbf29b5d91439",
+      "additions": 12,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Advertise `xdg_toplevel_icon_manager_v1`\r\n\r\nThis adds `xdg_toplevel_icon_manager_v1` support to `cosmic-comp`.\r\n\r\n### Why?\r\n\r\nApplications using `winit` currently produce the following warning when running under `cosmic-comp`:\r\n\r\n```text\r\nxdg_toplevel_icon_manager_v1 is not supported\r\n```\r\n\r\nThe protocol was already handled correctly by the client and applications continued to function normally. The missing compositor global only caused `winit` to emit a warning.\r\n\r\nThis change advertises the protocol through Smithay, allowing clients to detect its availability and eliminating the warning.\r\n\r\n### Changes\r\n\r\n* Add an `xdg_toplevel_icon` Wayland handler.\r\n* Implement `XdgToplevelIconHandler` for `State`.\r\n* Create and advertise `XdgToplevelIconManager`.\r\n* Keep the manager alive as part of `Common`.\r\n\r\nSmithay handles the protocol requests and maintains the cached toplevel icon state. This change does not alter COSMIC's existing window behavior or add icon integration to the compositor UI.\r\n\r\n### Testing\r\n\r\n* `cargo check` passes successfully.\r\n* Tested with the Smithay revision currently used by `cosmic-comp`.\r\n\r\n### Impact\r\n\r\nNo existing functionality was broken before this change. The primary purpose of this change is to advertise the already-supported Wayland protocol and remove the unnecessary client-side warning.\r\n\r\n---\r\n\r\n- I have not included any LLM (also known as AI) generated content in this PR, including code, comments, and descriptions.\r\n- I understand these changes in full and will be able to respond to review comments.\r\n- My change is accurately described in the commit message.\r\n- My contribution is tested and working as described.\r\n- I have read the [Developer Certificate of Origin](https://developercertificate.org/) and certify my contribution under its conditions.\r\n- [X] I have read and followed all of the above requirements. For more information, see our [contributor guide](https://github.com/pop-os/pop/blob/master/CONTRIBUTING.md).\r\n",
+      "patch_file": "prs/2914.json"
+    },
+    {
+      "id": "cosmic-comp-2917",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2917,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2917",
+      "title": "fix: back off and give up on repeated render submit failures",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-05T08:46:07Z",
+      "user": "orlodax",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "a5a67fb9abad233e323e38e945936410ac14f0d7",
+      "additions": 196,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Closes #2688\n\n## Problem\n\nWhen the kernel rejects every atomic commit for an output, the redraw timer in `queue_redraw` re-queues a\nforced redraw immediately after each failure, with no delay and no limit. smithay logs\n`New screen configuration invalid!` with the full `AtomicRequest` dump on every attempt, so the loop\nfloods the journal (in #2688 it filled 158 GiB of disk in 18.5 h) and keeps the compositor busy.\n\nThe dead output's `DrmCompositor` also stays registered with the `DrmOutputManager`. `use_mode`,\n`initialize_output` and `allow_primary_scanout_any` submit on every registered compositor, so\noutput-configuration requests for the *other* outputs fail as well, and the first\n`cosmic-randr disable` of the dead output is rejected (`Failed to switch primary-plane scanout flags`).\n\n## Change\n\nIn the surface thread (`src/backend/kms/surface/mod.rs`, first commit) and the DPMS handler\n(`src/wayland/handlers/output_power.rs`, second commit):\n\n- A redraw that fails before KMS takes the frame retries after an exponential back-off: one frame\n  time, doubling, capped at 4 s. Redraw requests during the back-off wait for it.\n- After 12 consecutive failures, if the error chain contains a `DrmError` (KMS rejected the frame),\n  the surface stops rendering and deactivates the same way a session pause does (`active = false`,\n  `DrmOutput` dropped). The next `apply_config_for_outputs` then disables or re-initializes it; that\n  also happens on VT switch / session resume and on a DRM udev change.\n- Other errors (e.g. no renderer after a GPU reset) keep retrying at the cap and never give up, since\n  they clear by themselves.\n- The failure count resets on the first frame KMS accepts, on resume, and on DPMS off.\n- When outputs are powered on (input or wlr-output-power) and a woken surface has given up, the\n  output config is re-applied once on idle (`refresh_output_config()`, as on a DRM udev change), so a\n  later wake can still bring the output back. The old loop recovered that way: on the rig below, 2 of\n  6 stuck episodes on the stock build healed by themselves at a later wake (2 of 8 wakes while stuck).\n- Logging is per state change: first failure (warn), giving up (error), recovery and\n  re-initialization (warn, so the episode is closed at the default log level).\n\nOut of scope: why the commit is rejected in the first place, and smithay logging the whole atomic\nrequest at warn level. Known limitation, shared with session resume and hotplug:\n`apply_config_for_outputs` stops at the first output that fails to initialize, so if two outputs gave\nup and one still fails at wake, the other is not re-initialized either. And while a given-up output\nstays enabled in the config, a request that keeps it enabled (e.g. any change from the display\nsettings) retries it and is rejected if the kernel still refuses; disabling it is accepted. Marking\nsuch an output disabled in the config would avoid that, but is a policy change left for a follow-up.\n\n## Testing\n\nFedora 44, NVIDIA GTX 1060 on 580.178.04, three outputs (DP-1 3840x2160@120, DP-3 and HDMI-A-1\n2560x1440@100). One output intermittently fails to come back after the screens sleep (HDMI-A-1\non 6 of 18 wakes from a healthy state between 2026-09-25 and 2026-10-02 on the stock build; DP-3 in\nthe patched run below), with the same `Atomic Test failed for new properties on crtc` /\n`Error setting crtc ... Invalid argument` errors as #2688.\n\n| | stock 1.8.0 | this PR |\n|---|---|---|\n| render failures after the wake | 1,300-3,500/s (logged + journald-suppressed), unbounded | 11 attempts in 14 s, then gives up |\n| cosmic-comp log lines of its own | one per attempt | 2 (first failure, giving up) |\n| cosmic-comp CPU | ~110% | ~13% (idle) |\n| `cosmic-randr list` / kernel for the dead output | enabled / disabled | enabled / disabled until reconfigured |\n| `cosmic-randr disable <dead output>` | 1st rejected, 2nd accepted | 1st accepted |\n| re-enabling it afterwards (mode change script) | works after the 2nd disable | works, no log-out |\n\nThe re-apply on wake, on device, twice: after a system suspend/resume the session-resume reload could\nnot re-initialize DP-3 (`Invalid argument` from the kernel), which leaves the output dark on the stock\nbuild too; and HDMI-A-1 gave up 14 s after a natural wake. In both cases the next DPMS off/on\nre-applied the config and the output came back with no manual steps.\n\n`cargo fmt --check`, `cargo clippy --all-targets -- -D warnings` (default and `debug` features),\n`cargo check --no-default-features` and `cargo test` pass; `--all-features` (tracy) was not built\nlocally. Unit tests cover the back-off sequence and the KMS-rejection classification.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n",
+      "patch_file": "prs/2917.json"
+    },
+    {
+      "id": "cosmic-comp-2918",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2918,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2918",
+      "title": "backend: dmabuf: ensure primary render node is preffered",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-05T11:52:34Z",
+      "user": "mikairyuu",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "9097fb25a5b7eb834d7986f367e2e65534206583",
+      "additions": 7,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "After dmabuf-v6 support in #2513, `update_default_feedback()` adds every non-primary GPU using `add_preference_tranche()`. Smithay intentionally places those tranches before the implicit main tranche.\r\nAs a result, the current default feedback ordering is\r\n```\r\nsecondary 1\r\nsecondary 2\r\nprimary\r\n```\r\n\r\nand not the desired\r\n\r\n```\r\nprimary\r\nsecondary 1\r\nsecondary 2\r\n```\r\nFor v6 clients, secondary GPU becomes the first/default Sampling device even though `cosmic-comp` selected another GPU as `primary_node`.\r\nOn my AMD iGPU + RTX 4060 laptop, before this fix `cosmic-panel`, `cosmic-workspaces` and EGL clients selected NVIDIA by default. \r\n\r\nAfter the fix, applications now select the integrated GPU again, matching the behavior before the dmabuf-v6 update. \r\n\r\n- I have not included any LLM (also known as AI) generated content in this PR, including code, comments, and descriptions.\r\n- I understand these changes in full and will be able to respond to review comments.\r\n- My change is accurately described in the commit message.\r\n- My contribution is tested and working as described.\r\n- I have read the [Developer Certificate of Origin](https://developercertificate.org/) and certify my contribution under its conditions.\r\n- [x] I have read and followed all of the above requirements. For more information, see our [contributor guide](https://github.com/pop-os/pop/blob/master/CONTRIBUTING.md).\r\n",
+      "patch_file": "prs/2918.json"
+    },
+    {
+      "id": "cosmic-comp-2920",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2920,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2920",
+      "title": "Optional approval mode: keep a build-time-trusted window above everything and ignore libei input while it is up",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-05T21:47:04Z",
+      "user": "MingyuanChen94",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "997cc2831e5d24546a24e6bf8dcccf01c4aea9ab",
+      "additions": 266,
+      "changed_files": 11,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## What it does\r\nThis mode is off unless the build sets both `COSMIC_COMP_APPROVER_EXE` and `COSMIC_COMP_APPROVER_APP_ID`. Builds that set neither behave exactly as before.\r\n\r\nWhen both are set, a Wayland toplevel is an approval window if two things hold:\r\n- its client's executable (from the socket credentials, `/proc/<pid>/exe`) equals `COSMIC_COMP_APPROVER_EXE`;\r\n- its app id equals `COSMIC_COMP_APPROVER_APP_ID`.\r\n\r\nWhile an approval window is up:\r\n- **Placement.** It is not placed on a workspace. A new render/input stage, right after the session lock, draws it centred on the active output, above overlay-layer surfaces.\r\n- **Keyboard.** Only it can hold keyboard focus, so exclusive layer surfaces cannot take it.\r\n- **Pointer.** Pointer input reaches it or nothing.\r\n- **libei.** Input from `com.system76.CosmicComp.Ei` sender sockets is dropped. A new `test-input` Cargo feature lets that input through for test builds.\r\n\r\n## Why\r\nA desktop that asks the user to confirm a privileged action needs a confirmation window that no other client can cover, steal focus from, or click through with injected input. This follows the same reasoning as the session lock, but applies to a single trusted client.\r\n\r\n## Files\r\n- `src/shell/approval.rs` (new, with unit tests).\r\n- Small hooks in `shell/mod.rs`, `shell/focus/{mod,order,target}.rs`, `input/mod.rs`, `backend/render/mod.rs`, `wayland/handlers/{compositor,xdg_shell/mod}.rs` and `libei.rs`.\r\n- `Cargo.toml` gains `test-input = []`.\r\n\r\n## Testing\r\n- `cargo check` and `cargo test --lib approval` pass on master (41497b4), both with and without `test-input` and with the two variables set.\r\n- A downstream VM suite for this patch on epoch-1.8.0 is written but has not run yet. On both builds it makes two attempts against an approval window: an overlay-layer surface that requests exclusive keyboard focus, and libei key events. I'll add its results here.\r\n\r\nOpened as a draft to ask whether you would take this upstream, or would prefer another shape for it, such as a protocol or a config key instead of build-time variables.\r\n\r\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\r\n\r\nhttps://claude.ai/code/session_01Y59zkAE8nXP6nLwfBYxqWU\r\n",
+      "patch_file": "prs/2920.json"
+    },
+    {
+      "id": "cosmic-comp-2922",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2922,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2922",
+      "title": "image-copy: redraw screencopy buffers that were never painted",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-06T10:26:07Z",
+      "user": "zveinn",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "354704e76dd88292e9306808a5c51f6f9660957c",
+      "additions": 83,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "llm"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "I ran into this issue where video buffers were not being piped to shared memory buffers, which breaks screen sharing/capture. I don't know enough about this kind of stuff to fix it manually so I had grok come up with a small fix for it. \r\n\r\nI know the policy is no LLM code, but I've validated this fix manually and reviewed the code and it seems fairly clean. \r\n\r\nFeel free to close this PR and re-use the code or just implement your own fix if you want, I just want OBS + screen sharing to work again :S \r\n\r\nRelated to:\r\n\r\n- https://github.com/pop-os/xdg-desktop-portal-cosmic/issues/367\r\n- https://github.com/pop-os/cosmic-comp/issues/1750\r\n\r\nhttps://github.com/pop-os/xdg-desktop-portal-cosmic/issues/286 is a separate portal crash and is not addressed here.\r\n\r\n---\r\n\r\n- My change is accurately described in the commit message.\r\n- My contribution is tested and working as described.\r\n- I have read the [Developer Certificate of Origin](https://developercertificate.org/) and certify my contribution under its conditions.\r\n- [x] I have read and followed all of the above requirements. For more information, see our [contributor guide](https://github.com/pop-os/pop/blob/master/CONTRIBUTING.md).\r\n",
+      "patch_file": "prs/2922.json"
+    },
+    {
+      "id": "cosmic-comp-2925",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2925,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2925",
+      "title": "Update for `smithay` virtual-keyboard API changes",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-07T01:16:32Z",
+      "user": "ids1024",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "ed16ac21ca4534e62c1c5608e7256f02f9fa9f0b",
+      "additions": 235,
+      "changed_files": 7,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "https://github.com/Smithay/smithay/pull/2159\r\n\r\n---\r\n\r\n- I have not included any LLM (also known as AI) generated content in this PR, including code, comments, and descriptions.\r\n- I understand these changes in full and will be able to respond to review comments.\r\n- My change is accurately described in the commit message.\r\n- My contribution is tested and working as described.\r\n- I have read the [Developer Certificate of Origin](https://developercertificate.org/) and certify my contribution under its conditions.\r\n- [x] I have read and followed all of the above requirements. For more information, see our [contributor guide](https://github.com/pop-os/pop/blob/master/CONTRIBUTING.md).\r\n",
+      "patch_file": "prs/2925.json"
+    },
+    {
+      "id": "cosmic-comp-2928",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2928,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2928",
+      "title": "Send activation signals over private EI dbus used by OSK",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-08T17:27:55Z",
+      "user": "jackpot51",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "e100a5e0ad4be8ec6e91fe46f84676c5107f7f3f",
+      "additions": 92,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "This sends activated and deactivated signals over the private `/com/system76/CosmicComp/Ei` dbus interface used by the OSK.\r\n\r\nNeeded by https://github.com/pop-os/cosmic-osk/pull/55\r\n\r\n---\r\n\r\n- I have not included any LLM (also known as AI) generated content in this PR, including code, comments, and descriptions.\r\n- I understand these changes in full and will be able to respond to review comments.\r\n- My change is accurately described in the commit message.\r\n- My contribution is tested and working as described.\r\n- I have read the [Developer Certificate of Origin](https://developercertificate.org/) and certify my contribution under its conditions.\r\n- [x] I have read and followed all of the above requirements. For more information, see our [contributor guide](https://github.com/pop-os/pop/blob/master/CONTRIBUTING.md).\r\n",
+      "patch_file": "prs/2928.json"
+    },
+    {
+      "id": "cosmic-comp-2942",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2942,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2942",
+      "title": "Translations update from Hosted Weblate",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-14T11:53:18Z",
+      "user": "weblate",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "5176ec479ccd789e45b627eddad2fb1e6588181c",
+      "additions": 2,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Translations update from [Hosted Weblate](https://hosted.weblate.org) for [Pop OS/COSMIC Comp](https://hosted.weblate.org/projects/pop-os/cosmic-comp/).\n\n\n\nCurrent translation status:\n\n![Weblate translation status](https://hosted.weblate.org/widget/pop-os/cosmic-comp/matrix-auto.svg)",
+      "patch_file": "prs/2942.json"
+    },
+    {
+      "id": "cosmic-comp-2944",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2944,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2944",
+      "title": "input-method: Don't send virtual keyboard input back to ime grab",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-14T21:04:51Z",
+      "user": "ids1024",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "ebf297cea0bfa427e258920967dbd6d03927964c",
+      "additions": 40,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Should fix https://github.com/pop-os/cosmic-comp/issues/2941.\n\nUses https://github.com/Smithay/smithay/pull/2204.\n\nThere may be other things to improve (including some overhaul to how keyboard grabs work in smithay, and eventually a better Wayland protocol for IMEs...), but it's good to get this regression fixed, at least.\n\n---\n\n- I have not included any LLM (also known as AI) generated content in this PR, including code, comments, and descriptions.\n- I understand these changes in full and will be able to respond to review comments.\n- My change is accurately described in the commit message.\n- My contribution is tested and working as described.\n- I have read the [Developer Certificate of Origin](https://developercertificate.org/) and certify my contribution under its conditions.\n- [x] I have read and followed all of the above requirements. For more information, see our [contributor guide](https://github.com/pop-os/pop/blob/master/CONTRIBUTING.md).\n",
+      "patch_file": "prs/2944.json"
+    },
+    {
+      "id": "cosmic-comp-2967",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2967,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2967",
+      "title": "corner-radius: Clip subsurfaces with their own corner radius",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-18T21:09:13Z",
+      "user": "jirkacepelka",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "540bdc61098ce22fe2051a5e83e09b70fb99b969",
+      "additions": 201,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Depends on pop-os/cosmic-protocols#93\n\nWindow and workspace thumbnails in the workspaces overview are subsurfaces, so the client cannot clip them and they always have square corners (pop-os/cosmic-workspaces-epoch#283).\n\nThis implements version 3 of `cosmic_corner_radius_manager_v1` (`get_corner_radius_subsurface`):\n\n- The radius is stored in the same `CacheableCorners` cached state that toplevels use.\n- When rendering the surface tree, a subsurface with its own radius is clipped to its bounds with the existing `ClippedSurfaceRenderElement`. No new shader is added. Subsurfaces without a radius render as before.\n- Known limitation: a subsurface with its own radius is not also clipped by the rounded corners of its parent window.\n\nTested in a live COSMIC session together with the iced and cosmic-workspaces changes.\n\n---\n\n- I have not included any LLM (also known as AI) generated content in this PR, including code, comments, and descriptions.\n- I understand these changes in full and will be able to respond to review comments.\n- My change is accurately described in the commit message.\n- My contribution is tested and working as described.\n- I have read the [Developer Certificate of Origin](https://developercertificate.org/) and certify my contribution under its conditions.\n- [ ] I have read and followed all of the above requirements. For more information, see our [contributor guide](https://github.com/pop-os/pop/blob/master/CONTRIBUTING.md).\n",
+      "patch_file": "prs/2967.json"
+    },
+    {
+      "id": "cosmic-comp-2978",
+      "source": "github",
+      "repo": "pop-os/cosmic-comp",
+      "kind": "pull_request",
+      "number": 2978,
+      "url": "https://github.com/pop-os/cosmic-comp/pull/2978",
+      "title": "fix: [ Input Method related ] only switch input source on the configu…",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-21T07:34:18Z",
+      "user": "vvn-git",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "4f1f7affa2ac4715e17d047f531cb888eccfff12",
+      "additions": 47,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "\n## Bug\n\nAfter switching to a non-US layout, almost any key flips the input source back to the default (e.g. `us`). The layout should only be changed by the configured `InputSourceSwitch` shortcut.\n\n## Cause\n\nEvery key press could call `update_virtual_keyboard_keymap` without requiring the key + modifier to match the system config.\n\n## Fix\n\n- Only keys pressed with a modifier (Super/Ctrl/Alt/Shift) can ever update the   keymap or change the layout. Without a modifier, the handler returns early   and never touches the shortcut list.\n- The layout can be changed only by the shortcut configured in system   settings: the pressed keycode and modifier must both match the configured   shortcut. \n- Unrelated keys no longer trigger a keymap update or a layout change.\n\n## Tested\n\n- Single modifier: `Super+Space`, `Ctrl+Space`, `Alt+Space`, `Shift+Space`  -   each switches only on its own shortcut.\n- Combined modifiers: configurations like `Ctrl+Shift+Space` also work as  configured.\n- Multiple different shortcut configs were tested and all behave correctly.\n- Keys not configured as the shortcut never switch and never update the\n  keymap, with or without modifiers.\n\n---\n\n- I have not included any LLM (also known as AI) generated content in this PR, including code, comments, and descriptions.\n- I understand these changes in full and will be able to respond to review comments.\n- My change is accurately described in the commit message.\n- My contribution is tested and working as described.\n- I have read the [Developer Certificate of Origin](https://developercertificate.org/) and certify my contribution under its conditions.\n- [x] I have read and followed all of the above requirements. For more information, see our [contributor guide](https://github.com/pop-os/pop/blob/master/CONTRIBUTING.md).\n",
+      "patch_file": "prs/2978.json"
+    }
+  ],
+  "mail_threads": []
+}

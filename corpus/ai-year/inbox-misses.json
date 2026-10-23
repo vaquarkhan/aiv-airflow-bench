@@ -1,0 +1,97 @@
+[
+  {
+    "q": "Incubator",
+    "total": 0,
+    "rows": []
+  },
+  {
+    "q": "governance values",
+    "total": 0,
+    "rows": []
+  },
+  {
+    "q": "release candidate",
+    "total": 11,
+    "rows": [
+      {
+        "subject": "[VOTE] Airflow Providers, release preparation date 2026-10-20",
+        "excerpt": "Hey all,  I have cut a new wave of 30 Airflow provider packages with release preparation date 2026-10-20.  This email calls a vote on the release. The vote will remain open for at least 72 hours and until at least three binding +1 votes have been rec",
+        "url": "https://lists.apache.org/thread/sn28295qls3pk7lv5nx3smpgqtmz1m1g",
+        "replies": 3,
+        "epoch": 1792603437
+      },
+      {
+        "subject": "📢 Apache Airflow 3.4.0beta2 is available for testing! 🎉",
+        "excerpt": "Dear Airflow Community,  I am excited to announce the availability of Apache Airflow 3.4.0.beta2 for testing!  This is a beta release, so do not run it in production. It may contain significant issues, and you will likely need to reset your database ",
+        "url": "https://lists.apache.org/thread/5rks8xc05zfbp8b6dndqfrhkrs9g6s4z",
+        "replies": 2,
+        "epoch": 1792529885
+      }
+    ]
+  },
+  {
+    "q": "Fabric",
+    "total": 0,
+    "rows": []
+  },
+  {
+    "q": "3.3.2rc1",
+    "total": 0,
+    "rows": []
+  },
+  {
+    "q": "Rookie",
+    "total": 3,
+    "rows": [
+      {
+        "subject": "[VOTE] September 2026 Rookie PR of the Month",
+        "excerpt": "Hello All!  Great conference at Austin this past month for the attendees - Thanks to the organisers, sponsors and speakers 🙌  Apache Airflow 3.3.2 is available [image: :tada:]  Thanks to all contributors!!!✨  Kindly take the time to celebrate your ow",
+        "url": "https://lists.apache.org/thread/vhm66823z05jd93y9b9z5brf60ghxmt3",
+        "replies": 3,
+        "epoch": 1790469664
+      },
+      {
+        "subject": "[ANNOUNCE] October 2026 Airflow Monthly Town Hall coming up!",
+        "excerpt": "Hi All,  A friendly reminder that our next Airflow Monthly Virtual Town Hall will be taking place this *Friday, October 9, 2026 at 8am PT / 11am ET.*  The agenda includes:     - *Airflow Project Update* w/ Vikram Koka    - *PR of the Month* Highlight",
+        "url": "https://lists.apache.org/thread/7okxgox09hdgmvmrsjtq2gw32n0h9h02",
+        "replies": 0,
+        "epoch": 1791288000
+      }
+    ]
+  },
+  {
+    "q": "anomaly",
+    "total": 0,
+    "rows": []
+  },
+  {
+    "q": "AWS account",
+    "total": 3,
+    "rows": [
+      {
+        "subject": "[LAZY CONSENSUS] AIP-118 Self-hosted runners for Apache Airflow CI",
+        "excerpt": "Hello everyone,  Following the discussion <https://lists.apache.org/thread.html/6sfqor414lxvwjnw3dvp5kzckms3t7zb>on the dev list, I would like to call for lazy consensus on AIP-118:  https://cwiki.apache.org/confluence/x/-JXwGg  Appendix with the sup",
+        "url": "https://lists.apache.org/thread/lfgvvffhtzgpbyy3dm197vftsg448qpx",
+        "replies": 0,
+        "epoch": 1792430769
+      },
+      {
+        "subject": "Re: [DISCUSS] \"scheduled\" triaging and security issues - with Airflow as engine",
+        "excerpt": "Hello everyone,  As a follow-up to this thread, I've written up the proposal, Here is an AIP <https://cwiki.apache.org/confluence/spaces/AIRFLOW/pages/451979463/WIP+AIP-124+Airflow-Powered+Agentic+Workflows+for+Project+Operations> ,  TL;DR: Move our ",
+        "url": "https://lists.apache.org/thread/f8jnjonpf8kbr25jwz67q5vo07h62wws",
+        "replies": 7,
+        "epoch": 1791541739
+      }
+    ]
+  },
+  {
+    "q": "incubator logo",
+    "total": 0,
+    "rows": []
+  },
+  {
+    "q": "Acorn",
+    "total": 0,
+    "rows": []
+  }
+]

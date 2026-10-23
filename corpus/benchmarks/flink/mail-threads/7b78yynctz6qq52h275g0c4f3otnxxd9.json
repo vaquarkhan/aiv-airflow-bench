@@ -1,0 +1,26 @@
+{
+  "tid": "7b78yynctz6qq52h275g0c4f3otnxxd9",
+  "subject": "Re: [Discuss] FLIP-XXX: Dynamic Rate Limiting for FLIP-27 Source",
+  "epoch": 1791454249,
+  "last_epoch": 1791961048,
+  "date": "2026-10-08T10:10:49+00:00",
+  "last_date": "2026-10-14T06:57:28+00:00",
+  "replies": 2,
+  "list": "dev@flink.apache.org",
+  "url": "https://lists.apache.org/thread/7b78yynctz6qq52h275g0c4f3otnxxd9",
+  "query": "LLM",
+  "flags": {
+    "slop_terms": [],
+    "tool_terms": [
+      "llm"
+    ],
+    "slop": false,
+    "tool": true
+  },
+  "disclosure": {
+    "signals": [],
+    "disclosed": false,
+    "generated_by": null
+  },
+  "starter_excerpt": "Hi Peter,\n\nThanks for putting together this proposal. I agree that static rate\nlimiting has its limitations, especially for pipelines involving large\nlanguage model (LLM) inference, where downstream processing capacity and\nlatency can fluctuate signi"
+}

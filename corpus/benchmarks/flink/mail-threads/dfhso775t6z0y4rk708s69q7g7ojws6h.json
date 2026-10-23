@@ -1,0 +1,24 @@
+{
+  "tid": "dfhso775t6z0y4rk708s69q7g7ojws6h",
+  "subject": "Re: [DISCUSS] Flink Community Skills",
+  "epoch": 1791732171,
+  "last_epoch": 1792164833,
+  "date": "2026-10-11T15:22:51+00:00",
+  "last_date": "2026-10-16T15:33:53+00:00",
+  "replies": 1,
+  "list": "dev@flink.apache.org",
+  "url": "https://lists.apache.org/thread/dfhso775t6z0y4rk708s69q7g7ojws6h",
+  "query": "AGENTS.md",
+  "flags": {
+    "slop_terms": [],
+    "tool_terms": [],
+    "slop": false,
+    "tool": false
+  },
+  "disclosure": {
+    "signals": [],
+    "disclosed": false,
+    "generated_by": null
+  },
+  "starter_excerpt": "Hi Rui,\n\n+1, and one pointer.\n\nJim Pizagno proposed operational troubleshooting skills for Flink on 4\nAugust [1]. It did not get\npicked up at the time, It overlaps the troubleshooting direction you\nmention, and might be worth pulling into this thread"
+}

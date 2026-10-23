@@ -1,0 +1,34 @@
+[
+  {
+    "repo": "pop-os/cosmic-comp",
+    "prs": 425
+  },
+  {
+    "repo": "pop-os/cosmic-panel",
+    "prs": 68
+  },
+  {
+    "repo": "pop-os/cosmic-settings",
+    "prs": 312
+  },
+  {
+    "repo": "pop-os/cosmic-files",
+    "prs": 328
+  },
+  {
+    "repo": "pop-os/cosmic-edit",
+    "prs": 119
+  },
+  {
+    "repo": "pop-os/cosmic-applets",
+    "prs": 237
+  },
+  {
+    "repo": "pop-os/libcosmic",
+    "prs": 320
+  },
+  {
+    "repo": "pop-os/cosmic-launcher",
+    "prs": 79
+  }
+]

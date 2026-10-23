@@ -1,0 +1,24 @@
+{
+  "tid": "9vh2s0zfrcf932kqb2gkk4d50n98ozcm",
+  "subject": "Re: [PR] [FLINK-40775][ci] Add a PR template with AI disclosure [flink-ci-docker]",
+  "epoch": 1790607346,
+  "last_epoch": 1790607346,
+  "date": "2026-09-28T14:55:46+00:00",
+  "last_date": "2026-09-28T14:55:46+00:00",
+  "replies": 0,
+  "list": "dev@flink.apache.org",
+  "url": "https://lists.apache.org/thread/9vh2s0zfrcf932kqb2gkk4d50n98ozcm",
+  "query": "disclosure",
+  "flags": {
+    "slop_terms": [],
+    "tool_terms": [],
+    "slop": false,
+    "tool": false
+  },
+  "disclosure": {
+    "signals": [],
+    "disclosed": false,
+    "generated_by": null
+  },
+  "starter_excerpt": "\n1996fanrui merged PR #8:\nURL: https://github.com/apache/flink-ci-docker/pull/8\n\n\n-- \nThis is an automated message from the Apache Git Service.\nTo respond to the message, please log on to GitHub and use the\nURL above to go to the specific comment.\n\nT"
+}

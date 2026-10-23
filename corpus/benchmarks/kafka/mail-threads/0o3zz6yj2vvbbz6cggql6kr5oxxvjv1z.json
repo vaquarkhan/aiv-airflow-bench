@@ -1,0 +1,24 @@
+{
+  "tid": "0o3zz6yj2vvbbz6cggql6kr5oxxvjv1z",
+  "subject": "Interest in an end-of-study internship (AI / ML / MLOps) at Kafka",
+  "epoch": 1792152670,
+  "last_epoch": 1792152670,
+  "date": "2026-10-16T12:11:10+00:00",
+  "last_date": "2026-10-16T12:11:10+00:00",
+  "replies": 0,
+  "list": "dev@kafka.apache.org",
+  "url": "https://lists.apache.org/thread/0o3zz6yj2vvbbz6cggql6kr5oxxvjv1z",
+  "query": "generative",
+  "flags": {
+    "slop_terms": [],
+    "tool_terms": [],
+    "slop": false,
+    "tool": true
+  },
+  "disclosure": {
+    "signals": [],
+    "disclosed": false,
+    "generated_by": null
+  },
+  "starter_excerpt": "Dear Kafka,\n\nI am writing to ask about an end-of-study internship at Kafka in artificial intelligence, machine learning, MLOps, or a related field. I am in my AI engineering program at ESPRIT and would be glad to contribute to your team while complet"
+}

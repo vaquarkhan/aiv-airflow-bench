@@ -1,0 +1,5442 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-22T15:42:02.386836+00:00",
+  "window": "2025-10-22..2026-10-22",
+  "issues_scanned": 2427,
+  "issues_by_category": {
+    "ai_related": 247,
+    "ai_slop": 9,
+    "llm_tool": 192,
+    "ai_disclosure": 11,
+    "ai_mention": 85
+  },
+  "prs_linked": 493,
+  "prs_with_objective_markers": 0,
+  "mail_messages_scanned": 4377,
+  "mail_by_category": {
+    "ai_related": 1233,
+    "ai_slop": 221,
+    "llm_tool": 724,
+    "ai_disclosure": 120,
+    "ai_mention": 1018
+  },
+  "mail_threads": 264,
+  "not_claimed": [
+    "A lexical AI flag is not proof of AI authorship.",
+    "A lexical AI flag is not proof the change should fail the gate.",
+    "Bare 'AI' includes product work (providers, features), not only slop.",
+    "Search totals are not a measure of AI-slop volume."
+  ],
+  "flagged_issues": [
+    {
+      "id": "issue-57018",
+      "issue": 57018,
+      "url": "https://github.com/apache/airflow/issues/57018",
+      "title": "Migrate remaining providers to `common.compat` compatibility layer",
+      "created_at": "2025-10-22T02:57:08Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "openai"
+      ],
+      "comment_count": 29,
+      "linked_prs": [
+        55457,
+        57322,
+        56884,
+        57007,
+        56996,
+        56999,
+        57000,
+        56994
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-57080",
+      "issue": 57080,
+      "url": "https://github.com/apache/airflow/issues/57080",
+      "title": "Status of testing Providers that were prepared on October 22, 2025",
+      "created_at": "2025-10-22T16:12:20Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 23,
+      "linked_prs": [
+        56276,
+        56584,
+        56435,
+        56158,
+        56633,
+        56286,
+        55110,
+        55092
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-57979",
+      "issue": 57979,
+      "url": "https://github.com/apache/airflow/issues/57979",
+      "title": "ImportError: cannot import name 'Styles' from 'structlog.dev' in Airflow 3.1.2",
+      "created_at": "2025-11-06T15:58:32Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "genai",
+        "openai"
+      ],
+      "comment_count": 7,
+      "linked_prs": [
+        57335
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-58315",
+      "issue": 58315,
+      "url": "https://github.com/apache/airflow/issues/58315",
+      "title": "Status of testing Providers that were prepared on November 14, 2025",
+      "created_at": "2025-11-14T13:49:39Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 19,
+      "linked_prs": [
+        57713,
+        57777,
+        57443,
+        56936,
+        56910,
+        57490,
+        57178,
+        58262
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-58562",
+      "issue": 58562,
+      "url": "https://github.com/apache/airflow/issues/58562",
+      "title": "[3.x] SDK subprocess killed with SIGKILL when patching TaskInstance (ServerResponseError)",
+      "created_at": "2025-11-21T13:35:18Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "chatgpt"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        59639
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-58573",
+      "issue": 58573,
+      "url": "https://github.com/apache/airflow/issues/58573",
+      "title": "apache-airflow-providers-snowflake connector 6.6.0 not connecting -- \"Could not deserialize key data\"",
+      "created_at": "2025-11-21T22:03:09Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "openai"
+      ],
+      "comment_count": 10,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-58792",
+      "issue": 58792,
+      "url": "https://github.com/apache/airflow/issues/58792",
+      "title": "Status of testing Providers that were prepared on November 27, 2025",
+      "created_at": "2025-11-27T21:52:32Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 12,
+      "linked_prs": [
+        58342,
+        55869,
+        54505,
+        58388,
+        58070,
+        58591,
+        58391,
+        58397
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-59248",
+      "issue": 59248,
+      "url": "https://github.com/apache/airflow/issues/59248",
+      "title": "Redis MessageQueueTrigger reads binary from Redis/Valkey and throws exception when encoding to JSON",
+      "created_at": "2025-12-09T17:27:32Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 5,
+      "linked_prs": [
+        58746
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-59602",
+      "issue": 59602,
+      "url": "https://github.com/apache/airflow/issues/59602",
+      "title": "On failed DAGs logs are not displayed with remote logging and and celery workers scaling.",
+      "created_at": "2025-12-18T13:19:59Z",
+      "state": "closed",
+      "categories": [
+        "ai_disclosure",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "generated by",
+        "ai"
+      ],
+      "comment_count": 15,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-60000",
+      "issue": 60000,
+      "url": "https://github.com/apache/airflow/issues/60000",
+      "title": "Update conf imports in providers to use airflow.sdk.configuration",
+      "created_at": "2025-12-31T18:54:35Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "openai",
+        "ai"
+      ],
+      "comment_count": 50,
+      "linked_prs": [
+        59966,
+        59979,
+        59986,
+        60030,
+        60092,
+        60026,
+        60002,
+        60090
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-60439",
+      "issue": 60439,
+      "url": "https://github.com/apache/airflow/issues/60439",
+      "title": "Add \"Copy\" function to copy all log content to clipboard on UI",
+      "created_at": "2026-01-13T01:45:48Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-60496",
+      "issue": 60496,
+      "url": "https://github.com/apache/airflow/issues/60496",
+      "title": "Status of testing Providers that were prepared on January 13th, 2026",
+      "created_at": "2026-01-14T00:01:17Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "gemini",
+        "openai"
+      ],
+      "comment_count": 22,
+      "linked_prs": [
+        59991,
+        59993,
+        57753,
+        59476,
+        58905,
+        60301,
+        60299,
+        60382
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-60741",
+      "issue": 60741,
+      "url": "https://github.com/apache/airflow/issues/60741",
+      "title": "Status of testing Providers that were prepared on January 17, 2026",
+      "created_at": "2026-01-18T10:05:12Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "gemini"
+      ],
+      "comment_count": 7,
+      "linked_prs": [
+        60730,
+        59518,
+        60083,
+        60089,
+        60679,
+        60380,
+        60322,
+        60260
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-60863",
+      "issue": 60863,
+      "url": "https://github.com/apache/airflow/issues/60863",
+      "title": "ORM and Migration have inconsistent column sizes for ab_user.first_name/last_name",
+      "created_at": "2026-01-21T07:39:58Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "openai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-60941",
+      "issue": 60941,
+      "url": "https://github.com/apache/airflow/issues/60941",
+      "title": "Cross-communication between Airflow components differs in Airflow2 and Airflow3",
+      "created_at": "2026-01-22T15:07:25Z",
+      "state": "open",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        51699
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-61165",
+      "issue": 61165,
+      "url": "https://github.com/apache/airflow/issues/61165",
+      "title": "Status of testing Providers that were prepared on January 28, 2026",
+      "created_at": "2026-01-28T15:50:35Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "gemini"
+      ],
+      "comment_count": 27,
+      "linked_prs": [
+        60776,
+        60920,
+        60666,
+        60904,
+        60247,
+        51883,
+        60978,
+        60472
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-61214",
+      "issue": 61214,
+      "url": "https://github.com/apache/airflow/issues/61214",
+      "title": "API server segfault when PYTHONASYNCIODEBUG=1",
+      "created_at": "2026-01-29T15:41:01Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "genai",
+        "openai"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-61224",
+      "issue": 61224,
+      "url": "https://github.com/apache/airflow/issues/61224",
+      "title": "DataFusion: support stopping a specific pipeline run (CDAP Stop a Program Run) in DataFusionHook / Stop operator",
+      "created_at": "2026-01-29T17:48:58Z",
+      "state": "closed",
+      "categories": [
+        "ai_disclosure"
+      ],
+      "matched_terms": [
+        "generated by"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        60688
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-61255",
+      "issue": 61255,
+      "url": "https://github.com/apache/airflow/issues/61255",
+      "title": "Status of testing of Apache Airflow 3.1.7rc2 and Task SDK 1.1.7rc2",
+      "created_at": "2026-01-30T11:56:50Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 19,
+      "linked_prs": [
+        61331,
+        56422,
+        60003,
+        60052,
+        60124,
+        60267,
+        60278,
+        60270
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-61261",
+      "issue": 61261,
+      "url": "https://github.com/apache/airflow/issues/61261",
+      "title": "Add unit tests for exceptions in GCP gen. ai operators",
+      "created_at": "2026-01-30T15:18:02Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "genai",
+        "ai"
+      ],
+      "comment_count": 16,
+      "linked_prs": [
+        61253,
+        61262
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-61735",
+      "issue": 61735,
+      "url": "https://github.com/apache/airflow/issues/61735",
+      "title": "EksPodOperator deferrable mode fails on remote triggerers — credential temp file not available",
+      "created_at": "2026-02-10T14:55:14Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-61736",
+      "issue": 61736,
+      "url": "https://github.com/apache/airflow/issues/61736",
+      "title": "EksPodOperator deferrable mode fails on remote triggerers — credential temp file not available",
+      "created_at": "2026-02-10T14:59:35Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 6,
+      "linked_prs": [
+        64187
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-61984",
+      "issue": 61984,
+      "url": "https://github.com/apache/airflow/issues/61984",
+      "title": "Define Translation Agent Skills for Airflow Terminology",
+      "created_at": "2026-02-16T10:44:39Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "llm",
+        "claude",
+        "copilot",
+        "gemini",
+        "ai"
+      ],
+      "comment_count": 9,
+      "linked_prs": [
+        55917,
+        62059,
+        62185
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-62020",
+      "issue": 62020,
+      "url": "https://github.com/apache/airflow/issues/62020",
+      "title": "API - UI Optimization",
+      "created_at": "2026-02-16T14:24:44Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "cursor"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        60940,
+        62482,
+        61483,
+        63180,
+        60241,
+        61656,
+        61111,
+        62369
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-62126",
+      "issue": 62126,
+      "url": "https://github.com/apache/airflow/issues/62126",
+      "title": "Dag Run ID and Triggering User Name are not recorded properly for a Backfill job",
+      "created_at": "2026-02-18T13:48:55Z",
+      "state": "open",
+      "categories": [
+        "ai_disclosure"
+      ],
+      "matched_terms": [
+        "generated by"
+      ],
+      "comment_count": 4,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-62291",
+      "issue": 62291,
+      "url": "https://github.com/apache/airflow/issues/62291",
+      "title": "Feature request: RAG failure analysis example DAG using 16-problem ProblemMap",
+      "created_at": "2026-02-21T14:11:09Z",
+      "state": "closed",
+      "categories": [
+        "ai_slop",
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "hallucinations",
+        "hallucination",
+        "llm"
+      ],
+      "comment_count": 4,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-62345",
+      "issue": 62345,
+      "url": "https://github.com/apache/airflow/issues/62345",
+      "title": "Migrate remaining provider connection UI metadata to YAML",
+      "created_at": "2026-02-23T07:13:29Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "openai"
+      ],
+      "comment_count": 25,
+      "linked_prs": [
+        62011,
+        62109,
+        62165,
+        62381,
+        62380,
+        62379
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-62362",
+      "issue": 62362,
+      "url": "https://github.com/apache/airflow/issues/62362",
+      "title": "[Feat] [Snowflake Provider] Lazy import of `snowflake` modules in `snowflake/hooks/snowflake.py`",
+      "created_at": "2026-02-23T15:15:09Z",
+      "state": "closed",
+      "categories": [
+        "ai_slop",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai generated",
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-62500",
+      "issue": 62500,
+      "url": "https://github.com/apache/airflow/issues/62500",
+      "title": "[GSOC 2026] Airflow Contribution & Verification Agent Skills",
+      "created_at": "2026-02-26T03:24:50Z",
+      "state": "open",
+      "categories": [
+        "ai_slop",
+        "llm_tool",
+        "ai_disclosure",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai-slop",
+        "hallucinations",
+        "claude",
+        "gemini",
+        "copilot",
+        "gen-ai",
+        "chatgpt",
+        "llm",
+        "openai",
+        "ai-assisted",
+        "ai"
+      ],
+      "comment_count": 68,
+      "linked_prs": [
+        63661,
+        63435,
+        64008,
+        64012,
+        64029,
+        60963
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-62537",
+      "issue": 62537,
+      "url": "https://github.com/apache/airflow/issues/62537",
+      "title": "Status of testing Providers that were prepared on February 26, 2026",
+      "created_at": "2026-02-26T20:00:50Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 28,
+      "linked_prs": [
+        60597,
+        59392,
+        61010,
+        60904,
+        61145,
+        61051,
+        61272,
+        60440
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-62684",
+      "issue": 62684,
+      "url": "https://github.com/apache/airflow/issues/62684",
+      "title": "[Bug][Airflow 3 API] TaskGroup UI 404 Not Found due to missing dag_id filter when querying identical run_ids",
+      "created_at": "2026-03-02T00:12:36Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "genai",
+        "openai"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-62733",
+      "issue": 62733,
+      "url": "https://github.com/apache/airflow/issues/62733",
+      "title": "Include reserved_ip_ranges to airflow.providers.google.cloud.operators.vertex_ai.pipeline_job.RunPipelineJobTrigger",
+      "created_at": "2026-03-02T20:35:59Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "openai",
+        "codex",
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        62739,
+        66625
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-62734",
+      "issue": 62734,
+      "url": "https://github.com/apache/airflow/issues/62734",
+      "title": "LLMSchemaCompareOperator / @task.llm_schema_compare",
+      "created_at": "2026-03-02T20:52:27Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "llm"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-62738",
+      "issue": 62738,
+      "url": "https://github.com/apache/airflow/issues/62738",
+      "title": "`@task.llm_branch` / `LLMBranchOperator`",
+      "created_at": "2026-03-02T21:37:49Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "llm"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-62826",
+      "issue": 62826,
+      "url": "https://github.com/apache/airflow/issues/62826",
+      "title": "AgentOperator + @task.agent",
+      "created_at": "2026-03-03T21:57:59Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "llm",
+        "openai",
+        "gpt-4o",
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-62872",
+      "issue": 62872,
+      "url": "https://github.com/apache/airflow/issues/62872",
+      "title": "AIP 99: Human-in-the-loop approval for Common AI Provider",
+      "created_at": "2026-03-04T13:45:29Z",
+      "state": "closed",
+      "categories": [
+        "ai_slop",
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "llm-generated",
+        "ai-generated",
+        "llm",
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-62875",
+      "issue": 62875,
+      "url": "https://github.com/apache/airflow/issues/62875",
+      "title": "Support defining custom Roles/ClusterRoles and bindings for CRDs",
+      "created_at": "2026-03-04T14:09:43Z",
+      "state": "open",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-62876",
+      "issue": 62876,
+      "url": "https://github.com/apache/airflow/issues/62876",
+      "title": "[Airflow 3] Keycloak Auth Manager: 401 Redirect Loop due to Missing 'kid' in Internal JWT Header",
+      "created_at": "2026-03-04T14:41:41Z",
+      "state": "closed",
+      "categories": [
+        "ai_disclosure"
+      ],
+      "matched_terms": [
+        "generated by"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        62883
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-62937",
+      "issue": 62937,
+      "url": "https://github.com/apache/airflow/issues/62937",
+      "title": "Unable to change log timestamp formats using logging config class or log formatter class",
+      "created_at": "2026-03-05T14:04:48Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "openai"
+      ],
+      "comment_count": 3,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-63258",
+      "issue": 63258,
+      "url": "https://github.com/apache/airflow/issues/63258",
+      "title": "Add support to Google ADK for agentic LLM workflows",
+      "created_at": "2026-03-10T12:03:25Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "llm",
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        62825
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-63279",
+      "issue": 63279,
+      "url": "https://github.com/apache/airflow/issues/63279",
+      "title": "Status of testing Providers that were prepared on March 10, 2026",
+      "created_at": "2026-03-10T15:56:18Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 33,
+      "linked_prs": [
+        62426,
+        62379,
+        58312,
+        63147,
+        62985,
+        63148,
+        63137,
+        62771
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-63295",
+      "issue": 63295,
+      "url": "https://github.com/apache/airflow/issues/63295",
+      "title": "DAG names should be filtered a little stronger",
+      "created_at": "2026-03-10T19:58:40Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "copilot"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        62616
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-63348",
+      "issue": 63348,
+      "url": "https://github.com/apache/airflow/issues/63348",
+      "title": "Standardize connection docs labels (howto/connection:{conn_type}) across all providers",
+      "created_at": "2026-03-11T13:25:22Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 4,
+      "linked_prs": [
+        63349
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-63442",
+      "issue": 63442,
+      "url": "https://github.com/apache/airflow/issues/63442",
+      "title": "Temporal partition mappers fail to parse partition keys generated by CronPartitionTimetable",
+      "created_at": "2026-03-12T13:04:49Z",
+      "state": "closed",
+      "categories": [
+        "ai_disclosure"
+      ],
+      "matched_terms": [
+        "generated by"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        63262,
+        62509
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-63456",
+      "issue": 63456,
+      "url": "https://github.com/apache/airflow/issues/63456",
+      "title": "TriggerDagRunLink does not respect base_url when Airflow runs behind a URL prefix",
+      "created_at": "2026-03-12T16:00:07Z",
+      "state": "closed",
+      "categories": [
+        "ai_disclosure"
+      ],
+      "matched_terms": [
+        "generated by"
+      ],
+      "comment_count": 6,
+      "linked_prs": [
+        54218
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-63580",
+      "issue": 63580,
+      "url": "https://github.com/apache/airflow/issues/63580",
+      "title": "CeleryExecutor worker health check does not detect catatonic state after Redis broker restart",
+      "created_at": "2026-03-14T09:12:46Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-63679",
+      "issue": 63679,
+      "url": "https://github.com/apache/airflow/issues/63679",
+      "title": "GNAP: git-native coordination protocol for Airflow DAGs that delegate to autonomous AI agents",
+      "created_at": "2026-03-15T22:17:39Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-64195",
+      "issue": 64195,
+      "url": "https://github.com/apache/airflow/issues/64195",
+      "title": "Status of testing Providers that were prepared on March 24, 2026",
+      "created_at": "2026-03-24T23:48:50Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "openai",
+        "ai"
+      ],
+      "comment_count": 24,
+      "linked_prs": [
+        63578,
+        64084,
+        63246,
+        63622,
+        61819,
+        63274,
+        47256,
+        62962
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-64561",
+      "issue": 64561,
+      "url": "https://github.com/apache/airflow/issues/64561",
+      "title": "Add AEO quality badge to README (score: 40/100)",
+      "created_at": "2026-04-01T05:26:15Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-64641",
+      "issue": 64641,
+      "url": "https://github.com/apache/airflow/issues/64641",
+      "title": "`action_logging` dependency logs invalid requests before route validation can reject them",
+      "created_at": "2026-04-02T18:57:36Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude",
+        "llm"
+      ],
+      "comment_count": 5,
+      "linked_prs": [
+        63994
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-64657",
+      "issue": 64657,
+      "url": "https://github.com/apache/airflow/issues/64657",
+      "title": "EksPodOperator returns 401 Unauthorized when using cross-account AssumeRole via aws_conn_id",
+      "created_at": "2026-04-03T06:17:35Z",
+      "state": "closed",
+      "categories": [
+        "ai_disclosure"
+      ],
+      "matched_terms": [
+        "generated by"
+      ],
+      "comment_count": 3,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-64880",
+      "issue": 64880,
+      "url": "https://github.com/apache/airflow/issues/64880",
+      "title": "Weaviate endpoint change",
+      "created_at": "2026-04-08T03:58:16Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "llm"
+      ],
+      "comment_count": 7,
+      "linked_prs": [
+        67343
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-64886",
+      "issue": 64886,
+      "url": "https://github.com/apache/airflow/issues/64886",
+      "title": "Status of testing Providers that were prepared on April 08, 2026",
+      "created_at": "2026-04-08T06:50:23Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "openai",
+        "ai"
+      ],
+      "comment_count": 15,
+      "linked_prs": [
+        63826,
+        64361,
+        64210,
+        64807,
+        64513,
+        64187,
+        64545,
+        64085
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-64957",
+      "issue": 64957,
+      "url": "https://github.com/apache/airflow/issues/64957",
+      "title": "dag_id missing in get_task_instance of TaskInstance Model",
+      "created_at": "2026-04-09T11:38:13Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "copilot"
+      ],
+      "comment_count": 5,
+      "linked_prs": [
+        57279
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-64971",
+      "issue": 64971,
+      "url": "https://github.com/apache/airflow/issues/64971",
+      "title": "Persist external_executor_id for CeleryExecutor in _send_workloads() to avoid \"lost\" events during scheduler termination",
+      "created_at": "2026-04-09T17:59:31Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 4,
+      "linked_prs": [
+        37784
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-65336",
+      "issue": 65336,
+      "url": "https://github.com/apache/airflow/issues/65336",
+      "title": "Status of testing of Apache Airflow 3.2.1rc3",
+      "created_at": "2026-04-15T21:31:43Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 22,
+      "linked_prs": [
+        64449,
+        64587,
+        64640,
+        64693,
+        64695,
+        64720,
+        64738,
+        64758
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-65702",
+      "issue": 65702,
+      "url": "https://github.com/apache/airflow/issues/65702",
+      "title": "Status of testing Providers that were prepared on April 21, 2026",
+      "created_at": "2026-04-22T23:40:41Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 16,
+      "linked_prs": [
+        65483,
+        65395,
+        65396,
+        65299,
+        65173,
+        65393,
+        64991,
+        65649
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-65709",
+      "issue": 65709,
+      "url": "https://github.com/apache/airflow/issues/65709",
+      "title": "GenAIGenerativeModelHook.get_genai_client() ignores Airflow connection credentials — falls back to ADC",
+      "created_at": "2026-04-23T07:55:51Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "genai",
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-65725",
+      "issue": 65725,
+      "url": "https://github.com/apache/airflow/issues/65725",
+      "title": "airflowctl dagrun list crashes unless both --state and --limit are explicitly provided",
+      "created_at": "2026-04-23T14:48:51Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude",
+        "anthropic"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        65608
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-65729",
+      "issue": 65729,
+      "url": "https://github.com/apache/airflow/issues/65729",
+      "title": "Triggerer unable to ship logs to remote azure blob connection",
+      "created_at": "2026-04-23T15:11:50Z",
+      "state": "closed",
+      "categories": [
+        "ai_disclosure"
+      ],
+      "matched_terms": [
+        "generated by"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-65871",
+      "issue": 65871,
+      "url": "https://github.com/apache/airflow/issues/65871",
+      "title": "IMAP hook does not properly handle non-ASCII (Cyrillic) attachment filenames",
+      "created_at": "2026-04-26T13:26:38Z",
+      "state": "closed",
+      "categories": [
+        "ai_disclosure"
+      ],
+      "matched_terms": [
+        "generated by"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-66025",
+      "issue": 66025,
+      "url": "https://github.com/apache/airflow/issues/66025",
+      "title": "[Feat] [Slack Provider] Lazy import of Slack modules in slack/hooks/*",
+      "created_at": "2026-04-28T14:59:48Z",
+      "state": "closed",
+      "categories": [
+        "ai_slop",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai generated",
+        "ai"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        67479
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66268",
+      "issue": 66268,
+      "url": "https://github.com/apache/airflow/issues/66268",
+      "title": "Add example DAG demonstrating Deadline Alerts",
+      "created_at": "2026-05-02T11:25:44Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        66265
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66307",
+      "issue": 66307,
+      "url": "https://github.com/apache/airflow/issues/66307",
+      "title": "Decide fate of `start_from_trigger` on the 3.2 release branch — #55068 missed backport",
+      "created_at": "2026-05-03T15:15:52Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 10,
+      "linked_prs": [
+        55068,
+        64298,
+        64715,
+        64714,
+        66002,
+        66766
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66358",
+      "issue": 66358,
+      "url": "https://github.com/apache/airflow/issues/66358",
+      "title": "Triggers fetching XComs/Variables/Connections serialize on supervisor comms, causing TaskDeferralTimeout under load (regression vs 3.1)",
+      "created_at": "2026-05-04T14:57:34Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        48239,
+        64882
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66413",
+      "issue": 66413,
+      "url": "https://github.com/apache/airflow/issues/66413",
+      "title": "Strengthen trigger-hash tests with a fully-serialized JSON guard and broader fixtures",
+      "created_at": "2026-05-05T11:27:43Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        66002
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66425",
+      "issue": 66425,
+      "url": "https://github.com/apache/airflow/issues/66425",
+      "title": "Google provider: support universe_domain via connection extras",
+      "created_at": "2026-05-05T15:28:08Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "copilot",
+        "gpt-5.3",
+        "codex"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        66159
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66436",
+      "issue": 66436,
+      "url": "https://github.com/apache/airflow/issues/66436",
+      "title": "publish-docs-to-s3 fails on tags cut before #66100",
+      "created_at": "2026-05-05T18:14:04Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        66100
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66480",
+      "issue": 66480,
+      "url": "https://github.com/apache/airflow/issues/66480",
+      "title": "Status of testing Providers that were prepared on May 06, 2026",
+      "created_at": "2026-05-06T15:12:22Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 19,
+      "linked_prs": [
+        64986,
+        64119,
+        64051,
+        66375,
+        66380,
+        62240,
+        66362,
+        66361
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66734",
+      "issue": 66734,
+      "url": "https://github.com/apache/airflow/issues/66734",
+      "title": "Deadlock between api-server `ti_update_state` and scheduler `_verify_integrity_if_dag_changed` on task_instance",
+      "created_at": "2026-05-11T22:47:06Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        65920,
+        65836,
+        66762
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66763",
+      "issue": 66763,
+      "url": "https://github.com/apache/airflow/issues/66763",
+      "title": "Scheduler MySQL: misplaced `USE INDEX (ti_state)` hint on outer rejoin causes `task_instance` full scan in `_executable_task_instances_to_queued` (Airflow 3.2 regression from PR #54103)",
+      "created_at": "2026-05-12T09:44:52Z",
+      "state": "closed",
+      "categories": [
+        "ai_disclosure"
+      ],
+      "matched_terms": [
+        "generated by"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        54103
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66836",
+      "issue": 66836,
+      "url": "https://github.com/apache/airflow/issues/66836",
+      "title": "`JavaCoordinator`: Rename `bundles_folder`, accept `list[str]`, and switch coordinator config to dict",
+      "created_at": "2026-05-13T02:25:19Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-66837",
+      "issue": 66837,
+      "url": "https://github.com/apache/airflow/issues/66837",
+      "title": "Decouple Cadwyn (FastAPI/Starlette) hard dependencies from the Airflow Task SDK installation",
+      "created_at": "2026-05-13T02:25:39Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-66838",
+      "issue": 66838,
+      "url": "https://github.com/apache/airflow/issues/66838",
+      "title": "Improve `BaseCoordinator` interface to support pluggable communication channels",
+      "created_at": "2026-05-13T02:26:10Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        67161
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66936",
+      "issue": 66936,
+      "url": "https://github.com/apache/airflow/issues/66936",
+      "title": "Refactor ExecutableCoordinator interface based on dev-list design discussion",
+      "created_at": "2026-05-14T11:50:19Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-66939",
+      "issue": 66939,
+      "url": "https://github.com/apache/airflow/issues/66939",
+      "title": "Add user-facing docs for the Go SDK with the executable coordinator",
+      "created_at": "2026-05-14T11:50:40Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        68221,
+        68223
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66940",
+      "issue": 66940,
+      "url": "https://github.com/apache/airflow/issues/66940",
+      "title": "ExecutableCoordinator: rename bundles_folder, accept list[str], switch coordinator config to dict-keyed shape",
+      "created_at": "2026-05-14T11:50:49Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        67161
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66941",
+      "issue": 66941,
+      "url": "https://github.com/apache/airflow/issues/66941",
+      "title": "Embed supervisor schema version in airflow-metadata.yaml for executable bundles",
+      "created_at": "2026-05-14T11:51:07Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        67153
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66942",
+      "issue": 66942,
+      "url": "https://github.com/apache/airflow/issues/66942",
+      "title": "Cross-SDK DagSerialization compatibility CI for the Go SDK",
+      "created_at": "2026-05-14T11:51:14Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        65959
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66943",
+      "issue": 66943,
+      "url": "https://github.com/apache/airflow/issues/66943",
+      "title": "E2E and Breeze coverage for the executable coordinator path (Go SDK)",
+      "created_at": "2026-05-14T11:51:21Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        65959
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66944",
+      "issue": 66944,
+      "url": "https://github.com/apache/airflow/issues/66944",
+      "title": "Dag and task-level callbacks in the Go SDK",
+      "created_at": "2026-05-14T11:51:27Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-66961",
+      "issue": 66961,
+      "url": "https://github.com/apache/airflow/issues/66961",
+      "title": "Fix provider triggers whose serialize() drops __init__ parameters",
+      "created_at": "2026-05-14T18:17:08Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        66960,
+        66965,
+        66966,
+        66968
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66963",
+      "issue": 66963,
+      "url": "https://github.com/apache/airflow/issues/66963",
+      "title": "BigQueryStreamingBufferEmptySensor can falsely report an empty streaming buffer (metadata lag)",
+      "created_at": "2026-05-14T18:56:44Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 4,
+      "linked_prs": [
+        66652
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-66986",
+      "issue": 66986,
+      "url": "https://github.com/apache/airflow/issues/66986",
+      "title": "Add Bundle documentation in providers",
+      "created_at": "2026-05-15T10:26:43Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-67033",
+      "issue": 67033,
+      "url": "https://github.com/apache/airflow/issues/67033",
+      "title": "Add a Backend.AI provider package",
+      "created_at": "2026-05-16T11:31:18Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 3,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-67044",
+      "issue": 67044,
+      "url": "https://github.com/apache/airflow/issues/67044",
+      "title": "Hook lineage collector pollution: ObjectStoragePath-using tests leak into openlineage extractor tests",
+      "created_at": "2026-05-16T18:54:26Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        64199,
+        66825
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67051",
+      "issue": 67051,
+      "url": "https://github.com/apache/airflow/issues/67051",
+      "title": "CloudComposerExternalTaskSensor succeeds when all task instances are outside execution_range",
+      "created_at": "2026-05-16T21:40:07Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "codex",
+        "gpt-5"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-67123",
+      "issue": 67123,
+      "url": "https://github.com/apache/airflow/issues/67123",
+      "title": "Celery executor: per-publish Celery app reconstruction (since providers-celery 3.16.0) causes operation_timeout breaches",
+      "created_at": "2026-05-18T16:18:16Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        60675,
+        61798
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67210",
+      "issue": 67210,
+      "url": "https://github.com/apache/airflow/issues/67210",
+      "title": "Allow embedding a Dag run under an external trace via run conf",
+      "created_at": "2026-05-19T20:22:17Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        63568,
+        68591,
+        68592,
+        68860,
+        67424
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67213",
+      "issue": 67213,
+      "url": "https://github.com/apache/airflow/issues/67213",
+      "title": "Status of testing Providers that were prepared on May 19, 2026",
+      "created_at": "2026-05-19T21:39:46Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 24,
+      "linked_prs": [
+        64051,
+        61472,
+        66479,
+        66844,
+        66957,
+        66816,
+        64513,
+        64807
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67461",
+      "issue": 67461,
+      "url": "https://github.com/apache/airflow/issues/67461",
+      "title": "Add dedicated permission for viewing import errors of unregistered Dag files (with multi-team support)",
+      "created_at": "2026-05-25T09:07:42Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        67465
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67515",
+      "issue": 67515,
+      "url": "https://github.com/apache/airflow/issues/67515",
+      "title": "Provider package performance improvements via lazy loading 3rd party packages",
+      "created_at": "2026-05-26T00:07:44Z",
+      "state": "closed",
+      "categories": [
+        "ai_slop",
+        "llm_tool",
+        "ai_disclosure",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai-generated",
+        "ai generated",
+        "slop",
+        "hallucinated",
+        "claude",
+        "ai-assisted",
+        "ai"
+      ],
+      "comment_count": 17,
+      "linked_prs": [
+        67519,
+        62365,
+        67479,
+        67522
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67541",
+      "issue": 67541,
+      "url": "https://github.com/apache/airflow/issues/67541",
+      "title": "UI: normalize serialized no-status child_states key (\"None\") in collapsed-aggregate rendering",
+      "created_at": "2026-05-26T09:50:00Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 4,
+      "linked_prs": [
+        67552,
+        61854,
+        67543
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67599",
+      "issue": 67599,
+      "url": "https://github.com/apache/airflow/issues/67599",
+      "title": "Implement SecretsMasker for Variables and Connections in the Go SDK",
+      "created_at": "2026-05-27T09:12:45Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        67317,
+        67318
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67797",
+      "issue": 67797,
+      "url": "https://github.com/apache/airflow/issues/67797",
+      "title": "Go-SDK: Coordinator-mode task failures never transition to UP_FOR_RETRY",
+      "created_at": "2026-05-31T08:49:27Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        67318
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67798",
+      "issue": 67798,
+      "url": "https://github.com/apache/airflow/issues/67798",
+      "title": "AIP-108: Java SDK coordinator-mode task failures never transition to UP_FOR_RETRY",
+      "created_at": "2026-05-31T08:49:48Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        67318
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67813",
+      "issue": 67813,
+      "url": "https://github.com/apache/airflow/issues/67813",
+      "title": "SchedulerJobRunner.adopt_or_reset_orphaned_tasks crashes with DetachedInstanceError",
+      "created_at": "2026-05-31T19:57:00Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        65711
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67869",
+      "issue": 67869,
+      "url": "https://github.com/apache/airflow/issues/67869",
+      "title": "Track Firefox Dag Calendar tooltip e2e flake",
+      "created_at": "2026-06-01T21:30:23Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "codex",
+        "gpt-5"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        67879
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67891",
+      "issue": 67891,
+      "url": "https://github.com/apache/airflow/issues/67891",
+      "title": "KubernetesExecutor: scheduler crash loop (DetachedInstanceError), nested scoped create_session() in _alive_other_scheduler_job_ids detaches orphan TaskInstances (10.17.1)",
+      "created_at": "2026-06-02T08:13:20Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        66400,
+        67850
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67938",
+      "issue": 67938,
+      "url": "https://github.com/apache/airflow/issues/67938",
+      "title": "Honor [scheduler] create_cron_data_intervals when serializing cron schedules in the Go SDK",
+      "created_at": "2026-06-03T06:06:02Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        67155
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67957",
+      "issue": 67957,
+      "url": "https://github.com/apache/airflow/issues/67957",
+      "title": "Status of testing Providers that were prepared on June 02, 2026",
+      "created_at": "2026-06-03T12:55:15Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 25,
+      "linked_prs": [
+        67816,
+        67626,
+        67229,
+        67382,
+        67443,
+        66721,
+        66549,
+        67508
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67970",
+      "issue": 67970,
+      "url": "https://github.com/apache/airflow/issues/67970",
+      "title": "HTTP 500 on GET /api/v2/dags//dagRuns//taskInstances after sorting by run_after column (regression in 3.2.2)",
+      "created_at": "2026-06-03T19:27:40Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "cursor",
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        65604,
+        65746,
+        64845,
+        65405
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-67989",
+      "issue": 67989,
+      "url": "https://github.com/apache/airflow/issues/67989",
+      "title": "airflow CTL --conf option can't parse input",
+      "created_at": "2026-06-04T01:32:14Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-68217",
+      "issue": 68217,
+      "url": "https://github.com/apache/airflow/issues/68217",
+      "title": "common-ai HITL Review plugin UI fails to load on Airflow 3.1.7",
+      "created_at": "2026-06-08T10:00:09Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "openai",
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        68260
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-68416",
+      "issue": 68416,
+      "url": "https://github.com/apache/airflow/issues/68416",
+      "title": "LlamaIndexEmbeddingOperator returns vector=None for every chunk",
+      "created_at": "2026-06-11T22:53:31Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "openai",
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-68417",
+      "issue": 68417,
+      "url": "https://github.com/apache/airflow/issues/68417",
+      "title": "Redo #59691: placeholder upstream map-index resolution breaks per-index expansion in mapped task groups",
+      "created_at": "2026-06-11T23:04:28Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        59691,
+        68418,
+        68454
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-68567",
+      "issue": 68567,
+      "url": "https://github.com/apache/airflow/issues/68567",
+      "title": "Store a hash of dag_version.version_data to avoid loading/comparing large manifests on parse",
+      "created_at": "2026-06-15T11:25:27Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        68336
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-68605",
+      "issue": 68605,
+      "url": "https://github.com/apache/airflow/issues/68605",
+      "title": "Replace private Agent Engine query SDK request",
+      "created_at": "2026-06-16T03:11:41Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "genai",
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-68699",
+      "issue": 68699,
+      "url": "https://github.com/apache/airflow/issues/68699",
+      "title": "Concurrent POST /api/v2/backfills causes HTTP 500 + partial data with SQLite metadata DB",
+      "created_at": "2026-06-18T05:59:57Z",
+      "state": "open",
+      "categories": [
+        "ai_slop",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai slop",
+        "ai"
+      ],
+      "comment_count": 3,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-68721",
+      "issue": 68721,
+      "url": "https://github.com/apache/airflow/issues/68721",
+      "title": "Backfill premature completion (confirmed on Airflow 3.2.2)",
+      "created_at": "2026-06-18T15:51:42Z",
+      "state": "open",
+      "categories": [
+        "ai_slop",
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "slop",
+        "claude"
+      ],
+      "comment_count": 5,
+      "linked_prs": [
+        62561,
+        68125,
+        68705,
+        67900
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-68723",
+      "issue": 68723,
+      "url": "https://github.com/apache/airflow/issues/68723",
+      "title": "Join us for Airflow Summit 2026 from Aug-31 to Sep-2 in Austin, TX",
+      "created_at": "2026-06-18T16:19:16Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "openai",
+        "ai"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-68751",
+      "issue": 68751,
+      "url": "https://github.com/apache/airflow/issues/68751",
+      "title": "Status of testing Providers that were prepared on June 19, 2026",
+      "created_at": "2026-06-19T12:36:06Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 25,
+      "linked_prs": [
+        68300,
+        68140,
+        67984,
+        68619,
+        68310,
+        68256,
+        67847,
+        68685
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-68827",
+      "issue": 68827,
+      "url": "https://github.com/apache/airflow/issues/68827",
+      "title": "KubernetesExecutor scheduler crashes with PicklingError on pod_override with kubernetes client 36.x",
+      "created_at": "2026-06-22T07:29:55Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        68819,
+        2532
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-68845",
+      "issue": 68845,
+      "url": "https://github.com/apache/airflow/issues/68845",
+      "title": "Track a future SandboxExecutor for isolated Task SDK workloads",
+      "created_at": "2026-06-22T14:59:33Z",
+      "state": "open",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        68847,
+        68407
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-68858",
+      "issue": 68858,
+      "url": "https://github.com/apache/airflow/issues/68858",
+      "title": "Cursor pagination silently drops rows when sorting by a nullable column",
+      "created_at": "2026-06-22T19:37:45Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "cursor"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-69023",
+      "issue": 69023,
+      "url": "https://github.com/apache/airflow/issues/69023",
+      "title": "Restore kubernetes-client 36.x support in cncf.kubernetes and google providers (401 auth regression)",
+      "created_at": "2026-06-26T09:47:39Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 4,
+      "linked_prs": [
+        68041,
+        69025,
+        68848,
+        69032
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69035",
+      "issue": 69035,
+      "url": "https://github.com/apache/airflow/issues/69035",
+      "title": "UI: DAG detail page 500s / infinite load for DAGs with run history but no parsed definition (e.g. created by dag.test()/system tests)",
+      "created_at": "2026-06-26T12:53:19Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-69052",
+      "issue": 69052,
+      "url": "https://github.com/apache/airflow/issues/69052",
+      "title": "KubernetesExecutor: automatically requeue tasks whose pod failed before execution started",
+      "created_at": "2026-06-26T18:38:41Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        66405
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69063",
+      "issue": 69063,
+      "url": "https://github.com/apache/airflow/issues/69063",
+      "title": "AF 2 to 3 migration 0049 (remove_pickled_data_from_xcom_table) aborts on U+0000 NUL escape in XCom values during bytea to JSONB cast",
+      "created_at": "2026-06-26T21:42:12Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        57893
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69065",
+      "issue": 69065,
+      "url": "https://github.com/apache/airflow/issues/69065",
+      "title": "Migrate to FastAPI 0.137 (lazy router inclusion) — scope decision, target 3.4.0",
+      "created_at": "2026-06-26T22:10:56Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 8,
+      "linked_prs": [
+        68826,
+        68578
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69122",
+      "issue": 69122,
+      "url": "https://github.com/apache/airflow/issues/69122",
+      "title": "Migrate common.ai provider to pydantic-ai 2.x and remove the <2 cap",
+      "created_at": "2026-06-29T11:02:54Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        68933
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69123",
+      "issue": 69123,
+      "url": "https://github.com/apache/airflow/issues/69123",
+      "title": "Migrate exasol provider to pyexasol 2.x and remove the <2 cap",
+      "created_at": "2026-06-29T11:02:58Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        68933
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69144",
+      "issue": 69144,
+      "url": "https://github.com/apache/airflow/issues/69144",
+      "title": "Task worker OTel span not marked ERROR on task failures",
+      "created_at": "2026-06-29T21:40:25Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        67877
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69164",
+      "issue": 69164,
+      "url": "https://github.com/apache/airflow/issues/69164",
+      "title": "Update SQLAlchemy documentation links from 1.4 (en/14) to 2.0 (en/20)",
+      "created_at": "2026-06-30T05:44:16Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 12,
+      "linked_prs": [
+        69168,
+        69150,
+        69167,
+        69200
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69323",
+      "issue": 69323,
+      "url": "https://github.com/apache/airflow/issues/69323",
+      "title": "Google provider base-depends on google-cloud-aiplatform[evaluation], force-installing litellm/scikit-learn for every user",
+      "created_at": "2026-07-03T10:04:35Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "genai",
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        69399
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69460",
+      "issue": 69460,
+      "url": "https://github.com/apache/airflow/issues/69460",
+      "title": "Gate release-process and secret-using workflows via a protected \"release\" deployment environment",
+      "created_at": "2026-07-06T10:58:14Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        69457
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69463",
+      "issue": 69463,
+      "url": "https://github.com/apache/airflow/issues/69463",
+      "title": "Microsoft Graph Filesystem fails due to missing token_endpoint",
+      "created_at": "2026-07-06T11:31:27Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-69466",
+      "issue": 69466,
+      "url": "https://github.com/apache/airflow/issues/69466",
+      "title": "Migrate CI-time secret workflows to a deployment environment and re-enable zizmor secrets-outside-env",
+      "created_at": "2026-07-06T11:43:13Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-69562",
+      "issue": 69562,
+      "url": "https://github.com/apache/airflow/issues/69562",
+      "title": "Status of testing Providers that were prepared on July 07, 2026",
+      "created_at": "2026-07-07T15:54:18Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "anthropic",
+        "openai",
+        "claude",
+        "codex",
+        "gpt-5",
+        "ai"
+      ],
+      "comment_count": 16,
+      "linked_prs": [
+        69081,
+        68882,
+        69142,
+        64274,
+        69072,
+        68946,
+        69002,
+        68925
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69616",
+      "issue": 69616,
+      "url": "https://github.com/apache/airflow/issues/69616",
+      "title": "Deliberate upgrades needed for Dependabot-capped deps: aiosqlite, fastapi/cadwyn, datamodel-code-generator",
+      "created_at": "2026-07-08T14:35:25Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 6,
+      "linked_prs": [
+        68816,
+        68578
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69822",
+      "issue": 69822,
+      "url": "https://github.com/apache/airflow/issues/69822",
+      "title": "Google Vertex AI Feature Store system Dag exceeds import timeout",
+      "created_at": "2026-07-13T11:18:47Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-69825",
+      "issue": 69825,
+      "url": "https://github.com/apache/airflow/issues/69825",
+      "title": "Google GKE system Dags use deprecated cluster fields",
+      "created_at": "2026-07-13T12:18:46Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        69823
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69841",
+      "issue": 69841,
+      "url": "https://github.com/apache/airflow/issues/69841",
+      "title": "Prevent stale task triggers from blocking healthy workloads",
+      "created_at": "2026-07-14T00:51:45Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "codex",
+        "gpt-5"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-69862",
+      "issue": 69862,
+      "url": "https://github.com/apache/airflow/issues/69862",
+      "title": "Track a future SandboxOperator for sandboxed command/job execution",
+      "created_at": "2026-07-14T09:35:12Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        68407,
+        68847
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69938",
+      "issue": 69938,
+      "url": "https://github.com/apache/airflow/issues/69938",
+      "title": "Asset-triggered DAG queueing can deadlock on MySQL and is not retried",
+      "created_at": "2026-07-15T20:15:08Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        26103,
+        69977
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-69980",
+      "issue": 69980,
+      "url": "https://github.com/apache/airflow/issues/69980",
+      "title": "Deadline callback migration 0094 shallow-encodes nested callback kwargs → scheduler CrashLoopBackOff (KeyError('__var'))",
+      "created_at": "2026-07-16T17:55:57Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 4,
+      "linked_prs": [
+        69985
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-70093",
+      "issue": 70093,
+      "url": "https://github.com/apache/airflow/issues/70093",
+      "title": "Add deferrable support to LLM operators in common.ai provider",
+      "created_at": "2026-07-19T09:52:36Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "llm",
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-70251",
+      "issue": 70251,
+      "url": "https://github.com/apache/airflow/issues/70251",
+      "title": "create-team in multi-team failing to allow access to team DAGs",
+      "created_at": "2026-07-22T17:14:13Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 5,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-70296",
+      "issue": 70296,
+      "url": "https://github.com/apache/airflow/issues/70296",
+      "title": "Move template-field validation/transformation out of operator __init__ (exemption-list burn-down)",
+      "created_at": "2026-07-23T12:12:27Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "anthropic",
+        "claude",
+        "codex",
+        "gpt-5",
+        "cursor",
+        "grok",
+        "ai"
+      ],
+      "comment_count": 37,
+      "linked_prs": [
+        73040,
+        70351,
+        70325,
+        70326,
+        70330,
+        71174,
+        70491,
+        70922
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-70314",
+      "issue": 70314,
+      "url": "https://github.com/apache/airflow/issues/70314",
+      "title": "Deferrable tasks with remote logging don't push triggerer logs to AWS CloudWatch",
+      "created_at": "2026-07-23T18:19:45Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 8,
+      "linked_prs": [
+        66633,
+        68779
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-70317",
+      "issue": 70317,
+      "url": "https://github.com/apache/airflow/issues/70317",
+      "title": "Logs produced by deferrable tasks disapper from Airflow UI after completion of the task",
+      "created_at": "2026-07-23T18:47:35Z",
+      "state": "open",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-70355",
+      "issue": 70355,
+      "url": "https://github.com/apache/airflow/issues/70355",
+      "title": "Status of testing Providers that were prepared on July 22, 2026",
+      "created_at": "2026-07-24T04:28:18Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "anthropic",
+        "llm",
+        "openai",
+        "codex",
+        "gpt-5",
+        "gpt-5.6",
+        "claude",
+        "ai"
+      ],
+      "comment_count": 24,
+      "linked_prs": [
+        68882,
+        69772,
+        70182,
+        66816,
+        64513,
+        47508,
+        64807,
+        69817
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-70465",
+      "issue": 70465,
+      "url": "https://github.com/apache/airflow/issues/70465",
+      "title": "EcsRunTaskOperator deferrable mode fetches CloudWatch logs from wrong region when awslogs_region differs from region_name",
+      "created_at": "2026-07-26T09:42:21Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        70464,
+        70474
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-70503",
+      "issue": 70503,
+      "url": "https://github.com/apache/airflow/issues/70503",
+      "title": "Restore argument-provision checks to __init__ in operators fixed by the burn-down",
+      "created_at": "2026-07-27T08:20:53Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 7,
+      "linked_prs": [
+        70508,
+        70505,
+        70338,
+        70341,
+        70348,
+        70373,
+        70450,
+        70340
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-70526",
+      "issue": 70526,
+      "url": "https://github.com/apache/airflow/issues/70526",
+      "title": "Scheduler deadlocks in pipe write during task dispatch (LocalExecutor) — runtime variant of #67881",
+      "created_at": "2026-07-27T15:08:04Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 9,
+      "linked_prs": [
+        67881,
+        70545
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-70587",
+      "issue": 70587,
+      "url": "https://github.com/apache/airflow/issues/70587",
+      "title": "Get provider registry build off the docs publish critical path",
+      "created_at": "2026-07-28T10:51:29Z",
+      "state": "closed",
+      "categories": [
+        "ai_slop",
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai-generated",
+        "claude",
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        62261,
+        70285,
+        65188,
+        65506
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-70631",
+      "issue": 70631,
+      "url": "https://github.com/apache/airflow/issues/70631",
+      "title": "Additional template fields required for Vertex AI Batch Inference Job",
+      "created_at": "2026-07-28T15:41:56Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        70632
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-70880",
+      "issue": 70880,
+      "url": "https://github.com/apache/airflow/issues/70880",
+      "title": "Tasks from asset-triggered DAGs execute in arbitrary order - no tiebreaker in scheduler",
+      "created_at": "2026-07-31T23:15:03Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 3,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-70953",
+      "issue": 70953,
+      "url": "https://github.com/apache/airflow/issues/70953",
+      "title": "Status of testing Providers that were prepared on August 01, 2026",
+      "created_at": "2026-08-03T00:29:53Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "anthropic",
+        "llm",
+        "gemini",
+        "openai",
+        "claude",
+        "ai"
+      ],
+      "comment_count": 35,
+      "linked_prs": [
+        69786,
+        64051,
+        70682,
+        67056,
+        69676,
+        70394,
+        70569,
+        69799
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-71036",
+      "issue": 71036,
+      "url": "https://github.com/apache/airflow/issues/71036",
+      "title": "HITL responses with serde-reserved keys in params_input cannot be resumed or resubmitted",
+      "created_at": "2026-08-03T23:36:34Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-71037",
+      "issue": 71037,
+      "url": "https://github.com/apache/airflow/issues/71037",
+      "title": "Per-key secrets-backend config options are not recognised as sensitive under a team-scoped spelling",
+      "created_at": "2026-08-03T23:36:53Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        70755
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-71080",
+      "issue": 71080,
+      "url": "https://github.com/apache/airflow/issues/71080",
+      "title": "Backfill authorization falls back to the request body when the backfill does not exist",
+      "created_at": "2026-08-04T10:05:06Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        70889
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-71121",
+      "issue": 71121,
+      "url": "https://github.com/apache/airflow/issues/71121",
+      "title": "Adopt flit 4 as the provider distribution build backend deliberately",
+      "created_at": "2026-08-04T18:47:43Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-71125",
+      "issue": 71125,
+      "url": "https://github.com/apache/airflow/issues/71125",
+      "title": "DAG processor treats any zip-format file (.jar, .pptx, .docx, .xlsx, etc.) as a potential DAG bundle, not just .zip",
+      "created_at": "2026-08-04T20:05:44Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 5,
+      "linked_prs": [
+        74573
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-71246",
+      "issue": 71246,
+      "url": "https://github.com/apache/airflow/issues/71246",
+      "title": "Status of testing Providers that were prepared on August 06, 2026",
+      "created_at": "2026-08-06T16:33:03Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "anthropic",
+        "llm",
+        "gemini",
+        "openai",
+        "claude",
+        "copilot",
+        "codex",
+        "gpt-5",
+        "gpt-5.6",
+        "cursor",
+        "grok",
+        "ai"
+      ],
+      "comment_count": 18,
+      "linked_prs": [
+        69786,
+        64051,
+        70682,
+        67056,
+        69676,
+        70394,
+        70569,
+        69799
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-71259",
+      "issue": 71259,
+      "url": "https://github.com/apache/airflow/issues/71259",
+      "title": "Three config.yml options are never read: color_log_error_keywords, color_log_warning_keywords, ignore_first_depends_on_past_by_default",
+      "created_at": "2026-08-06T21:09:07Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_disclosure",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai-assisted",
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-71321",
+      "issue": 71321,
+      "url": "https://github.com/apache/airflow/issues/71321",
+      "title": "Status of testing Providers that were prepared on August 08, 2026",
+      "created_at": "2026-08-08T02:09:50Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "gemini",
+        "claude",
+        "ai"
+      ],
+      "comment_count": 4,
+      "linked_prs": [
+        70595,
+        69269,
+        68480,
+        69661,
+        70234,
+        70335,
+        70289,
+        70337
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-71377",
+      "issue": 71377,
+      "url": "https://github.com/apache/airflow/issues/71377",
+      "title": "Codegen prek hooks fail with uv 0.12",
+      "created_at": "2026-08-10T13:57:51Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "codex",
+        "gpt-5"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        70501
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-71453",
+      "issue": 71453,
+      "url": "https://github.com/apache/airflow/issues/71453",
+      "title": "DagRun.created_dag_version_id no longer matches its documented contract",
+      "created_at": "2026-08-11T18:33:13Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude",
+        "codex"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        42913,
+        49097,
+        52177,
+        54984,
+        59764,
+        65835,
+        71425,
+        66901
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-71454",
+      "issue": 71454,
+      "url": "https://github.com/apache/airflow/issues/71454",
+      "title": "DagRun.dag_versions silently drops versions after a partial \"run on latest version\" clear",
+      "created_at": "2026-08-11T18:33:33Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        49097,
+        54984,
+        65835
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-71455",
+      "issue": 71455,
+      "url": "https://github.com/apache/airflow/issues/71455",
+      "title": "only_new clear can silently miss real new tasks after a prior \"run on latest version\" clear",
+      "created_at": "2026-08-11T18:33:43Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        59764,
+        54984
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-71577",
+      "issue": 71577,
+      "url": "https://github.com/apache/airflow/issues/71577",
+      "title": "[Tech Debt] Improve Unit Test DB Isolation",
+      "created_at": "2026-08-13T21:24:16Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 9,
+      "linked_prs": [
+        69093
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-71847",
+      "issue": 71847,
+      "url": "https://github.com/apache/airflow/issues/71847",
+      "title": "Status of testing Providers that were prepared on August 18, 2026",
+      "created_at": "2026-08-19T16:19:58Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "anthropic",
+        "llm",
+        "copilot",
+        "gpt-5.6",
+        "openai",
+        "codex",
+        "gpt-5",
+        "cursor",
+        "grok",
+        "ai"
+      ],
+      "comment_count": 17,
+      "linked_prs": [
+        71211,
+        71492,
+        71380,
+        71570,
+        71495,
+        71531,
+        71124,
+        70152
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-72071",
+      "issue": 72071,
+      "url": "https://github.com/apache/airflow/issues/72071",
+      "title": "Migrate anthropic provider to anthropic SDK 1.0 (httpx2) and remove the <1.0.0 cap",
+      "created_at": "2026-08-25T19:06:37Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "anthropic",
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        72016,
+        72069
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-72110",
+      "issue": 72110,
+      "url": "https://github.com/apache/airflow/issues/72110",
+      "title": "DogStatsD backend emits `Stats.timer()` metrics in seconds instead of milliseconds",
+      "created_at": "2026-08-26T16:55:36Z",
+      "state": "open",
+      "categories": [
+        "ai_slop",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai-generated",
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        15132
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-72144",
+      "issue": 72144,
+      "url": "https://github.com/apache/airflow/issues/72144",
+      "title": "AWS deferrable operators drop hook configuration when handing off to triggers",
+      "created_at": "2026-08-27T10:57:56Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 13,
+      "linked_prs": [
+        72171,
+        72557,
+        72449,
+        72472,
+        72453,
+        71646,
+        71857,
+        72098
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-72263",
+      "issue": 72263,
+      "url": "https://github.com/apache/airflow/issues/72263",
+      "title": "Add missing tests for `common.compat.standard` Operators andTtriggers",
+      "created_at": "2026-08-29T16:55:33Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-72265",
+      "issue": 72265,
+      "url": "https://github.com/apache/airflow/issues/72265",
+      "title": "Add missing tests for `cncf.kubernetes` script and delete utilities",
+      "created_at": "2026-08-29T17:11:20Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 5,
+      "linked_prs": [
+        74424,
+        74524,
+        72461
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-72266",
+      "issue": 72266,
+      "url": "https://github.com/apache/airflow/issues/72266",
+      "title": "Add missing tests for `edge3` worker API app and auth",
+      "created_at": "2026-08-29T17:14:08Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-72267",
+      "issue": 72267,
+      "url": "https://github.com/apache/airflow/issues/72267",
+      "title": "Add missing tests for the `apache.hive` macros plugin",
+      "created_at": "2026-08-29T17:14:50Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 3,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-72268",
+      "issue": 72268,
+      "url": "https://github.com/apache/airflow/issues/72268",
+      "title": "Add missing tests for `sftp` exceptions",
+      "created_at": "2026-08-29T17:15:21Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-72269",
+      "issue": 72269,
+      "url": "https://github.com/apache/airflow/issues/72269",
+      "title": "Remove the dead `cloudant_fake` module, or add its missing tests",
+      "created_at": "2026-08-29T17:15:53Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        52072
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-72276",
+      "issue": 72276,
+      "url": "https://github.com/apache/airflow/issues/72276",
+      "title": "Add missing tests for the `google.cloud.utils` BigQuery helpers",
+      "created_at": "2026-08-30T01:40:58Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-72277",
+      "issue": 72277,
+      "url": "https://github.com/apache/airflow/issues/72277",
+      "title": "Add missing tests for the `amazon` auth manager login datamodel",
+      "created_at": "2026-08-30T01:47:51Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-72278",
+      "issue": 72278,
+      "url": "https://github.com/apache/airflow/issues/72278",
+      "title": "Forward hook config to `BatchJobTrigger` from the `BatchSensor`",
+      "created_at": "2026-08-30T01:58:36Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        72171
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-72279",
+      "issue": 72279,
+      "url": "https://github.com/apache/airflow/issues/72279",
+      "title": "Forward hook config to the `SageMakerUnifiedStudioNotebookTrigger`",
+      "created_at": "2026-08-30T01:59:39Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        72171
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-72280",
+      "issue": 72280,
+      "url": "https://github.com/apache/airflow/issues/72280",
+      "title": "Forward hook config to `OpenSearchServerlessCollectionActiveTrigger`",
+      "created_at": "2026-08-30T02:00:33Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        72171,
+        72098
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-72281",
+      "issue": 72281,
+      "url": "https://github.com/apache/airflow/issues/72281",
+      "title": "Add a `has_events` filter to the Assets search view",
+      "created_at": "2026-08-30T02:18:51Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        70971
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-72298",
+      "issue": 72298,
+      "url": "https://github.com/apache/airflow/issues/72298",
+      "title": "Dependabot drops pnpm.overrides when regenerating UI lockfiles",
+      "created_at": "2026-08-30T17:49:31Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        72311,
+        72390,
+        72257,
+        72258,
+        72255,
+        72234
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-72316",
+      "issue": 72316,
+      "url": "https://github.com/apache/airflow/issues/72316",
+      "title": "PydanticAI hooks use wrong connection_type convention which breaks with dynamic lookup",
+      "created_at": "2026-08-31T07:09:58Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-72351",
+      "issue": 72351,
+      "url": "https://github.com/apache/airflow/issues/72351",
+      "title": "Regression with use of bearer token for keycloak",
+      "created_at": "2026-08-31T22:00:39Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 5,
+      "linked_prs": [
+        70800,
+        70981,
+        72381,
+        72205
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-72385",
+      "issue": 72385,
+      "url": "https://github.com/apache/airflow/issues/72385",
+      "title": "Data Fusion pipeline state polling no longer retries transient 404 responses",
+      "created_at": "2026-09-01T18:04:59Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        10031,
+        60688
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-72408",
+      "issue": 72408,
+      "url": "https://github.com/apache/airflow/issues/72408",
+      "title": "Replace `airflow.utils.state import` with `airflow.sdk` in edge3 Provider",
+      "created_at": "2026-09-02T03:48:17Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-72409",
+      "issue": 72409,
+      "url": "https://github.com/apache/airflow/issues/72409",
+      "title": "Replace `airflow.utils.state` import with `airflow.sdk` in OpenSearch Provider",
+      "created_at": "2026-09-02T03:55:52Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-72410",
+      "issue": 72410,
+      "url": "https://github.com/apache/airflow/issues/72410",
+      "title": "Replace `airflow.utils.state import` with `airflow.sdk` in Common AI Provider",
+      "created_at": "2026-09-02T03:55:57Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-72411",
+      "issue": 72411,
+      "url": "https://github.com/apache/airflow/issues/72411",
+      "title": "Replace `airflow.utils.state import` with `airflow.sdk` in Informatica Provider",
+      "created_at": "2026-09-02T03:56:04Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 4,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-72514",
+      "issue": 72514,
+      "url": "https://github.com/apache/airflow/issues/72514",
+      "title": "ExternalTaskSensor does not check task or task-group existence on Airflow 3",
+      "created_at": "2026-09-04T11:31:46Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_disclosure",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "codex",
+        "gpt-5",
+        "ai-assisted",
+        "ai"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        72517,
+        67832
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-72902",
+      "issue": 72902,
+      "url": "https://github.com/apache/airflow/issues/72902",
+      "title": "Status of testing Providers that were prepared on September 09, 2026",
+      "created_at": "2026-09-10T18:26:21Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "anthropic",
+        "llm",
+        "claude",
+        "ai"
+      ],
+      "comment_count": 26,
+      "linked_prs": [
+        72646,
+        72682,
+        72455,
+        72824,
+        22002,
+        21441,
+        72625,
+        72557
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73049",
+      "issue": 73049,
+      "url": "https://github.com/apache/airflow/issues/73049",
+      "title": "Remove the nltk GHSA-8mgp-746c-j5xp dependency-review allowlist entry once nltk ships a fix",
+      "created_at": "2026-09-12T21:10:38Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        72946,
+        73061
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73156",
+      "issue": 73156,
+      "url": "https://github.com/apache/airflow/issues/73156",
+      "title": "CSOAI — Airflow AI governance measurement DAGs",
+      "created_at": "2026-09-15T03:40:59Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-73177",
+      "issue": 73177,
+      "url": "https://github.com/apache/airflow/issues/73177",
+      "title": "dropdown to the Trigger DAG has dramatically decrease UX",
+      "created_at": "2026-09-15T10:17:23Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_disclosure"
+      ],
+      "matched_terms": [
+        "copilot",
+        "generated-by"
+      ],
+      "comment_count": 5,
+      "linked_prs": [
+        73564,
+        45097,
+        70413
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73382",
+      "issue": 73382,
+      "url": "https://github.com/apache/airflow/issues/73382",
+      "title": "SFTP sensors can make incorrect newer_than comparisons when timezones differ",
+      "created_at": "2026-09-19T16:46:47Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "codex",
+        "ai"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        65442,
+        73312
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73431",
+      "issue": 73431,
+      "url": "https://github.com/apache/airflow/issues/73431",
+      "title": "Fix Cloud Monitoring list operators when format_ is set",
+      "created_at": "2026-09-21T06:57:38Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        73354
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73583",
+      "issue": 73583,
+      "url": "https://github.com/apache/airflow/issues/73583",
+      "title": "Airflow 3.3.2: LocalExecutor workers and DAG Processor child processes hang when OpenTelemetry is enabled",
+      "created_at": "2026-09-22T23:15:22Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "copilot"
+      ],
+      "comment_count": 6,
+      "linked_prs": [
+        56187,
+        63566
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73584",
+      "issue": 73584,
+      "url": "https://github.com/apache/airflow/issues/73584",
+      "title": "SFTPHookAsync lets a connection known_hosts extra override an explicit constructor path",
+      "created_at": "2026-09-22T23:21:42Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        73419
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73585",
+      "issue": 73585,
+      "url": "https://github.com/apache/airflow/issues/73585",
+      "title": "Concurrent SFTP directory transfers drop the parent hook's connection overrides",
+      "created_at": "2026-09-22T23:21:45Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        73419
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73658",
+      "issue": 73658,
+      "url": "https://github.com/apache/airflow/issues/73658",
+      "title": "Status of testing Providers that were prepared on September 22, 2026",
+      "created_at": "2026-09-24T11:38:02Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "anthropic",
+        "llm",
+        "gemini",
+        "openai",
+        "codex",
+        "gpt-6",
+        "claude",
+        "gpt-5",
+        "grok",
+        "ai"
+      ],
+      "comment_count": 42,
+      "linked_prs": [
+        73286,
+        72081,
+        66576,
+        71653,
+        69042,
+        71135,
+        69000,
+        71652
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73678",
+      "issue": 73678,
+      "url": "https://github.com/apache/airflow/issues/73678",
+      "title": "Cyclic TaskGroup dependencies break Grid/Graph since 3.3.1; proposed parse-time rejection is a breaking change",
+      "created_at": "2026-09-24T17:43:54Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 8,
+      "linked_prs": [
+        73087,
+        72822,
+        69933,
+        70591,
+        73724,
+        73746
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73686",
+      "issue": 73686,
+      "url": "https://github.com/apache/airflow/issues/73686",
+      "title": "Improve max_active_runs visibility across logs, API, and UI",
+      "created_at": "2026-09-24T19:14:13Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        72403,
+        69769,
+        72371,
+        73689,
+        73692,
+        73693
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73774",
+      "issue": 73774,
+      "url": "https://github.com/apache/airflow/issues/73774",
+      "title": "apache-airflow-providers-google installs types-protobuf (a mypy stub package) as a runtime dependency",
+      "created_at": "2026-09-27T09:08:36Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "codex",
+        "gpt-6"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        48666,
+        50075
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73795",
+      "issue": 73795,
+      "url": "https://github.com/apache/airflow/issues/73795",
+      "title": "Support azure-datalake-store 1.x in the Microsoft Azure provider",
+      "created_at": "2026-09-27T14:34:05Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        73629
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73861",
+      "issue": 73861,
+      "url": "https://github.com/apache/airflow/issues/73861",
+      "title": "In-place bundle_version refresh leaves old runs showing the wrong commit and breaks triggering at an earlier commit",
+      "created_at": "2026-09-28T18:32:10Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        68336,
+        61550
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73951",
+      "issue": 73951,
+      "url": "https://github.com/apache/airflow/issues/73951",
+      "title": "Go SDK: a pointer spec field cannot be set from a literal",
+      "created_at": "2026-09-30T11:07:33Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        73936
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-73954",
+      "issue": 73954,
+      "url": "https://github.com/apache/airflow/issues/73954",
+      "title": "Go SDK: models.gen.go is behind the supervisor schema snapshot",
+      "created_at": "2026-09-30T12:25:52Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        73224,
+        73027,
+        73531,
+        73936
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74058",
+      "issue": 74058,
+      "url": "https://github.com/apache/airflow/issues/74058",
+      "title": "Lang-SDK runtimes: one transport for native Dag parsing and the task-handler probe",
+      "created_at": "2026-10-02T02:16:51Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        74035,
+        73974
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74059",
+      "issue": 74059,
+      "url": "https://github.com/apache/airflow/issues/74059",
+      "title": "Lang-SDK task handlers: smaller follow-ups",
+      "created_at": "2026-10-02T02:16:53Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-74060",
+      "issue": 74060,
+      "url": "https://github.com/apache/airflow/issues/74060",
+      "title": "A packaged Dag named `*.ZIP` cannot be read back",
+      "created_at": "2026-10-02T02:16:54Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-74061",
+      "issue": 74061,
+      "url": "https://github.com/apache/airflow/issues/74061",
+      "title": "TS SDK unit tests do not run in pull request CI",
+      "created_at": "2026-10-02T02:16:55Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-74062",
+      "issue": 74062,
+      "url": "https://github.com/apache/airflow/issues/74062",
+      "title": "Edge worker UI types are out of date with the worker API spec",
+      "created_at": "2026-10-02T02:16:56Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-74063",
+      "issue": 74063,
+      "url": "https://github.com/apache/airflow/issues/74063",
+      "title": "Lang-SDK coordinator tasks do not run their task callbacks",
+      "created_at": "2026-10-02T02:45:33Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-74086",
+      "issue": 74086,
+      "url": "https://github.com/apache/airflow/issues/74086",
+      "title": "Schema version prek hooks overwrite the git index when committing from a linked worktree",
+      "created_at": "2026-10-02T12:46:12Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        72070,
+        74115
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74092",
+      "issue": 74092,
+      "url": "https://github.com/apache/airflow/issues/74092",
+      "title": "Pause a Dag for a set time and resume it automatically",
+      "created_at": "2026-10-02T14:03:00Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        72407,
+        73763
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74114",
+      "issue": 74114,
+      "url": "https://github.com/apache/airflow/issues/74114",
+      "title": "Require explicit acknowledgement before sync-staging-to-main drops staging-only commits",
+      "created_at": "2026-10-02T17:42:31Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        73653
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74167",
+      "issue": 74167,
+      "url": "https://github.com/apache/airflow/issues/74167",
+      "title": "Remove the Sphinx 9 builtin cross-reference workaround once sphinx-doc/sphinx#14223 is fixed",
+      "created_at": "2026-10-03T15:29:20Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        74168
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74175",
+      "issue": 74175,
+      "url": "https://github.com/apache/airflow/issues/74175",
+      "title": "Short-circuit in a mapped task group lets later all_done and none_failed tasks run",
+      "created_at": "2026-10-03T21:30:33Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        73959,
+        73960
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74193",
+      "issue": 74193,
+      "url": "https://github.com/apache/airflow/issues/74193",
+      "title": "Databricks: add Unity Gateway MCP integration for common.ai",
+      "created_at": "2026-10-04T16:11:48Z",
+      "state": "open",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        74191,
+        74198
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74194",
+      "issue": 74194,
+      "url": "https://github.com/apache/airflow/issues/74194",
+      "title": "Databricks: support Genie consultations and resumable standalone tasks",
+      "created_at": "2026-10-04T16:14:11Z",
+      "state": "open",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        74191,
+        73532,
+        74198
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74207",
+      "issue": 74207,
+      "url": "https://github.com/apache/airflow/issues/74207",
+      "title": "Scheduler warns \"Discarding executor event ... may be locked by another scheduler\" on every task retry under LocalExecutor",
+      "created_at": "2026-10-04T22:16:21Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        73916,
+        73554,
+        74142
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74208",
+      "issue": 74208,
+      "url": "https://github.com/apache/airflow/issues/74208",
+      "title": "SFTPHook concurrent workers ignore the parent hook's constructor overrides",
+      "created_at": "2026-10-04T22:51:34Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        73419,
+        73647
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74239",
+      "issue": 74239,
+      "url": "https://github.com/apache/airflow/issues/74239",
+      "title": "API server event loop blocks on database queries while serializing get_dag_details and get_pools responses",
+      "created_at": "2026-10-05T12:57:42Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 4,
+      "linked_prs": [
+        73422,
+        74247
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74336",
+      "issue": 74336,
+      "url": "https://github.com/apache/airflow/issues/74336",
+      "title": "Validate params against each other in the trigger form",
+      "created_at": "2026-10-06T12:30:39Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-74357",
+      "issue": 74357,
+      "url": "https://github.com/apache/airflow/issues/74357",
+      "title": "KeycloakAuthManager authorization conflict with Keycloak resource server Decision Strategy",
+      "created_at": "2026-10-06T15:45:21Z",
+      "state": "open",
+      "categories": [
+        "ai_disclosure"
+      ],
+      "matched_terms": [
+        "generated by"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-74376",
+      "issue": 74376,
+      "url": "https://github.com/apache/airflow/issues/74376",
+      "title": "Publish llms.txt and Markdown copies of the docs for coding agents",
+      "created_at": "2026-10-06T22:21:59Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "llms",
+        "claude",
+        "cursor",
+        "copilot",
+        "llm",
+        "codex",
+        "ai"
+      ],
+      "comment_count": 5,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-74414",
+      "issue": 74414,
+      "url": "https://github.com/apache/airflow/issues/74414",
+      "title": "TS SDK: support logicalDate and runAfter in triggerDagRun",
+      "created_at": "2026-10-07T16:01:14Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        74543
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74428",
+      "issue": 74428,
+      "url": "https://github.com/apache/airflow/issues/74428",
+      "title": "AssetOrTimeSchedule Dags can starve other scheduled Dags",
+      "created_at": "2026-10-07T22:07:38Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "gpt-6.1"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        64109
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74453",
+      "issue": 74453,
+      "url": "https://github.com/apache/airflow/issues/74453",
+      "title": "SerializedDAG.partial_subset modifies the original DAG when it contains a mapped TaskGroup (ReferenceError with nested TaskGroups)",
+      "created_at": "2026-10-08T08:58:25Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "copilot",
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-74459",
+      "issue": 74459,
+      "url": "https://github.com/apache/airflow/issues/74459",
+      "title": "Status of testing Providers that were prepared on October 06, 2026",
+      "created_at": "2026-10-08T11:37:46Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "anthropic",
+        "openai",
+        "claude",
+        "codex",
+        "gpt-6",
+        "ai"
+      ],
+      "comment_count": 33,
+      "linked_prs": [
+        71092,
+        73789,
+        73698,
+        72647,
+        73917,
+        73532,
+        71946,
+        73301
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74551",
+      "issue": 74551,
+      "url": "https://github.com/apache/airflow/issues/74551",
+      "title": "Unicode prefix ranges can exclude matches under libc collation",
+      "created_at": "2026-10-11T00:10:19Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "codex",
+        "gpt-6",
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [],
+      "markers_in_patch": [],
+      "runnable": false
+    },
+    {
+      "id": "issue-74614",
+      "issue": 74614,
+      "url": "https://github.com/apache/airflow/issues/74614",
+      "title": "Triggerer restarts after a transient metadata database disconnect",
+      "created_at": "2026-10-12T20:12:19Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "codex",
+        "gpt-6.1",
+        "claude"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        70961,
+        74650
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74724",
+      "issue": 74724,
+      "url": "https://github.com/apache/airflow/issues/74724",
+      "title": "Prefix filters can miss ASCII matches under collations with contractions",
+      "created_at": "2026-10-14T11:53:39Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        74552
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74741",
+      "issue": 74741,
+      "url": "https://github.com/apache/airflow/issues/74741",
+      "title": "Status of testing Providers that were prepared on October 14, 2026",
+      "created_at": "2026-10-14T14:38:21Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "llm",
+        "anthropic",
+        "openai",
+        "claude",
+        "ai"
+      ],
+      "comment_count": 12,
+      "linked_prs": [
+        70766,
+        69207,
+        74125,
+        73698,
+        72647,
+        74529,
+        73917,
+        73532
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74905",
+      "issue": 74905,
+      "url": "https://github.com/apache/airflow/issues/74905",
+      "title": "Fork CI reconciler: count a workflow added by a PR as project CI only if its jobs did work",
+      "created_at": "2026-10-17T00:51:21Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        74822
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74906",
+      "issue": 74906,
+      "url": "https://github.com/apache/airflow/issues/74906",
+      "title": "Fork CI reconciler: match recorded runs to a pull request, not only to its fork branch",
+      "created_at": "2026-10-17T00:51:24Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        74822
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74907",
+      "issue": 74907,
+      "url": "https://github.com/apache/airflow/issues/74907",
+      "title": "Fork CI reconciler: scope the cached green-trust decision to the pull request and its base",
+      "created_at": "2026-10-17T00:51:27Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        74822
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74908",
+      "issue": 74908,
+      "url": "https://github.com/apache/airflow/issues/74908",
+      "title": "Fork CI reconciler: retry a lost \"push again\" nudge",
+      "created_at": "2026-10-17T00:51:30Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        74822
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-74914",
+      "issue": 74914,
+      "url": "https://github.com/apache/airflow/issues/74914",
+      "title": "Normalize rst license header shape and enforce it in prek",
+      "created_at": "2026-10-17T08:48:51Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        74804
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-75013",
+      "issue": 75013,
+      "url": "https://github.com/apache/airflow/issues/75013",
+      "title": "KubernetesPodOperator startup event polling overloads kube-apiserver at scale and fails tasks on 504",
+      "created_at": "2026-10-18T16:32:57Z",
+      "state": "closed",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 0,
+      "linked_prs": [
+        50192,
+        59080,
+        66471,
+        60532,
+        56872
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-75014",
+      "issue": 75014,
+      "url": "https://github.com/apache/airflow/issues/75014",
+      "title": "Forward log_events_on_startup to the GKE and EKS deferrable pod triggers",
+      "created_at": "2026-10-18T17:03:35Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        75016
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-75118",
+      "issue": 75118,
+      "url": "https://github.com/apache/airflow/issues/75118",
+      "title": "Remove the sqlalchemy<2.1 cap in the Snowflake provider once snowflake-sqlalchemy supports SQLAlchemy 2.1",
+      "created_at": "2026-10-19T15:01:56Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "claude",
+        "ai"
+      ],
+      "comment_count": 4,
+      "linked_prs": [
+        73822
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-75134",
+      "issue": 75134,
+      "url": "https://github.com/apache/airflow/issues/75134",
+      "title": "Marking a task success with include_future on a run without a logical date clears failed tasks in other runs",
+      "created_at": "2026-10-19T18:46:23Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        47036
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-75195",
+      "issue": 75195,
+      "url": "https://github.com/apache/airflow/issues/75195",
+      "title": "uv.lock on main fails to parse: duplicate package pyvespa==1.2.9",
+      "created_at": "2026-10-20T07:58:45Z",
+      "state": "closed",
+      "categories": [
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "ai"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        73822,
+        75193,
+        75062,
+        75200
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-75254",
+      "issue": 75254,
+      "url": "https://github.com/apache/airflow/issues/75254",
+      "title": "Scheduler crashes on every restart when a scheduled task with a task concurrency limit belongs to a Dag that no longer deserializes",
+      "created_at": "2026-10-20T22:20:18Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        74499
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-75332",
+      "issue": 75332,
+      "url": "https://github.com/apache/airflow/issues/75332",
+      "title": "Status of testing Providers that were prepared on October 20, 2026",
+      "created_at": "2026-10-21T16:50:12Z",
+      "state": "open",
+      "categories": [
+        "llm_tool",
+        "ai_mention"
+      ],
+      "matched_terms": [
+        "openai",
+        "codex",
+        "gpt-6",
+        "claude",
+        "ai"
+      ],
+      "comment_count": 12,
+      "linked_prs": [
+        73580,
+        66379,
+        74399,
+        73014,
+        65335,
+        65212,
+        58743,
+        74870
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-75352",
+      "issue": 75352,
+      "url": "https://github.com/apache/airflow/issues/75352",
+      "title": "Asset watcher triggers shared by several assets can't use the asset state store",
+      "created_at": "2026-10-21T20:08:41Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 3,
+      "linked_prs": [
+        74293
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-75364",
+      "issue": 75364,
+      "url": "https://github.com/apache/airflow/issues/75364",
+      "title": "Execution API treats executor-run deadline callbacks as teamless in multi-team mode",
+      "created_at": "2026-10-22T01:04:22Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 2,
+      "linked_prs": [
+        71192,
+        74779,
+        75377
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-75366",
+      "issue": 75366,
+      "url": "https://github.com/apache/airflow/issues/75366",
+      "title": "previously_succeeded metric is documented but never emitted in Airflow 3",
+      "created_at": "2026-10-22T01:53:57Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        57818,
+        67592
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    },
+    {
+      "id": "issue-75374",
+      "issue": 75374,
+      "url": "https://github.com/apache/airflow/issues/75374",
+      "title": "Auto-rebuild docs when a mounted local sphinx_airflow_theme changes",
+      "created_at": "2026-10-22T06:09:26Z",
+      "state": "open",
+      "categories": [
+        "llm_tool"
+      ],
+      "matched_terms": [
+        "claude"
+      ],
+      "comment_count": 1,
+      "linked_prs": [
+        75001,
+        70139
+      ],
+      "markers_in_patch": [],
+      "runnable": true
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-22T16:23:25.514782+00:00",
+  "window": "2025-10-22..2026-10-22",
+  "stats": {
+    "cases": 555,
+    "runnable": 555,
+    "by_class": {
+      "closed_unmerged_sample": 135,
+      "merged_control": 108,
+      "objective_slop": 1,
+      "ai_disclosed": 311
+    },
+    "by_cohort": {
+      "closed_unmerged_sample": 135,
+      "merged_control": 108,
+      "objective_slop": 1,
+      "codex": 59,
+      "chatgpt": 26,
+      "gemini": 28,
+      "copilot": 48,
+      "claude": 150
+    },
+    "objective_slop": 1,
+    "ai_disclosed": 311,
+    "merged_control": 108,
+    "closed_unmerged_sample": 135
+  },
+  "sampling": "Latest N created per month, one search page, after dropping oversized diffs. Disclosure queries match a filled Generated-by trailer. Not a census. April, September, and October 2026 Claude rows were re-queried by splitting ranges after a zero-hit search.",
+  "not_claimed": [
+    "Filled disclosure does not mean the PR should fail.",
+    "This sample is not the fraction of all Airflow PRs that are AI-authored.",
+    "Closed-unmerged is not AI slop.",
+    "Search totals for Generated-by include only the sampled months' reported totals, not a scored census."
+  ],
+  "artifacts": {
+    "cases": "corpus/e2e-proof/cases.json",
+    "patches": "corpus/e2e-proof/prs/<number>.json"
+  }
+}

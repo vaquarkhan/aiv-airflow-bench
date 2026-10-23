@@ -1,0 +1,24 @@
+{
+  "tid": "2lfmpggn6h637tobf6sqcopclv04mlw3",
+  "subject": "[jira] [Created] (KAFKA-21280) SslTransportLayer.transferFrom sends stale buffer contents after a failed file read",
+  "epoch": 1791990780,
+  "last_epoch": 1791990780,
+  "date": "2026-10-14T15:13:00+00:00",
+  "last_date": "2026-10-14T15:13:00+00:00",
+  "replies": 0,
+  "list": "dev@kafka.apache.org",
+  "url": "https://lists.apache.org/thread/2lfmpggn6h637tobf6sqcopclv04mlw3",
+  "query": "generative",
+  "flags": {
+    "slop_terms": [],
+    "tool_terms": [],
+    "slop": false,
+    "tool": true
+  },
+  "disclosure": {
+    "signals": [],
+    "disclosed": false,
+    "generated_by": null
+  },
+  "starter_excerpt": "Mykyta Bozhenko created KAFKA-21280:\n---------------------------------------\n\n             Summary: SslTransportLayer.transferFrom sends stale buffer contents after a failed file read\n                 Key: KAFKA-21280\n                 URL: https://is"
+}

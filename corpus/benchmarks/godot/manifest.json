@@ -1,0 +1,29 @@
+{
+  "bench": 5,
+  "repo": "godotengine/godot",
+  "generated_at": "2026-10-23T01:52:25.024398+00:00",
+  "stats": {
+    "cases": 62,
+    "runnable_prs": 58,
+    "by_class": {
+      "merged_control": 24,
+      "closed_unmerged_sample": 24,
+      "ai_slop_discussion": 10,
+      "ai_tool_mention": 4
+    },
+    "objective_slop": 0,
+    "ai_slop_discussion": 10,
+    "ai_disclosed": 0,
+    "merged_control": 24,
+    "mail_threads": 0,
+    "mail_slop_language": 0
+  },
+  "why": "On 30 Jun 2026 the Godot Foundation said review was overwhelmed by AI-agent and AI-written pull requests, that vibe-coded submissions are already an auto-ban, and that new contributors need permission before a feature or large refactor. https://godotengine.org/article/contribution-policy-2026/",
+  "population_search": {
+    "prs": 7589,
+    "closed_unmerged": 1094,
+    "slop_language": 32,
+    "generated_by": 79
+  },
+  "population_note": "Search totals from 2026-10-22. Not a census, and not a count of bad patches."
+}

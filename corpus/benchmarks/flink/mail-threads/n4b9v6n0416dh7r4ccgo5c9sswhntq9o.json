@@ -1,0 +1,24 @@
+{
+  "tid": "n4b9v6n0416dh7r4ccgo5c9sswhntq9o",
+  "subject": "Re: [DISCUSS] Flink Community Skills",
+  "epoch": 1791727662,
+  "last_epoch": 1792164833,
+  "date": "2026-10-11T14:07:42+00:00",
+  "last_date": "2026-10-16T15:33:53+00:00",
+  "replies": 2,
+  "list": "dev@flink.apache.org",
+  "url": "https://lists.apache.org/thread/n4b9v6n0416dh7r4ccgo5c9sswhntq9o",
+  "query": "Claude",
+  "flags": {
+    "slop_terms": [],
+    "tool_terms": [],
+    "slop": false,
+    "tool": false
+  },
+  "disclosure": {
+    "signals": [],
+    "disclosed": false,
+    "generated_by": null
+  },
+  "starter_excerpt": "Hi Rui\n+ 1 to the overall idea.\n\nI agree with the proposal to create a dedicated skill repository. I have\nfound them helpful as well.\n1. +1, It would be a good to from both user and the customer perspective to\nhave skills for this in the community-ma"
+}

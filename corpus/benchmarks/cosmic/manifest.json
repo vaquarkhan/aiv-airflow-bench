@@ -1,0 +1,26 @@
+{
+  "bench": 7,
+  "repo": "pop-os/cosmic-comp",
+  "generated_at": "2026-10-23T02:06:35.916986+00:00",
+  "stats": {
+    "cases": 41,
+    "runnable_prs": 41,
+    "by_class": {
+      "closed_unmerged_sample": 22,
+      "merged_control": 18,
+      "ai_slop_discussion": 1
+    },
+    "objective_slop": 0,
+    "ai_slop_discussion": 1,
+    "ai_disclosed": 0,
+    "merged_control": 18,
+    "mail_threads": 0,
+    "mail_slop_language": 0
+  },
+  "why": "On 30 Sep 2026 Jeremy Soller said COSMIC would no longer accept LLM-written code, comments, or PR text because first-time LLM submissions were unplanned and rarely accepted. cosmic-epoch itself had 23 PRs in the year; cosmic-comp is the compositor and had 425. The pop-os org had 4363 PRs in the same window.",
+  "population_search": {
+    "prs": 425,
+    "org_prs": 4363
+  },
+  "population_note": "Search totals from 2026-10-22. Not a census, and not a count of bad patches."
+}

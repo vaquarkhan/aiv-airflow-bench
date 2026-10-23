@@ -1,0 +1,1493 @@
+{
+  "schema_version": 1,
+  "bench": 3,
+  "project": "kafka",
+  "repo": "apache/kafka",
+  "window": "2025-10-22..2026-10-22",
+  "generated_at": "2026-10-22T16:53:59.993784+00:00",
+  "why": "Kafka dev list and pull requests are the third bench, parallel to Airflow and Flink.",
+  "sampling": "Up to a fixed number of latest matches per quarter. Not a census. A zero-hit quarter is split before it is trusted.",
+  "not_claimed": [
+    "A tool mention or filled Generated-by line is not proof the change should fail.",
+    "Slop language in discussion is not proof the attached patch is slop.",
+    "Search totals are not the percent of the project that is AI-authored."
+  ],
+  "stats": {
+    "cases": 38,
+    "runnable_prs": 38,
+    "by_class": {
+      "merged_control": 22,
+      "ai_tool_mention": 7,
+      "ai_disclosed": 9
+    },
+    "objective_slop": 0,
+    "ai_slop_discussion": 0,
+    "ai_disclosed": 9,
+    "merged_control": 22,
+    "mail_threads": 0,
+    "mail_slop_language": 0
+  },
+  "cases": [
+    {
+      "id": "kafka-21089",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 21089,
+      "url": "https://github.com/apache/kafka/pull/21089",
+      "title": "KAFKA-19970: Add configurable TTL for tiered storage index cache eviction",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-12-05T13:33:18Z",
+      "user": "nandini12396",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "4846bbadf46120f13ea7a7c4462a003f7955ef85",
+      "additions": 202,
+      "changed_files": 5,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Caffeine cache currently only uses size-based eviction with frequency\nbuckets. Within same frequency bucket,\nlarger entries are always evicted. This causes old (smaller) index files\nto stay in cache indefinitely while\nnewer indices thrash, resulting in:\n- Poor cache utilization for backfill workloads\n- Higher fetch errors\n- Suboptimal memory usage\n\nThis problem is exacerbated when a broker is no longer the leader for a\npartition  or when read-from-replica is enabled, as stale indexes can\naccumulate without  being cleared.\n\nSolution:\n---------\nAdd time-based eviction (expireAfterAccess) via a new internal config\nremote.log.index.file.cache.ttl.ms (default: 1 hour). This ensures\nentries are\nevicted after last access time expires, preventing indefinite\naccumulation.\nEvicted index files are automatically re-fetched from remote storage\nwhen needed.\n\nReviewers: Luke Chen <showuon@gmail.com>, Kamal Chandraprakash\n <kamal.chandraprakash@gmail.com>\n",
+      "patch_file": "prs/21089.json"
+    },
+    {
+      "id": "kafka-21091",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 21091,
+      "url": "https://github.com/apache/kafka/pull/21091",
+      "title": "KAFKA-19678: Refactor to reset timestamp to zero when no open iterators",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-12-05T15:43:19Z",
+      "user": "bbejeck",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "b2007124c0b433e63a8886fa0a98d1af791d9d5b",
+      "additions": 46,
+      "changed_files": 9,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "This PR changes the approach for handling the case when there are no\nopen iterators for the `oldest-iterator-open-since-ms` metric.\nPreviously, we would register the metric when the store opens its first\niterator, then deregister the metric when it closes the last remaining\nopen iterator.  Under heavy load this process can cause performance\ndegradation as detailed in the Jira ticket\nhttps://issues.apache.org/jira/browse/KAFKA-19678.  This PR updates the\nhandling of the metric to register and deregister on store opening and\nclosing respectively, and handle the case of current open iterators by\nreturning a `0` to indicate this state.\n\nReviewers: Matthias Sax <mjsax@apache.org>, Ramesh Sinha\n",
+      "patch_file": "prs/21091.json"
+    },
+    {
+      "id": "kafka-21092",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 21092,
+      "url": "https://github.com/apache/kafka/pull/21092",
+      "title": "KAFKA-19972: Bump delivery count on session release",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-12-05T17:20:15Z",
+      "user": "apoorvmittal10",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "fdcbc247475e8ff2dcdfb35133bb8d2897ea75d5",
+      "additions": 49,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "If a client application crashes then it can go in infinte loop where\nsame records will be delivered. Though previously we chose to decrease\nthe delivery count on session release as we didn't have throttling\nsupport. Now when we do then it makes sense to bump the delivery count\non session close. Also as share-groups clients should ideally not have\npre-fetched data hence it's safe to bump the delivery count on session\nrelease.\n\nI have not removed the code to decrease the delivery count as that\nfunctionality is well tested and we might need at the time of\npre-fetching support or in cases where we do need not to bump the\ndelivery count, in future.\n\nReviewers: Andrew Schofield <aschofield@confluent.io>\n",
+      "patch_file": "prs/21092.json"
+    },
+    {
+      "id": "kafka-21093",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 21093,
+      "url": "https://github.com/apache/kafka/pull/21093",
+      "title": "MINOR: Extend streams quickstart with new protocol",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-12-05T19:38:53Z",
+      "user": "ezhou413",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "b892d2ed7ec5673f2c6e7b628769050a9c4dc8b0",
+      "additions": 6,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "This PR adds a section in the Kafka Streams quickstart for enabling the\nnew `streams` protocol.\n\nReviewers: Lucas Brutschy <lbrutschy@confluent.io>, Matthias J. Sax\n <matthias@confluent.io>\n",
+      "patch_file": "prs/21093.json"
+    },
+    {
+      "id": "kafka-21096",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 21096,
+      "url": "https://github.com/apache/kafka/pull/21096",
+      "title": "MINOR: Clean up ProducerStateEntry",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-12-06T19:21:54Z",
+      "user": "wernerdv",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "2e2d054eb0d1365da316d1407e4d9f09a3e24e10",
+      "additions": 26,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "A small cleanup in ProducerStateEntry: fixed access modifiers for\nmethods.\n\nReviewers: Chia-Ping Tsai <chia7712@gmail.com>\n",
+      "patch_file": "prs/21096.json"
+    },
+    {
+      "id": "kafka-21101",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 21101,
+      "url": "https://github.com/apache/kafka/pull/21101",
+      "title": "KAFKA-12617: Convert MetadataRequestTest to use ClusterTest",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-12-07T16:01:24Z",
+      "user": "jack2012aa",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "b8f51196a9ff86cf725c0a65955af7a3d8c1735f",
+      "additions": 440,
+      "changed_files": 5,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "# Description\nChanged `MetadataRequestTest` to use `ClusterTest`\n\n# Changes\nAdded `ClusterInstance#createTopicWithAssignment` to align with\n`KafkaServerTestHarness#createTopicWithAssignment`\n\nHelper functions inherited from base classes were rewritten in\n`AbstractMetadataRequestTest`\n\n# Issue\n`testIsrAfterBrokerShutDownAndJoinsBack` fails because of thread leak:\n```\norg.opentest4j.AssertionFailedError: Thread leak detected: JMX server\nconnection timeout 28 ==>\nExpected :true\nActual   :false\n```\n\n`testAliveBrokersWithNoTopics` would also fail if the last\n`checkMetadata` is removed.\n\nReviewers: Chia-Ping Tsai <chia7712@gmail.com>\n",
+      "patch_file": "prs/21101.json"
+    },
+    {
+      "id": "kafka-22118",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 22118,
+      "url": "https://github.com/apache/kafka/pull/22118",
+      "title": "KAFKA-19009: Move MetadataCacheTest to metadata module",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T14:36:18Z",
+      "user": "FrankYang0529",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "a2c4ce9f737bbd428280691dd1c08f509926a115",
+      "additions": 1082,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Migrate `MetadataCacheTest` to metadata module.\n\nReviewers: Mickael Maison <mickael.maison@gmail.com>, Chia-Ping Tsai\n <chia7712@gmail.com>\n",
+      "patch_file": "prs/22118.json"
+    },
+    {
+      "id": "kafka-22119",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 22119,
+      "url": "https://github.com/apache/kafka/pull/22119",
+      "title": "MINOR: Fix typo in testConsumerGroupHeartbeatRebalance",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T15:07:20Z",
+      "user": "squah-confluent",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "dfff81acba37c0b77ced92052a69c1a022eecc2d",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Fix an incorrect assertion in ConsumerGroupHeartbeatRequestTest's\ntestConsumerGroupHeartbeatRebalance.\n\nReviewers: Andrew Schofield <aschofield@confluent.io>\n",
+      "patch_file": "prs/22119.json"
+    },
+    {
+      "id": "kafka-22120",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 22120,
+      "url": "https://github.com/apache/kafka/pull/22120",
+      "title": "MINOR: Remove unnecessary min.assignment.interval.ms config from test",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T15:49:19Z",
+      "user": "squah-confluent",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "766e456729b476fcbbcac3ad4a587816704b314e",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Remove the group.consumer.min.assignment.interval.ms config override\nfrom ConsumerGroupHeartbeatRequestTest's\ntestStaticMembersRejoinWithDifferentServerAssignor. The config already\ndefaults to 0 and we are very unlikely to ever change it, since we\nalways want to allow a 0 value to disable assignment batching.\n\nReviewers: Chia-Ping Tsai <chia7712@gmail.com>\n",
+      "patch_file": "prs/22120.json"
+    },
+    {
+      "id": "kafka-22121",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 22121,
+      "url": "https://github.com/apache/kafka/pull/22121",
+      "title": "MINOR: Move LogOffsetTest to server module and rewrite in Java",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T16:25:03Z",
+      "user": "majialoong",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "7e04c67526fd9e0a8750b38a74bec1bdbf949181",
+      "additions": 300,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Move `LogOffsetTest` to server module and rewrite in Java.\n\nReviewers: Chia-Ping Tsai <chia7712@gmail.com>\n",
+      "patch_file": "prs/22121.json"
+    },
+    {
+      "id": "kafka-22122",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 22122,
+      "url": "https://github.com/apache/kafka/pull/22122",
+      "title": "MINOR: avoid redundant HashMap lookups and simplify Uuid conversions",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T20:29:35Z",
+      "user": "mirkoalicastro",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "33ad2af345bb50912e221865cb4d63e8bc327430",
+      "additions": 10,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "This PR contains 2 small performance optimisations and 1 cosmetic\nimprovement.\n\n1. remove the repeated HashMap lookups in `GroupMetadataManager`: from 6\nto 1;\n2. Uuid `toArray` done via idiomatic way. Previously, on LinkedList it\ncosted O(n^2);\n3. Uuid `toList` - no performance improvement, but cleaner\nimplementation\n\nReviewers: Mickael Maison <mickael.maison@gmail.com>\n",
+      "patch_file": "prs/22122.json"
+    },
+    {
+      "id": "kafka-22123",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 22123,
+      "url": "https://github.com/apache/kafka/pull/22123",
+      "title": "KAFKA-15768: Fix getOnlyPartitionResult to handle FailedQueryResult",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T22:38:30Z",
+      "user": "suzhiking",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "b6fd5adfd7b763ddddf61bcf2d38bb496f1825be",
+      "additions": 32,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "`getOnlyPartitionResult()` was silently discarding `FailedQueryResult`\r\nentries by filtering only for successful results, making failures\r\nindistinguishable from \"not found\". Fix the filter to treat failed\r\nresults as meaningful so callers can inspect the failure via\r\n`isFailure()`/`getFailureReason()`/`getFailureMessage()`.\r\n\r\nReviewers: Evan Zhou <ezhou@confluent.io>, Bill Bejeck <bbejeck@apache.org>\r\n",
+      "patch_file": "prs/22123.json"
+    },
+    {
+      "id": "kafka-22470",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 22470,
+      "url": "https://github.com/apache/kafka/pull/22470",
+      "title": "MINOR: adding AGENTS.md",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-06-04T12:04:44Z",
+      "user": "showuon",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "7f42fc3aca66bb1829b84a92f74681376392ebcb",
+      "additions": 149,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "anthropic",
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "Added `AGENTS.md`.\n\nCo-Authored-By: Claude Sonnet 4.6 <claude@anthropic.com>\n\nReviewers: Viktor Somogyi-Vass <viktorsomogyi@gmail.com>, Andrew\n Schofield <aschofield@confluent.io>\n",
+      "patch_file": "prs/22470.json"
+    },
+    {
+      "id": "kafka-22486",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 22486,
+      "url": "https://github.com/apache/kafka/pull/22486",
+      "title": "KAFKA-20292 [2/N]: Prepare to split TargetAssignmentBuilders",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-06-05T14:44:33Z",
+      "user": "squah-confluent",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "e1d454af917349e1ac3c3cc8cf41d98bb10e94b0",
+      "additions": 314,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "To accommodate asynchronous assignments, such as those from client-side\nassignors and assignors offloaded to background threads, we want to\nsplit the TargetAssignmentBuilders into two: one builder for building\nthe target assignment and another for building the target assignment\nrecords. Client-side assignors will only use the second builder.\n\nBoth builders require an up-to-date view of group members at the time\nthey are run. In the non-offloaded case, this is the same view. However,\nthe view needs to include the unwritten member operations from the\nongoing heartbeat request. Currently the operations are applied within\nthe TargetAssignmentBuilders. To avoid duplicating the logic once the\nTargetAssignmentBuilders are split, we would like to lift it out and\npass the TargetAssignmentBuilders the updated view of members and\nassignments.\n\nAdd UpdatedMembersAndTargetAssignmentView, which provides updated views\nof members and target assignments after unwritten member joins, updates\nand leaves. Future commits will update the consumer, share and streams\ngroup assignment paths to use the new class.\n\nReviewers: David Jacot <david.jacot@gmail.com>\n",
+      "patch_file": "prs/22486.json"
+    },
+    {
+      "id": "kafka-22487",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 22487,
+      "url": "https://github.com/apache/kafka/pull/22487",
+      "title": "KAFKA-20292 [6/N]: Add TargetAssignmentRecordsBuilder",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-06-05T14:44:45Z",
+      "user": "squah-confluent",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "026f3808ce4bdbdd78e01712a7d3c87805c10c60",
+      "additions": 970,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "To accommodate asynchronous assignors, such as assignors offloaded to\nthe background thread pool and client-side assignors, we require a\nbuilder to turn a new target assignment into records to be persisted.\nPreviously, the logic lived within the TargetAssignmentBuilder classes.\nWe copy the logic out into its own builder class, keeping the existing\nlogic within the TargetAssignmentBuilders for now.\n\nFuture commits will remove the record-building logic from the\nTargetAssignmentBuilder classes and update callers to use the new\nTargetAssignmentRecordsBuilders.\n\nAdditionally, we have to handle concurrent member operations such as\nleaves and static member replacements when building the target\nassignment records for asynchronous assignors. These member operations\nupdate the target assignment directly. Once the new target assignment is\nready, we have to apply any member operations we missed to it. That is,\nwe act as if the member removals and static member replacements are\nreordered after the assignment calculation.\n\nReviewers: David Jacot <david.jacot@gmail.com>, David Jacot\n <dajac@apache.org>\n",
+      "patch_file": "prs/22487.json"
+    },
+    {
+      "id": "kafka-22489",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 22489,
+      "url": "https://github.com/apache/kafka/pull/22489",
+      "title": "KAFKA-20664: Clarify docs on max compaction lag, segment.ms, and segment.bytes for active segment rolling",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-06-05T14:47:45Z",
+      "user": "alanlau28",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "7b5cf7315402a2c25b5ba6481fde7615cfbb1cb7",
+      "additions": 19,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Improves the documentation for `segment.bytes`, `segment.ms`, and\n`max.compaction.lag.ms` with respect to active segment rolling.\n\nReviewers: Lucy Liu <lucliu@confluent.io>, Matthias J. Sax\n <matthias@confluent.io>\n",
+      "patch_file": "prs/22489.json"
+    },
+    {
+      "id": "kafka-22490",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 22490,
+      "url": "https://github.com/apache/kafka/pull/22490",
+      "title": "KAFKA-20663: Fix startup state manager close to release StateDirectory task lock",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-06-05T16:36:33Z",
+      "user": "nicktelford",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "95b3dcc7a9ef8a7b39df8a20576c4cad35da81c5",
+      "additions": 17,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "## Summary\n\n`initializeStartupStores()` acquires a `StateDirectory` task lock via\n`StateManagerUtil.registerStateStores()` but then closes the temporary\nstate manager by calling `temporaryStateManager.close()` directly —\nwhich is `ProcessorStateManager.close()`. That method closes the RocksDB\nstores but has no knowledge of the `StateDirectory` lock and never calls\n`stateDirectory.unlock()`. Only `StateManagerUtil.closeStateManager()`\ncalls `stateDirectory.unlock()`, and it was never invoked for the\nstartup path.\n\nAs a result the main thread holds the `StateDirectory` task lock for\nevery startup task permanently. At shutdown, when the stream thread\ncalls `closeStateManager()` for those tasks, `stateDirectory.lock()`\nreturns `false` (main thread owns the lock, stream thread is the\ncaller), so `db.close()` is never called. With WAL disabled the RocksDB\nmemtables — including the 30-second `maybeCheckpoint()` offset writes —\nare lost when the JVM exits. The SST files retain only the offset from\nthe last data-CF auto-flush, which for an inactive segment can be many\nhours old, causing `OffsetOutOfRangeException` on the next restart when\nthe stale offset falls outside the changelog retention window.\n\nThe secondary symptom is the logged error `\"Some task directories still\nlocked while closing state, this indicates unclean shutdown\"`:\n`StateDirectory.close()` is called from the shutdown helper thread, not\nthe main thread, so `unlockStartupStores()` cannot release\nmain-thread-owned locks (`unlock()` requires the calling thread to match\nthe lock owner).\n\nThe fix replaces `temporaryStateManager.close()` with\n`StateManagerUtil.closeStateManager()`, which is the correct counterpart\nto `registerStateStores()` — every other call site in the codebase\nalready pairs them. `closeStateManager()` calls\n`ProcessorStateManager.close()` (preserving existing behaviour including\n`maybeDowngradeOffsets()`) and then releases the `StateDirectory` lock\nin a nested `finally` block.\n\nReviewers: Bill Bejeck <bbejeck@apache.org>, Eduwer Camacaro\n <eduwerc@gmail.com>, Matthias Sax <mjsax@apache.org>\n",
+      "patch_file": "prs/22490.json"
+    },
+    {
+      "id": "kafka-22491",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 22491,
+      "url": "https://github.com/apache/kafka/pull/22491",
+      "title": "KAFKA-20663: Return committed offset from newest segment first",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-06-05T16:37:24Z",
+      "user": "nicktelford",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "72391f506016c409e280c6beb3a7df1f9ae6eb5f",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "## Summary\n\n`AbstractSegments.committedOffset()` iterates the segment `TreeMap` in\nascending key order (oldest segment first) and returns the first\nnon-null offset it finds. Because inactive segments (past their time\nwindow) stop receiving data writes, their 16MB data CF write buffer\nnever fills and never triggers an atomic flush. Their offset CF is\nupdated by every 30-second `maybeCheckpoint()` call, but those writes\nsit in the memtable and are lost on an unclean JVM exit. The SST for an\ninactive segment therefore holds the offset from its last data-driven\nflush, which can be many hours old.\n\nWhen restoration reads the committed offset on restart, the current code\nreturns the stale offset from the oldest segment rather than the current\noffset from the active (most recently flushed) segment. This stale\noffset may fall outside the changelog topic's retention window, causing\n`OffsetOutOfRangeException`.\n\nThe fix iterates `segments.descendingMap().values()` so the newest\nsegment — whose SST is kept current by active data writes and atomic\nflushes — is checked first. This is the same pattern already used in\n`allSegments(forward=false)`.\n\n## Test plan\n\n- Existing `AbstractRocksDBSegmentedBytesStoreTest` /\n`RocksDBSegmentedBytesStoreTest` suites pass.\n- Add a test simulating stale SST on an older segment and asserting\n`committedOffset()` returns the newer segment's value.\n\n🤖 Generated with [Claude Code](https://claude.ai/claude-code)\n\nReviewers: Matthias J. Sax <matthias@confluent.io>, Bill Bejeck\n <bbejeck@apache.org>\n",
+      "patch_file": "prs/22491.json"
+    },
+    {
+      "id": "kafka-22493",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 22493,
+      "url": "https://github.com/apache/kafka/pull/22493",
+      "title": "KAFKA-20673: AdminClient partition-leader APIs hang when a cached leader has left the cluster",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-06-05T18:54:34Z",
+      "user": "lucasbru",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "99540b638e5face3db13d3a39c68413e2e016f6b",
+      "additions": 227,
+      "changed_files": 5,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Since the partition-leader cache fast path was introduced,\n`AdminApiDriver` routes a cached leader straight to the fulfillment\nstage with a `ConstantNodeIdProvider` for that broker id, skipping the\nlookup stage. If the cached broker id is no longer present in the admin\nclient's cluster metadata — for example because the broker left the\ncluster and was not replaced under the same id — the call can never be\nassigned a node. `ConstantNodeIdProvider.provide()` returns null and the\ncall sits in `pendingCalls` issuing only broker-info metadata refreshes,\nwhich never re-resolve the partition leader, so the request stays stuck\nuntil `default.api.timeout.ms` expires and then fails with \"Timed out\nwaiting for a node assignment\". This affects all\n`PartitionLeaderStrategy`-based APIs: `listOffsets`, `deleteRecords`,\n`describeProducers` and `abortTransaction`.\n\nThe cache's existing staleness recovery only covers leader changes that\nsurface as per-partition errors such as `NOT_LEADER_OR_FOLLOWER`. There\nis no path that handles a cached leader id simply disappearing from the\ncluster without any such error reaching the admin client, so the stale\nentry is believed until the deadline.\n\nThis change detects, on the admin client thread where metadata access is\nsafe, that a fulfillment call's target broker is absent from ready\nmetadata, and sends the affected keys back to the lookup stage so the\nleader is re-resolved with a fresh topic metadata request. The liveness\ncheck is performed on the admin client thread rather than where the\ncache is read: the cache is consulted in the `AdminApiDriver`\nconstructor on the calling thread, where `AdminMetadataManager` (which\nis confined to the admin client thread) cannot be accessed safely.\n\nThe behaviour is covered by a driver-level test that verifies a cached\nfulfillment request is sent back to the lookup stage, and by an\nend-to-end test in `KafkaAdminClientTest` that seeds the cache, removes\nthe cached leader from the cluster, and asserts that the subsequent\n`listOffsets` re-resolves the leader and completes instead of timing\nout.\n\nReviewers: Andrew Schofield <aschofield@confluent.io>\n",
+      "patch_file": "prs/22493.json"
+    },
+    {
+      "id": "kafka-22890",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 22890,
+      "url": "https://github.com/apache/kafka/pull/22890",
+      "title": "KAFKA-20722: Upgrade JLine to 3.30.14",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-21T07:13:46Z",
+      "user": "qiuyanjun888",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "de6f44b7fa466543a74f302f5864d8dcb99ec528",
+      "additions": 2,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "OpenAI Codex (GPT-5.6)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "codex",
+          "gpt-5",
+          "openai"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## Summary\n\n- Upgrade JLine from 3.30.4 to 3.30.14, the public 3.x release containing backports for GHSA-47qp-hqvx-6r3f and GHSA-2r2c-cx56-8933.\n- Update the matching JLine entry in `LICENSE-binary`.\n\nJira: https://issues.apache.org/jira/browse/KAFKA-20722\n\nPublic advisories:\n- https://github.com/advisories/GHSA-47qp-hqvx-6r3f\n- https://github.com/advisories/GHSA-2r2c-cx56-8933\n\n## Rationale\n\nKafka currently packages the JLine 3.30.4 aggregate jar in the shell runtime. JLine 3.30.14 is the patch-line update that publicly backports both telnet denial-of-service mitigations, avoiding a JLine 4.x migration.\n\n## Testing\n\n- `./gradlew :shell:dependencyInsight --dependency org.jline:jline --configuration runtimeClasspath`\n- `./gradlew :shell:copyDependantLibs :shell:test`\n- Confirmed the copied runtime artifact is `jline-3.30.14.jar`.\n- `git diff --check` and exact two-file scope verification.\n\nGenerated-by: OpenAI Codex (GPT-5.6)\nReviewers: Chia-Ping Tsai <chia7712@gmail.com>\n",
+      "patch_file": "prs/22890.json"
+    },
+    {
+      "id": "kafka-23349",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23349,
+      "url": "https://github.com/apache/kafka/pull/23349",
+      "title": "MINOR: Fix GroupsCommand exiting from execute() and masking failures",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-09-03T16:22:20Z",
+      "user": "regarmukesh3g",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "f350b56ab7b2c4d541bc9271ab7525c7c70f5ca3",
+      "additions": 43,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "## Problem\n\n`GroupsCommand.execute()` calls `Exit.exit(exitCode)` in a `finally` block:\n\n```java\n} catch (Throwable t) {\n    printException(t);\n    exitCode = 1;\n} finally {\n    Exit.exit(exitCode);\n}\n```\n\nEvery other tool in this package (`FeatureCommand`, `DelegationTokenCommand`, `MetadataQuorumCommand`, `GetOffsetShell`, `LeaderElectionCommand`) calls `Exit.exit` exactly once, from `main()`, and lets `execute()` propagate failures to `mainNoExit()`. `GroupsCommand` is the only one that exits from inside `execute()`.\n\nThis has two consequences:\n\n- **Under the default exit procedure**, `execute()` terminates the JVM directly, so `mainNoExit()` never returns and the exit code it computes is unreachable.\n- **Under a replaced exit procedure** (for example the `MockExitProcedure` used in tests, which records the code and returns), `execute()` swallows the exception and returns normally, so `mainNoExit()` reports **success with code 0 for a command that actually failed**.\n\nThe `mainNoExit()` / `execute()` pair exists precisely so the exit code can be observed without killing the JVM, and this defeats it.\n\n## Fix\n\nRemove the `Exit.exit()` call and the `exitCode` bookkeeping from `execute()`, letting the exception propagate so `mainNoExit()` maps it to a non-zero code and `main()` passes that to `Exit.exit()`. `ExecutionException` is still unwrapped so the underlying cause is what surfaces to the user. Error reporting in `mainNoExit()` now goes through `printException()` so the message and stack trace are rendered the same way on both paths.\n\n## Testing\n\nAdded two tests covering `mainNoExit()` and `execute()` on the failure path, which had no coverage — the gap that let this go unnoticed. Both fail before this change:\n\n```\ntestMainNoExitReturnsNonZeroWithoutExitingOnFailure() :: expected: <1> but was: <0>\ntestExecuteDoesNotExitOnFailure() :: Expected java.lang.Exception to be thrown, but nothing was thrown.\n```\n\nand pass after it. The tests make the admin client creation *inside* the `try` block fail (via an invalid security protocol in the command config), so they exercise the affected path rather than failing earlier during option parsing.\n\n`GroupsCommandTest` passes in full (33 tests), as do `LeaderElectionCommandTest` and `TopicCommandTest` (146 tests total). `./gradlew :tools:checkstyleMain :tools:checkstyleTest :tools:spotlessCheck` is clean.\n\n### Committer Checklist (excluded from commit message)\n- [ ] Verify design and implementation\n- [ ] Verify test coverage and CI build status\n- [ ] Verify documentation (including upgrade notes)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nhttps: //claude.ai/code/session_01GvbzZgK7eH63iPswf8tV6v\nReviewers: Andrew Schofield <aschofield@confluent.io>\n",
+      "patch_file": "prs/23349.json"
+    },
+    {
+      "id": "kafka-23373",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23373,
+      "url": "https://github.com/apache/kafka/pull/23373",
+      "title": "KAFKA-21011: Declare server as an api dependency of core",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-09-05T19:47:21Z",
+      "user": "regarmukesh3g",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "bcad4a1070fbd72070a5d29f8547ca5519c0798d",
+      "additions": 3,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "[KAFKA-21011](https://issues.apache.org/jira/browse/KAFKA-21011)\n\n## Problem\n\nThe published pom for `org.apache.kafka:kafka_2.13` lists `org.apache.kafka:kafka-server` with `runtime` scope:\n\n```xml\n<dependency>\n  <groupId>org.apache.kafka</groupId>\n  <artifactId>kafka-server</artifactId>\n  <version>4.1.3</version>\n  <scope>runtime</scope>\n</dependency>\n```\n\nThis is because `core` declares it as an `implementation` dependency in `build.gradle`.\n\nHowever, `kafka.server.KafkaConfig` extends `org.apache.kafka.server.config.AbstractKafkaConfig`, which lives in the `server` module:\n\n```scala\nclass KafkaConfig private(doLog: Boolean, val props: util.Map[_, _], enforceProviderAllowlist: Boolean)\n  extends AbstractKafkaConfig(\n```\n\nThat supertype is therefore part of `core`'s compile-time API surface. With `kafka-server` only on the runtime classpath, a consumer that references `KafkaConfig` cannot see its supertype when compiling. The Kotlin compiler already warns about this and is moving towards rejecting it outright:\n\n```\nw: Cannot access 'org.apache.kafka.server.config.AbstractKafkaConfig' which is a supertype\nof 'KafkaConfig'. This may be forbidden soon. Check the module classpath for missing or\nconflicting dependencies.\n```\n\nUsers currently have to work around it by re-declaring `kafka-server` themselves, which dependency-analysis linters then flag as an unnecessary explicit dependency.\n\n## Fix\n\nDeclare `server` as an `api` dependency of `core`, which puts `kafka-server` in `compile` scope in the generated pom.\n\nThis matches the existing treatment of `clients`. The comment already sitting above that declaration records the rationale:\n\n```gradle\n// `core` is often used in users' tests, define the following dependencies as `api` for backwards compatibility\n// even though the `core` module doesn't expose any public API\napi project(':clients')\n```\n\n## Testing\n\nThis is a build-configuration change, so it is verified against the generated pom rather than a unit test. There is no existing test asserting pom contents.\n\n**Generated pom before** (`./gradlew :core:generatePomFileForMavenJavaPublication`):\n\n```\nkafka-clients          compile\nkafka-server           runtime\n```\n\n**After:**\n\n```\nkafka-clients          compile\nkafka-server           compile\n```\n\nA structured comparison of the full pom confirms `kafka-server`'s scope is the only dependency change — no dependencies added or removed (25 before, 25 after).\n\n**The resolved `runtimeClasspath` of `core` is byte-identical before and after** (32 entries, `diff` clean), so this changes only the scope recorded in the published pom, not what actually ends up on the classpath.\n\n`:core:compileScala`, `:core:compileTestScala`, `:core:jar`, and the dependent modules `:tools`, `:streams` and `:connect:runtime` all compile cleanly.\n\n### A note on the dropped exclusions\n\nMoving the dependency from `implementation` to `api` means `kafka-server` no longer carries the `javax`/`jline`/`jms`/`jmxri`/`jmxtools`/`mail` exclusions in the pom, since those are attached to the `implementation` configuration:\n\n```gradle\nconfigurations {\n  // manually excludes some unnecessary dependencies\n  implementation.exclude module: 'javax'\n  ...\n}\n```\n\nThis is consistent with the existing `api` dependencies — `kafka-clients` and `scala-library` never carried those exclusions either. The exclusions guard against transitive dependencies of old log4j 1.x artifacts, and none of the excluded modules appear anywhere in `core`'s resolved dependency graph. This is corroborated by the unchanged `runtimeClasspath` above.\n\nI'm happy to instead promote the exclusions to a configuration that covers `api` as well, if reviewers would prefer to keep them attached defensively.\n\n### Committer Checklist (excluded from commit message)\n- [ ] Verify design and implementation\n- [ ] Verify test coverage and CI build status\n- [ ] Verify documentation (including upgrade notes)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nhttps://claude.ai/code/session_01GvbzZgK7eH63iPswf8tV6v",
+      "patch_file": "prs/23373.json"
+    },
+    {
+      "id": "kafka-23444",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23444,
+      "url": "https://github.com/apache/kafka/pull/23444",
+      "title": "KAFKA-21076: Return TELEMETRY_TOO_LARGE for oversize decompressed telemetry payloads",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-09-13T03:21:48Z",
+      "user": "rishi-rana",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "3120d16c38ff251583de6094f166069fd3a681f8",
+      "additions": 54,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "## Summary\n\nSince #22327 (4.3.1, \"MINOR: Fixed metrics decompression\"), `ClientTelemetryUtils.decompress` throws `TelemetryTooLargeException` when the decompressed telemetry payload exceeds `telemetry.max.bytes`. That exception propagates up through `ClientTelemetryExporterPlugin.exportMetrics` into `ClientMetricsManager.processPushTelemetryRequest`, where it's caught by a generic `catch (Throwable)` that always maps to `Errors.INVALID_RECORD`.\n\nPer KIP-714, `INVALID_RECORD` means \"the client's metrics serialization is broken, stop pushing\" — the Java client reacts by setting its push interval to `Integer.MAX_VALUE`, permanently disabling telemetry for that client instance until the process restarts. `TELEMETRY_TOO_LARGE` is the correct, retryable code for this case — it's exactly what the pre-decompression wire-size check already returns via `Errors.forException` in `validatePushRequest`, a few lines above in the same method.\n\nTypical OTLP metrics decompress at 10-25x their compressed size, so any client sending a payload that's well within the compressed wire limit can still trip the decompressed-size check and get silently, permanently cut off. This was observed in production: after upgrading brokers from 4.3.0 to 4.3.1, every Kafka Streams stream-thread consumer's telemetry stopped in every environment simultaneously.\n\n## Fix\n\nAdd `catch (TelemetryTooLargeException)` before the existing `catch (Throwable)` in `ClientMetricsManager.processPushTelemetryRequest`, mapping to `Errors.TELEMETRY_TOO_LARGE` instead of `Errors.INVALID_RECORD`. This mirrors the `catch (ApiException) -> Errors.forException(exception)` pattern already used for `validatePushRequest` just above it — no new error-handling shape introduced. `TelemetryTooLargeException` already extends `ApiException` and `Errors.TELEMETRY_TOO_LARGE` already exists (introduced with KIP-714), so this is a two-catch-block change with no protocol/config additions.\n\nOut of scope (per the reporter's own note, and to keep this change minimal): whether the decompressed-size bound should have its own configuration or a documented multiple of `telemetry.max.bytes`, since a single value can't sensibly bound both a compressed wire size and a 10-25x larger decompressed size. That's a separate, larger discussion; this PR only fixes the error code mismatch, which is the part causing clients to be permanently and silently cut off.\n\n## Test plan\n\n- Added `testPushTelemetryPluginTooLargeException` to `ClientMetricsManagerTest`, mirroring the existing `testPushTelemetryPluginException` (generic-exception) test, asserting the response and the client instance's `lastKnownError` are `TELEMETRY_TOO_LARGE`, with the same plugin-error metric accounting as any other export failure.\n- `./gradlew :server:test --tests \"org.apache.kafka.server.ClientMetricsManagerTest\"` — all tests pass.\n- `./gradlew :server:checkstyleMain :server:checkstyleTest :server:spotlessCheck` — clean.\n\n## AI assistance disclosure\n\nPer `AI_POLICY`/`CONTRIBUTING.md`: Claude Code (Sonnet 5) was used to investigate the root cause, implement the fix, and write the test in `server/src/main/java/org/apache/kafka/server/ClientMetricsManager.java` and `server/src/test/java/org/apache/kafka/server/ClientMetricsManagerTest.java`. All changes were reviewed by me before submission.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nhttps: //claude.ai/code/session_01K4B9PPesZhXHiWr5Ak1PNz\nReviewers: Apoorv Mittal <apoorvmittal10@gmail.com>, Steven Schlansker <stevenschlansker@gmail.com>\n",
+      "patch_file": "prs/23444.json"
+    },
+    {
+      "id": "kafka-23465",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23465,
+      "url": "https://github.com/apache/kafka/pull/23465",
+      "title": "KAFKA-21076: Document the decompressed telemetry.max.bytes bound",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-09-14T23:01:31Z",
+      "user": "rishi-rana",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "af178e3aa5168018e6d2be0f39691ef0bcaca92d",
+      "additions": 3,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "## Summary\n\nFollow-up to #23444 (KAFKA-21076), which fixed the error code returned\nwhen a client's decompressed telemetry payload exceeds\n`telemetry.max.bytes`. The original report also asked to document this\nbehavior, which #23444 didn't cover:\n\n> Document the decompressed bound in telemetry.max.bytes or add a\nseparate configuration, and mention the behavior change in the upgrade\nnotes.\n\nThis PR addresses the documentation half. A *separate* configuration for\nthe decompressed bound (as opposed to documenting the existing one)\nwould be a new public interface and needs its own KIP, so it's\nintentionally left out of scope here.\n\n## Changes\n\n- `MetricConfigs.CLIENT_TELEMETRY_MAX_BYTES_DOC`: the doc string only\ndescribed `telemetry.max.bytes` as a compressed wire-size limit\n(KIP-714's original definition). It's been bounding the decompressed\npayload size too since 4.3.1 (#22327), so the doc string was stale.\nUpdated it to say so, and that exceeding it returns\n`TELEMETRY_TOO_LARGE`.\n- `docs/getting-started/upgrade.md`: added a bullet under \"Notable\nchanges in 4.4.0\" (matching the existing `KAFKA-20609`/`KAFKA-20843`\nbullet style) explaining the behavior change and pointing operators at\nraising `telemetry.max.bytes` if they hit it after upgrading.\n\n## Test plan\n\nDocumentation-only change (a Java doc-string constant and a markdown\nfile). Verified `./gradlew :server:compileJava :server:checkstyleMain\n:server:spotlessCheck` stays clean.\n\n## AI assistance disclosure\n\nPer `AI_POLICY`/`CONTRIBUTING.md`: Claude Code (Sonnet 5) was used to\ndraft both doc changes in\n`server/src/main/java/org/apache/kafka/server/metrics/MetricConfigs.java`\nand `docs/getting-started/upgrade.md`. Reviewed by me before submission.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nhttps: //claude.ai/code/session_01K4B9PPesZhXHiWr5Ak1PNz Reviewers:\nAndrew Schofield <aschofield@confluent.io>, Steven Schlansker\n<stevenschlansker@gmail.com>\n",
+      "patch_file": "prs/23465.json"
+    },
+    {
+      "id": "kafka-23682",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23682,
+      "url": "https://github.com/apache/kafka/pull/23682",
+      "title": "MINOR: Drain buffered bytes before continuing delegated skips",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-03T09:04:41Z",
+      "user": "sunlishuo25",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "d7d64313620b2ed3a257db92d2aea66c2b59ac92",
+      "additions": 115,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "OpenAI Codex (GPT-6)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "codex",
+          "gpt-6",
+          "openai"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "When delegated `skip` returns zero, `ChunkedBytesStream.skip` reads through its own buffered `read()` method. That can fill the intermediate buffer, after which subsequent delegated skips move the source past unread buffered bytes. With input bytes 0–9 and a four-byte buffer, a source whose first skip returns zero makes `skip(5)` report success while the next read returns 1 instead of 5.\n\nConsume any bytes prefetched by the fallback read before delegating another skip. This preserves the existing buffered codec path. The regression tests verify the full remaining sequence for skips within the buffer, beyond the buffer, and through EOF, plus repeated skips through real LZ4 frames containing consecutive empty compressed blocks.\n\nValidation: compiled the actual production classes and the full `ChunkedBytesStreamTest` class with `javac --release 11` on JDK 21, then ran JUnit Jupiter 5.14.4 and Mockito 5.23.0. The unchanged production code fails 2 of 56 tests; the fix passes all 56. The three real LZ4 boundary cases also pass. File-scoped checks using Kafka's Checkstyle 12.3.1 configuration and Spotless 4.10.0 import-order step pass.\n\nThe LZ4 checks compile the current decoder and helper sources; a cached Kafka clients 3.9.2 jar supplies auxiliary compile-time signatures. They do not validate the complete current clients module or record batches. The official Gradle tasks, full clients suite, and CI JDKs 17/25 have not been run locally.\n\nThis is my original contribution, prepared with AI assistance from OpenAI Codex (GPT-6). I have the right to submit it and license it under the project's Apache-2.0 license.\n\nGenerated-by: OpenAI Codex (GPT-6)\n",
+      "patch_file": "prs/23682.json"
+    },
+    {
+      "id": "kafka-23691",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23691,
+      "url": "https://github.com/apache/kafka/pull/23691",
+      "title": "KAFKA-21205 Preserve Markdown when formatting PR descriptions",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-04T00:07:09Z",
+      "user": "gitedmond",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "e66e016f42c03c884ad9a267f19615f7f9d9d1e2",
+      "additions": 393,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Codex (GPT-6)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "codex",
+          "gpt-6"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "The PR linter corrupts indented lists and fenced code blocks when\nrewriting descriptions. Preserve their structure while keeping commit\nmessage prose wrapped at 72 columns.\n\n- Track code fences across blank lines and preserve structured content,\n  indentation, hard breaks, and long code lines.\n- Wrap prose containing inline code, underscores, and links without a\n  Markdown parser or additional dependencies.\n- Preserve list markers with or without a following space, including\n  timeline lines beginning with plus or minus signs.\n- Wrap Reviewers trailers with indented continuations and keep adjacent\n  trailers separate and parseable.\n- Normalize line endings to LF and prose spacing for stable repeated\n  formatting. Only update descriptions when their contents change.\n- Add locally runnable unit tests and a read-only pull request workflow\n  that runs when the formatter or its tests change.\n\nUse code fences to preserve aligned output; unfenced benchmark output\ncontinues to follow prose wrapping.\n\nValidation:\n- The expanded suite fails against the previous formatter and passes\n  against this change, including second-pass checks for every case.\n- Python compilation and git diff --check pass.\n- Run locally without Python dependencies:\n  python -B -S -m unittest discover -s .github/scripts -p\ntest_pr_format.py\n\nEarlier fork demonstration of the original formatting corruption:\nhttps://github.com/gitedmond/kafka/pull/2\n\nKAFKA-21205: https://issues.apache.org/jira/browse/KAFKA-21205\n\nGenerated-by: Codex (GPT-6)\nReviewers: Andy Huang <ky052632@gmail.com>, Dejan Stojadinović\n <dejan2609@gmail.com>, Sean Quah <squah@confluent.io>\n",
+      "patch_file": "prs/23691.json"
+    },
+    {
+      "id": "kafka-23745",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23745,
+      "url": "https://github.com/apache/kafka/pull/23745",
+      "title": "MINOR: Remove redundant tools test-common-util dependency",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-07T15:37:52Z",
+      "user": "gitedmond",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "cdaa57b89f077a204a4f3c73cd79ec757be66f30",
+      "additions": 0,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "OpenAI Codex (GPT-6)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "codex",
+          "gpt-6",
+          "openai"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "Remove the explicit testImplementation dependency on\n:test-common:test-common-util from :tools.\n\nThe only compile-time use was the @Flaky annotation, which #23531\nremoved. The module is still on the test runtime classpath via\nruntimeTestLibs, so the JUnit filters keep working.\n\nFollow-up to the cleanup discussed in #23466.\n\nGenerated-by: OpenAI Codex (GPT-6)\n\nReviewers: Chia-Ping Tsai <chia7712@gmail.com>\n",
+      "patch_file": "prs/23745.json"
+    },
+    {
+      "id": "kafka-23774",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23774,
+      "url": "https://github.com/apache/kafka/pull/23774",
+      "title": "KAFKA-17029: SetSchemaMetadata throws DataException for non-STRUCT schemas",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-11T15:38:49Z",
+      "user": "atharvaHJoshi",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "189b29d9253d7aaa1867bd3c79aafcdb6ee397c8",
+      "additions": 83,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "opencode (big-pickle)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "SetSchemaMetadata#apply unconditionally calls Schema#fields(), which throws a DataException for any schema that is not a STRUCT. Consequently the SMT fails on Avro/Connect primitive schemas (and also on array and map schemas), even though setting only the schema name/version does not require struct fields.\n\nThis change copies the fields only when the schema type is STRUCT, mirroring the existing handling of keySchema/valueSchema for map and array types.\n\n### Testing\n- ./gradlew :connect:transforms:test --tests \"org.apache.kafka.connect.transforms.SetSchemaMetadataTest\" (added coverage for primitive, primitive with null value, array and map schemas)\n- ./gradlew :connect:transforms:spotlessCheck :connect:transforms:checkstyleMain :connect:transforms:checkstyleTest\n\nGenerated-by: opencode (big-pickle)",
+      "patch_file": "prs/23774.json"
+    },
+    {
+      "id": "kafka-23775",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23775,
+      "url": "https://github.com/apache/kafka/pull/23775",
+      "title": "KAFKA-17770: use Locale.ROOT when converting server config keys from env vars",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-11T15:47:18Z",
+      "user": "atharvaHJoshi",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "7fed5dbb91a0ca5bc64142972db2c3106a22b0be",
+      "additions": 18,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "opencode (big-pickle)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "KafkaDockerWrapper#getServerConfigsFromEnv lowercased the environment variable name using the system default Locale. Locales with different casing rules (for example Turkish/Azerbaijani, where 'I' lowercases to a dotless 'ı') therefore produced invalid server config keys from KAFKA_* environment variables.\n\nThis change uses Locale.ROOT so the conversion is independent of the system default Locale. This is one of the remaining instances of the locale sensitivity described in KAFKA-17770.\n\n### Testing\n- Added KafkaDockerWrapperTest#testGetServerConfigsFromEnvWithLocaleSensitiveCaseMapping, which sets the default Locale to tr-TR and asserts the resulting key is inter.broker.listener.name (fails before the fix).\n- `./gradlew :core:test --tests \"kafka.docker.KafkaDockerWrapperTest\"`\n- `./gradlew :core:spotlessCheck :core:checkstyleMain`\n\nGenerated-by: opencode (big-pickle)",
+      "patch_file": "prs/23775.json"
+    },
+    {
+      "id": "kafka-23779",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23779,
+      "url": "https://github.com/apache/kafka/pull/23779",
+      "title": "KAFKA-16020: Use elapsed time comparison in waitForFuture to avoid nanoTime overflow",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-11T18:48:09Z",
+      "user": "atharvaHJoshi",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "670f0feb06820fe4048154450adc22fead1b0204",
+      "additions": 44,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "opencode (big-pickle)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "### Problem\nTime#waitForFuture compares absolute nanoTime values directly (`deadlineNs <= nowNs` and `deadlineNs - nowNs`). As noted in the JDK docs for System.nanoTime(), comparing absolute nanoTimes is unsafe due to potential overflow (wrap-around).\n\n### Solution\nCompare elapsed time instead: compute `startTimeNs = nanoseconds()` and use `elapsedNs = nowNs - startTimeNs` vs `timeoutNs = deadlineNs - startTimeNs`. This correctly handles nanoTime overflow.\n\n### Testing\n- Compiled clients module successfully.\n- This is a minimal, safe fix following JDK recommendation. Additional unit tests could be added, but the existing behavior is preserved.\n\nGenerated-by: opencode (big-pickle)\nReviewers: Gaurav Narula <gaurav_narula2@apple.com>\n",
+      "patch_file": "prs/23779.json"
+    },
+    {
+      "id": "kafka-23832",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23832,
+      "url": "https://github.com/apache/kafka/pull/23832",
+      "title": "KAFKA-21280: Do not send stale bytes after a failed file read in SslTransportLayer.transferFrom",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-15T18:25:52Z",
+      "user": "cheeeee",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "854779b9f817429e6d2cdee97ac1fb8bce5cc4d6",
+      "additions": 139,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude (Anthropic)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "anthropic",
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "`SslTransportLayer.transferFrom` clears `fileChannelBuffer` before\nreading the next chunk of the file. When the read threw, or returned no\nbytes, the buffer was left cleared rather than flipped, so it still\nlooked full of the previous chunk. If bytes had already been written in\nthe same call the `IOException` was swallowed, and the next call sent\nthe stale buffer as the contents of the position that could not be read:\na read error on the segment never surfaced, and the client received a\ncorrupt batch.\n\nThis flips the buffer whether or not the read succeeds, so that it holds\nexactly what was read: nothing after a failed read or at the end of the\nfile. It also rethrows the `IOException` when bytes were already written\nin the same call: the connection is closed on it anyway, and returning\nthe bytes written only delayed the error to the next call.\n\nGenerated-by: Claude (Anthropic)\n\nReviewers: Jun Rao <junrao@gmail.com>\n",
+      "patch_file": "prs/23832.json"
+    },
+    {
+      "id": "kafka-23840",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23840,
+      "url": "https://github.com/apache/kafka/pull/23840",
+      "title": "KAFKA-21294: Add missing OAuth login configs to production SASL examples",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-16T12:40:18Z",
+      "user": "dybyte",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "ccc45dfd4798b00b46bad1e6fe3a862c53378cc0",
+      "additions": 192,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Opus 5.5"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "The production OAUTHBEARER examples don't work as written. Add the\nmissing login callback handler to the broker and client examples, and\nthe org.apache.kafka.sasl.oauthbearer.allowed.urls system property,\nwhich has defaulted to empty since 4.0.\n\nAlso add an integration test that runs the documented broker config with\na replicated topic.\n\nGenerated-by: Claude Opus 5.5\n\nReviewers: Chia-Ping Tsai <chia7712@gmail.com>\n",
+      "patch_file": "prs/23840.json"
+    },
+    {
+      "id": "kafka-23888",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23888,
+      "url": "https://github.com/apache/kafka/pull/23888",
+      "title": "MINOR: Make share group state partition metadata unmodifiable",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-20T17:22:26Z",
+      "user": "squah-confluent",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "e9c0c9dbb19f35b54061c3c97d8a6584dcac5f9b",
+      "additions": 69,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "anthropic",
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "Wrap InitMapValue's partitions and\nShareGroupStatePartitionMetadataInfo's collections in unmodifiable\nviews, so that the share group state partition metadata cannot be\nmodified through them. Add withAddedPartitions and withRemovedPartitions\nto InitMapValue to derive new values.\n\nUse them in GroupMetadataManager and remove the copies that are no\nlonger needed. combineInitMaps reuses a value when only one of the maps\nhas the topic, and initializeShareGroupState no longer deep copies the\ninitializing topics to remove partitions in place.\ninitializedShareGroupPartitions and\nsharePartitionsEligibleForOffsetDeletion no longer copy the partitions.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n\nReviewers: David Jacot <dajac@apache.org>\n",
+      "patch_file": "prs/23888.json"
+    },
+    {
+      "id": "kafka-23889",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23889,
+      "url": "https://github.com/apache/kafka/pull/23889",
+      "title": "MINOR: Fix RackAwareStandbyPicker javadoc on how tag keys are picked    ",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-20T17:25:57Z",
+      "user": "gabriellefu",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "3fa28529540f9ea2b3fbc1e20b98532b0dbbca99",
+      "additions": 2,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "pick() keeps the tag keys in rack.aware.assignment.tags order, each only\nif a process with room still meets it together with those kept so far.\n\nReviewers: Chia-Ping Tsai <chia7712@gmail.com>\n",
+      "patch_file": "prs/23889.json"
+    },
+    {
+      "id": "kafka-23897",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23897,
+      "url": "https://github.com/apache/kafka/pull/23897",
+      "title": "MINOR: Bump Jackson version to 2.21.8",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-21T12:40:17Z",
+      "user": "Russole",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "5274e7a6c2046cd04a481a50c7c453f4b88f8802",
+      "additions": 10,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Based on the discussion in\nhttps://github.com/apache/kafka/pull/23862#issuecomment-6305190312, this\nPR upgrades Jackson from 2.21.7 to 2.21.8 on the 4.4 branch. It also\nupdates the corresponding entries in `LICENSE-binary`.\n\nReviewers: Chia-Ping Tsai <chia7712@gmail.com>\n",
+      "patch_file": "prs/23897.json"
+    },
+    {
+      "id": "kafka-23904",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23904,
+      "url": "https://github.com/apache/kafka/pull/23904",
+      "title": "MINOR: Validate operation types in incremental config updates",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-21T15:05:27Z",
+      "user": "johnny94",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "81d907cb419e7f0d30ff694a8e0ea9cc08653fdf",
+      "additions": 87,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Cherry-picked 6adbf155a6aeda2bbc3dcf0893dd6ffe4a333ed5 to 4.2 branch and fix test error\r\n\r\nReviewers: Chia-Ping Tsai <chia7712@gmail.com>",
+      "patch_file": "prs/23904.json"
+    },
+    {
+      "id": "kafka-23906",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23906,
+      "url": "https://github.com/apache/kafka/pull/23906",
+      "title": "MINOR: Stop staging LICENSE/NOTICE into kafka-site content dir",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-21T19:18:39Z",
+      "user": "OmniaGM",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "9b6289ee231fb2f04ba095604d99ed18626e3b28",
+      "additions": 8,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Follow-up to KAFKA-21289 (#23833), which fixed `release.py stage-docs`\nfor the Hugo-based kafka-site layout.\n\nThe site-docs tar carries the repo's top-level `LICENSE` and `NOTICE` at\nits root. `stage-docs` extracts the tar with `tar xf ...\n--strip-components 1` straight into `content/en/<version>/`, so those\ntwo files get dumped into the  kafka-site content tree alongside the\nactual docs. They are not docs content and do not belong there — the\nprevious release slot (`content/en/43`) has neither, and the javadoc\ntree already carries its own `legal/` license files under\n`static/<version>/javadoc/`.\n\nThis was flagged on the 4.4 kafka-site PR, where `content/en/44/LICENSE`\nand `content/en/44/NOTICE` showed up as spurious additions and had to be\nremoved by hand. Without this change they return on every `stage-docs`\nrun.\n\nThis patch drops `LICENSE` and `NOTICE` from the content directory after\nextraction, mirroring the existing post-extraction cleanup that moves\n`images/` out to `static/<version>/`.\n\nNo behavior change for any other staged file.\n\nReviewers: Chia-Ping Tsai <chia7712@gmail.com>\n",
+      "patch_file": "prs/23906.json"
+    },
+    {
+      "id": "kafka-23908",
+      "source": "github",
+      "repo": "apache/kafka",
+      "kind": "pull_request",
+      "number": 23908,
+      "url": "https://github.com/apache/kafka/pull/23908",
+      "title": "MINOR: Validate operation types in incremental config updates",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-22T02:04:42Z",
+      "user": "johnny94",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "b07fbd856bfef7bf4afb4859781a6500fc558091",
+      "additions": 87,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Cherry-picked 6adbf155a6aeda2bbc3dcf0893dd6ffe4a333ed5 to 4.3 branch and\nfix test error\n\nReviewers: Chia-Ping Tsai <chia7712@gmail.com>\n",
+      "patch_file": "prs/23908.json"
+    }
+  ],
+  "mail_threads": []
+}

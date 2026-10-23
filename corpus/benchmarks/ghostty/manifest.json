@@ -1,0 +1,29 @@
+{
+  "bench": 6,
+  "repo": "ghostty-org/ghostty",
+  "generated_at": "2026-10-23T01:58:26.061102+00:00",
+  "stats": {
+    "cases": 53,
+    "runnable_prs": 52,
+    "by_class": {
+      "closed_unmerged_sample": 24,
+      "merged_control": 24,
+      "ai_disclosed": 1,
+      "ai_slop_discussion": 4
+    },
+    "objective_slop": 0,
+    "ai_slop_discussion": 4,
+    "ai_disclosed": 1,
+    "merged_control": 24,
+    "mail_threads": 0,
+    "mail_slop_language": 0
+  },
+  "why": "On 22 Jan 2026 Mitchell Hashimoto restricted AI-written contributions to accepted issues and maintainers, and banned repeat low-effort submissions, after saying bad content was up by about 10x. https://github.com/ghostty-org/ghostty/pull/10412",
+  "population_search": {
+    "prs": 2492,
+    "closed_unmerged": 447,
+    "slop_language": 9,
+    "generated_by": 27
+  },
+  "population_note": "Search totals from 2026-10-22. Not a census, and not a count of bad patches."
+}

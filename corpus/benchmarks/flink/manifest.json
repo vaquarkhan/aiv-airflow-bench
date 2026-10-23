@@ -1,0 +1,21 @@
+{
+  "bench": 2,
+  "repo": "apache/flink",
+  "generated_at": "2026-10-22T16:53:28.909322+00:00",
+  "stats": {
+    "cases": 51,
+    "runnable_prs": 51,
+    "by_class": {
+      "merged_control": 21,
+      "ai_disclosed": 24,
+      "ai_tool_mention": 6
+    },
+    "objective_slop": 0,
+    "ai_slop_discussion": 0,
+    "ai_disclosed": 24,
+    "merged_control": 21,
+    "mail_threads": 2,
+    "mail_slop_language": 0
+  },
+  "why": "Dev list discussed AI-assisted contributions, AGENTS.md, and a disclosure checkbox in 2026."
+}

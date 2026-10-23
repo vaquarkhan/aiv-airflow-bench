@@ -1,0 +1,462 @@
+[
+  {
+    "query": "Merging \"almost\" ready PRs with maintainer-fixups",
+    "tid": "zpv8f6gsokomrw2f516cxhwkvqkx1sxh",
+    "subject": "[DISCUSS] Merging \"almost\" ready PRs with maintainer-fixups from contributors",
+    "epoch": 1791274673,
+    "replies": 28,
+    "url": "https://lists.apache.org/thread/zpv8f6gsokomrw2f516cxhwkvqkx1sxh",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello everyone,\n\nIn order to improve our \"agentic AI\" workflows, I have recently\nchanged my approach for pull requests that are \"almost ready\" and need\nonly small fixes, such as mechanical conflicts, typos, or minor\ncomment updates. I would love to g"
+  },
+  {
+    "query": "Airflow Contributor Day in Glasgow",
+    "tid": "6q2r04hbhsyx6mx2dbj39pksdmzgvt0o",
+    "subject": "[REMINDER] Airflow Contributor Day in Glasgow",
+    "epoch": 1791283027,
+    "replies": 6,
+    "url": "https://lists.apache.org/thread/6q2r04hbhsyx6mx2dbj39pksdmzgvt0o",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello Everyone,\n\nThis is a short reminder for those who may have forgotten: we have\n\"Airflow Contributor Day\" as part of the Apache Software Foundation's\n\"Community Over Code Glasgow 2026\" event, starting this weekend. There\nis still time to register"
+  },
+  {
+    "query": "hardened, trixie-based PROD images",
+    "tid": "h0sxvd5g4drxfrph35dvlrk46zomsk0y",
+    "subject": "[LAZY CONSENSUS] Airflow 3.4.0: hardened, trixie-based PROD images by default; bookworm/source-built images become \"legacy\" and go away in 3.5.0",
+    "epoch": 1791626566,
+    "replies": 9,
+    "url": "https://lists.apache.org/thread/h0sxvd5g4drxfrph35dvlrk46zomsk0y",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello everyone,\n\nFollowing the discussion [1], I'd like to call for lazy consensus on how\nwe build the CI and PROD images starting with Airflow 3.4.0:\n\n* 3.4.0: the CI image and the default PROD images are based on Docker\n  Hardened Images (Python pr"
+  },
+  {
+    "query": "hardened, trixie-based PROD images",
+    "tid": "y0mlxsx36kzc84tn31q1kyl4rdvgv1xx",
+    "subject": "[DISCUSS] Airflow 3.4.0: hardened, trixie-based PROD images by default; bookworm/source-built images become \"legacy\" and go away in 3.5.0",
+    "epoch": 1791192386,
+    "replies": 2,
+    "url": "https://lists.apache.org/thread/y0mlxsx36kzc84tn31q1kyl4rdvgv1xx",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello everyone,\n\nI would like to propose a change to how we build our PROD (and CI) Docker\nimages, starting with Airflow 3.4.0. The groundwork is in\nhttps://github.com/apache/airflow/pull/73038.\n\nTL;DR\n\n* 3.4.0: the default PROD images are based on D"
+  },
+  {
+    "query": "Human Summary section in agent-drafted PR descriptions",
+    "tid": "5k06417wrbb10hkfk8ogz8py7qgcbpqz",
+    "subject": "[DISCUSS] Human Summary section in agent-drafted PR descriptions",
+    "epoch": 1790260285,
+    "replies": 5,
+    "url": "https://lists.apache.org/thread/5k06417wrbb10hkfk8ogz8py7qgcbpqz",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello everyone,\n\nFollowing the objection in the [LAZY CONSENSUS] thread, I am turning\nthis into a discussion. The change (#73660) has already been reverted\nin #73669 (thanks Ash) - and apologies for merging it before the lazy\nconsensus ended; I thoug"
+  },
+  {
+    "query": "Human Summary section in agent-drafted PR descriptions",
+    "tid": "6n9z98hlt3q78yf02m0yxlh6dod2lrd1",
+    "subject": "[LAZY CONSENSUS] Human Summary section in agent-drafted PR descriptions",
+    "epoch": 1790252827,
+    "replies": 4,
+    "url": "https://lists.apache.org/thread/6n9z98hlt3q78yf02m0yxlh6dod2lrd1",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello everyone,\n\nFollowing Shahar's idea - and a number of PRs he has already opened this\nway - I would like to call for lazy consensus on making it a rule for\nagent-drafted PR descriptions:\n\nhttps://github.com/apache/airflow/pull/73660\n\nThe idea is "
+  },
+  {
+    "query": "Python 3.10 dropped",
+    "tid": "hw7gj54hv2g0rbd7ng740vcbok22m9s2",
+    "subject": "[LAZY CONSENSUS] Python 3.10 dropped",
+    "epoch": 1791276676,
+    "replies": 3,
+    "url": "https://lists.apache.org/thread/hw7gj54hv2g0rbd7ng740vcbok22m9s2",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello All,\n\nSince Shahar is unavailable for most of today, I will continue this.\n\nI do not see it as controversial, so just formality after Shahar's\nDISCUSS thread - we are dropping support for Python 3.10.\n\nShahar's stacked PR: https://github.com/ap"
+  },
+  {
+    "query": "Limiting number of opened pull requests",
+    "tid": "901dt9qdqjtqrh7ow5cdnd8sp0dl3llp",
+    "subject": "[RESULT][LAZY CONSENSUS] Limiting number of opened pull requests for users without write access",
+    "epoch": 1790275056,
+    "replies": 6,
+    "url": "https://lists.apache.org/thread/901dt9qdqjtqrh7ow5cdnd8sp0dl3llp",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello everyone,\n\nThe lazy consensus on limiting the number of open pull requests for\nusers without write access has passed - it ended on Thursday,\n24 September 2026, 19:00 CEST with no objections from committers.\n\nResult:\n\n* We enable GitHub's \"limit"
+  },
+  {
+    "query": "Limiting number of opened pull requests",
+    "tid": "76hg4lnyhnlz1v21vvr60bc98rf7ox5n",
+    "subject": "Re: [LAZY CONSENSUS] Limiting number of opened pull requests for users without write access",
+    "epoch": 1790159632,
+    "replies": 4,
+    "url": "https://lists.apache.org/thread/76hg4lnyhnlz1v21vvr60bc98rf7ox5n",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "For now - it looks like we are heading towards consensus, and 5 is the most\npopular choice.\n\nOn Tue, Sep 22, 2026 at 12:15 PM Jarek Potiuk <ja...@potiuk.com> wrote:\n\n> > You can still create the branches in your fork, you just can’t hit the\n> “create"
+  },
+  {
+    "query": "llms.txt and Markdown docs for coding agents",
+    "tid": "bb0kvht96mw9n6h92rxyvvgco18fb79x",
+    "subject": "[CONTRIBUTION OPPORTUNITY] llms.txt and Markdown docs for coding agents for Airflow site",
+    "epoch": 1791325662,
+    "replies": 9,
+    "url": "https://lists.apache.org/thread/bb0kvht96mw9n6h92rxyvvgco18fb79x",
+    "from": "Kaxil Naik <ka...@gmail.com>",
+    "excerpt": "Hi all,\n\nMore and more people write Dags with coding agents (Claude Code, Cursor,\nCopilot, Codex), and those agents read our docs as HTML. A provider guide\npage is about 150 KB of HTML for about 20 KB of content, and fetch tools\noften summarise it do"
+  },
+  {
+    "query": "AIP-104 Iterable Tasks",
+    "tid": "8mgpjryfcqdozkjop0tdwm96yvcz4558",
+    "subject": "[RESULT][VOTE] AIP-104 Iterable Tasks (IT) and Task Spreading (TS)",
+    "epoch": 1791451626,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/8mgpjryfcqdozkjop0tdwm96yvcz4558",
+    "from": "Blain David <da...@infrabel.be>",
+    "excerpt": "Hi all,\n\nThe vote for AIP-104: Iterable Tasks (IT) and Task Spreading (TS) has closed.\n\nThe result is:\n\nBinding +1 (10):\n\n     *\nDavid Blain\n     *\nAmogh Desai\n     *\nJarek Potiuk\n     *\nShahar Epstein\n     *\nJens Scheffler\n     *\nKaxil Naik\n     *\nD"
+  },
+  {
+    "query": "AIP-104 Iterable Tasks",
+    "tid": "7c1nwwl0rm047hc19fkz6ql2rgbz5chh",
+    "subject": "[VOTE] AIP-104 Iterable Tasks (IT) and Task Spreading (TS)",
+    "epoch": 1790841621,
+    "replies": 10,
+    "url": "https://lists.apache.org/thread/7c1nwwl0rm047hc19fkz6ql2rgbz5chh",
+    "from": "Blain David <da...@infrabel.be>",
+    "excerpt": "Hi everyone,\n\nI would like to restart the vote on AIP-104, now titled Iterable Tasks (IT) and Task Spreading (TS):\n\nhttps://cwiki.apache.org/confluence/spaces/AIRFLOW/pages/421954527/AIP-104+Iterable+Tasks+IT+and+Task+Spreading+TS\n\nThe previous vote,"
+  },
+  {
+    "query": "[secrets]backend_order",
+    "tid": "6p05co5hvrl1p33jv6d38fqxmmm5trfr",
+    "subject": "Re: Discuss: new option [secrets]backend_order",
+    "epoch": 1791082954,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/6p05co5hvrl1p33jv6d38fqxmmm5trfr",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello everyone,\n\nReviving this thread with an apology. I merged the implementation of this\nfeature (https://github.com/apache/airflow/pull/70681) last week because I\nthought this discussion had been settled. Re-reading it, it was not: it\nstopped at \""
+  },
+  {
+    "query": "MLH Fellowship on Airflow",
+    "tid": "mtmjsgoqhfxjkxkf2lz8czhm2wdtbc5h",
+    "subject": "MLH Fellowship on Airflow, Fall 2026",
+    "epoch": 1790809184,
+    "replies": 2,
+    "url": "https://lists.apache.org/thread/mtmjsgoqhfxjkxkf2lz8czhm2wdtbc5h",
+    "from": "Daman Arora via dev <de...@airflow.apache.org>",
+    "excerpt": "Hi all,\n\nI'm Daman Arora, pod leader for the MLH Fellowship's Fall 2026 open source\ntrack. Saying hello since we'll be around Airflow for the next few months.\n\nJoel Emmanuel is our fellow on Airflow. It's his first time contributing to\na\nproject this"
+  },
+  {
+    "query": "release preparation date 2026-10-02",
+    "tid": "qjdg7fhqy95l60bs5yds3396cnd9c4ct",
+    "subject": "[RESULT][VOTE] Airflow Providers - release preparation date 2026-10-02",
+    "epoch": 1791223125,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/qjdg7fhqy95l60bs5yds3396cnd9c4ct",
+    "from": "Shahar Epstein <sh...@apache.org>",
+    "excerpt": "Hello,\n\nApache Airflow Providers prepared on 2026-10-02 have been accepted.\n\n3 \"+1\" binding votes received:\n- Shahar Epstein\n- Jarek Potiuk\n- Vincent Beck\n\n1 \"+1\" non-binding vote received:\n- David Blain\n\n1 \"+1\" non-binding vote received for specific"
+  },
+  {
+    "query": "release preparation date 2026-10-02",
+    "tid": "42hkj4pl1v8ycsgo5907dn5xl8g56g11",
+    "subject": "[ACCELERATED VOTE] Airflow Providers, release preparation date 2026-10-02 (ad-hoc)",
+    "epoch": 1790965504,
+    "replies": 8,
+    "url": "https://lists.apache.org/thread/42hkj4pl1v8ycsgo5907dn5xl8g56g11",
+    "from": "Shahar Epstein <sh...@apache.org>",
+    "excerpt": "Hey all,\n\nI have just cut the new wave Airflow Providers packages with release\npreparation date 2026-10-02. This email is calling a vote on the release,\nwhich will last for 24 hours - which means that it will end on 2026-10-03\n18:25 UTC and until 3 b"
+  },
+  {
+    "query": "Preparing for Airflow 3.4.0 Release",
+    "tid": "fg54s1qkz648svn04b26b6ghv8yvtoq6",
+    "subject": "Preparing for Airflow 3.4.0 Release",
+    "epoch": 1790775675,
+    "replies": 3,
+    "url": "https://lists.apache.org/thread/fg54s1qkz648svn04b26b6ghv8yvtoq6",
+    "from": "Rahul Vats <ra...@gmail.com>",
+    "excerpt": "Dear Airflow Community,\n\nI will be cutting 3.4.0b1 in the week of 12th Oct 2026 as per 3.4.0\ntimelines\n<https://cwiki.apache.org/confluence/spaces/AIRFLOW/pages/446071447/Airflow+3.4#Airflow3.4-Airflow3.4Timelines>\n.\n\n\n\nI am planning to create the v3"
+  },
+  {
+    "query": "release preparation date 2026-10-14",
+    "tid": "nh465q76f20hhxn1g1jcq27ohbnvds2o",
+    "subject": "[RESULT][VOTE] Airflow Providers - release preparation date 2026-10-14",
+    "epoch": 1792259957,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/nh465q76f20hhxn1g1jcq27ohbnvds2o",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello,\n\nApache Airflow Providers prepared on 2026-10-14 have been accepted.\n\n4 \"+1\" binding votes received:\n- Jarek Potiuk\n- Vincent Beck\n- Shahar Epstein\n- Kaxil Naik\n\n1 \"+1\" non-binding vote received:\n- David Blain\n\n1 \"+1\" non-binding vote received"
+  },
+  {
+    "query": "release preparation date 2026-10-14",
+    "tid": "s2qht3onyscf3wtl67bv7g09p605yzwl",
+    "subject": "[VOTE] Airflow Providers, release preparation date 2026-10-14",
+    "epoch": 1791988795,
+    "replies": 6,
+    "url": "https://lists.apache.org/thread/s2qht3onyscf3wtl67bv7g09p605yzwl",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hey all,\n\nI have just cut the new wave Airflow Providers packages with release\npreparation date 2026-10-14. This email is calling a vote on the\nrelease,\nwhich will last for 72 hours - which means that it will end on\n2026-10-17 14:46 UTC and until 3 b"
+  },
+  {
+    "query": "Providers packages prepared on 2026-10-17",
+    "tid": "5kclstq9wvnw2s5s6rpwp8cwpj3vps5v",
+    "subject": "[ANNOUNCE] Apache Airflow Providers prepared on 2026-10-17 are released",
+    "epoch": 1792409596,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/5kclstq9wvnw2s5s6rpwp8cwpj3vps5v",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Dear Airflow community,\n\nI'm happy to announce that new versions of Airflow Providers packages\nprepared on 2026-10-17 were just released.\n\nFull list of PyPI packages released is added at the end of the message.\n\nThe source release, as well as the bin"
+  },
+  {
+    "query": "Native asset-event emission from tasks",
+    "tid": "5999hbp077prc8m17p2hjkmlgh8oz22w",
+    "subject": "[DISCUSS] Native asset-event emission from tasks, callbacks, and notifiers",
+    "epoch": 1791983135,
+    "replies": 5,
+    "url": "https://lists.apache.org/thread/5999hbp077prc8m17p2hjkmlgh8oz22w",
+    "from": "Hussein Awala <hu...@awala.fr>",
+    "excerpt": "Hi everyone,\n\nI'd like to discuss a native Task SDK capability for explicitly emitting\nasset events from running tasks, task- and Dag-level callbacks, and\nnotifiers used at either level.\n\nI have put together a small proof of concept in draft PR #7472"
+  },
+  {
+    "query": "Enable auto-merge for PRs to main",
+    "tid": "5x43zx0xtwokvm0o7jm9yw5lyhmgqxm8",
+    "subject": "[LAZY CONSENSUS] Enable auto-merge for PRs to main",
+    "epoch": 1792528282,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/5x43zx0xtwokvm0o7jm9yw5lyhmgqxm8",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello everyone,\n\nFollowing the proposal thread [1], I'm calling a lazy consensus on\nenabling GitHub auto-merge for PRs to main, as implemented in #75142 [2].\n\nIn short:\n\n- After approving a PR, a committer can click \"Enable auto-merge\" (or\n  run \"gh "
+  },
+  {
+    "query": "Enable auto-merge for PRs to main",
+    "tid": "5nr3ngh1vjbgfn8frf8j5tsf4r051ms1",
+    "subject": "[PROPOSAL] Enable auto-merge for PRs to main",
+    "epoch": 1792444876,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/5nr3ngh1vjbgfn8frf8j5tsf4r051ms1",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello everyone,\n\nI'd like to enable GitHub auto-merge for PRs to main. The change is in\n#75142 (https://github.com/apache/airflow/pull/75142).\n\nHow it works: after approving a PR, a committer clicks \"Enable\nauto-merge\" (or runs \"gh pr merge --squash "
+  },
+  {
+    "query": "release preparation date 2026-10-17",
+    "tid": "722g6o3qzdqq49mlvglcp9h5wc7fxwn1",
+    "subject": "[RESULT][VOTE] Airflow Providers - release preparation date 2026-10-17",
+    "epoch": 1792407993,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/722g6o3qzdqq49mlvglcp9h5wc7fxwn1",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello,\n\nApache Airflow Providers prepared on 2026-10-17 have been accepted.\n\n3 \"+1\" binding votes received:\n- Jarek Potiuk\n- Shahar Epstein\n- Kaxil Naik\n\nThe released provider is common.ai 1.0.0 (voted as 1.0.0rc3), the first\nstable release of the pr"
+  },
+  {
+    "query": "release preparation date 2026-10-17",
+    "tid": "zmqm5tpcv6c0vz34n2l5kqktfolnn40f",
+    "subject": "[ACCELERATED VOTE] Airflow Providers, release preparation date 2026-10-17",
+    "epoch": 1792278245,
+    "replies": 5,
+    "url": "https://lists.apache.org/thread/zmqm5tpcv6c0vz34n2l5kqktfolnn40f",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hey all,\n\nI have just cut the new wave Airflow Providers packages with release\npreparation date 2026-10-17. This email is calling a vote on the\nrelease, which will last for 24 hours - which means that it will end\non 2026-10-19 00:00 UTC and until 3 b"
+  },
+  {
+    "query": "AIP-120 Run CI for external contributions",
+    "tid": "nfno4r1jqx5dj75v867prjjgg6o77odx",
+    "subject": "[LAZY CONSENSUS] AIP-120 Run CI for external contributions in contributor forks",
+    "epoch": 1792404499,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/nfno4r1jqx5dj75v867prjjgg6o77odx",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello everyone,\n\nFollowing the two discussions on dev@ (\"[DISCUSS] Run CI for external\ncontributions in contributor forks\" and \"[DISCUSS] Next step after the PR\nlimit: \"your PR, your CI\"\"), I would like to call for lazy consensus on\nAIP-120:\n\nhttps:/"
+  },
+  {
+    "query": "Providers packages prepared on 2026-10-14",
+    "tid": "f2d0rrksyjxsktjjmncj0qfqrtjgbvzy",
+    "subject": "[ANNOUNCE] Apache Airflow Providers prepared on 2026-10-14 are released",
+    "epoch": 1792265925,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/f2d0rrksyjxsktjjmncj0qfqrtjgbvzy",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Dear Airflow community,\n\nI'm happy to announce that new versions of Airflow Providers packages\nprepared on 2026-10-14 were just released.\n\nFull list of PyPI packages released is added at the end of the message.\n\nThe source release, as well as the bin"
+  },
+  {
+    "query": "scheduled triaging and security issues",
+    "tid": "f8jnjonpf8kbr25jwz67q5vo07h62wws",
+    "subject": "Re: [DISCUSS] \"scheduled\" triaging and security issues - with Airflow as engine",
+    "epoch": 1791541739,
+    "replies": 7,
+    "url": "https://lists.apache.org/thread/f8jnjonpf8kbr25jwz67q5vo07h62wws",
+    "from": "Shubham Raj <sh...@apache.org>",
+    "excerpt": "Hello everyone,\n\nAs a follow-up to this thread, I've written up the proposal, Here is an AIP\n<https://cwiki.apache.org/confluence/spaces/AIRFLOW/pages/451979463/WIP+AIP-124+Airflow-Powered+Agentic+Workflows+for+Project+Operations>\n,\n\nTL;DR: Move our "
+  },
+  {
+    "query": "release preparation date 2026-10-06",
+    "tid": "mjvch54cntd6lpnrxq9gbxnpvbb1580v",
+    "subject": "[RESULT][VOTE] Airflow Providers - release preparation date 2026-10-06",
+    "epoch": 1791884684,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/mjvch54cntd6lpnrxq9gbxnpvbb1580v",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello,\n\nApache Airflow Providers prepared on 2026-10-06 have been accepted.\n\n3 \"+1\" binding votes received:\n- Jarek Potiuk\n- Vincent Beck\n- Nikolas Oliveira\n\n5 \"+1\" non-binding votes received:\n- Pankaj Koti\n- Subhramit B.B.\n- Pankaj Singh\n- Bingqin W"
+  },
+  {
+    "query": "release preparation date 2026-10-06",
+    "tid": "t58ppv8qkxncpyt1r6nwjx8lhbskv783",
+    "subject": "[VOTE] Airflow Providers, release preparation date 2026-10-06",
+    "epoch": 1791470435,
+    "replies": 19,
+    "url": "https://lists.apache.org/thread/t58ppv8qkxncpyt1r6nwjx8lhbskv783",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hey all,\n\nI have just cut the new wave of Airflow Providers packages with release\npreparation date 2026-10-06. This email is calling a vote on the release,\nwhich will last for 72 hours and will end on 2026-10-11 14:47 UTC.\n\nConsider this my (binding)"
+  },
+  {
+    "query": "AIP-118: Self-hosted runners",
+    "tid": "lfgvvffhtzgpbyy3dm197vftsg448qpx",
+    "subject": "[LAZY CONSENSUS] AIP-118 Self-hosted runners for Apache Airflow CI",
+    "epoch": 1792430769,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/lfgvvffhtzgpbyy3dm197vftsg448qpx",
+    "from": "Shahar Epstein <sh...@apache.org>",
+    "excerpt": "Hello everyone,\n\nFollowing the discussion\n<https://lists.apache.org/thread.html/6sfqor414lxvwjnw3dvp5kzckms3t7zb>on\nthe dev list, I would like to call for lazy consensus on AIP-118:\n\nhttps://cwiki.apache.org/confluence/x/-JXwGg\n\nAppendix with the sup"
+  },
+  {
+    "query": "AIP-118: Self-hosted runners",
+    "tid": "4m7s5dlvxyyy4t9ljr8o76cy1glow76g",
+    "subject": "RE: [DISCUSS] AIP-118: Self-hosted runners for Apache Airflow CI",
+    "epoch": 1790180265,
+    "replies": 4,
+    "url": "https://lists.apache.org/thread/4m7s5dlvxyyy4t9ljr8o76cy1glow76g",
+    "from": "\"Subhramit B.B.\" <su...@live.in>",
+    "excerpt": "Hi Shahar and everyone\nJarek, Ash and I were having a small discussion over the community Slack on how we can run more CI checks faster and potentially use the merge queue for stronger validation before changes reach main.\nThe main concern is that ru"
+  },
+  {
+    "query": "Newsfragments: when to add one",
+    "tid": "dzdkk5j4zw1j9c12rxzbp2bjhj99s87t",
+    "subject": "[RESULT][LAZY CONSENSUS] Newsfragments: when to add one",
+    "epoch": 1792451052,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/dzdkk5j4zw1j9c12rxzbp2bjhj99s87t",
+    "from": "Pierre Jeambrun <pi...@gmail.com>",
+    "excerpt": "Hello everyone,\n\nPosting this late for sanity. (I was travelling during the past few days).\n\nThe lazy consensus on \"When to add a newsfragment\" policy has passed - it\nended on Saturday,\n17 OCtober 2026, 11:30 UTC with no objections.\n\nThe PR https://g"
+  },
+  {
+    "query": "Newsfragments: when to add one",
+    "tid": "bvbdk0bw1wysn8v067xzg8szgdmt3srb",
+    "subject": "[LAZY CONSENSUS] Newsfragments: when to add one",
+    "epoch": 1791977156,
+    "replies": 3,
+    "url": "https://lists.apache.org/thread/bvbdk0bw1wysn8v067xzg8szgdmt3srb",
+    "from": "Pierre Jeambrun <pi...@gmail.com>",
+    "excerpt": "Hi all,\n\nFollowing the discussion thread started by Kaxil\nhttps://lists.apache.org/thread.html/o4jknx0v7p0x8f1qvpvtl6ol8jm2ytjj I'm\ncalling for a lazy consensus on when to add newsfragments:\n* Only use 'significant' newsfragments\n\n* Used for 'notable"
+  },
+  {
+    "query": "Requiring real GCP testing evidence",
+    "tid": "7z1q39d8fq6ny9jj6omxkrk9o1mogmk7",
+    "subject": "[DISCUSS] Requiring real GCP testing evidence for Google Provider PRs",
+    "epoch": 1791207983,
+    "replies": 14,
+    "url": "https://lists.apache.org/thread/7z1q39d8fq6ny9jj6omxkrk9o1mogmk7",
+    "from": "\"Ulada Zakharava (xWF)\" <ul...@xwf.google.com>",
+    "excerpt": "Hi everyone,\n\nWe’ve noticed an increasing number of PRs submitted to the Google Provider\nwhere contributors—often using AI tooling—don't have access to a GCP\nproject to test their changes.\n\nWhile we love community contributions, many of these PRs tou"
+  },
+  {
+    "query": "your PR, your CI",
+    "tid": "ky392mrrcmj312y1r276r30p584n804c",
+    "subject": "[DISCUSS] Next step after the PR limit: \"your PR, your CI\" - running CI for external contributors' PRs in their own forks",
+    "epoch": 1791198063,
+    "replies": 8,
+    "url": "https://lists.apache.org/thread/ky392mrrcmj312y1r276r30p584n804c",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello everyone,\n\nIt has been 10 days since we introduced the limit of 5 open PRs for\ncontributors without write access. I want to share early results and\npropose the next step.\n\nTL;DR\n\n* The PR limit is doing what we hoped. The data is early (9 days)"
+  },
+  {
+    "query": "Providers packages prepared on 2026-10-06",
+    "tid": "wmst0stk00gjngc89jj8nw85dsygoqop",
+    "subject": "[ANNOUNCE] Apache Airflow Providers prepared on 2026-10-06 are released",
+    "epoch": 1791895771,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/wmst0stk00gjngc89jj8nw85dsygoqop",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Dear Airflow community,\n\nI'm happy to announce that new versions of Airflow Providers packages\nprepared on 2026-10-06 were just released.\n\nFull list of PyPI packages released is added at the end of the message.\n\nThe source release, as well as the bin"
+  },
+  {
+    "query": "Dropping Python 3.10 support",
+    "tid": "30s10g2k93gb4rvvqpf0y40m5xtwv4xw",
+    "subject": "[DISCUSS] Dropping Python 3.10 support",
+    "epoch": 1791038277,
+    "replies": 3,
+    "url": "https://lists.apache.org/thread/30s10g2k93gb4rvvqpf0y40m5xtwv4xw",
+    "from": "Shahar Epstein <sh...@apache.org>",
+    "excerpt": "Hey everyone,\n\nWe're past Oct. 1 2026, which means EOL of Python 3.10\n<https://devguide.python.org/versions/>.\nI've created a GitHub issue\n<https://github.com/apache/airflow/issues/74148> for\ntracking, and a stacked PR <https://github.com/apache/airf"
+  },
+  {
+    "query": "September 2026 PR of the Month",
+    "tid": "hywhpdtqp8ott22ylgfd31l8lqp8oqd5",
+    "subject": "[VOTE] September 2026 PR of the Month",
+    "epoch": 1790609137,
+    "replies": 9,
+    "url": "https://lists.apache.org/thread/hywhpdtqp8ott22ylgfd31l8lqp8oqd5",
+    "from": "Kenten Danas via dev <de...@airflow.apache.org>",
+    "excerpt": "Hey All,\n\nIt's once again time to vote for the PR of the Month!\nWith the help of the get_important_pr_candidates script in dev/stats, we've\nidentified the following candidates:\n\n1. PR#64422: Add GitHub App authentication for git DAG bundles by @RaphC"
+  },
+  {
+    "query": "September 2026 PR of the Month",
+    "tid": "rxsppp24x5bsj6hrjqovb7cw2jbx0x4h",
+    "subject": "[RESULT][VOTE] September 2026 PR of the Month",
+    "epoch": 1790874713,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/rxsppp24x5bsj6hrjqovb7cw2jbx0x4h",
+    "from": "Kenten Danas via dev <de...@airflow.apache.org>",
+    "excerpt": "Hey All,\n\nVoting has closed for September 2026 PR of the Month! Thank you to everyone\nwho participated. Here are the results:\n\nWinner: PR#72783: Speed up breeze UI asset change detection by skipping\npnpm store by @Andrushika (Andrew Chang) - 3 votes\n"
+  },
+  {
+    "query": "Airflow Open Spaces at PyCon TW",
+    "tid": "k2pdnm3odr98sj1ogx23fsmqk5z3tbld",
+    "subject": "Airflow Open Spaces at PyCon TW 2026",
+    "epoch": 1790230054,
+    "replies": 4,
+    "url": "https://lists.apache.org/thread/k2pdnm3odr98sj1ogx23fsmqk5z3tbld",
+    "from": "\"dev.wei-lee.me via dev\" <de...@airflow.apache.org>",
+    "excerpt": "Hi all,\n\nWe’ll 2 two Apache Airflow community Open Spaces at PyCon TW 2026 — attendee-organized discussion sessions with no fixed agenda — together with the Apache Airflow Korea User Group and Apache Airflow Taiwan User Group.\n\nThese Open Spaces also"
+  },
+  {
+    "query": "Deprecate cyclic TaskGroup dependencies",
+    "tid": "5fpwlxg4y6jhyrw7n2m3jz3o7t6xvhlk",
+    "subject": "[RESULT][LAZY CONSENSUS] Deprecate cyclic TaskGroup dependencies in 3.4, reject them in 3.5",
+    "epoch": 1790713853,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/5fpwlxg4y6jhyrw7n2m3jz3o7t6xvhlk",
+    "from": "Dheeraj Turaga <tu...@apache.org>",
+    "excerpt": "Hi all,\n\nThe lazy consensus [1] closed on Tuesday, 29 September 2026, 05:00 UTC with\nno objections, so it passes. Thanks to David, Jarek and Damian for the +1s,\nand to Ash for the feedback.\n\nWe will handle Dags whose TaskGroups depend on each other i"
+  },
+  {
+    "query": "Deprecate cyclic TaskGroup dependencies",
+    "tid": "b6h120jw7tv1l1zf1ovwrok2zk4hyvwc",
+    "subject": "[LAZY CONSENSUS] Deprecate cyclic TaskGroup dependencies in 3.4, reject them in 3.5",
+    "epoch": 1790398968,
+    "replies": 8,
+    "url": "https://lists.apache.org/thread/b6h120jw7tv1l1zf1ovwrok2zk4hyvwc",
+    "from": "Dheeraj Turaga <tu...@apache.org>",
+    "excerpt": "Hi all,\n\nFollowing the discussion [1], I'm calling for lazy consensus on how we\nhandle Dags whose TaskGroups depend on each other in a cycle when each\ngroup is treated as a single unit (their task dependencies themselves\nare acyclic).\n\nProposal:\n\n1. "
+  },
+  {
+    "query": "pull request limit is temporarily a soft limit",
+    "tid": "pbry9otfdbkr1n85scq3v9mdlp15fgg2",
+    "subject": "[ANNOUNCE] Open pull request limit is temporarily a soft limit",
+    "epoch": 1790415651,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/pbry9otfdbkr1n85scq3v9mdlp15fgg2",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello everyone,\n\nA short update on the limit of open pull requests for contributors\nwithout write access.\n\nAs agreed in the lazy consensus [1][2], the limit is 5 open PRs at a\ntime. We have run the one-time closure: more than 200 PRs (210, from\n21 co"
+  },
+  {
+    "query": "Contributor Day at Community Over Code Glasgow",
+    "tid": "zfnmlzh54ly8hwyzxdhdjqn35q92ry3c",
+    "subject": "Re: [DISCUSS] Next step after the PR limit: \"your PR, your CI\" - running CI for external contributors' PRs in their own forks",
+    "epoch": 1791465854,
+    "replies": 0,
+    "url": "https://lists.apache.org/thread/zfnmlzh54ly8hwyzxdhdjqn35q92ry3c",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "I would love to hear any comments for that one. I think that should help us\nto deal with PR overload and also it will have a nice effect of freeing a\nlot of resources in shared Apache Runners Queue. I will share this with\nother PMCs as well and ask t"
+  },
+  {
+    "query": "Contributor Day at Community Over Code Glasgow",
+    "tid": "6q2r04hbhsyx6mx2dbj39pksdmzgvt0o",
+    "subject": "[REMINDER] Airflow Contributor Day in Glasgow",
+    "epoch": 1791283027,
+    "replies": 1,
+    "url": "https://lists.apache.org/thread/6q2r04hbhsyx6mx2dbj39pksdmzgvt0o",
+    "from": "Jarek Potiuk <ja...@potiuk.com>",
+    "excerpt": "Hello Everyone,\n\nThis is a short reminder for those who may have forgotten: we have\n\"Airflow Contributor Day\" as part of the Apache Software Foundation's\n\"Community Over Code Glasgow 2026\" event, starting this weekend. There\nis still time to register"
+  }
+]

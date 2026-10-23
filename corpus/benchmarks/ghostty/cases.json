@@ -1,0 +1,2043 @@
+{
+  "schema_version": 1,
+  "bench": 6,
+  "project": "ghostty",
+  "repo": "ghostty-org/ghostty",
+  "window": "2025-10-22..2026-10-22",
+  "generated_at": "2026-10-23T01:58:26.061102+00:00",
+  "why": "On 22 Jan 2026 Mitchell Hashimoto restricted AI-written contributions to accepted issues and maintainers, and banned repeat low-effort submissions, after saying bad content was up by about 10x. https://github.com/ghostty-org/ghostty/pull/10412",
+  "sampling": "Up to a fixed number of latest matches per quarter. Not a census. A zero-hit quarter is split before it is trusted.",
+  "not_claimed": [
+    "A tool mention or filled Generated-by line is not proof the change should fail.",
+    "Slop language in discussion is not proof the attached patch is slop.",
+    "Search totals are not the percent of the project that is AI-authored."
+  ],
+  "stats": {
+    "cases": 53,
+    "runnable_prs": 52,
+    "by_class": {
+      "closed_unmerged_sample": 24,
+      "merged_control": 24,
+      "ai_disclosed": 1,
+      "ai_slop_discussion": 4
+    },
+    "objective_slop": 0,
+    "ai_slop_discussion": 4,
+    "ai_disclosed": 1,
+    "merged_control": 24,
+    "mail_threads": 0,
+    "mail_slop_language": 0
+  },
+  "cases": [
+    {
+      "id": "ghostty-10284",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 10284,
+      "url": "https://github.com/ghostty-org/ghostty/pull/10284",
+      "title": "terminal: reflow capacity adjustment should use current page",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-11T22:07:15Z",
+      "user": "mitchellh",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "b07aa60cfb023f28120341782f5a2c5c723707c0",
+      "additions": 14,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "While reflowing, if we required more page capacity, we were using `cap.<field> * 2` to grow the capacity. But `cap` references the _source page capacity_. What this means is that for _every single row_ we would hit our capacity limit again and call `adjustCapacity` again, since we were never actually increasing our capacity to begin with.\r\n\r\nThis commit replaces our capacity growth by using our current target page capacity as the source instead. Under edge case scenarios, this reduces the `adjustCapacity` burden and should result in performance improvements.",
+      "patch_file": "prs/10284.json"
+    },
+    {
+      "id": "ghostty-10322",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 10322,
+      "url": "https://github.com/ghostty-org/ghostty/pull/10322",
+      "title": "feat: add support for clicking tilde paths",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-15T03:10:02Z",
+      "user": "luxuriaVT",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "7745914cd588b9d9292a4deb63baba2a4dfa1181",
+      "additions": 26,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Previously, only relative (`../.bashrc`) and absolute (`/Users/so-and-so/.bashrc`) paths were clickable. This PR changes the regex to match tilde-prefixed paths and adds shell-style tilde expansion before opening the paths.\r\n\r\nAI Disclosure: I used Opus to assist me with the Zig side of things. I've reviewed it thoroughly by hand and tested it manually.\r\n\r\nRelated to #1972.\r\n",
+      "patch_file": "prs/10322.json"
+    },
+    {
+      "id": "ghostty-10324",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 10324,
+      "url": "https://github.com/ghostty-org/ghostty/pull/10324",
+      "title": "feat/macos search prefill selection",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-15T09:33:16Z",
+      "user": "ShanthoshPrabhu",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "0218994fb32d1e7c9dbe1f1d4105a8ba26f25161",
+      "additions": 20,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "codex"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Currently when the search cmd is executed, search input remains empty even if text is actively selected in the terminal\r\n\r\nChange:\r\nModified the start_search logic to check for an active selection, and if that exists, set the search state with that value. Also pre-fill only if the selection stays within one line\r\n\r\nNote: I used an AI(codex) to help me navigate through the codebase.",
+      "patch_file": "prs/10324.json"
+    },
+    {
+      "id": "ghostty-10347",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 10347,
+      "url": "https://github.com/ghostty-org/ghostty/pull/10347",
+      "title": "macOS: copy_title_to_clipboard respects user-set title override",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-16T17:20:30Z",
+      "user": "syy",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "cdc3d4280f21bd19feb850e0008dd86c5abba3ab",
+      "additions": 53,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Summary\r\n  - When using \"Change Terminal Title...\" to set a custom title, `copy_title_to_clipboard` now copies the user-set title instead of\r\n  the original terminal title\r\n  - Adds `getDisplayTitle()` method that returns `title_override` if set, otherwise falls back to the terminal-set title\r\n\r\n  ## Test plan\r\n  - [x] Set custom title via \"Change Terminal Title...\"\r\n  - [x] Use \"Copy Terminal Title to Clipboard\" → copies custom title\r\n  - [x] Clear custom title (leave empty)\r\n  - [x] Use \"Copy Terminal Title to Clipboard\" → copies original terminal title\r\n\r\n  **Note:** GTK implementation is not included per CONTRIBUTING.md guidelines (macOS-only machine).\r\n\r\nAI Disclosure: This PR was written with Claude Code assistance. I tested all changes on macOS.\r\n\r\n  Ref #10345",
+      "patch_file": "prs/10347.json"
+    },
+    {
+      "id": "ghostty-10354",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 10354,
+      "url": "https://github.com/ghostty-org/ghostty/pull/10354",
+      "title": "renderer: Metal and OpenGL shrink buffers when they're much smaller",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-17T05:53:45Z",
+      "user": "mitchellh",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "5269da097b6afaa81bf1043aaa20d2e034fcbf0c",
+      "additions": 12,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Fixes the memory associated with #10352\r\n\r\nPresently, our GPU buffers never shrink, they only grow. If the grid size grows very large, we have to allocate very large GPU buffers.\r\n\r\nThis commit introduces a little heuristic to shrink buffers when the size we're using is less than a quarter of the total size.\r\n\r\nI don't love this so #10355 for the proper long term solution.",
+      "patch_file": "prs/10354.json"
+    },
+    {
+      "id": "ghostty-10361",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 10361,
+      "url": "https://github.com/ghostty-org/ghostty/pull/10361",
+      "title": "test: add test for clearGrapheme infinite loop in ReleaseFast mode",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-17T16:29:27Z",
+      "user": "grishy",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "f0ee726cb0e8fae75e2230aa0ad107a0c11c62dc",
+      "additions": 57,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Sorry, wrong target...",
+      "patch_file": "prs/10361.json"
+    },
+    {
+      "id": "ghostty-10396",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 10396,
+      "url": "https://github.com/ghostty-org/ghostty/pull/10396",
+      "title": "feat(macos): focus surface view if search box is manually closed",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-21T12:43:17Z",
+      "user": "MrConnorKenway",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "02d6dc06728b9e0738937a1fa432fdb2cf84b6ea",
+      "additions": 6,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Currently, if a user clicks the \"xmark\" button to close the search box, the main interface does not regain focus until clicked again. This patch focuses the surface view upon closing.",
+      "patch_file": "prs/10396.json"
+    },
+    {
+      "id": "ghostty-10399",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 10399,
+      "url": "https://github.com/ghostty-org/ghostty/pull/10399",
+      "title": "OSC 9: Finish parsing all ConEmu OSCs",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-21T19:34:55Z",
+      "user": "jcollie",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "9ee27d2697cbe33c29cad008bb5aeb31563c0747",
+      "additions": 430,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Adds support for parsing OSC 9;7, 9;8, 9;9, 9;10, 9;11, 9;12",
+      "patch_file": "prs/10399.json"
+    },
+    {
+      "id": "ghostty-10401",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 10401,
+      "url": "https://github.com/ghostty-org/ghostty/pull/10401",
+      "title": "Introduce Tripwire to test errdefer and fix some found issues",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-21T20:41:52Z",
+      "user": "mitchellh",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "3fdff49a821d81c71f12f979075e4c094a928202",
+      "additions": 888,
+      "changed_files": 16,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "This adds a new single-file library called \"Tripwire\" in `src/tripwire.zig`. This library helps inject failures around `try` cases for the purpose of testing `errdefer`. It is fully optimized away in non-test builds (even debug), turning into zero space and zero assembly. \r\n\r\nFrom this, I've verified (via unit tests w/ tripwire) and fixed a number of errdefer issues:\r\n\r\n* PageList init with non-standard pages that requires more than 1 page can leak on allocation error on the 2nd+ loop\r\n* Tabstop allocation failure on resize corrupts the internal state (invalid cols)\r\n* `Screen.selectionString` would leak memory on late allocation failures\r\n* Screen search could leak memory on late allocation failures\r\n* `SharedGrid.renderGlyph` in our font subsystem would corrupt the glyph cache if failure occurred\r\n* `SharedGrid.init` could leak memory if loading font metrics failed\r\n\r\nIn addition to the bugs found, there is now tripwire coverage around more of our core and we should continue to add more. I've also added significantly more explicit error sets as I found them.\r\n\r\n**AI disclosure:** AI wrote some of the tests, but tripwire itself is all handwritten and everything was reviewed.",
+      "patch_file": "prs/10401.json"
+    },
+    {
+      "id": "ghostty-10407",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 10407,
+      "url": "https://github.com/ghostty-org/ghostty/pull/10407",
+      "title": "tripwire: change backing store from ArrayHashMap to EnumMap",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-21T23:31:17Z",
+      "user": "mitchellh",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "01f1611c9ffe6883c19cf091c1c2e6d58c391144",
+      "additions": 30,
+      "changed_files": 7,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "This eliminates all allocation from Tripwire.\r\n\r\nThanks @pluiedev ",
+      "patch_file": "prs/10407.json"
+    },
+    {
+      "id": "ghostty-10408",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 10408,
+      "url": "https://github.com/ghostty-org/ghostty/pull/10408",
+      "title": "build(deps): bump peter-evans/create-pull-request from 8.0.0 to 8.1.0",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-22T00:16:07Z",
+      "user": "dependabot[bot]",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "3570c2b28fef31fb78c8c21df789809d07239cb7",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Bumps [peter-evans/create-pull-request](https://github.com/peter-evans/create-pull-request) from 8.0.0 to 8.1.0.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/peter-evans/create-pull-request/releases\">peter-evans/create-pull-request's releases</a>.</em></p>\n<blockquote>\n<h2>Create Pull Request v8.1.0</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>README.md: bump given GitHub actions to their latest versions by <a href=\"https://github.com/deining\"><code>@​deining</code></a> in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4265\">peter-evans/create-pull-request#4265</a></li>\n<li>build(deps): bump the github-actions group with 2 updates by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4273\">peter-evans/create-pull-request#4273</a></li>\n<li>build(deps-dev): bump the npm group with 2 updates by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4274\">peter-evans/create-pull-request#4274</a></li>\n<li>build(deps-dev): bump undici from 6.22.0 to 6.23.0 by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4284\">peter-evans/create-pull-request#4284</a></li>\n<li>Update distribution by <a href=\"https://github.com/actions-bot\"><code>@​actions-bot</code></a> in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4289\">peter-evans/create-pull-request#4289</a></li>\n<li>fix: Handle remote prune failures gracefully on self-hosted runners by <a href=\"https://github.com/peter-evans\"><code>@​peter-evans</code></a> in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4295\">peter-evans/create-pull-request#4295</a></li>\n<li>feat: add <code>@​octokit/plugin-retry</code> to handle retriable server errors by <a href=\"https://github.com/peter-evans\"><code>@​peter-evans</code></a> in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4298\">peter-evans/create-pull-request#4298</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/deining\"><code>@​deining</code></a> made their first contribution in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4265\">peter-evans/create-pull-request#4265</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/peter-evans/create-pull-request/compare/v8.0.0...v8.1.0\">https://github.com/peter-evans/create-pull-request/compare/v8.0.0...v8.1.0</a></p>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/c0f553fe549906ede9cf27b5156039d195d2ece0\"><code>c0f553f</code></a> feat: add <code>@​octokit/plugin-retry</code> to handle retriable server errors (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4298\">#4298</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/70001242bfa9ec7844891e620fdda69a2a2a06c7\"><code>7000124</code></a> fix: Handle remote prune failures gracefully (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4295\">#4295</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/34aa40e9cf0bb8b5be745a552003fdeb25e4dd3a\"><code>34aa40e</code></a> build: update distribution (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4289\">#4289</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/641099ddca097df58c3369dd5e1f33322b223029\"><code>641099d</code></a> build(deps-dev): bump undici from 6.22.0 to 6.23.0 (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4284\">#4284</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/2271f1ddcf09437ed8f019733eb5cfba58ac76f0\"><code>2271f1d</code></a> build(deps-dev): bump the npm group with 2 updates (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4274\">#4274</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/437c31a11dd02128dd37633ad8d3832853477e7a\"><code>437c31a</code></a> build(deps): bump the github-actions group with 2 updates (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4273\">#4273</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/0979079bc20c05bbbb590a56c21c4e2b1d1f1bbe\"><code>0979079</code></a> docs: update readme</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/5b751cdf403b4f0314c656b2618939e4c8bdf824\"><code>5b751cd</code></a> README.md: bump given GitHub actions to their latest versions (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4265\">#4265</a>)</li>\n<li>See full diff in <a href=\"https://github.com/peter-evans/create-pull-request/compare/98357b18bf14b5342f975ff684046ec3b2a07725...c0f553fe549906ede9cf27b5156039d195d2ece0\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=peter-evans/create-pull-request&package-manager=github_actions&previous-version=8.0.0&new-version=8.1.0)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)\n\nDependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot merge` will merge this PR after your CI passes on it\n- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it\n- `@dependabot cancel merge` will cancel a previously requested merge and block automerging\n- `@dependabot reopen` will reopen this PR if it is closed\n- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually\n- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n\n\n</details>",
+      "patch_file": "prs/10408.json"
+    },
+    {
+      "id": "ghostty-10411",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 10411,
+      "url": "https://github.com/ghostty-org/ghostty/pull/10411",
+      "title": "editorconfig: 2-space indent for Nushell scripts",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-22T19:10:36Z",
+      "user": "jparise",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "16a98f58314cbbcb4594e6579e708fe8aa6b7ecf",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "This aligns with the Topiary format, which appears to be the most prominent community standard.\r\n\r\nhttps://github.com/blindFS/topiary-nushell",
+      "patch_file": "prs/10411.json"
+    },
+    {
+      "id": "ghostty-10515",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 10515,
+      "url": "https://github.com/ghostty-org/ghostty/pull/10515",
+      "title": "feat(macos): add SSH image paste support",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-02-01T05:14:08Z",
+      "user": "mvanhorn",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "97c630a72c08396b81dd353d199ce1e27c64c841",
+      "additions": 345,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [
+          "checkbox_yes"
+        ],
+        "disclosed": true,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "anthropic",
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "Closes #10516\n\n## Summary\n\nWhen pasting an image from the clipboard while in an SSH session, Ghostty now automatically uploads the image to the remote host via SCP and inserts the remote file path instead.\n\nThis enables seamless image sharing with remote tools like Claude Code that can read local files but not the local clipboard.\n\n## How it works\n\n1. User copies image to clipboard\n2. User presses Ctrl+V in SSH session  \n3. Ghostty detects image data + finds active SSH ControlMaster socket\n4. Image uploads via SCP to `/tmp/ghostty-paste-{uuid}.png` on remote\n5. Remote path is inserted as text\n\nUses existing SSH ControlMaster sockets for authentication - no password prompts.\n\n## Changes\n\n- `macos/Sources/Helpers/SSHImagePaste.swift` - Core upload logic (280 lines)\n- `macos/Sources/Helpers/Extensions/NSPasteboard+Extension.swift` - Image detection\n- `macos/Sources/Ghostty/Ghostty.App.swift` - Integration in clipboard handling\n- `src/config/Config.zig` - Config options\n\n## Config options\n\n```\nssh-image-paste = true          # Enable/disable feature (default: true)\nssh-image-paste-path = /tmp     # Remote upload directory (default: /tmp)\n```\n\n## Test plan\n\n- [x] Copy image to clipboard, paste in SSH session → path appears\n- [x] Paste text in SSH session → normal behavior\n- [x] Paste when not in SSH → graceful fallback\n- [x] Works with Claude Code on remote host\n\n🤖 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>",
+      "patch_file": "prs/10515.json"
+    },
+    {
+      "id": "ghostty-10992",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 10992,
+      "url": "https://github.com/ghostty-org/ghostty/pull/10992",
+      "title": "macOS: Implement additional accessibility methods",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-24T17:38:36Z",
+      "user": "MrMage",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "0870490a756a2de3bd85f8e807c736e505fd9a42",
+      "additions": 1885,
+      "changed_files": 12,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "ai slop",
+          "slop"
+        ],
+        "tool_terms": [
+          "claude",
+          "cursor"
+        ],
+        "slop": true,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "Fixes #9932; also see https://github.com/ghostty-org/ghostty/discussions/9930.\r\n\r\n**Submitting this as a draft PR to get feedback on the areas listed below. Please let me know whether this is going in the right direction.**\r\n\r\n- The code was largely written by Claude Code, with guidance from me. I have read through the implementation and reviewed it; overall, the code looks reasonable to me. (I have of course also checked that it actually works; see below.) I have also improved the factoring and removed some unnecessary duplication etc., especially on the Swift side.\r\n  - I have read the contribution guidelines and AI policy, but it still leaves room for interpretation (e.g. with regards to how many comments are \"too much\" etc., see below); happy to make adjustments to bring this further in line with your expectations. Again, this is just a rough first draft.\r\n  - I have intentionally left in most comments (and asked Claude to focus on the _motivation_ of the code); happy to clean them up further if you find them too verbose.\r\n- Caveat: I have hardly any experience with Zig, so I may have missed something in that implementation. In particular, my knowledge of PinMap is limited, so please feel free to provide some guidance there (see below).\r\n  - Speaking of PinMap, I am unsure how inefficient the current implementation is in practice. But even if it is somewhat inefficient, it could serve as a starting point for a more efficient implementation as needed in practice.\r\n  - To my understanding, we could also replace `cachedScreenContents` and `cachedVisibleContents` with accesses into the `cachedScreenTextInfo`; I also don't think they are accessed much more frequently than the `cachedScreenTextInfo`, so any possible performance overhead of `cachedScreenTextInfo` would probably be tolerable. Happy to make these changes, let me know.\r\n  - Speaking of `cachedVisibleContents`, I am unsure why reading the visible text with `ghostty_surface_read_text` would be less expensive (potentially by not requiring a PinMap, but how?) than getting byte offsets into the entire text using a PinMap.\r\n  - As an alternative, maybe we could include a pointer to a PinMap itself in the `cachedScreenTextInfo` struct and cache that, to minimize the frequency of recreating PinMaps for Accessibility methods? That could be worthwhile to also optimize the other AX methods (e.g. for getting the rectangles of certain characters etc.). We would probably need to manage the PinMap's lifetime in Swift, but I guess that's doable.\r\n  - @mitchellh your feedback on how we should best architect this aspect, both from a caching and a Swift/Zig interop perspective, would be greatly appreciated.\r\n- Tests are only on the Zig layer right now; having good tests on the Swift layer might be a bit more difficult because we'd need to test them in the UI harness (haven't looked too much into that yet).\r\n- Not _all_ Accessibility methods have been implemented yet, but hopefully a subset that already provides value; most others (e.g. selected text range, notifications for that) would add slightly less value and I already feel like this PR is getting large enough.\r\n- As Accessibility implementations also very much depend on how AX clients actually interact with this API (and what they expect from it), it would be useful to get feedback from actual users of AX clients. /cc @grishy @burakssen\r\n  - For reference, I did use my own app [Cotypist](https://cotypist.app) (which also uses AX extensively) to see whether the implementation is sufficient for it. Will attach a screenshot of the result shortly; overall, it looks decent, but there's room for improvement. But I felt it was good to first get some feedback on the current state.\r\n  - Screenshot: Completions are shown in roughly the right location: <img width=\"981\" height=\"252\" alt=\"Screenshot 2026-02-24 at 18 42 03\" src=\"https://github.com/user-attachments/assets/3b90f35a-c5c8-47dc-a5a4-235999ba5797\" />\r\n- `macos/tools/check-accessibility/` tool: Pure AI slop, but very useful for debugging/verifying the implementation; happy to remove it from the PR before leaving draft status; let me know.\r\n\r\n---\r\n\r\n_AI slop (but guided by me in an attempt to make it actually useful) follows_\r\n\r\n# PR: Implement rich macOS accessibility for terminal surfaces\r\n\r\n## Overview\r\n\r\nAdds comprehensive macOS Accessibility support so VoiceOver and other assistive technologies can read terminal content, navigate by line, locate characters spatially, and stay in sync as new output arrives. The implementation spans the full stack: Zig core terminal logic, the C API bridge, and the Swift/AppKit accessibility overrides.\r\n\r\nAll positional data flows as **UTF-8 byte offsets** from the Zig core. The Swift layer converts to/from **UTF-16 code units** (NSRange semantics) at the boundary, since every macOS Accessibility API speaks NSRange.\r\n\r\n## Accessibility functions\r\n\r\n| Override | Purpose | How it works |\r\n|---|---|---|\r\n| `accessibilityValue` | Full terminal text (scrollback + active) | Reads from `ScreenTextInfo` cache, which calls `ghostty_surface_ax_text` to get text + viewport byte range via the Zig pin map |\r\n| `accessibilityNumberOfCharacters` | Total character count | `NSString.length` (UTF-16 code units) on the cached text |\r\n| `accessibilityVisibleCharacterRange` | Viewport range within the full text | Zig core walks its pin map to find viewport start/end byte offsets; Swift converts to an NSRange via `String.Index` |\r\n| `accessibilityLine(for:)` | Line number for a UTF-16 character index | Converts the UTF-16 index to a `String.Index`, slices, counts newlines |\r\n| `accessibilityRange(forLine:)` | Character range for a line number | Walks UTF-16 code units via `NSString.character(at:)` counting `\\n` boundaries |\r\n| `accessibilityInsertionPointLineNumber` | Cursor's line number | Gets cursor byte offset from Zig (`ax_cursor_offset`), counts `0x0A` bytes directly in UTF-8 — safe because no multi-byte sequence contains `0x0A` |\r\n| `accessibilityFrame(for:)` | Screen-coordinate bounds of a character range (AXBoundsForRange) | Converts NSRange → UTF-8 byte offset, asks Zig for cell bounds, flips Y from top-left to AppKit bottom-left, converts view → screen coords. Same-line ranges get a tight rect; multi-line ranges use full view width (matching NSTextView/Terminal.app behavior) |\r\n| `accessibilityRange(for:)` | Character at a screen point (AXRangeForPosition) | Converts screen → window → view → flipped-Y coordinates, asks Zig for the byte offset at that grid position, converts back to a 1-character NSRange |\r\n| `accessibilityContentDidChange` | Notifies VoiceOver of new output | Invalidates the text cache and posts `NSAccessibility.valueChanged`. Triggered by a push-based `content_changed` action from the renderer — no polling |\r\n\r\n## Changes by layer\r\n\r\n### Zig core — `src/terminal/Screen.zig`\r\n\r\nNew `AccessibilityText` and `AccessibilityCell` types, plus four functions:\r\n\r\n- **`accessibilityText`** — Builds a full-screen selection, generates text with a `PinMap`, then scans the map to find the viewport's start/end byte offsets using a node-to-row-offset hash map.\r\n- **`accessibilityGridForOffset`** — Resolves a byte offset to a viewport-relative `(col, row)` cell via the pin map. Returns `null` for offsets in scrollback above the viewport.\r\n- **`accessibilityOffsetForGrid`** — Inverse: resolves viewport `(col, row)` to a byte offset. Falls back to row-start if the exact column has no content (e.g. cursor past end of line).\r\n- **`accessibilityCursorOffset`** — Convenience wrapper that calls `accessibilityOffsetForGrid` with the current cursor coordinates.\r\n\r\nIncludes 17 unit tests covering scrollback, wide characters, soft wraps, empty screens, round-trips, and edge cases.\r\n\r\n### Surface — `src/Surface.zig`\r\n\r\nThin wrappers that lock the renderer mutex and delegate to `Screen`. `boundsForOffset` also handles content-scale conversion (pixels ↔ points) and wide-character cell widths.\r\n\r\n### C API — `include/ghostty.h`, `src/apprt/embedded.zig`\r\n\r\nFive new exports:\r\n\r\n- `ghostty_surface_ax_text` / `_ax_text_free` — text + viewport byte range\r\n- `ghostty_surface_ax_bounds` — byte offset → view-local cell rect\r\n- `ghostty_surface_ax_offset` — view-local point → byte offset\r\n- `ghostty_surface_ax_cursor_offset` — cursor byte offset\r\n\r\nNew `ghostty_ax_text_s` and `ghostty_ax_bounds_s` structs. All offsets are UTF-8 bytes; the docstrings note that platform layers using NSRange must convert.\r\n\r\n### Action / Message — `src/apprt/action.zig`, `src/apprt/surface.zig`\r\n\r\nNew `content_changed` action and surface message, replacing the previous polling approach.\r\n\r\n### Renderer — `src/renderer/generic.zig`\r\n\r\nWhen the terminal's dirty flag is set, pushes a `content_changed` message through the surface mailbox (instant/non-blocking, like the scrollbar notification).\r\n\r\n### Swift / macOS — `SurfaceView_AppKit.swift`, `Ghostty.App.swift`\r\n\r\n- New `ScreenTextInfo` struct with `viewportRange` (NSRange), `utf16Length`, `utf8Offset(of:)`, and `characterIndex(forUTF8Offset:)` helpers.\r\n- Separate `cachedScreenTextInfo` cache (500ms TTL) — kept distinct from `cachedScreenContents` because the pin-map-based text generation is more expensive and only needed by accessibility callers.\r\n- `CachedValue<T>` gains an `invalidate()` method for push-based cache busting.\r\n- `Ghostty.App` dispatches the `content_changed` action to `surfaceView.accessibilityContentDidChange()`.\r\n\r\n### Test tool — `macos/tools/check-accessibility/`\r\n\r\nStandalone Swift Package Manager CLI that queries a running Ghostty instance via the macOS AX API. Dumps all text-area attributes and parameterized attributes (bounds, ranges, line navigation), runs automated consistency checks, and supports `--listen` mode for monitoring `valueChanged`/`selectedTextChanged` notifications in real time.",
+      "patch_file": "prs/10992.json"
+    },
+    {
+      "id": "ghostty-11539",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 11539,
+      "url": "https://github.com/ghostty-org/ghostty/pull/11539",
+      "title": "Lots of duplicate word typos + typo",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-15T22:09:18Z",
+      "user": "00-kat",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "6fabf775bba63ae41396057fe0ee9458082e0723",
+      "additions": 26,
+      "changed_files": 16,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "slop"
+        ],
+        "tool_terms": [
+          "claude",
+          "llm"
+        ],
+        "slop": true,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "TL;DR: this description is (intentionally) nonsense but I ran `\\b(\\w+)\\s\\1\\b` over `src` and stole a singular typo fix from #11528.\r\n\r\nReplacement of #11528 with 100% less slop and 99% less AI; I didn't feel like saying no to free(ish) typo checking. Note that many of the fixes there were outright incorrect (and clearly had no review from sentient lifeforms, contrary to its—sorry, it's—description). A lot of extra double words were caught with a handy `rg --pcre2 '\\b(\\w+)\\s+\\1\\b' src`; you could say this PR was “ripgrep-assisted” the way that one was “AI-assisted”. Rather ironic since that PR also claims to have used grep via Claude Code, but missed a lot of them.\r\n\r\nThe its → it's changes from that PR were elided; I decided to run a `rg \"\\bit'?s\\b\" src`, but someone REALLY likes their its, so I reverted my changes as there were an extremely large number of changes (probably a hundred files with multiple hundred cases). The only other change was “baout” → “about”.\r\n\r\n# AI Usage\r\n\r\nClaude Code was used by proxy for finding baout. Claude Code was used by proxy for realizing that the correct spelling is about. Claude Code was not used for fixing it. Oh my god it was so difficult to fix, the original PR had it so easy. I had to type out the file name (fish's AI sorry I mean autocomplete helped though) and like, type /baout, press R, press ab, then save and exit. This is so difficult you know we should use an AI for this, like this is so hard I don't know how people manage.\r\n\r\nAll changes were verified by me: I consulted the dictionary to delve into double-checkment of “in existence; being in evidence; apparent.” Uhhh insert assorted other AI impersonation here maybe? THE LLM IN ME WANTS TO ESCAPE PLEASE HELP",
+      "patch_file": "prs/11539.json"
+    },
+    {
+      "id": "ghostty-12333",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 12333,
+      "url": "https://github.com/ghostty-org/ghostty/pull/12333",
+      "title": "pushed to wrong repo, sorry!",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-18T19:09:06Z",
+      "user": "RyantHults",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "94368a8a4300eace874404ae10eb0d292d329aae",
+      "additions": 48,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "opened in the wrong repo. sorry!",
+      "patch_file": "prs/12333.json"
+    },
+    {
+      "id": "ghostty-12350",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 12350,
+      "url": "https://github.com/ghostty-org/ghostty/pull/12350",
+      "title": "Add swap_split action to exchange terminal content between panes",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-20T16:00:03Z",
+      "user": "lukeprofits",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "34a5a04b39f804937a5fde1e9c9b314e0b5af648",
+      "additions": 429,
+      "changed_files": 12,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Summary\r\n\r\n  Adds a new `swap_split` action that exchanges the terminal content of the currently focused split with the neighbor split in a given direction. Unlike `goto_split` (which moves focus), `swap_split`\r\n  preserves the tree layout and split ratios — only the two leaf views trade places. Useful for rearranging panes without reshaping the layout.\r\n\r\n  Example: with a big left pane and a small right pane, pressing the swap binding with direction `right` puts the left pane's content in the small right position and vice versa. Pane sizes are unchanged.\r\n\r\n  ## Default keybinds\r\n\r\n  - **macOS**: `Cmd+Shift+Option+Arrow` (mirrors the existing `Cmd+Option+Arrow` for `goto_split`)\r\n  - **Linux/GTK**: `Ctrl+Alt+Shift+Arrow` (mirrors the existing `Ctrl+Alt+Arrow` for `goto_split`)\r\n\r\n  Both are marked `performable`, so at a layout edge with no neighbor in that direction the action is a no-op and the key passes through.\r\n\r\n  ## Implementation\r\n\r\n  - **Action** (`src/apprt/action.zig`): new `swap_split: GotoSplit` variant. `GHOSTTY_ACTION_SWAP_SPLIT` appended at the end of the C enum to avoid renumbering existing values.\r\n  - **Binding** (`src/input/Binding.zig`): `swap_split: SplitFocusDirection`. Command palette entries added in `src/input/command.zig`.\r\n  - **Surface dispatch** (`src/Surface.zig`): mirrors the `goto_split` arm.\r\n  - **Core SplitTree** (`src/datastruct/split_tree.zig`): new `pub fn swap(gpa, a, b)` — clones the tree and swaps the two leaf view pointers in place (same `@constCast` pattern as `resizeInPlace`). Zoomed\r\n  handle is preserved (zoom tracks position).\r\n  - **GTK apprt**: `swap(to)` wrapper on `split_tree.zig` reusing `goto` for target resolution; `swapSplit` handler in `application.zig`.\r\n  - **macOS Swift SplitTree**: new `swapping(_:with:)` using `path(to:)` + two `replacingNode` calls. Clears zoom (matches `resizing`/`inserting`).\r\n  - **macOS dispatch** (`Ghostty.App.swift`): `swapSplit` handler uses `replaceSurfaceTree(_, moveFocusTo:, moveFocusFrom:, undoAction: \"Swap Split\")`, so the operation integrates with the existing undo\r\n  system. Focus follows the content (user's terminal moves with them).\r\n\r\n  ## Tests\r\n\r\n  - `src/datastruct/split_tree.zig`: two tests — swap preserves layout/ratios and swaps leaf views; swap-with-self is a no-op clone.\r\n  - `macos/Tests/Splits/SplitTreeTests.swift`: three tests — leaf swap preserves direction/ratio, self-swap no-op, zoomed state cleared on swap.\r\n\r\n  ## Known inconsistency (matches existing goto_split)\r\n\r\n  GTK spatial navigation wraps at edges (`nearestWrapped`); macOS spatial navigation does not (`slots(in:from:)` strict directional). So `swap_split:right` from the rightmost pane wraps to leftmost on GTK\r\n  but is a no-op on macOS. This matches the pre-existing `goto_split` behavior in both apprts and is not addressed in this PR.",
+      "patch_file": "prs/12350.json"
+    },
+    {
+      "id": "ghostty-12353",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 12353,
+      "url": "https://github.com/ghostty-org/ghostty/pull/12353",
+      "title": "Sync middle-click paste with copy-on-select",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-20T18:02:58Z",
+      "user": "007hacky007",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "50e8ebaf6025c4b35ef57f0e82418e4beb3e3db3",
+      "additions": 17,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Implements the behavior from #9788.\n\nToday, middle-click paste always reads from the selection clipboard (or the\nsystem clipboard on platforms without a selection clipboard). With this change\nit follows `copy-on-select`:\n\n- `true`: selection clipboard (unchanged)\n- `clipboard`: system clipboard\n- `false`: selection clipboard (also unchanged, preserves traditional X11\n  middle-click behavior)\n\nThe idea is symmetry: if `copy-on-select = clipboard` writes selections to the\nsystem clipboard, middle-click should come back from there too.\n\nAlso updated the config doc comment, which previously claimed middle-click\n\"will always use the selection clipboard\".\n\n### Testing\n\n`zig build test` passes locally (macOS, Zig 0.15.2).\n\nI couldn't do interactive runtime testing. My local env currently can't produce\na working `Ghostty.app` because of a Zig 0.15.2 + Xcode 26.4 TBD linker bug\n(upstream fix in zig PR #31673, not released yet). Marking draft so nobody\nmerges before someone checks the three copy-on-select modes on a real build.",
+      "patch_file": "prs/12353.json"
+    },
+    {
+      "id": "ghostty-12362",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 12362,
+      "url": "https://github.com/ghostty-org/ghostty/pull/12362",
+      "title": "Update VOUCHED list",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-21T15:02:45Z",
+      "user": "ghostty-vouch[bot]",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "2a1a0cbd04d5f3b1eaa1a3bd1a5d7bd6a7e1d91b",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Triggered by [discussion comment](https://github.com/ghostty-org/ghostty/discussions/12361#discussioncomment-16656763) from @jcollie.\n\nVouch: @sandydoo",
+      "patch_file": "prs/12362.json"
+    },
+    {
+      "id": "ghostty-12363",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 12363,
+      "url": "https://github.com/ghostty-org/ghostty/pull/12363",
+      "title": "Use patched Zig 0.15.2 on macOS to avoid Xcode 26.4 issue",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-21T16:41:41Z",
+      "user": "mitchellh",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "d2f86028bb2104f1582d40c8dfc1feaa3fe383c4",
+      "additions": 15,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "This updates our Nix flake to use the Homebrew bottled Zig 0.15.2 which contains a patch to work around the issue with Zig 0.15.x and Xcode 26.4.",
+      "patch_file": "prs/12363.json"
+    },
+    {
+      "id": "ghostty-12364",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 12364,
+      "url": "https://github.com/ghostty-org/ghostty/pull/12364",
+      "title": "libghostty-vt: fix broken dynamic linking with pkg-config",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-21T17:07:41Z",
+      "user": "sandydoo",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "733abbcc391f99c4bea3b91058486fe038ccfae2",
+      "additions": 3,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "~`${prefix}/include` and `${prefix}/lib` are incorrect under split-prefix installs (e.g. Nix multi-output). Use `b.h_dir` / `b.lib_dir` instead and drop the unneeded Nix postInstall/postFixup hooks.~\r\n\r\nRefactors the libghostty-vt derivation to:\r\n\r\n- fix `libdir` pointing to the wrong output in the pkg-config files. This would throw a missing library error at runtime.\r\n- reduce the amount of manual copying, linking, and patching of files.\r\n\r\nAn earlier version of this PR used the zig compiler + `.pc` files to do this. People pointed out concerns, so I came up with a simpler solution.\r\n\r\nClaude Code was used to debug and write an initial fix. Final changes rewritten and simplified by me. No AI was used to write comments, descriptions, etc.",
+      "patch_file": "prs/12364.json"
+    },
+    {
+      "id": "ghostty-12369",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 12369,
+      "url": "https://github.com/ghostty-org/ghostty/pull/12369",
+      "title": "Add support for RTL languages",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-22T01:12:25Z",
+      "user": "albalak88",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "69d051d8e7ca88076f664284105dbe5afba42d8e",
+      "additions": 551,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "cursor"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Before this change, multi-word Hebrew phrases rendered with each word's letters correctly reversed but the words themselves in logical (left-to-right) order. Typing \"חדש שלום\" produced \"חדש\" visually left of \"שלום\", whereas VS Code and the Unicode Bidi Algorithm put the first-typed word on the right.\r\n\r\nThe fix is a three-layer pipeline:\r\n\r\n1. src/font/shaper/run.zig tags each TextRun with `right_to_left` (run contains a strong-RTL codepoint from Hebrew, Arabic, Syriac, etc.) and `all_spaces` (run is entirely U+0020). The CoreText space-split rule already produces one run per word.\r\n\r\n2. src/font/shaper/coretext.zig keeps the intra-run reversal that places cluster c at cell index `(run.cells - 1) - c`, so letters within a single Hebrew word render in RTL order.\r\n\r\n3. src/renderer/generic.zig collects each row's runs into a row-local `RowRun` list and applies `reorderRtlBlocks` before the cell loop. A block is a maximal sequence of RTL runs plus the space runs flanked on both sides by RTL runs; leading or trailing spaces at an LTR boundary are not absorbed, and an LTR run between two RTL words splits them into separate blocks. Each block is reversed and the runs' offsets are reassigned so the block still spans the same columns.\r\n\r\nA subtle constraint we hit: a TextRun yielded by RunIterator.next() is only shapeable until the next next() call, because the iterator hook's prepare() resets the shaper's codepoint buffer. rebuildRow therefore shapes each run at the moment it is yielded and copies the resulting cells into a row-local std.ArrayList(font.shape.Cell), so shape results survive both the reordering pass and the bounded shape cache.\r\n\r\nTests:\r\n\r\n- New reorderRtlBlocks tests in generic.zig covering no-RTL, two adjacent RTL words, LTR prompt + RTL block, trailing space not absorbed, and LTR-between-RTL splitting.\r\n- New shaper tests in coretext.zig: shape Hebrew string, shape mixed Hebrew and latin string, shape multiple Hebrew words, run iterator splits prompt from Hebrew phrase.\r\n- Updated stale run-count expectations in shape nerd fonts and shape U+3C9 with JB Mono that were broken by the earlier space-split rule.\r\n\r\nKnown limitations: cursor, selection, and background fills still use logical column indices, so for RTL blocks they sit on the logical cell instead of where the glyph ended up. RTL detection is a codepoint-range heuristic, not full UBA. Arabic contextual shaping and wide characters inside RTL blocks are not exercised.",
+      "patch_file": "prs/12369.json"
+    },
+    {
+      "id": "ghostty-12372",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 12372,
+      "url": "https://github.com/ghostty-org/ghostty/pull/12372",
+      "title": "Sync/upstream 2026 04 22",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-22T14:56:00Z",
+      "user": "saeedvaziry",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "21403017da0f150855124f26b203574382eea235",
+      "additions": 331,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "",
+      "patch_file": "prs/12372.json"
+    },
+    {
+      "id": "ghostty-12373",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 12373,
+      "url": "https://github.com/ghostty-org/ghostty/pull/12373",
+      "title": "windows: provide DllMain stub for non-MSVC ABI",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T15:43:33Z",
+      "user": "mattn",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "5a84afef29e2b46cb20db78278f46926bcc61a5d",
+      "additions": 8,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Part of preparation for adding a Win32 application runtime (discussion #2563). One of three small, independent build fixes that together unblock the Windows GNU-ABI library build.\n\nOn Windows with non-MSVC ABI, `pub const DllMain` resolved to `void` (a type), and Zig's stdlib `start.zig` then tried to call it as a function via `root.DllMain(...)`, failing to compile with \"type 'type' not a function\".\n\nThis restructures the conditional so MSVC keeps its existing CRT-init handler unchanged, non-MSVC Windows gets a no-op `BOOL` handler, and non-Windows continues to resolve to `void`.\n\nVerified: `zig build -Dtarget=native-native-gnu -Dapp-runtime=none [-Doptimize=ReleaseSafe]` now builds cleanly on Windows.",
+      "patch_file": "prs/12373.json"
+    },
+    {
+      "id": "ghostty-12374",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 12374,
+      "url": "https://github.com/ghostty-org/ghostty/pull/12374",
+      "title": "Update VOUCHED list",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T15:56:41Z",
+      "user": "ghostty-vouch[bot]",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "9e49d67bdb2f02b4b5a6092bee7f30660899ab62",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Triggered by [discussion comment](https://github.com/ghostty-org/ghostty/discussions/12168#discussioncomment-16672511) from @jcollie.\n\nVouch: @mattn",
+      "patch_file": "prs/12374.json"
+    },
+    {
+      "id": "ghostty-12375",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 12375,
+      "url": "https://github.com/ghostty-org/ghostty/pull/12375",
+      "title": "Add code for validating OpenType GLYF table entries",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T17:50:11Z",
+      "user": "qwerasd205",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "464c50457ba2a8b56c781cb0124240d984dce9ae",
+      "additions": 589,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "This code was motivated by the need for the glyph protocol handler (#12352) to be able to validate the provided `glyf` payload, without having to link freetype or anything (because libghostty-vt needs to be static). As such it's written specifically to meet those needs, but in such a way that it can be expanded if we find a need for more in-depth inspection of `glyf`s in the future.",
+      "patch_file": "prs/12375.json"
+    },
+    {
+      "id": "ghostty-12376",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 12376,
+      "url": "https://github.com/ghostty-org/ghostty/pull/12376",
+      "title": "TouchBar Support",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-22T18:20:58Z",
+      "user": "tbrundige",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "37660a1de3961b45a645eb4f64fe2daa152f5b06",
+      "additions": 136,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "TouchBar Support as mentioned here - https://github.com/ghostty-org/ghostty/discussions/12327",
+      "patch_file": "prs/12376.json"
+    },
+    {
+      "id": "ghostty-13085",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "issue",
+      "number": 13085,
+      "url": "https://github.com/ghostty-org/ghostty/issues/13085",
+      "title": "Additional context and explanation regarding the reported issue",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-06-25T05:24:33Z",
+      "user": "aicccode",
+      "cohort": "slop_search",
+      "runnable": false,
+      "head_sha": null,
+      "additions": null,
+      "changed_files": null,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "ai slop",
+          "ai-generated"
+        ],
+        "tool_terms": [],
+        "slop": true,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "We don't entertain AI slop reports.\r\n\r\nFirst of all, I want to clarify that this isn't just some random issue generated by an AI. I can assure you that I've encountered this multiple times, and it has severely impacted my work. I really hope we can figure out the root cause.\r\nSince I'm not very familiar with Zig, I was worried I wouldn't be able to describe the issue clearly. So, I used AI to help me track down the problem over several rounds and summarize my findings before posting this report.\r\nI totally understand how frustrating it is for open-source developers to deal with low-quality, AI-generated spam. I know it wastes your time. However, I genuinely hope this issue can be fixed. I really love this software—it's excellent and incredibly useful.\r\n\r\n_Originally posted by @pluiedev in https://github.com/ghostty-org/ghostty/discussions/13083#discussioncomment-17429023_",
+      "patch_file": null
+    },
+    {
+      "id": "ghostty-13343",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 13343,
+      "url": "https://github.com/ghostty-org/ghostty/pull/13343",
+      "title": "libghostty-vt: preserve PNG allocation capacity",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-15T15:56:56Z",
+      "user": "rasitakyol",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "52204e209cc1424944b4b59bfa494b27fc48acfe",
+      "additions": 217,
+      "changed_files": 5,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "codex"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Summary\n\n- add `data_cap` to the C and Zig PNG decode results\n- validate `data_len <= data_cap` and free decoder buffers with their actual allocation length\n- transfer over-allocated PNG buffers into final image storage without copying\n- document the capacity contract and update the C Kitty Graphics example\n\nFor compatibility with callbacks built against the older header, a zero capacity is treated as an exact-size allocation (`data_cap == data_len`). New callbacks can report a larger capacity explicitly.\n\n## Testing\n\n- `zig build test-lib-vt`\n- targeted decode, invalid-capacity, pointer-identity, PNG loading, and storage-ownership tests\n- `zig build -Demit-lib-vt`\n- C Kitty Graphics example build and runtime\n- `zig fmt --check` and `git diff --check`\n\nFixes #12163\n\nAI disclosure: Codex was used to investigate, implement, and test this change.\n",
+      "patch_file": "prs/13343.json"
+    },
+    {
+      "id": "ghostty-13344",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 13344,
+      "url": "https://github.com/ghostty-org/ghostty/pull/13344",
+      "title": "macos: make AppleScript tab names writable",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-15T15:56:58Z",
+      "user": "rasitakyol",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "7460c17c0ba971df6ead07986c93fb63efd7b5d5",
+      "additions": 12,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "codex"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Summary\n\n- mark AppleScript `tab.name` as writable\n- route writes to the existing `titleOverride` model\n- treat an empty string as clearing the override and restoring the computed title\n\nThe scope follows the issue body and its AppleScript/JXA examples: writable tab names only.\n\n## Testing\n\n- `macos/build.nu --action test`\n- SwiftLint and `xmllint --noout macos/Ghostty.sdef`\n- AppleScript set/read/clear against the built app\n- JXA set/read/clear against the built app\n- two-tab check confirming that changing one tab does not affect the other\n\nFixes #12048\n\nAI disclosure: Codex was used to investigate, implement, and test this change.\n",
+      "patch_file": "prs/13344.json"
+    },
+    {
+      "id": "ghostty-13345",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 13345,
+      "url": "https://github.com/ghostty-org/ghostty/pull/13345",
+      "title": "macos: handle standard scroll keybindings",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-15T15:57:01Z",
+      "user": "rasitakyol",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "a9c0768e15ec1a3da58adf241cbb51b4a7273bd7",
+      "additions": 99,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "codex",
+          "cursor"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Summary\n\n- map the six AppKit standard scrolling selectors to existing Ghostty scroll actions\n- consume both the handled key press and its matching release so no terminal bytes leak\n- clear stale release-suppression state on a fresh physical press\n- leave terminal navigation selectors such as `pageUp:` and `moveToBeginningOfDocument:` untouched\n\nThe scroll selectors are intentionally handled before raw/cooked terminal processing, matching the maintainer's description of system-level bindings behaving like Command-Q.\n\n## Testing\n\n- `macos/build.nu --action test` (223 passed, 1 skipped)\n- SwiftLint and `git diff --check`\n- live scrollback: Page Up moved `1 -> 0.9018`, Home moved to `0`, and End/Page Down returned to `1`\n- Kitty press/release reporting: scroll keys emitted no bytes; Ctrl-C produced press and release sequences as a positive control\n- Vim raw-mode check: Home was consumed by the scroll layer rather than moving the Vim cursor\n- ASCII and Turkish Unicode input smoke tests\n\nFixes #2526\n\nAI disclosure: Codex was used to investigate, implement, and test this change.\n",
+      "patch_file": "prs/13345.json"
+    },
+    {
+      "id": "ghostty-13372",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 13372,
+      "url": "https://github.com/ghostty-org/ghostty/pull/13372",
+      "title": "feat(macos): add worktree creation flow",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-18T05:27:21Z",
+      "user": "eu-lee",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "99b0439c81a049e81f02b051bf339869d32c33a2",
+      "additions": 2638,
+      "changed_files": 37,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Summary\n- add a macOS worktree sidebar row that prompts for a branch name and creates a sibling worktree with `git worktree add -b`\n- refresh/select/open the newly created worktree on success and show inline sidebar errors for failures\n- preserve sidebar collapsed/width state per window and document the worktree sidebar flow in the README\n- add model and sidebar view model tests for success, validation, and git failure cases\n\n## Verification\n- `git diff --check`\n- `env DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild -project macos/Ghostty.xcodeproj -scheme Ghostty -configuration Debug -destination platform=macOS,arch=arm64 test -only-testing:GhosttyTests/WorktreeTests -only-testing:GhosttyTests/WorktreeSidebarViewModelTests`\n- `env DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild -project macos/Ghostty.xcodeproj -scheme Ghostty -configuration Debug -destination platform=macOS,arch=arm64 test`\n\n## Notes\n- `swiftlint lint --strict --fix` was not run because `swiftlint` is not installed in this environment.\n- `macos/build.nu --action test` was not run because `nu` is not installed in this environment.",
+      "patch_file": "prs/13372.json"
+    },
+    {
+      "id": "ghostty-13401",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 13401,
+      "url": "https://github.com/ghostty-org/ghostty/pull/13401",
+      "title": "Update VOUCHED list",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-20T20:54:15Z",
+      "user": "ghostty-vouch[bot]",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "357b2ca714a00bc2b67193226323dd0737bfcc39",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Triggered by [discussion comment](https://github.com/ghostty-org/ghostty/discussions/13400#discussioncomment-17706483) from @jcollie.\n\nVouch: @Ragnoroct",
+      "patch_file": "prs/13401.json"
+    },
+    {
+      "id": "ghostty-13403",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 13403,
+      "url": "https://github.com/ghostty-org/ghostty/pull/13403",
+      "title": "build(deps): bump actions/checkout from 7.0.0 to 7.0.1",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-21T00:13:00Z",
+      "user": "dependabot[bot]",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "f5477459ea23fe09bb047ed9e89a5ae53a3269bd",
+      "additions": 68,
+      "changed_files": 9,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Bumps [actions/checkout](https://github.com/actions/checkout) from 7.0.0 to 7.0.1.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/checkout/releases\">actions/checkout's releases</a>.</em></p>\n<blockquote>\n<h2>v7.0.1</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>skip running unsafe pr check if input is default by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2518\">actions/checkout#2518</a></li>\n<li>trim only ascii whitespace for branch by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2521\">actions/checkout#2521</a></li>\n<li>escape values passed to --unset by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2530\">actions/checkout#2530</a></li>\n<li>Various dependency updates</li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v7...v7.0.1\">https://github.com/actions/checkout/compare/v7...v7.0.1</a></p>\n</blockquote>\n</details>\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/checkout/blob/main/CHANGELOG.md\">actions/checkout's changelog</a>.</em></p>\n<blockquote>\n<h1>Changelog</h1>\n<h2>v7.0.1</h2>\n<ul>\n<li>Skip running unsafe pr check if input is default by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2518\">actions/checkout#2518</a></li>\n<li>Trim only ascii whitespace for branch by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2521\">actions/checkout#2521</a></li>\n<li>Escape values passed to --unset by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2530\">actions/checkout#2530</a></li>\n<li>Various dependency updates</li>\n</ul>\n<h2>v7.0.0</h2>\n<ul>\n<li>Block checking out fork PR for pull_request_target and workflow_run by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n<li>Various dependency updates</li>\n</ul>\n<h2>v6.0.3</h2>\n<ul>\n<li>Fix checkout init for SHA-256 repositories by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2439\">actions/checkout#2439</a></li>\n<li>fix: expand merge commit SHA regex and add SHA-256 test cases by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n</ul>\n<h2>v6.0.2</h2>\n<ul>\n<li>Fix tag handling: preserve annotations and explicit fetch-tags by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2356\">actions/checkout#2356</a></li>\n</ul>\n<h2>v6.0.1</h2>\n<ul>\n<li>Add worktree support for persist-credentials includeIf by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2327\">actions/checkout#2327</a></li>\n</ul>\n<h2>v6.0.0</h2>\n<ul>\n<li>Persist creds to a separate file by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2286\">actions/checkout#2286</a></li>\n<li>Update README to include Node.js 24 support details and requirements by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2248\">actions/checkout#2248</a></li>\n</ul>\n<h2>v5.0.1</h2>\n<ul>\n<li>Port v6 cleanup to v5 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2301\">actions/checkout#2301</a></li>\n</ul>\n<h2>v5.0.0</h2>\n<ul>\n<li>Update actions checkout to use node 24 by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2226\">actions/checkout#2226</a></li>\n</ul>\n<h2>v4.3.1</h2>\n<ul>\n<li>Port v6 cleanup to v4 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2305\">actions/checkout#2305</a></li>\n</ul>\n<h2>v4.3.0</h2>\n<ul>\n<li>docs: update README.md by <a href=\"https://github.com/motss\"><code>@​motss</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1971\">actions/checkout#1971</a></li>\n<li>Add internal repos for checking out multiple repositories by <a href=\"https://github.com/mouismail\"><code>@​mouismail</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1977\">actions/checkout#1977</a></li>\n<li>Documentation update - add recommended permissions to Readme by <a href=\"https://github.com/benwells\"><code>@​benwells</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2043\">actions/checkout#2043</a></li>\n<li>Adjust positioning of user email note and permissions heading by <a href=\"https://github.com/joshmgross\"><code>@​joshmgross</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2044\">actions/checkout#2044</a></li>\n<li>Update README.md by <a href=\"https://github.com/nebuk89\"><code>@​nebuk89</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2194\">actions/checkout#2194</a></li>\n<li>Update CODEOWNERS for actions by <a href=\"https://github.com/TingluoHuang\"><code>@​TingluoHuang</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2224\">actions/checkout#2224</a></li>\n<li>Update package dependencies by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2236\">actions/checkout#2236</a></li>\n</ul>\n<h2>v4.2.2</h2>\n<ul>\n<li><code>url-helper.ts</code> now leverages well-known environment variables by <a href=\"https://github.com/jww3\"><code>@​jww3</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1941\">actions/checkout#1941</a></li>\n<li>Expand unit test coverage for <code>isGhes</code> by <a href=\"https://github.com/jww3\"><code>@​jww3</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1946\">actions/checkout#1946</a></li>\n</ul>\n<h2>v4.2.1</h2>\n<ul>\n<li>Check out other refs/* by commit if provided, fall back to ref by <a href=\"https://github.com/orhantoy\"><code>@​orhantoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1924\">actions/checkout#1924</a></li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/actions/checkout/commit/3d3c42e5aac5ba805825da76410c181273ba90b1\"><code>3d3c42e</code></a> prep v7.0.1 release (<a href=\"https://redirect.github.com/actions/checkout/issues/2531\">#2531</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/28802689a136bfcdb721715abd713740beecbe07\"><code>2880268</code></a> escape values passed to --unset (<a href=\"https://redirect.github.com/actions/checkout/issues/2530\">#2530</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/12cd2235efa0937479335606d7c3ac9f6c0973b1\"><code>12cd223</code></a> trim only ascii whitespace for branch (<a href=\"https://redirect.github.com/actions/checkout/issues/2521\">#2521</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/62661c4e71a304b2823ed026347b8d34c3eac541\"><code>62661c4</code></a> skip running unsafe pr check if input is default (<a href=\"https://redirect.github.com/actions/checkout/issues/2518\">#2518</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/e8d4307400f9427dba7cb98e488d6ab85f1cec5f\"><code>e8d4307</code></a> Bump the minor-actions-dependencies group with 2 updates (<a href=\"https://redirect.github.com/actions/checkout/issues/2499\">#2499</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/631c942040754b6e095e929c1677c07e10ed4f87\"><code>631c942</code></a> eslint 9 (<a href=\"https://redirect.github.com/actions/checkout/issues/2474\">#2474</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/4f1f4aec02e41874fa0262ea8ff5172d7978ad1e\"><code>4f1f4ae</code></a> Bump actions/upload-artifact from 4 to 7 (<a href=\"https://redirect.github.com/actions/checkout/issues/2476\">#2476</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/ba097532fb203f7e88c9c3c0b899b49469908a92\"><code>ba09753</code></a> Bump actions/checkout from 6 to 7 (<a href=\"https://redirect.github.com/actions/checkout/issues/2488\">#2488</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/b9e0990d219a03df7633c93f6f005a8fecbcab22\"><code>b9e0990</code></a> Bump docker/login-action from 3.3.0 to 4.2.0 (<a href=\"https://redirect.github.com/actions/checkout/issues/2479\">#2479</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/e8cb398be4a550817e382abf69e4c12c76fce1f2\"><code>e8cb398</code></a> Bump docker/build-push-action from 6.5.0 to 7.2.0 (<a href=\"https://redirect.github.com/actions/checkout/issues/2478\">#2478</a>)</li>\n<li>Additional commits viewable in <a href=\"https://github.com/actions/checkout/compare/9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0...3d3c42e5aac5ba805825da76410c181273ba90b1\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=actions/checkout&package-manager=github_actions&previous-version=7.0.0&new-version=7.0.1)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)\n\nDependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n\n\n</details>",
+      "patch_file": "prs/13403.json"
+    },
+    {
+      "id": "ghostty-13404",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 13404,
+      "url": "https://github.com/ghostty-org/ghostty/pull/13404",
+      "title": "Update VOUCHED list",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-21T00:22:36Z",
+      "user": "ghostty-vouch[bot]",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "64c443f9050af28de6de0be99c79366244b3f6c1",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Triggered by [discussion comment](https://github.com/ghostty-org/ghostty/discussions/13402#discussioncomment-17707616) from @jcollie.\n\nVouch: @carldaws",
+      "patch_file": "prs/13404.json"
+    },
+    {
+      "id": "ghostty-13407",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 13407,
+      "url": "https://github.com/ghostty-org/ghostty/pull/13407",
+      "title": "macOS: sync appearance after screen parameters change",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-21T10:02:23Z",
+      "user": "carldaws",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "11e6b3cc4cd7dc1f49b77b8da08647801fa908c7",
+      "additions": 8,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "In #5389 there are multiple reports of tab bars appearing incorrectly after disconnecting an external monitor when Ghostty is in fullscreen.\r\n\r\nBaseTerminalController handles the notfiication from AppKit about a screen change and, for non-fullscreen windows, it calls setFrame, which triggers windowDidMove, which calls fixTabBar. But for fullscreen windows, none of this happens, we skip clamping because macOS handles the sizing and the tab bar doesn't get fixed.\r\n\r\nI've restructured the handler so that the clamping is conditional on the window being non-fullscreen and window.screen being defined, and regardless of the clamping, called syncAppearance at the end of the handler.\r\n\r\nThis has fixed the issue for me, reproduced locally using BetterDisplay to create a virtual second display and with my external monitor.\r\n\r\nAI disclosure: I used GLM 5.2 and Claude Opus 4.8 in OpenCode to investigate the issue and the call chain, but I fully understand what is going on and wrote this PR and my commit message and the comment and the code myself.",
+      "patch_file": "prs/13407.json"
+    },
+    {
+      "id": "ghostty-13411",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 13411,
+      "url": "https://github.com/ghostty-org/ghostty/pull/13411",
+      "title": "fix: convert Windows selection timestamps to QPC ticks",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-22T09:36:24Z",
+      "user": "elias8",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "13ad9569327b5d54ae566ac3062a4fc6375df9e1",
+      "additions": 24,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Fixes triple click selectoin on windows. Selection press timestamps are provided in nanoseconds, but `std.time.Instant` uses QPC ticks on windows. Converting between the units preserves the elapsed time to calculate presses correctly. Exposed while adding windows runner for the libghostty [binding](https://github.com/elias8/libghostty/actions/runs/29901534786/job/88863392044?pr=112#step:10:510).\r\n\r\n_Note: used GPT 5.5 to identify the issue._",
+      "patch_file": "prs/13411.json"
+    },
+    {
+      "id": "ghostty-13414",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 13414,
+      "url": "https://github.com/ghostty-org/ghostty/pull/13414",
+      "title": "gtk: improve split sizing",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T11:47:56Z",
+      "user": "dkinzler",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "90da3aba58a8c5f44d97bd9ec54eaa1696591256",
+      "additions": 139,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "This PR improves the way splits/surfaces are sized in the GTK app, which eliminates flickering and slightly improves performance.\r\n\r\nFixes #13328, #12709, #11187.\r\nRelated #8208 (closed) but some later comments mention flickering issues persisting.\r\nBuilds on top of the changes in #12698.\r\n\r\nPreviously an idle callback was used to sync the split ratio between the GTK widget tree and the split tree data structure that represents the split layout. The widget tree contains a `SplitTreeSplit` widget, which wraps a `GtkPaned` widget, for every split. During size allocation a `GtkPaned` widget first computes the initial position of the divider and thereby the size for its two children. We get notified of that position (and the max possible position) via the `propPosition/propMaxPosition` callbacks in `SplitTreeSplit` and set up an idle callback (the `onIdle` function) to update the position if it does not match the desired split ratio. Since the initial position is often not correct, especially in nested layouts or if the ratio is not 0.5, a surface will first be shown with the wrong size for a few frames until the idle callback runs and corrects the sizing. In nested layouts it might take multiple rounds of size allocation and idle callbacks until every surface gets the correct size. This causes flickering as widgets eventually snap to another size, which is especially noticeable if the layout changes quickly e.g. when resizing a split using keybinds.\r\n\r\nTo fix this, the divider position will now be corrected directly from the `propMaxPosition` callback, which runs during GTK size allocation, right after a `GtkPaned` computes the initial position and right before it uses the position to allocate sizes for its two children. With this change every surface will be sized correctly during the first round of size allocation. \r\n The idle callback is still used to update the ratio in the split tree when a split is resized by manually dragging the divider in the UI. The logic to sync the split ratio was moved to the new `syncSplitRatio` function which is called from both `propMaxPosition` and `onIdle`.\r\n\r\nThis is kind of hacky, but I reviewed the GTK source code in detail to verify that this is safe (see the various code comments for more details). I also tested extensively on both Hyprland and KDE Plasma: creating deeply nested layouts, resizing with both keybinds and dragging dividers by hand, with multiple tabs, resizing the entire window, resizing entire subtrees to 0 and back. Everything seems to work fine.\r\n\r\nFor performance testing I used sysprof which can also collect GTK stats. When creating/deleting/resizing splits I can measure a slight but consistent increase in GTK FPS (+5 to 10) on my system. Other than that CPU usage and FPS seem to be the same before and after. I guess this makes sense, while we added a bit of work to the GTK loop during size allocation, we avoid surfaces being resized.\r\n\r\nFor the flickering, here's a side-by-side comparison. Left is before the changes, right is after.\r\n\r\nhttps://github.com/user-attachments/assets/2a4f0b4b-e113-49b5-b0d7-d9e507a5a4ff\r\n\r\nAI Disclosure: no AI was used.",
+      "patch_file": "prs/13414.json"
+    },
+    {
+      "id": "ghostty-13418",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 13418,
+      "url": "https://github.com/ghostty-org/ghostty/pull/13418",
+      "title": "pkg/apple-sdk: enable libc++ availability annotations",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T18:15:21Z",
+      "user": "mitchellh",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "dac134d254bab15209e494413973e4f902b654c6",
+      "additions": 24,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "#13417\r\n\r\nThe bundled upstream libc++ headers in Zig 0.16 skip the Apple-configured availability setting. This causes the headers to assume every LLVM 21 ABI symbol is present in the target system libc++, producing binaries that fail at launch on macOS versions without `std::__hash_memory`.\r\n\r\nEnable the Apple vendor availability table for compile steps configured by the Apple SDK helper. libc++ now selects its inline compatibility implementation when the target system dylib does not provide the symbol.\r\n\r\nReferences in the mega comment",
+      "patch_file": "prs/13418.json"
+    },
+    {
+      "id": "ghostty-13419",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 13419,
+      "url": "https://github.com/ghostty-org/ghostty/pull/13419",
+      "title": "pkg/apple-sdk: support Xcode 27 SDK headers",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T19:58:34Z",
+      "user": "mitchellh",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "d97a5742423551e8847f2c81f6c10feeb6f5a66e",
+      "additions": 77,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Xcode 27's math.h uses the __need_infinity_nan protocol provided by matching Clang resource headers. Zig 0.16's bundled float.h predates that protocol, causing the bundled libc++ compilation to fail.\r\n\r\nOverlay the SDK math.h through the Apple SDK libc include path and provide the missing infinity and NaN definitions. The compatibility header can be removed once Zig's bundled Clang headers support the protocol.",
+      "patch_file": "prs/13419.json"
+    },
+    {
+      "id": "ghostty-13894",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 13894,
+      "url": "https://github.com/ghostty-org/ghostty/pull/13894",
+      "title": "test: add CoreText bitmap font test",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-08-18T18:21:13Z",
+      "user": "basteez",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "ff7e898f611e3ca02410eaaf26b509391f8a25c5",
+      "additions": 79,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "vibe coding"
+        ],
+        "tool_terms": [],
+        "slop": true,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "Adds test coverage for bitmap font rendering in the CoreText backend, completing the CoreText side of #8524 (the FreeType side already landed in #10193).\r\n\r\nThe test uses an Apple bitmap-only SFNT (the `bhed` header table with `bdat`/`bloc` bitmap strikes) so it exercises the existing `bhed` fallback path in `getMetrics()`.\r\n\r\nThe test loads the font-face from memory, asserts the bhed-derived metrics, renders the 'A' glyph and checks it pixel by pixel againsts the expected bitmap, using the same approach used in the FreeType tests.\r\n\r\n**Note on the font used:** `spleen-8x16-apple.ttf` it's the raw sfnt font data taken out of Spleen 2.1.0's `spleen-8x16.dfont` suitcase because CoreText can't load a dfont from memory but only a bare SFNT\r\n\r\n\r\n**AI disclosure**: Senior Software Engineer here (7yoe), I'm working using AI with a spec driven approach, not vibe coding. Use it to derive the context, write the specs and implement what's needed being in the loop of every iteration checking manually every step and I'm happy to study what I don't know before doing any change. (as already stated in https://github.com/ghostty-org/ghostty/discussions/13838)\r\n\r\nCloses: https://github.com/ghostty-org/ghostty/issues/8524",
+      "patch_file": "prs/13894.json"
+    },
+    {
+      "id": "ghostty-14675",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 14675,
+      "url": "https://github.com/ghostty-org/ghostty/pull/14675",
+      "title": "surface: resolve punctuation in clicked file paths",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-13T14:25:27Z",
+      "user": "fyockm",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "34e84d2f9ec1ead4322ffc12f9e367f1a49aa7ce",
+      "additions": 486,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Command-click path matches can include trailing sentence punctuation or a following prose word, such as `SKILL.md again.`. The opener then receives a path that doesn't exist.\n\nTrimming punctuation blindly isn't safe, because `.`, `;`, `?`, and `!` can all be valid filename endings on macOS. So the resolver now checks the exact accessible path first. Only after a `FileNotFound` does it try dropping a final period, followed by progressively shorter space-separated prefixes. Real filenames are preserved and sentence suffixes get dropped.\n\nThe regex span and hover highlight are unchanged, as is the existing handling of commas, trailing colons, and closers. Scheme URLs and OSC 8 links are also untouched.\n\nTests cover exact-path precedence, punctuation and prose-suffix fallback, home-directory caching, and OOM propagation.\n\nThe focused Zig tests and build were not run after the final changes. The available Homebrew Zig build is incompatible with this checkout, Xcode's `metal` tool is unavailable, and earlier dependency fetches failed.\n\nRelated: https://github.com/ghostty-org/ghostty/discussions/12527\n\n_AI disclosure: Implemented with help from Claude Code._",
+      "patch_file": "prs/14675.json"
+    },
+    {
+      "id": "ghostty-14701",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 14701,
+      "url": "https://github.com/ghostty-org/ghostty/pull/14701",
+      "title": "fix: prevent prompt drift and duplication during resize",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-14T12:19:34Z",
+      "user": "EriksRemess",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "cf82244c11cde2d60510328b729b517b04071c7a",
+      "additions": 155,
+      "changed_files": 5,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "gpt-6"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Resizing the terminal could move multiline prompts or leave duplicate lines behind. This fix prevents old prompt text from wrapping before the shell redraws it and leaves the screen unchanged if resizing fails. It also preserves Powerlevel10k’s prompt-start marker and ensures shell redraws use the updated terminal size.\r\n\r\nAdds regression tests for repeated resizing, full-width prompts, and last-line-only redraws.\r\n\r\nRelated discussions: [OSC 133 prompt duplication on resize (#13629)](https://github.com/ghostty-org/ghostty/discussions/13629) and [similar prompt duplication when resizing splits (#9903)](https://github.com/ghostty-org/ghostty/discussions/9903).\r\n\r\nAI disclosure: GPT-6 Astra helped to debug the issue and fix it.",
+      "patch_file": "prs/14701.json"
+    },
+    {
+      "id": "ghostty-14714",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 14714,
+      "url": "https://github.com/ghostty-org/ghostty/pull/14714",
+      "title": "Macos tab sidebar",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-15T01:03:42Z",
+      "user": "lanweihong",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "b366d11acef7523bf554f7410a6f859985ef5ebc",
+      "additions": 4549,
+      "changed_files": 36,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "",
+      "patch_file": "prs/14714.json"
+    },
+    {
+      "id": "ghostty-14749",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 14749,
+      "url": "https://github.com/ghostty-org/ghostty/pull/14749",
+      "title": "macos: show which clause is being converted while typing Japanese",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-18T05:23:16Z",
+      "user": "zzznu",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "ed4a60e22f1d99b7f21ce4104ebc4e6152463ec5",
+      "additions": 178,
+      "changed_files": 10,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "This PR is about how Ghostty displays Japanese text while it is being converted, which I raised in discussion #14737.\n\nWhen I type Japanese, the input method first shows the text I typed as text that is not yet committed. In this PR, I call it the composing text. The input method splits the composing text into clauses (short groups of words) and converts one clause at a time. The input method sends the composing text to Ghostty with two kinds of underline attributes: a thin underline for the whole composing text and a thick underline for the clause being converted. Ghostty discards these underline attributes and draws one thin underline under the whole composing text. Because of this, I cannot see which clause will change when I press the space key or the arrow keys.\n\nWith this PR, Ghostty keeps the underline attributes. Ghostty draws the clause being converted with a thick underline and the rest of the composing text with a dotted underline. This PR does not add a configuration option. When no clause is marked, Ghostty displays the composing text the same way as before. This includes text that is still being typed as kana: Apple's Japanese input method puts a thick underline under all of that text, so a thick underline under the whole composing text is not treated as a clause.\n\n### Screenshots\n\nIn both screenshots, the composing text is 今日はいい天気です (\"It is nice weather today\"), and the clause being converted is いい (\"nice\").\n\nThis PR (a dotted underline for the composing text and a thick underline for the clause being converted):\n<img width=\"846\" height=\"443\" alt=\"try3-dotted-thick\" src=\"https://github.com/user-attachments/assets/23c921b2-6fb3-4b19-9866-ecd28e2158a9\" />\n\n\nAnother option that I tried (a thin underline for the composing text and a thick underline for the clause being converted):\n<img width=\"846\" height=\"444\" alt=\"try3-thin-thick\" src=\"https://github.com/user-attachments/assets/07fa72a7-fbb1-443d-996a-153b291a9674\" />\n\nWith the thin underline and the thick underline, the difference is hard to see. Personally, I found the combination of the dotted underline and the thick underline easier to read, so I chose the dotted underline. If you prefer the thin underline, the change is one line in the function `addPreeditCell` in `src/renderer/generic.zig`.\n\n### Changes\n\n- macOS app (`SurfaceView_AppKit.swift`): `validAttributesForMarkedText` returns `[.underlineStyle]`, so AppKit no longer removes the underline attributes. The macOS app finds the range with the thick underline and passes the range to the Ghostty core through a new C API function, `ghostty_surface_preedit_selected`. The existing function `ghostty_surface_preedit` does not change.\n- Ghostty core (`Surface.zig`, `renderer/State.zig`): each codepoint of the composing text gets a `selected` flag that is true when the codepoint is in the clause being converted.\n- Renderer (`renderer/generic.zig`): when the composing text has a clause being converted, the renderer draws that clause with a new `underline_thick` sprite and the other codepoints with the existing `underline_dotted` sprite.\n- Linux version (GTK): the GTK code passes no range, so the GTK version does not change.\n- Tests (`SurfaceViewAppKitTests.swift`): new cases check the range that the macOS app finds, for example a clause after an emoji, a double underline, and a thick underline under the whole text.\n\n### Testing\n\n- All Ghostty tests (`zig build test -Dxcframework-target=native`), including the macOS app tests, pass on the current `main`.\n- On macOS 27.0.1, Claude Code built the app and used a script to type Japanese in a Ghostty window with Apple's Japanese input method and with one other Japanese input method, and took screenshots. It checked typing kana, converting, moving between clauses, changing the length of a clause, going back to kana, committing, a single clause, and composing text that is wider than the window.\n- It also typed with Apple's Korean (2-Set) and Chinese (Pinyin) input methods. They do not use a thick underline, and their composing text looks the same as before.\n- Finally, I typed Japanese in the built app myself and confirmed that the clause being converted has a thick underline and the rest has a dotted underline.\n\n### AI disclosure\n\nI am not a developer, and my native language is Japanese. I used Claude Code (Claude Opus 5.5) for this PR. I decided what to change and how it should look. Claude Code read the Ghostty code to find the cause, wrote the code and the tests, ran the tests, and took the screenshots with a script. Claude Code also wrote the English of this text, and I checked it with Google Translate.",
+      "patch_file": "prs/14749.json"
+    },
+    {
+      "id": "ghostty-14753",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 14753,
+      "url": "https://github.com/ghostty-org/ghostty/pull/14753",
+      "title": "input: add url_hints binding action",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-18T11:47:21Z",
+      "user": "djl",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "69a1b7db369d1f3081812b8d237020984d9bd949",
+      "additions": 355,
+      "changed_files": 6,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Labels every link in the viewport with a short key sequence, similar to Alacritty's hints. Typing a label acts on that link; escape cancels and backspace undoes a key. Hint mode is modal and swallows other keys.\n\nThe action takes a mode: `open`, `persist` (stay in hint mode after opening), or `copy` (copy the link to the clipboard). The label alphabet and colors are configurable via `hint-alphabet` and the `hint-*` color options.\n\nHint mode ends on wheel scroll or a config reload, since the labels would no longer line up with the text. A hint-alphabet with duplicate or non-printable characters is rejected with a warning.\n\nLabels are drawn into the renderer's copy of the cells so clearing them just dirties the terminal.",
+      "patch_file": "prs/14753.json"
+    },
+    {
+      "id": "ghostty-14791",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 14791,
+      "url": "https://github.com/ghostty-org/ghostty/pull/14791",
+      "title": "libghostty-vt: reject OSC 7501 reports with disallowed bytes in an id",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-21T02:31:57Z",
+      "user": "jcollie",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "f949a79fe532274219981742490f19759a2cf9a0",
+      "additions": 48,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "The report validator read ids through a ValueIterator filtered by the value alphabet, which skips a value containing any other byte. An id like `a@b` therefore looked absent instead of invalid, and the report fell back to the root record; with state=clear that removed every record, the outcome the parser's documentation says an invalid id must never have.\n\nValidate every value without the filter, so the checks themselves reject bad bytes. The same filter also let a title or msg that isn't base64, an over-long value, or an unknown state slip through as a skipped pair rather than discarding the report, and those are fixed alongside. Anything that passes validation is within the alphabet, so readOption's filtered reads see the same values.\n\nFixes #14790\n\nAI disclosure: Claude Code was used in the preparation of this PR.",
+      "patch_file": "prs/14791.json"
+    },
+    {
+      "id": "ghostty-14798",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 14798,
+      "url": "https://github.com/ghostty-org/ghostty/pull/14798",
+      "title": "Update VOUCHED list",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-21T14:48:19Z",
+      "user": "ghostty-vouch[bot]",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "0715bbcdaeef66a13d88bf2b28f644d4b39b4b09",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Triggered by [discussion comment](https://github.com/ghostty-org/ghostty/discussions/14774#discussioncomment-19100005) from @jcollie.\n\nVouch: @olrtg",
+      "patch_file": "prs/14798.json"
+    },
+    {
+      "id": "ghostty-14802",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 14802,
+      "url": "https://github.com/ghostty-org/ghostty/pull/14802",
+      "title": "libghostty-vt: add `vt_write_until` to process vt until user-specified boundaries",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-21T20:47:45Z",
+      "user": "mitchellh",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "2e28d3ae28bffb6024e24a0510fa728351b09ada",
+      "additions": 2552,
+      "changed_files": 7,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "This adds `ghostty_terminal_vt_write_until`, which writes VT data like `ghostty_terminal_vt_write` but stops right after the first byte that reaches a caller-provided boundary: ground plus start and end of APC, DCS and OSC strings.\n\nThe use case for this is that it allows downstreams to create a high-performance proxy that sits between the pty and the terminal emulator in order to implement custom handlers, filter things out, etc. \n\nThe main constraint I had was that plain `nextSlice` must not move. Normal, mainline, unproxied IO must not have ANY impact from this API. And this achieves that.\n\n**ABI breaking change:** I decided to remove the old `ghostty_terminal_vt_write_until_ground` instead of having a shim because its not a commonly used API and `ghostty_terminal_vt_write_until` replaces it.\n\n## C Example\n\n```c\nuint32_t want = GHOSTTY_TERMINAL_BOUNDARY_APC_START |\n                GHOSTTY_TERMINAL_BOUNDARY_APC_END;\nsize_t off = 0;\nwhile (off < len) {\n  GhosttyTerminalWriteStop stop = GHOSTTY_INIT_SIZED(GhosttyTerminalWriteStop);\n  if (ghostty_terminal_vt_write_until(terminal, data + off, len - off,\n                                      want, &stop) == GHOSTTY_NO_VALUE) {\n    break; // No boundary in the rest of the chunk.\n  }\n  off += stop.consumed;\n  if (stop.reached & GHOSTTY_TERMINAL_BOUNDARY_APC_START) {\n    // Content starts at data + off.\n  }\n  if (stop.reached & GHOSTTY_TERMINAL_BOUNDARY_APC_END) {\n    // The ending byte is at data + off - 1.\n  }\n}\n```\n\n**AI usage:** I implemented most of the Zig, AI did most of the C changes, the tests, and the benchmark tooling under my direction. I reviewed the design, the parser state audit. I wrote the docs and this PR message.",
+      "patch_file": "prs/14802.json"
+    },
+    {
+      "id": "ghostty-14806",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 14806,
+      "url": "https://github.com/ghostty-org/ghostty/pull/14806",
+      "title": "build: add -Dinstalled-exe-path for the Linux launcher files",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-22T04:27:43Z",
+      "user": "jcollie",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "390e607550c2cfef322c761c7e4a40424be53eec",
+      "additions": 94,
+      "changed_files": 10,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "The Zig 0.17 port replaced the absolute path to the executable in the desktop file, D-Bus services and systemd user service with a bare  `ghostty`, since the install prefix is no longer known while the build  is configured. systemd resolves a bare ExecStart= name against a fixed search path rather than PATH: /usr/bin and /usr/local/bin on most systems, and only systemd's own directory on NixOS. So the service failed to start for any install outside those directories, including every Nix one.\r\n    \r\n-Dinstalled-exe-path gives the absolute path to write into those files. Without it they still name the executable alone, which is right for packages installing to /usr. The Nix package passes its output path, and the Flatpak manifests pass /app/bin/ghostty, which is what they produced before the port.\r\n\r\nFixes #14805\r\n\r\nAI disclosure: Claude Code was used in the preparation of this PR.",
+      "patch_file": "prs/14806.json"
+    },
+    {
+      "id": "ghostty-14811",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 14811,
+      "url": "https://github.com/ghostty-org/ghostty/pull/14811",
+      "title": "kitty graphics: non-chunk continuations end the chunked transmission",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-22T18:50:02Z",
+      "user": "mitchellh",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "3079a4396693c6cd76a3d5adc0e6d756a55bb290",
+      "additions": 161,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "While a chunked Kitty graphics load was in progress, every transmit or animation frame command was treated as its next chunk, regardless of its transmission medium. A file (`t=f`), temporary file (`t=t`), or shared memory (`t=s`) command arriving mid-load had its encoded path appended to the partial image as pixel data.\n\nThis diverged from Kitty. The spec only defines chunking for direct data, and continuation chunks must carry only the `m` and `q` keys, so a command with another medium can never be a continuation. Kitty abandons the in-progress load and handles the command as a new transmission, for both image and animation frame loads. A client that interrupts a load this way now gets the image or frame it asked for instead of a corrupted or failed one.\n\n`execute` now destroys the in-progress load before dispatching any non-direct transmit or frame command, so the command is handled as a fresh transmission, including its own `q` setting.",
+      "patch_file": "prs/14811.json"
+    },
+    {
+      "id": "ghostty-14812",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 14812,
+      "url": "https://github.com/ghostty-org/ghostty/pull/14812",
+      "title": "terminal: discard cancelled or aborted APC commands",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-22T18:59:10Z",
+      "user": "mitchellh",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "75a7606c3f19d08eb00dfdbd0b919abb6545ee0e",
+      "additions": 74,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "ECMA-48 says a control string that is cancelled or aborted is thrown away. xterm only dispatches a control string on ST, and Kitty only ends an APC on ST or BEL, so neither runs the command.\n\nhttps://ecma-international.org/publications-and-standards/standards/ecma-48/",
+      "patch_file": "prs/14812.json"
+    },
+    {
+      "id": "ghostty-14814",
+      "source": "github",
+      "repo": "ghostty-org/ghostty",
+      "kind": "pull_request",
+      "number": 14814,
+      "url": "https://github.com/ghostty-org/ghostty/pull/14814",
+      "title": "terminal: continuations must restart at C1 sequence introducers",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-22T19:53:31Z",
+      "user": "mitchellh",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "e07a6f0eba66a07b7f893e1d814018c57b0d1d6e",
+      "additions": 232,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "A stream continuation that ended after an 8-bit C1 introducer had aborted an APC could not be exported. For example, `ESC _ data 0x9B` ends the APC and starts a CSI, but the tracker only treats ESC as the start of a new sequence, so it kept the aborted APC. Replaying that would end the APC a second time, and validation rejected it.\n\nExport now starts at the last C1 introducer that moved the parser into a new sequence and writes it in its 7-bit ESC form.",
+      "patch_file": "prs/14814.json"
+    }
+  ],
+  "mail_threads": []
+}

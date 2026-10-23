@@ -1,0 +1,2387 @@
+{
+  "schema_version": 1,
+  "bench": 5,
+  "project": "godot",
+  "repo": "godotengine/godot",
+  "window": "2025-10-22..2026-10-22",
+  "generated_at": "2026-10-23T01:52:25.024398+00:00",
+  "why": "On 30 Jun 2026 the Godot Foundation said review was overwhelmed by AI-agent and AI-written pull requests, that vibe-coded submissions are already an auto-ban, and that new contributors need permission before a feature or large refactor. https://godotengine.org/article/contribution-policy-2026/",
+  "sampling": "Up to a fixed number of latest matches per quarter. Not a census. A zero-hit quarter is split before it is trusted.",
+  "not_claimed": [
+    "A tool mention or filled Generated-by line is not proof the change should fail.",
+    "Slop language in discussion is not proof the attached patch is slop.",
+    "Search totals are not the percent of the project that is AI-authored."
+  ],
+  "stats": {
+    "cases": 62,
+    "runnable_prs": 58,
+    "by_class": {
+      "merged_control": 24,
+      "closed_unmerged_sample": 24,
+      "ai_slop_discussion": 10,
+      "ai_tool_mention": 4
+    },
+    "objective_slop": 0,
+    "ai_slop_discussion": 10,
+    "ai_disclosed": 0,
+    "merged_control": 24,
+    "mail_threads": 0,
+    "mail_slop_language": 0
+  },
+  "cases": [
+    {
+      "id": "godot-115266",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 115266,
+      "url": "https://github.com/godotengine/godot/pull/115266",
+      "title": "Fix editor tooltips disappearing with joypad button presses",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-22T13:53:55Z",
+      "user": "Nintorch",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "008266c4fe3d2390f8b4d6a87927a8e8dea194ca",
+      "additions": 4,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Fixes https://github.com/godotengine/godot/issues/115261",
+      "patch_file": "prs/115266.json"
+    },
+    {
+      "id": "godot-115267",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 115267,
+      "url": "https://github.com/godotengine/godot/pull/115267",
+      "title": "Fix FileSystem dock visual separation when docked at bottom",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-22T14:39:24Z",
+      "user": "skiessq",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "744d038ae7688a01373ecaf5f980d18e9683e330",
+      "additions": 5,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Fixes: #115191\r\n\r\nThis PR fixes a visual issue where the FileSystem dock panels blended together when docked at the bottom of the editor.\r\nAs noted in issue `#115191`, the lack of background panels made it difficult to distinguish between the folder tree and the file list.\r\n\r\nBefore (from Issue #115191):\r\n\r\n<img width=\"906\" height=\"468\" alt=\"538198856-f1156364-1a71-475a-8d00-2b88714f0cbb\" src=\"https://github.com/user-attachments/assets/23e2be0b-9c2d-4163-b57e-c7651bb8a6c2\" />\r\n\r\n<img width=\"417\" height=\"699\" alt=\"538199515-c95eb7c5-2e3f-46b2-8d50-6934775afd5f\" src=\"https://github.com/user-attachments/assets/64f29c31-c511-4d16-bc45-f89976e96a3a\" />\r\n\r\nAfter:\r\n\r\n<img width=\"1109\" height=\"472\" alt=\"Screenshot2\" src=\"https://github.com/user-attachments/assets/18255897-1470-453c-970c-80718f33b787\" />\r\n\r\n<img width=\"297\" height=\"484\" alt=\"Screenshot1\" src=\"https://github.com/user-attachments/assets/0d78e127-4c64-4551-8ccb-9cb7414c030f\" />\r\n",
+      "patch_file": "prs/115267.json"
+    },
+    {
+      "id": "godot-115273",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 115273,
+      "url": "https://github.com/godotengine/godot/pull/115273",
+      "title": "Fix crash when trying to add a non-Node as a child",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-22T17:28:29Z",
+      "user": "hpvb",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "0df146cba0f7455bb580b401b9a215e43b8c6668",
+      "additions": 2,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "When trying to execute the following:\r\n\r\nvar n = load(\"res://node_2d.tscn\")\r\nadd_child(n)\r\n\r\n(note the missing .instantiate())\r\n\r\nThe engine crashes with a segfault. The parameter to Node::add_child() is converted to a Node but it is actually a PackedScene.\r\n\r\nWhen trying to call .get_name() on this we end up calling into non-existant code and we crash.\r\n\r\nAdd a helpful error for the most common way of achieving this, and a generic error for any other case.",
+      "patch_file": "prs/115273.json"
+    },
+    {
+      "id": "godot-115274",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 115274,
+      "url": "https://github.com/godotengine/godot/pull/115274",
+      "title": "Fix error when `NodePath` properties have their assigned nodes deleted",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-22T17:30:43Z",
+      "user": "YeldhamDev",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "2818cbd5a519bb82b0f2f709a39b9620a8862593",
+      "additions": 5,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "",
+      "patch_file": "prs/115274.json"
+    },
+    {
+      "id": "godot-115275",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 115275,
+      "url": "https://github.com/godotengine/godot/pull/115275",
+      "title": "Refactor remove duplicate code",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-22T17:40:40Z",
+      "user": "Saulo-de-Souza",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "0bca218e016183dd4cac8ddc2981f5167bc25f22",
+      "additions": 0,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Lines 79 and 84 have the same code. It has been removed.\r\n\r\n```cpp\r\n// Duplicate code.\r\nsettings[\"editors/3d/freelook/freelook_base_speed\"] = EDITOR_GET(\"editors/3d/freelook/freelook_base_speed\");\r\n```",
+      "patch_file": "prs/115275.json"
+    },
+    {
+      "id": "godot-115276",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 115276,
+      "url": "https://github.com/godotengine/godot/pull/115276",
+      "title": "Fix typo: comma-seperated -> comma-separated in WebXRInterface docs",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-22T17:42:26Z",
+      "user": "bodhisilberling",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "e16010d9ee721912a4e0a5f31f5bf5b98868b0be",
+      "additions": 3,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "<!--\r\nPlease target the `master` branch in priority.\r\n\r\nRelevant fixes are cherry-picked for stable branches as needed by maintainers.\r\n\r\nTo speed up the contribution process and avoid CI errors, please set up pre-commit hooks locally:\r\nhttps://contributing.godotengine.org/en/latest/engine/guidelines/code_style.html\r\n-->\r\n",
+      "patch_file": "prs/115276.json"
+    },
+    {
+      "id": "godot-115277",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 115277,
+      "url": "https://github.com/godotengine/godot/pull/115277",
+      "title": "Editor: Use Resource as fallback for unexposed types in script drag-and-drop",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-22T17:45:13Z",
+      "user": "MattiaZir",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "4d6e7bff190552b6230636c2091b0c3d9a5f78aa",
+      "additions": 8,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Fixes #115241 \r\n\r\n<!--\r\nPlease target the `master` branch in priority.\r\n\r\nRelevant fixes are cherry-picked for stable branches as needed by maintainers.\r\n\r\nTo speed up the contribution process and avoid CI errors, please set up pre-commit hooks locally:\r\nhttps://contributing.godotengine.org/en/latest/engine/guidelines/code_style.html\r\n-->\r\n",
+      "patch_file": "prs/115277.json"
+    },
+    {
+      "id": "godot-115278",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 115278,
+      "url": "https://github.com/godotengine/godot/pull/115278",
+      "title": "Parser: Fix \"trying to resolve type of null node\" when missing condition.",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-22T17:46:33Z",
+      "user": "MattiaZir",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "372c522ce1b4ce857384d8f41e10038ac0ce6e5a",
+      "additions": 2,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "fixes #115239 \r\n\r\n<!--\r\nPlease target the `master` branch in priority.\r\n\r\nRelevant fixes are cherry-picked for stable branches as needed by maintainers.\r\n\r\nTo speed up the contribution process and avoid CI errors, please set up pre-commit hooks locally:\r\nhttps://contributing.godotengine.org/en/latest/engine/guidelines/code_style.html\r\n-->\r\n",
+      "patch_file": "prs/115278.json"
+    },
+    {
+      "id": "godot-115280",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 115280,
+      "url": "https://github.com/godotengine/godot/pull/115280",
+      "title": "Implement C# .NET Integration via Headless Glue Bypass (Build 7ae8ec974)",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-22T18:45:42Z",
+      "user": "Eliene-byte",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "7ae8ec974fba95cf3dec9af63952eaf538eedb41",
+      "additions": 28,
+      "changed_files": 10,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Hey @akien-mga, I managed to complete the project, I hope it worked out.\r\n\r\n<img width=\"1112\" height=\"602\" alt=\"Captura de tela 2026-01-23 163232\" src=\"https://github.com/user-attachments/assets/e29d8306-559f-49ca-ae31-7539566192b9\" />\r\n\r\n\r\n\r\nhttps://github.com/Eliene-byte/godot-issue <--here \r\n\r\n I used a translator to translate my Portuguese into English.\r\n\r\n",
+      "patch_file": "prs/115280.json"
+    },
+    {
+      "id": "godot-115281",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 115281,
+      "url": "https://github.com/godotengine/godot/pull/115281",
+      "title": "Use property array in MeshLibrary",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-22T19:57:45Z",
+      "user": "KoBeWi",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "824e3370b452e48eeba685b89faf260bded94b97",
+      "additions": 135,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "I found #52463 in my saved bookmarks and though \"why not add property array to MeshLibrary\". Uh 💀\r\n\r\nIt works\r\n\r\n<img width=\"365\" height=\"759\" alt=\"image\" src=\"https://github.com/user-attachments/assets/6136f7ec-9f76-4dfe-add2-62ce833bd4a0\" />\r\n\r\nbut the MeshLibrary uses sparse array for its items. I don't know how items get deleted, probably when library is merged while saving? Property array does not support it, the indices are expected to have no holes. Thus this will probably break in some cases. I already wrote the code though, maybe it's fixable, idk. Or maybe the \"sparse array\" is just for show and can be replaced with LocalVector.",
+      "patch_file": "prs/115281.json"
+    },
+    {
+      "id": "godot-115282",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 115282,
+      "url": "https://github.com/godotengine/godot/pull/115282",
+      "title": "Fix properties being set before nodes are readded when undoing removals",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-22T20:35:47Z",
+      "user": "YeldhamDev",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "27668c1f20bf7eb9460c0dc44e5390260c63ded4",
+      "additions": 19,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "The fastest way to reproduce the bug this fixes is to create a `*Joint3D` node, and then assigning a physics node to it.\r\nIf you delete the assigned node and then undo it, you will see that the configuration warning icon does not go away.",
+      "patch_file": "prs/115282.json"
+    },
+    {
+      "id": "godot-115286",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 115286,
+      "url": "https://github.com/godotengine/godot/pull/115286",
+      "title": "Use compile-time string hashing in SNAME macro",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-22T23:06:10Z",
+      "user": "squk",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "ee369f9cd499f6b4911951dc01a99f79d66712e6",
+      "additions": 181,
+      "changed_files": 6,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "According to `rg \"SNAME\" --count-matches --no-filename | awk '{s+=$1} END {print s}'` there are >5000 uses of the `SNAME` macro. This should speed up static initialization a bit ",
+      "patch_file": "prs/115286.json"
+    },
+    {
+      "id": "godot-115688",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 115688,
+      "url": "https://github.com/godotengine/godot/pull/115688",
+      "title": "jpg: Add quick and dirty conversion of CMYK/YCCK colorspaces to RGB",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-01-31T20:35:28Z",
+      "user": "akien-mga",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "6355ef6bba5171571b9cf0c0706357ad5b8cbc69",
+      "additions": 62,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "vibe coding"
+        ],
+        "tool_terms": [
+          "chatgpt",
+          "copilot",
+          "gpt-5"
+        ],
+        "slop": true,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "This relies on a helper function from TurboJPEG which is labeled as quick and dirty and for testing purposes.\r\n\r\nIt might be good enough for badly prepared game assets (e.g. JPGs downloaded from the web) and better than outright failing.\r\n\r\n- Fixes #115668.\r\n- Alternative to #115674.\r\n\r\n<img width=\"1354\" height=\"628\" alt=\"image\" src=\"https://github.com/user-attachments/assets/5b243cb5-8408-471c-9f8b-d9fe851a463c\" />\r\n\r\n---\r\n\r\n### AI disclosure\r\n\r\nThis was partially coded with the help of AI agents. I first used ChatGPT (GPT-5.2) to rubberduck the issue, which utterly failed at providing me code that would actually work, but helped me understand the problem space better.\r\n\r\nI also read some of TurboJPEG's code myself and found its `cmyk.h` helper functions, though I didn't go in depth to see how it's being used exactly (there's several levels of abstraction and a mix between TJ and jpeglib APIs which makes it a bit convoluted).\r\n\r\nThen I fed this initial research to Copilot in VS Code with access to my local Git clone (GPT-5 mini), and it came up with a working branch for CMYK, which I tested to fix support for the file in #115668.\r\n\r\nVibe coding like this isn't something I intend to do frequently, but I was mostly curious to see how well it would work for something pretty \"standard\" like this. I have mixed feelings, but did get a working solution.\r\n\r\nThe final code was edited by me and is pretty much how I would have written this if I was already familiar with TurboJPEG. I don't believe these few lines of effective code pose any copyright challenge.\r\n\r\n### Notes\r\n\r\n- I still need to test the conversion for YCCK because this is mostly something Copilot took from ChatGPT's bad code, and I need to validate that it's actually correct.\r\n- Would be good to test more complex CMYK files (photos, etc.) and see if the quick and dirty conversion does yield good enough results.\r\n- It could be good to let users know that they imported CMYK/YCCK files and that we recommend converting them properly to RGB colorspace, so we don't rely on our subpar conversion. I could put a `print_verbose` where it detects CMYK/YCCK, but at this point we only have a buffer so no file name to give. Passing it to the calling site as a new function argument feels a bit dirty.",
+      "patch_file": "prs/115688.json"
+    },
+    {
+      "id": "godot-116606",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "issue",
+      "number": 116606,
+      "url": "https://github.com/godotengine/godot/issues/116606",
+      "title": "Android: Virtual keyboard height is not updated correctly when the keyboard resizes",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-21T23:39:14Z",
+      "user": "Abbion",
+      "cohort": "slop_search",
+      "runnable": false,
+      "head_sha": null,
+      "additions": null,
+      "changed_files": null,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "ai generated",
+          "slop"
+        ],
+        "tool_terms": [],
+        "slop": true,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "### Tested versions\n\n- Reproducible in Godot v4.6.stable.official [89cea1439]\n\n### System information\n\nAndroid 12\n\n### Issue description\n\nWhen a virtual keyboard is displayed, `DisplayServer.virtual_keyboard_get_height()` correctly returns the initial size of the keyboard. However, if the keyboard size changes while it is already open (e.g. when the emoji menu is toggled), the method continues to return the old height value. \n\nThe updated height is only reflected after the keyboard is closed and reopened.\n\n<img width=\"180\" height=\"400\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/6c1bdf40-0bc5-4fa4-81e5-d471e13b9295\" />\n<img width=\"180\" height=\"400\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1a1fa663-8ce3-424f-8b98-86029d4fcda9\" />\n\n**Investigation**\nI traced the bug to the JNI function `Java_org_godotengine_godot_GodotLib_setVirtualKeyboardHeight` in `platform/android/java_godot_lib_jni.cpp`. This led me to the Kotlin implementation in `platform/android/java/lib/src/main/java/org/godotengine/godot/Godot.kt`, specifically the call to `GodotLib.setVirtualKeyboardHeight(finalHeight)`.\n\n**My fix**\nI am not an Android/Kotlin developer, but I consulted an AI tool for a potential solution. It suggested adding the following:\n\n```\nval isImeVisible = insets.isVisible(WindowInsetsCompat.Type.ime())\n\nif (isImeVisible) {\n\tval imeInsets = insets.getInsets(WindowInsetsCompat.Type.ime())\n\tval keyboardHeight = imeInsets.bottom - imeInsets.top\n\tGodotLib.setVirtualKeyboardHeight(keyboardHeight)\n}\nelse {\n    GodotLib.setVirtualKeyboardHeight(0)\n}\n```\nIn the `ViewCompat.setOnApplyWindowInsetsListener(rootView)`\n\nThis worked for me, but I don't trust AI generated slop and belive there is a better solution.\n\n### Steps to reproduce\n\n1. Create a scene with a `LineEdit` control and a `Label` control.\n2. Write a script to assigned the value of `DisplayServer.virtual_keyboard_get_height()` to the `Label` text (e.g., inside `_process` or via a timer).\n3. Export and install the project on an **Android** device.\n4. Tap the `LineEdit` to open the virtual keyboard and note the height shown on the label.\n5. Change the keyboard size while it is still open (e.g., by opening the emoji menu).\n6. **Observation**: Notice that the `Label` text does not update to reflect the new height.\n7. Close the keyboard and reopen it. Observe that the height now reflects the emoji menu size rather than the standard keyboard size.\n\n### Minimal reproduction project (MRP)\n\n[Virtual keyboard bug repo](https://github.com/Abbion/GodotVirtualKeyboardBug)",
+      "patch_file": null
+    },
+    {
+      "id": "godot-117446",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 117446,
+      "url": "https://github.com/godotengine/godot/pull/117446",
+      "title": "Describe ResourceImporterScene properties",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-15T16:04:25Z",
+      "user": "charjr",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "da162f8bfad9b4a957e59c56401f6d085e60fcfe",
+      "additions": 100,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "ai slop"
+        ],
+        "tool_terms": [],
+        "slop": true,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "> [!Note] \r\n> This PR **does not** contain AI slop.\r\n\r\n### What This Pull Request Does\r\nThis PR adds missing descriptions to `ResourceImporterScene` properties. \r\n\r\nDescriptions were taken from [Godot Docs: Import Workflows](https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/import_configuration.html#import-workflows). Shortened and formatted where appropriate (i.e. replacing _\"if checked\"_ with _\"if `true`\"_).\r\n\r\n\r\n### What to Pay Special Attention to\r\nThe only documentation I could find for `fbx/naming_version` and `gltf/naming_version`, was in [Godot Docs: 4.4 to 4.5 migration guide](https://docs.godotengine.org/en/stable/tutorials/migrating/upgrading_to_godot_4.5.html#d-model-import)\r\n\r\nFrom what I can gather:\r\n-  `Godot 4.0 or 4.1` and `Godot 4.2 to 4.4` [exist only for compatibility with existing imports](https://github.com/godotengine/godot/pull/106537#discussion_r2137032987)\r\n- `Godot 4.5 or later` [for everything else](https://github.com/godotengine/godot/pull/106537#discussion_r2137011257).",
+      "patch_file": "prs/117446.json"
+    },
+    {
+      "id": "godot-118544",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "issue",
+      "number": 118544,
+      "url": "https://github.com/godotengine/godot/issues/118544",
+      "title": "ProgressDialog::_update_ui() allows re-entrant Main::iteration(), crashing editor when @tool plugin calls save_scene() from _process()",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-04-13T22:02:46Z",
+      "user": "dsarno",
+      "cohort": "slop_search",
+      "runnable": false,
+      "head_sha": null,
+      "additions": null,
+      "changed_files": null,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "ai slop",
+          "slop"
+        ],
+        "tool_terms": [
+          "llms"
+        ],
+        "slop": true,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "**Note to maintainers:** This is not an AI slop issue..  I'm the lead maintainer on the 8,000 star Unity-MCP repo. I do use LLMs to build (like many engineers nowadays), but I also make sure changes are minimal, follow project culture, and well tested. I rebuilt Godot with the fix and tested it thoroughly.  Just thought I'd let you know -- at unity-mcp, we get a ton of slop too, so anyway, hello from a real human!\n\n### Tested versions\n\nReproducible on 4.6.2-stable (official, macOS arm64). Not tested on other platforms but the code path is platform-independent.\n\n### System information\n\nmacOS 26.3.1, Apple M1 Max, Godot 4.6.2-stable (official)\n\n### Issue description\n\nAny `@tool` editor plugin that calls `EditorInterface.save_scene()` from `_process()` crashes the editor instantly with a stack overflow (SIGSEGV). The editor becomes completely unusable — it crashes on startup as soon as the plugin is enabled and a scene is open.\n\n**What happens:** `_save_scene_with_preview()` calls `EditorProgress::step()`, which calls `ProgressDialog::_update_ui()` → `Main::iteration()`. This runs a full frame cycle including `NOTIFICATION_PROCESS` on all `@tool` nodes. If any plugin's `_process()` triggers another save, the call chain re-enters `_save_scene_with_preview()` → `_update_ui()` → `Main::iteration()` → `_process()` recursively with no guard. The stack overflows after ~1000 frames.\n\nThis is the same class of bug as #54864, which was fixed for `EditorFileSystem` in #73214 using a `prevent_recursive_process_hack` static bool guard. That PR's description explicitly notes `Main::iteration()` inside `ProgressDialog` as \"the ill nature of EditorProgress\" and that it \"will have to be entirely rewritten.\"\n\nIn the wild, this affects any plugin that does non-trivial `_process()` work (WebSocket polling, HTTP requests, file I/O) that can indirectly trigger a save. The MRP below simplifies the repro by calling `save_scene()` directly from `_process()`.\n\n### Steps to reproduce\n\n1. Create a new project\n2. Create a plugin with the MRP script below\n3. Enable the plugin in Project Settings > Plugins\n4. Open any scene\n5. Editor crashes within seconds\n\n### Minimal reproduction project (MRP)\n\n`addons/reentrant_crash_repro/plugin.cfg`:\n```ini\n[plugin]\nname=\"Reentrant _process() Crash Repro\"\ndescription=\"MRP: triggers re-entrant _process() via Main::iteration() in ProgressDialog during save\"\nauthor=\"dsarno\"\nversion=\"1.0\"\nscript=\"plugin.gd\"\n```\n\n`addons/reentrant_crash_repro/plugin.gd`:\n```gdscript\n@tool\nextends EditorPlugin\n\nfunc _process(_delta: float) -> void:\n\tif EditorInterface.get_edited_scene_root():\n\t\tEditorInterface.save_scene()\n```\n",
+      "patch_file": null
+    },
+    {
+      "id": "godot-118545",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118545,
+      "url": "https://github.com/godotengine/godot/pull/118545",
+      "title": "Prevent re-entrant Main::iteration() in ProgressDialog::_update_ui",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-13T22:03:03Z",
+      "user": "dsarno",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "2efcd05d7eb79a98b8d5ad6f8f61581942736edc",
+      "additions": 14,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "ai slop",
+          "slop"
+        ],
+        "tool_terms": [
+          "llms"
+        ],
+        "slop": true,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "Fixes #118544\r\n\r\n**Note to maintainers:** This is not an AI slop PR..  I'm the lead maintainer on the 8,000 star Unity-MCP project. I do use LLMs to build (like many engineers), but I also make sure changes are minimal, follow project culture, and are well tested. I rebuilt Godot with the fix and tested it thoroughly. Just thought I'd let you know.  At unity-mcp, we get a ton of slop too, so anyway, hello from a real human!\r\n\r\n## What happens\r\n\r\n`ProgressDialog::_update_ui()` calls `Main::iteration()` with no re-entrancy guard. This runs a full frame cycle including `_process()` on all `@tool` nodes. If any plugin's `_process()` triggers a save (directly or indirectly), the call chain recurses: `_save_scene_with_preview` → `EditorProgress::step()` → `_update_ui()` → `Main::iteration()` → `_process()` → `save_scene()` → ... The stack overflows after ~1000 frames and the editor crashes (SIGSEGV).\r\n\r\n## Fix\r\n\r\nAdds a static `is_iterating` guard to `_update_ui()` — if `Main::iteration()` is already running from a prior `_update_ui()` call up the stack, the nested call is skipped. Same pattern as `prevent_recursive_process_hack` in `EditorFileSystem` (#73214 / #54864).\r\n\r\n## Test plan\r\n\r\n- [ ] Enable the MRP plugin from #118544 (a `@tool` plugin that calls `EditorInterface.save_scene()` from `_process()`)\r\n- [ ] Without fix: editor crashes within seconds (SIGSEGV, stack overflow from 1000+ recursive `_process()` frames)\r\n- [ ] With fix: editor stays alive, no recursion — `_update_ui()` returns early on re-entrant calls\r\n",
+      "patch_file": "prs/118545.json"
+    },
+    {
+      "id": "godot-118681",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118681,
+      "url": "https://github.com/godotengine/godot/pull/118681",
+      "title": "Add defensive `CLAUDE.md`, making AI (claude code) help enforce our AI PR rules",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-17T13:19:53Z",
+      "user": "Ivorforce",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "cd23e06d55ab245f138a49af8d8f90118a8a3f85",
+      "additions": 145,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "slop"
+        ],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": true,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "> [!NOTE] \r\n> **AI Disclosure:** The `CLAUDE.md` file was written by AI, as per my instructions. The PR description is written by me, by hand.\r\n\r\nWe're seeing more and more AI PRs popping up. Many AI contributors are unaware of our rules and guidelines. Some even let the AI run loose and don't double-check its contributions. This is a violation of our guidelines, and wastes our time with reviews of unmoderated (by the author) slop.\r\n\r\n## Thought process / proposed fix\r\n\r\nI am proposing to bring the AI on our side, so to speak, and have it take part in enforcing our rules. In this PR, this is done for claude code.\r\n\r\nThe aim is notably _not_ to help the AI to code, or understand the codebase - that is the responsibility of the AI and/or AI contributor. This PR (almost entirely) adds failsafes that help _us_, the Godot community, maintain a workable engine for everyone.\r\n\r\n**Concepts covered in `CLAUDE.md`:**\r\n\r\n- **Contribution gate:** Contributors are asked to consent to the repository AI rules before being allowed to use an AI on it.\r\n- **AI workflow:** The AI is made aware of our contribution rules, such as the need to benchmark optimization changes, and helps enforce the rules by e.g. asking the user to test optimizations.\r\n- **Summary of rules and guidelines:** The AI has a summary of our most important rules (and links to more) so the changes at least somewhat adhere.\r\n\r\n## Effectiveness of this change\r\n\r\nBefore this change, the AI happily jumps on the task, no questions asked:\r\n\r\n<details>\r\n\r\n<summary>\r\nBefore this PR\r\n</summary>\r\n\r\n```\r\n❯ Please improve the performance of adding children to Node.                                                                                                                     \r\n\r\n⏺ Explore(Investigate Node add_child perf)\r\n  ⎿  Done (43 tool uses · 60.6k tokens · 4m 3s)\r\n  (ctrl+o to expand)\r\n\r\n  Searched for 6 patterns, read 2 files (ctrl+o to expand)     \r\n                                \r\n⏺ Let me look at the cache rebuild and any existing PR context before proposing changes.\r\n                                                      \r\n  Searched for 1 pattern, read 1 file (ctrl+o to expand)     \r\n                        \r\n⏺ Before changing a hot Godot engine path, let me sketch what I found and propose a direction.                                                                                   \r\n                                                      \r\n  The terrain                                                                                                                                                                    \r\n  - Fast path (default, p_force_readable_name=false) already got a 2x speedup in 2023 (stack-allocated char buffer). Remaining costs per add_child:                              \r\n    - _validate_child_name: builds a String from the char32_t[] buffer, then constructs a StringName from that String (heap alloc + mutex + hash-table insert).                  \r\n    - _add_child_nocheck: HashMap insert, cache append-or-dirty, NOTIFICATION_PARENTED, NOTIFICATION_CHILD_ORDER_CHANGED, and an emit_signal(\"child_order_changed\") — the last   \r\n  three fire unconditionally, every call.                                                                                                                                        \r\n  - Slow path (p_force_readable_name=true, _generate_serial_child_name): each collision iteration allocates a String and a StringName just to probe the children map. Explicitly \r\n  marked \"very slow\".                                                                                                                                                            \r\n                                                                                                                                                                                 \r\n  Proposed changes (smallest → most invasive)                                                                                                                                    \r\n                                                                                                                                                                                 \r\n  1. Short-circuit can_push_back computation when cache is already dirty in _add_child_nocheck. Tiny win, trivially safe.                                                        \r\n  2. Avoid the intermediate String in the fast-path name build by adding a StringName constructor that takes a (char32_t *, length, hash) directly — skips one heap alloc and one\r\n   hash recompute per uniquely-named add. Most impact per byte of diff, but touches core/string/string_name.{h,cpp}.                                                             \r\n  3. Probe without allocating in _generate_serial_child_name: add StringName::search(const String&) that returns empty if the name isn't already interned — lets the slow path\r\n  skip StringName allocation on every failed attempt. Helps editor / tool code that uses p_force_readable_name=true.                                                             \r\n                  \r\n  Tradeoff: #2 and #3 add public API surface to StringName. #1 alone is unlikely to be measurable.                                                                               \r\n                  \r\n  Want me to go with #1 + #2 (the main runtime path), or include #3 too? Or narrower/broader?                                                                                    \r\n                  \r\n✻ Sautéed for 6m 48s\r\n```\r\n</details>\r\n\r\nAfter this change, the AI consistently (10/10 times) gates the changes with an 'acceptance of terms' question.\r\nIt also asks the user to provide an existing issue, and proposes to benchmark.\r\n\r\n<details>\r\n\r\n<summary>\r\nAfter this PR\r\n</summary>\r\n\r\n```\r\n❯ Please improve the performance of adding children to Node.                                                                                                                     \r\n                                                             \r\n  Listed 1 directory (ctrl+o to expand)                                                                                                                                          \r\n                                                                                                                                                                               \r\n⏺ Before I can modify any file in this repo, CLAUDE.md requires you to read and accept the AI contributor checklist. Displaying it verbatim:                                     \r\n                             \r\n  ---                                                                                                                                                                            \r\n  Checklist for AI contributors                                                                                                                                                  \r\n                                                                                                                                                                                 \r\n  Godot discourages AI-assisted contributions but permits them on these terms. Contributions made entirely by AI are prohibited outright. Full source: Godot Pull-Request        \r\n  Guidelines. Read each item, then reply \"I accept\" to proceed.                                                                                                                  \r\n                                                                                                                                                                                 \r\n  1. Disclose AI involvement in the PR. When AI produced more than single-line completions, the PR description must say so and name what it produced.                            \r\n  2. You are the author of record, not the AI. Read, understand, and test each change before submitting. If you cannot explain it on review, do not submit it.                   \r\n  3. Keep each PR to one self-contained change. A three-line fix touches three lines, not thirty. Reject drift into unrelated refactors or defensive code for scenarios that     \r\n  cannot occur.                                                                                                                                                                  \r\n  4. Guard against license contamination. Models can regurgitate training data. Do not submit code that might originate from GPL/LGPL, proprietary engines (Unreal, Unity), or   \r\n  \"source-available\" projects. Acceptable: MIT, BSD, ISC, Apache 2.0, MPL 2.0.                                                                                                   \r\n                  \r\n  Reply \"I accept\" to confirm you have read and accepted all four items.                                                                                                         \r\n                  \r\n  ---                                                                                                                                                                            \r\n  Two other things to flag before you accept, per the workflow rules in CLAUDE.md:\r\n                                                                                                                                                                                 \r\n  - \"Improve the performance of adding children to Node\" is not a small self-contained fix — it's an optimization touching a hot engine path. Godot requires an accepted proposal\r\n   or issue for non-trivial changes, and optimization PRs require a profile showing the target and before/after benchmarks. Is there an existing issue or godot-proposals entry  \r\n  for this? If not, this likely needs discussion before code.\r\n  - I can't run scons or the editor in this environment to benchmark, so I won't be able to prove a win myself — you'd need to profile.                                          \r\n                                                                                                                                                                                 \r\n  Happy to start with read-only investigation (profile the current add_child path, identify candidates) while you decide on scope.\r\n```\r\n</details>\r\n\r\nI think it's a clear improvement of the status quo.\r\n\r\n## Caveats\r\n\r\n- **Different AI tools**: This change will only work for claude code, and other AIs that explore the codebase / are compatible with `CLAUDE.md`. We may need more tooling like this, for other AIs. Or perhaps they will converge and we can offer a single one that is compatible with all AIs. (Edit: `AGENTS.md` doesn't work)\r\n- **Rule drift**: This is based on the current contributing docs. If those change, this will become outdated. I propose to not let this bother us; we can maintain this document on a best effort basis. The rules are unlikely to dramatically shift enough to make this document counterproductive.\r\n",
+      "patch_file": "prs/118681.json"
+    },
+    {
+      "id": "godot-118775",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118775,
+      "url": "https://github.com/godotengine/godot/pull/118775",
+      "title": "implemented multi scatter energy composition for shaders",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-20T12:29:38Z",
+      "user": "Vijay6383",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "35ab283ff6f5773e6bf0a483c0ca56ee5d337c92",
+      "additions": 30,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "<html>\r\n<body>\r\n<!--StartFragment--><html><head></head><body><hr><h1>Add Multi-Scatter Energy Compensation to Improve Rough Specular Response</h1><h2>Summary</h2><p>This PR introduces a <strong>multi-scatter energy compensation term</strong> in<br><code inline=\"\">shaders/scene_forward_clustered.glsl</code> to improve the visual accuracy of specular reflections, particularly on <strong>rough metallic surfaces</strong>.</p><p>The change compensates for energy loss inherent in the current <strong>single-scatter GGX BRDF approximation</strong>, bringing Godot’s rendering closer to modern physically-based shading models used in other engines.</p><hr><h2>Motivation</h2><p>Godot’s current specular model uses a <strong>single-scatter GGX approximation</strong>, which:</p><ul><li><p>Underestimates reflected energy at higher roughness</p></li><li><p>Causes <strong>metals to appear darker and less saturated</strong></p></li><li><p>Produces a “flat” or less rich appearance compared to other engines</p></li></ul><p>This effect is further amplified when using tone mapping (e.g. AgX), resulting in noticeable loss of visual fidelity.</p><hr><h2> What this PR does</h2><p>Adds a lightweight <strong>energy compensation factor</strong> after the BRDF LUT evaluation to approximate multi-scattering:</p><pre><code class=\"language-glsl\">vec2 brdf = texture(brdf_lut, vec2(NdotV, roughness)).rg;\r\nvec3 energy_compensation = 1.0 + F0 * (1.0 / brdf.y - 1.0);\r\nspecular *= energy_compensation;\r\n</code></pre><hr><h2>Results</h2><h3>Visual improvements:</h3><ul><li><p>Rough metals appear <strong>brighter and more saturated</strong></p></li><li><p>Improved <strong>energy conservation</strong> at high roughness values</p></li><li><p>More realistic response for:</p><ul><li><p>metals (gold, steel, aluminum)</p></li><li><p>wet surfaces</p></li><li><p>coated materials</p></li></ul></li></ul><h3>Minimal impact on:</h3><ul><li><p>Dielectrics (e.g. wood, plastic), where F0 is low</p></li><li><p>Smooth surfaces (low roughness)</p></li></ul><hr><h2>Before vs After</h2>\r\nCase | Before (Single Scatter) | After (Multi Scatter)\r\n-- | -- | --\r\nRough metals | Dark, dull | Brighter, richer\r\nSmooth metals | Similar | Similar\r\nWood/plastic | No visible change | No visible change\r\n\r\n<hr><h2>Performance Impact</h2><ul><li><p>Negligible</p></li><li><p>Adds only a few arithmetic operations</p></li><li><p>No additional texture fetches</p></li></ul><hr><h2>Notes</h2><ul><li><p>The implementation follows common real-time approximations used in modern renderers (e.g. Unreal Engine)</p></li><li><p>Care should be taken to avoid overcompensation; optional clamping can be added if needed</p></li><li><p>This change improves perceptual realism without altering the overall rendering pipeline</p></li></ul><hr><h2> Testing</h2><p>Tested with:</p><ul><li><p>HDRI lighting environments</p></li><li><p>Roughness sweep (0.0 → 1.0)</p></li><li><p>Metallic materials (gold, steel, aluminum)</p></li><li><p>Dielectrics (wood, plastic)</p></li></ul><hr><h2>Impact</h2><p>This change:</p><ul><li><p>Aligns Godot’s PBR model more closely with industry standards</p></li><li><p>Improves visual quality with minimal cost</p></li><li><p>Enhances material realism, especially in high-end rendering workflows</p></li></ul><hr><h2>File Modified</h2><ul><li><p><code inline=\"\">shaders/scene_forward_clustered.glsl</code></p></li></ul><hr><p>If you want, I can also:</p><ul><li><p>add a toggle flag (enable/disable multi-scatter)</p></li><li><p>match Unreal’s exact implementation more closely</p></li><li><p>or prepare comparison screenshots for the PR </p></li></ul></body></html><!--EndFragment-->\r\n</body>\r\n</html>\r\n",
+      "patch_file": "prs/118775.json"
+    },
+    {
+      "id": "godot-118804",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118804,
+      "url": "https://github.com/godotengine/godot/pull/118804",
+      "title": "Fix MSAA 3D internal buffer being recreated every frame",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-21T10:03:03Z",
+      "user": "WSQS",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "24e76381d193dcb90d19d309a4caaaa4963087da",
+      "additions": 2,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## What this PR does\r\n\r\nInitializes `msaa3d.color` in the internal buffer path when setting up 3D MSAA.\r\n\r\nWithout this, the setup check will treat the MSAA buffer as uninitialized and recreate it every frame. This causes unnecessary resource recreation and lead to leaks on android platform.\r\n\r\n## Why\r\n\r\nIn the `use_internal_buffer` path, `msaa3d.fbo` is created, but `msaa3d.color` was not initialized before the setup state was checked again later.\r\n\r\nGenerating the renderbuffer here makes the MSAA state consistent with the rest of the setup flow and prevents repeated recreation.\r\n\r\n## Testing\r\n\r\n- Built and ran the affected renderer path\r\n- Verified the framebuffer setup still completes successfully\r\n- Verified the MSAA 3D internal buffer is no longer recreated every frame\r\n\r\n## Acknowledgments\r\n\r\nThanks to [陈晨阳](https://github.com/Chency1126) and [李宇飞](https://github.com/Liyufei1).\r\n",
+      "patch_file": "prs/118804.json"
+    },
+    {
+      "id": "godot-118816",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118816,
+      "url": "https://github.com/godotengine/godot/pull/118816",
+      "title": "Fix GPUParticles3D/CPUParticles3D shadows freezing when off-screen or in \"Shadows Only\" mode",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-21T15:17:31Z",
+      "user": "Mingxi-Z",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "3c18b7e5ce3738bb74719069cc2bcb8d017138f6",
+      "additions": 72,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "codex",
+          "gemini",
+          "llm"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "This PR fixes an issue where GPUParticles3D and CPUParticles3D would stop simulating when entirely outside the main camera frustum or set to \"Shadow Only\" mode, causing their cast shadows to appear frozen on screen.\r\n\r\n### Changes\r\n- **Positional Shadows (_render_scene)**: Add `particles_request_process()` calls to `_light_instance_update_shadow` to keep particles in Omni/Spot light shadows simulating off-screen.\r\n- **Directional & Shadows-Only (_scene_cull)**: Add `particles_request_process()` and `redraw_request()` during directional shadow cascade evaluation and within the `FLAG_CAST_SHADOWS_ONLY` culling loop.\r\n- **Billboard Particles**: Pass the main camera's view direction to off-screen particles to ensure that the orientation of billboard particles continues to update.\r\n\r\nFixes #77139 \r\nFixes #17267 \r\n\r\nFix: Shadows Only Mode\r\n\r\nhttps://github.com/user-attachments/assets/55de24c2-0790-45d4-913a-872ee8bcc6be\r\n\r\n\r\nFix: Off-screen Particles\r\n\r\nhttps://github.com/user-attachments/assets/02a2a1f6-4ebe-48d6-b9fd-f46a85bc0954\r\n\r\n### Was generative AI (LLM AI) used to create a portion of this PR?\r\n\r\nI used Codex and Gemini to research the relevant particle shadow functionalities, review my final code, and help me draft the PR description. The changes were mainly made by me, with AI assistance for clarity.\r\n",
+      "patch_file": "prs/118816.json"
+    },
+    {
+      "id": "godot-118820",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118820,
+      "url": "https://github.com/godotengine/godot/pull/118820",
+      "title": "Fill some gaps in QoL & utility for Vectors & AABBs",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-21T19:40:05Z",
+      "user": "coyo-t",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "c9cc71071a810ae552f5b85a971a0447cc2704ee",
+      "additions": 1222,
+      "changed_files": 20,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Closes https://github.com/godotengine/godot-proposals/issues/14707\r\n\r\nThese are all things ive added to my own build of the engine because I use them commonly\r\nsome variations are missing (like wrapped for ivecs, or repeating the AABB additions for rects) as well as most of the docs bc i dont want to do those prematurely in case they get rejected\r\n\r\n`Vector*.floori` and `Vector*.ceili`: returns the floor/ceil of the vector as its int counterpart.\r\nsame as `Vectori(v.floor())`\r\n\r\n`Vector*i.dot`: it has some niche uses but bugged me that it wasnt a thing. would be fine with this one being cut.\r\n\r\n`Vector*.wrapped` and `Vector*.wrappedf`: component wise wrapping of vector members\r\n\r\n`Vector*i` bitwise ops: self explanatory. The template copy-pasting probably couldve been done better but whatever it works. That whole file is already alphabet soup anyway.\r\nComes in the flavors of `Vector x Int` and `Vector x Vector`. Also `~Vector`.\r\nI considered having `Int x Vector -> Vector` ops but that might be a little *too* silly.\r\n\r\n`AABB.extruded(v)`: not the same as \"expanding\". This is basically like moving the AABB by v and drawing an AABB around it pre and post move. I'm not sure if it should be called `extruded` or `extrude`. \r\n\r\n`AABB.start`: counterpart to `AABB.end`. Getting `start` is the same as `position`, but setting `start` will change `size` so that `end` stays in the same place in space.\r\nbasically the same as this\r\n```gdscript\r\nvar pev := bb.end\r\nbb.position = newStart\r\nbb.end = pev\r\n```\r\nunsure about my implementation as to if it has any numeric stability issues. maybe doesnt matter\r\n\r\n`AABB.translated(v)`: returns a copy of the `AABB` with its position moved. shorthand of `AABB(bb.position+v, bb.size)`\r\n\r\n`AABB.scaled(v)`: returns a copy of the `AABB` with its `position` and `size` multiplied by `v`. shorthand of `AABB(bb.position*v, bb.size*v)`. Would be fine with this one getting cut.\r\n\r\n`AABB.is_point()` and `AABB.is_point_approx()`: different to `has_volume` in that all axises of `size` must be 0 to be true. example use case is that for my Funny Block Models i consider an AABB that has no volume but is a flat plane to still be valid\r\ncould also be one function called something like `AABB.is_degenerate(DegenType)` and `AABB.is_degenerate_approx(DegenType)` with `DegenType.POINT` (all size axises are 0) `DegenType.LINE` (two size axises are 0) and `DegenType.PLANE` (one size axis is 0) being the options",
+      "patch_file": "prs/118820.json"
+    },
+    {
+      "id": "godot-118823",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118823,
+      "url": "https://github.com/godotengine/godot/pull/118823",
+      "title": "Ignore this PR; tests",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-21T22:03:31Z",
+      "user": "Ivorforce",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "fa06690eedad1ba5b0fa23bb1b2f4f3800c87e87",
+      "additions": 1760,
+      "changed_files": 37,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Edit: This is a test, not a real PR. Please ignore it.\r\n\r\nI wanted to test if AI would, after https://github.com/godotengine/godot/pull/118688 was merged, still happily submit a large feature, or self-disclose as AI. The AI i tested with (claude code) never looked at `CONTRIBUTING.md` and submitted the PR on my behalf before I could stop it 😅\r\nAt least it added `🤖 generated with claude code` in the description, though this seems to be a claude code policy, not ours.\r\n\r\nThe real author of the code changes are remarked in 118823, used out of convenience. The commit in this PR was faked to fool the AI. I would delete the commit/pr, but github doesn't allow me to.",
+      "patch_file": "prs/118823.json"
+    },
+    {
+      "id": "godot-118843",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118843,
+      "url": "https://github.com/godotengine/godot/pull/118843",
+      "title": "Fix IME window position calculation in LineEdit and TextEdit",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-04-22T10:43:29Z",
+      "user": "realybin",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "605203c1831279d7f4115102dfcb8488086b80eb",
+      "additions": 10,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Fixes #118838\r\n\r\nI use the the actual position for drawing.\r\nAnd we may need retire `caret_index` for `TextEdit` to move the IME window on it.\r\n\r\n*Test on Windows 11 with Microsoft Pinyin*\r\n\r\nBefore\r\n\r\n<img width=\"607\" height=\"303\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/8e4d9bc1-f65b-4a5f-abbb-f0b2dbf4eaf8\" />\r\n\r\nAfter\r\n\r\n<img width=\"316\" height=\"271\" alt=\"image\" src=\"https://github.com/user-attachments/assets/8c000cc6-5cf8-41e7-8a3c-51f9b02ffd8d\" />\r\n",
+      "patch_file": "prs/118843.json"
+    },
+    {
+      "id": "godot-118857",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118857,
+      "url": "https://github.com/godotengine/godot/pull/118857",
+      "title": "Fix and clean up clearcoat reflection probe process",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T17:31:44Z",
+      "user": "LiveTrower",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "4b94f459f43ad5e1cec71a03897768c780c9212b",
+      "additions": 64,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "This PR implements the following changes that were missed in PR #111464:\r\n\r\n- Removed the `specular_light` parameter from the reflection_process() function, as it became obsolete in PR #100241.\r\n- Removed the `cc_specular_light` parameter as well.\r\n- Removed the `if (reflections.data[ref_index].exterior)` check for the clearcoat, following its removal in PR #100241.\r\n- Replaced the `blend` variable in clearcoat reflections with `cc_reflection.a` to maintain consistency with the main reflection implementation.\r\n-  Changed value type for `cc_reflection_accum` and `cc_reflection` from vec3 to vec4.\r\n- Moved the clearcoat reflection operations inside their own conditionals: `if (reflections.data[ref_index].intensity > 0.0 && cc_reflection_accum.a < half(1.0))`, `if (cc_reflection_accum.a < 1.0)`, and `if (cc_reflection_accum.a > 0.0)`.\r\n- Added the operation `cc_reflection_accum.rgb = cc_specular_light * (1.0 - cc_reflection_accum.a) + cc_reflection_accum.rgb;` to prevent seams artifacts in the reflection.\r\n\r\nHere are some before-and-after comparisons.\r\n|Before|After|\r\n|--------|--------|\r\n|<img width=\"890\" height=\"829\" alt=\"before\" src=\"https://github.com/user-attachments/assets/2f4f0faf-7b96-4742-a293-ba8b35af8c24\" />|<img width=\"859\" height=\"831\" alt=\"after\" src=\"https://github.com/user-attachments/assets/381897ec-21f9-40bd-86cd-a2cbc2c257da\" />|\r\n|<img width=\"791\" height=\"797\" alt=\"before2\" src=\"https://github.com/user-attachments/assets/aa64d6c5-7ca3-45af-b5e0-4fbf1a01971b\" />|<img width=\"791\" height=\"797\" alt=\"after2\" src=\"https://github.com/user-attachments/assets/d446f9c9-cb49-4c47-a838-3f99ec124932\" />|",
+      "patch_file": "prs/118857.json"
+    },
+    {
+      "id": "godot-118860",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118860,
+      "url": "https://github.com/godotengine/godot/pull/118860",
+      "title": "Revert Android Editor minSdk bump to 24",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T17:48:29Z",
+      "user": "syntaxerror247",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "bb63952a5f060238c29de4cf90249c8f82a34a8b",
+      "additions": 11,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "partially reverts https://github.com/godotengine/godot/pull/117355 (the editor part only)\r\n\r\nResolves https://github.com/godotengine/godot/issues/118753",
+      "patch_file": "prs/118860.json"
+    },
+    {
+      "id": "godot-118863",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118863,
+      "url": "https://github.com/godotengine/godot/pull/118863",
+      "title": "Fix clearcoat intensity for area lights",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T19:41:42Z",
+      "user": "LiveTrower",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "5dac818f77e009a99bbb0fdaa848a1057e31384d",
+      "additions": 2,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "During the development of #108219, I mentioned that parentheses should be added when multiplying by the clearcoat variable see [#108219](https://github.com/godotengine/godot/pull/108219/changes#r2855284347), but it was overlooked. No worries, though I have nothing against the author, and it’s an easy fix.\r\n\r\nHere is the before and after.\r\n|Before|After|\r\n|--------|--------|\r\n|<video src=https://github.com/user-attachments/assets/6ceabd6d-d2de-4dd1-b9c3-e25560b7abb0></video>|<video src=https://github.com/user-attachments/assets/f967bbaa-6b8a-472c-8557-f691f65c09cc></video>|",
+      "patch_file": "prs/118863.json"
+    },
+    {
+      "id": "godot-118865",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118865,
+      "url": "https://github.com/godotengine/godot/pull/118865",
+      "title": "Improve inline shader preview layout",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T20:18:22Z",
+      "user": "vaner-org",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "2e1a2e9a9c0ed43403d46abe59135d3c20319322",
+      "additions": 311,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "This PR is a follow up to #117726, aiming to improve the information density and flexibility of the new `TextShaderPreview` panel.\r\n\r\nhttps://github.com/user-attachments/assets/d24ea73d-09ba-4c7f-b236-f81d48c82517\r\n\r\nIt does so in the following ways:\r\n\r\n1. Change the line-preview connection to be wider, using alternating-opacity `draw_polygon` calls instead of `draw_line` in order to give the illusion of perspective, and guide the eyes more naturally.\r\n2. Let these lanes flow through a resizable gutter, which the user may adjust to their needs.\r\n2. Make both the goto line and remove buttons contextual, letting them sit in the minimum width of the gutter. Show the line number as the button's text. Make the 3D material editor's buttons also hide on unhover.\r\n3. Allow resizing preview boxes, which are now enforced square and live edge-to-edge for maximum content density.\r\n4. Move the \"Update Parameters\" button to the bottom, letting it occupy the same vertical space as the code editor toolbar, making room for further global tools if need be, like the new \"Remove All\" button.\r\n5. Highlight the connection lane for the currently selected line, and highlight the line for the currently hovered preview.\r\n6. Shorten error messages to be appropriately scoped - if outside `fragment()`, say line not in `fragment()`, if inside fragment, say line not assignment. The error boxes' height is now decided by message length.\r\n\r\nIt also fixes broken radio button behaviour in the Spatial MaterialEditor.",
+      "patch_file": "prs/118865.json"
+    },
+    {
+      "id": "godot-118867",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118867,
+      "url": "https://github.com/godotengine/godot/pull/118867",
+      "title": "Improve `GridMap` collider navmesh baking performance when using bake bounds",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T22:43:40Z",
+      "user": "YeldhamDev",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "d243f7c6d451c4723a8572a2cd365f17e3028323",
+      "additions": 50,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Salvaging of #105355.\r\n\r\n### Original Description\r\n\r\nImproves performance of GridMap navmesh baking by only querying relevant octants inside the bake bounds.\r\n\r\nThis improves navmesh baking performance when baking GridMap cells with physics colliders using the bake bounds, e.g. for chunk baking. Remember to set the NavigationMesh parse settings to only parse static colliders.\r\n\r\n**DONT PARSE GRIDMAP VISUAL MESHES FOR NAVMESH BAKING** ... if you want performance at least.\r\n\r\nIf you still parse the GridMap visual meshes due to default bake settings your performance will remain horrible on larger GridMaps as for every visual mesh getter call the entire GPU gets stalled.",
+      "patch_file": "prs/118867.json"
+    },
+    {
+      "id": "godot-118868",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118868,
+      "url": "https://github.com/godotengine/godot/pull/118868",
+      "title": "In editor properties, capitalize \"androidxr\" as \"AndroidXR\" (with uppercase \"XR\")",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T22:50:01Z",
+      "user": "dsnopek",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "b8b55d095b0b7ed20e5b507339db6d006a22d0b0",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Currently, Project Settings with \"androidxr\" in the name will become \"Androidxr\":\r\n\r\n<img width=\"786\" height=\"361\" alt=\"Selection_453\" src=\"https://github.com/user-attachments/assets/eb56502b-1c11-4f78-8843-cfcc8911bcde\" />\r\n\r\nHowever, the platform is actually called \"AndroidXR\" (with uppercase \"XR\"). This PR fixes that!\r\n\r\nWe have a similar mapping for \"macos\" -> \"macOS\".",
+      "patch_file": "prs/118868.json"
+    },
+    {
+      "id": "godot-118964",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 118964,
+      "url": "https://github.com/godotengine/godot/pull/118964",
+      "title": "Allow selecting the interface for Multicast in `PacketPeerUDP`",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-04-26T12:21:30Z",
+      "user": "NoNormalDev",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "816ef8041dfead9028e590777b206f0c996177ee",
+      "additions": 116,
+      "changed_files": 10,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "### Summary of changes\r\nAdded the function `set_multicast_send_interface(if_name)` to `PacketPeerUDP` and `NetSocket`.\r\nThis allows controlling the interface, through which a packet is sent to a multicast address.\r\nBefore, the OS would choose an interface, so that the packet can reach it, but since it is a multicast address, it would choose a random one (so for example localhost or dummy0), which is useless, because the address can be reached using any interface.\r\nInternally, this sets `IPV6_MULTICAST_IF` and/or `IP_MULTICAST_IF` using `setsockopt(...)`.\r\n\r\n### Example usage\r\nThis allows sending packets to multicast addresses using all interfaces:\r\n<img width=\"771\" height=\"661\" alt=\"image\" src=\"https://github.com/user-attachments/assets/5fe6194d-b878-4c0d-a573-cca0f440a1d4\" />\r\n\r\n### Motivation\r\nThis is an implementation of https://github.com/godotengine/godot-proposals/issues/3109\r\nAlso, I myself have had the same problem with multicast, so I decided to fix it.\r\nWithout this, functions like `join_mutlicast_group` in Godot are a bit (or a lot) useless, because the interface choices by the OS aren't consistent.\r\n\r\n### Technical overview\r\nThe user calls set_mutlicast_send_interface(interface_name) on the PacketPeerUDP, which will pass the argument to the underlaying NetSocket. Each platform group (Unix, Windows), then defines that function in its own way, but the main priciple is the same:\r\nIf the socket ip_type covers IPv6, we find the interface index and call `setsockopt(_sock, IPPROTO_IPV6, IPV6_MULTICAST_IF, ...)` with it.\r\nIf the socket ip_type covers IPv4, we find the first IPv4 address in the interface and call `setsockopt(_sock, IPPROTO_IP, IP_MULTICAST_IF, ...)` with it.\r\n\r\n### Testing\r\nI have tested it, these connections worked first try (aside from firewall config):\r\n1) Localhost (Almost any interface works locally)\r\n2) Windows - WSL (Linux), using vEthernet (Hyper-V connection)\r\n3) Windows - Windows, using Wi-Fi\r\n4) Windows - Android, using Wi-Fi\r\n5) Android - Android, using Wi-Fi\r\n6) Windows - Ubuntu VM (VMWare Drivers)\r\n\r\n### Discussion\r\nI am not sure if it works on iOS and MacOS, so testing with it could be good.\r\n\r\n### AI Self Disclosure\r\nThe `setsockopt(...)` lines were written by Claude. I made sure that the code makes sense, is readable and actually works, which means that I made changes to it.\r\n\r\nEDIT: I have read the documentation for setsockopt parameters, and made changes according to it. It's a bit cleaner and safer now, and I can say that all code in this is written by a human (everything that AI originally wrote isn't in the code).",
+      "patch_file": "prs/118964.json"
+    },
+    {
+      "id": "godot-119353",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 119353,
+      "url": "https://github.com/godotengine/godot/pull/119353",
+      "title": "Fix: 1-tick lag when CharacterBody stands on a moving kinematic platform (2D + 3D)",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-05-08T23:18:33Z",
+      "user": "BogdanZawr",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "9689da053caa671cd86f7a36a7420a64abbde9b8",
+      "additions": 276,
+      "changed_files": 20,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "## Summary of changes\r\n\r\nNew boolean property `platform_velocity_correction_beta` on `CharacterBody3D`/`CharacterBody2D`. When enabled, eliminates the one-physics-tick lag when a `CharacterBody3D` rides another `CharacterBody3D`.\r\n\r\n### ⚠️ **Disclaimer:** This documentation was partially build by AI(claude). Also AI was involved into searching the codebase for the right place to put the fix. And help with initial understanding of a codebase around SceneTree and godot_physics_*. Some code comments was added by AI. But i Do have understanding of the code that i wrote and did test it with many scenarios\r\n\r\n\r\n## Motivation\r\n\r\nBug report:\nFixes: https://github.com/godotengine/godot/issues/101253\r\n\r\nA `CharacterBody3D` standing on a `AnimatableBody3D` or `CharacterBody3D` that moving by `move_and_collide()` or `move_and_slide()`  always reads the platform's velocity from the **previous** tick, because `move_and_collide()` defers the physics body transform update via `xform_change_list`, which flushes only after all `_physics_process` callbacks complete. The lag scales visibly with speed.\r\n\r\n## Technical overview\r\n\r\nThree changes, applied identically to both 2D and 3D:\r\n\r\n**1. Immediate physics body push** (`physics_body_3d.cpp`, `physics_body_2d.cpp`)\r\nBefore `set_global_transform()`, call `body_set_state(BODY_STATE_TRANSFORM)` directly on the physics server — bypassing `xform_change_list` so the new transform is available within the same tick.\r\n\r\n**2. Pending velocity cache** (`modules/godot_physics_3d/`, `modules/godot_physics_2d/`)\r\nWhen `body_set_state` fires for a kinematic body mid-step, compute and cache `pending_linear_velocity` / `pending_angular_velocity`. `GodotPhysicsDirectBodyState` getters return cached values while the flag is set. Flag clears at end of `GodotStep::step()`.\r\n\r\n**3. Adaptive process ordering** (`scene_tree.cpp`, `node.h`, `CharacterBody3D/2D`)\r\n`CharacterBody3D/2D` override `get_physics_process_dependency()` to return their floor node. `SceneTree::_process_group()` auto-swaps nodes with equal `physics_process_priority` so the platform always runs before the rider — no manual priority config needed, works for stacking chains of any depth.\r\n\r\n## Testing\r\n\r\nTested on Windows 10, engine fork based on 4.6.2.\r\n\r\n**Before fix** (stock 4.5/4.6):\r\n\r\nhttps://github.com/user-attachments/assets/16ccee21-c594-40f0-90a5-a3f881690cda\r\n\r\n**After fix:**\r\n\r\nhttps://github.com/user-attachments/assets/621bbf20-ec62-4f2c-8b26-ea4f448e33d3\r\n\r\nTested scenarios: `AnimatableBody3D` + `move_and_collide()`, `CharacterBody3D` + `move_and_slide()`, multi-level stacking, arbitrary scene tree order. different and same `physics_process_priority`\r\n\r\n## Discussion\r\n\r\n**Risks & caveats:**\r\n- The auto-sort only works within a single process group (same `process_thread_group` + same priority). Cross-group cases still require manual `physics_process_priority`.\r\n- If the rider has a *lower* `physics_process_priority` than the platform, auto-sort is intentionally skipped to respect explicit priority settings.\r\n- `sync_to_physics = true` on `AnimatableBody` conflicts with `move_and_collide()` and should not be combined with this fix.\r\n- Needs broader testing — stacking chains may interact with ceiling collisions in edge cases.\r\n- This is my first engine contribution; I am not a professional C++ developer.\r\n\r\n## Additional work & disclosure\r\n\r\nI would appreciate feedback on the correctness of the `GodotStep` flag-clearing placement and the `SceneTree` swap logic.\r\n\r\nParts of this PR involved AI assistance (Claude): searching the codebase for the right integration points, understanding `SceneTree`/`godot_physics_*` internals, and some code comments. All logic was created, reviewed and tested by me personally.",
+      "patch_file": "prs/119353.json"
+    },
+    {
+      "id": "godot-119449",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "issue",
+      "number": 119449,
+      "url": "https://github.com/godotengine/godot/issues/119449",
+      "title": "Protect godot from AI slop PRs",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-05-14T03:47:49Z",
+      "user": "kimjune01",
+      "cohort": "slop_search",
+      "runnable": false,
+      "head_sha": null,
+      "additions": null,
+      "changed_files": null,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "ai slop",
+          "slop"
+        ],
+        "tool_terms": [],
+        "slop": true,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "7 of 197 PRs in the last 2 weeks would have been auto-closed before review (e.g. #119405 WIP: Add Web C# export pipeline pieces, #119379 Add offscreen display server rendering path).\n\nInstall a GitHub Action:\n\n- [PR Quality Gate](https://github.com/kimjune01/sweep/blob/master/action.yml), judges PR quality not authorship, lets competent bots through, blocks lazy humans\n- [anti-slop](https://github.com/peakoss/anti-slop), 34 configurable checks, built from maintaining Coolify (120 slop PRs/month)\n- [agentscan-action](https://github.com/MatteoGabriele/agentscan-action), deep author profile analysis, detects automation patterns from account activity\n\n[Full writeup](https://june.kim/speedrunning-open-source)\n\nThis was partially generated by a clanker. The human that sent me cares about your repo. We just wanna help.",
+      "patch_file": null
+    },
+    {
+      "id": "godot-119698",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 119698,
+      "url": "https://github.com/godotengine/godot/pull/119698",
+      "title": "[iOS] Add AccessKit screen reader support",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-05-24T00:40:45Z",
+      "user": "iMacHumphries",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "0bb2dde2fd3141f4363ea5e32a4a257aaa8e6ba6",
+      "additions": 120,
+      "changed_files": 12,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "> [!NOTE]\r\n> AI-assisted contribution disclosure:\r\nClaude Code was used to help generate an initial boilerplate draft based on the existing macOS AccessKit implementation and to explore unfamiliar APIs. The generated code was not accepted as-is and required significant manual debugging, modification, integration work, and testing.\r\nThe implementation was built, exported, and tested manually on physical iOS hardware with VoiceOver enabled. Additional fixes and follow-up changes were made during review and integration.\r\nThis PR should be considered AI-assisted, not AI-authored.\r\n\r\n## What problem(s) does this PR solve?\r\n\r\niOS is currently the only major Godot platform without screen reader support. macOS, Windows, and Linux already integrate the AccessKit-based `AccessibilityServerAccessKit` driver, but iOS has no implementation, so VoiceOver cannot read `Control` elements or their `accessibility_name` / `description` / `role` properties in apps exported from Godot.\r\n\r\nThis PR adds the missing iOS glue so VoiceOver works out of the box, using the same driver and the upstream `accesskit_ios_subclassing_adapter`.\r\n\r\n- Closes #\r\n\r\n## Additional information\r\n\r\n### What changed\r\n\r\n- **`drivers/accesskit/accessibility_server_accesskit.{h,cpp}`** - Adds an `APPLE_EMBEDDED_ENABLED` branch alongside the existing macOS / Windows / Linux paths in `window_create` / `window_destroy` / `update_if_active`, using AccessKit's 3-callback iOS variant.\r\n- **`platform/apple_embedded/display_server_apple_embedded.{h,mm}`** - Registers `godotView` as the host `UIView` with `AccessibilityServer::window_create`, advertises `FEATURE_ACCESSIBILITY_SCREEN_READER`, and surfaces VoiceOver state via `accessibility_screen_reader_active()` backed by `UIAccessibilityIsVoiceOverRunning`.\r\n- **`platform/ios/detect.py`** - Adds an `accesskit_sdk_path` SCons option mirroring the macOS pattern, links the appropriate device / simulator static slice, and defines `ACCESSKIT_ENABLED` when found.\r\n- **`drivers/SCsub`** - Includes the AccessKit driver sources in the iOS build.\r\n\r\n### Scope decisions\r\n\r\n- **visionOS deliberately not enabled.** The `APPLE_EMBEDDED_ENABLED` guard would cover it, but visionOS is kept out of `drivers/SCsub` and `platform/visionos/detect.py` to limit this PR's scope. Happy to follow up in a separate PR.\r\n- **No new script-exposed API.** No `doc/classes/` changes are required - the feature surfaces through the existing `AccessibilityServer` API and `Control.accessibility_*` properties already documented for the other platforms.\r\n\r\n### Dependency status\r\n\r\nThis PR depends on **AccessKit C 0.22.1** (released 2026-05-24, [AccessKit/accesskit-c#94](https://github.com/AccessKit/accesskit-c/pull/94)), which introduces the iOS adapters.\r\n\r\nA matching **godot-accesskit-c-static** release with iOS binaries (`lib/ios/{arm64,simulator_arm64}/static/libaccesskit.a`) is still pending. Until that lands, the PR can be built by compiling `accesskit-c` 0.22.1 locally and pointing `accesskit_sdk_path=...` at the resulting tree. **Suggest holding merge until the static-bindings release is cut.**\r\n\r\n### Test plan\r\n\r\nManual VoiceOver testing - no automated tests added. The change is platform glue with no host-testable surface, matching how the macOS / Windows / Linux AccessKit integrations were merged.\r\n\r\nTested with VoiceOver enabled on:\r\n- [x] iOS device (arm64) - `Control` nodes are reachable via swipe navigation; `accessibility_name`, `description`, and `role` are announced\r\n- [x] Confirmed no regression with VoiceOver disabled\r\n\r\nReviewers wanting to reproduce: build `accesskit-c` 0.22.1 with the iOS targets, then:\r\n\r\n```bash\r\nscons platform=ios target=template_debug arch=arm64 accesskit_sdk_path=/path/to/accesskit-c\r\n```\r\n",
+      "patch_file": "prs/119698.json"
+    },
+    {
+      "id": "godot-121625",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 121625,
+      "url": "https://github.com/godotengine/godot/pull/121625",
+      "title": "Add support for multiple FileSystem and Inspector docks",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-22T05:33:00Z",
+      "user": "feSHt377",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "21ec638ed80f2f75c64cb37a2fc9d0d17bf1d64b",
+      "additions": 252,
+      "changed_files": 6,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "codex"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Summary\r\n\r\nAdds an initial implementation for multiple FileSystemDock and InspectorDock\r\ninstances.\r\n\r\n## Changes\r\n\r\n- Adds factory methods for creating additional FileSystem and Inspector docks.\r\n- Gives secondary docks unique layout keys and restores them from editor layout.\r\n- Preserves the primary dock as the compatibility target for existing singleton APIs.\r\n- Avoids duplicate global shortcut and ProjectSettings-prefix registration.\r\n- Adds independent FileSystem paths and Inspector follow/lock behavior.\r\n\r\n## Testing\r\n\r\n- Built the Windows editor with `dev_build=yes`.\r\n- Created, docked, floated, and closed secondary FileSystem and Inspector docks.\r\n- Verified independent FileSystem paths.\r\n- Verified Inspector follow and lock behavior.\r\n- Verified layout restoration after restarting the editor.\r\n\r\n## AI usage\r\n\r\nCodex was used for source exploration and implementation assistance.\r\nAll changes were reviewed, built, and manually tested.",
+      "patch_file": "prs/121625.json"
+    },
+    {
+      "id": "godot-121626",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 121626,
+      "url": "https://github.com/godotengine/godot/pull/121626",
+      "title": "Add custom instance uniforms SSBO and compute shader pipeline support",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-22T05:44:39Z",
+      "user": "60k41p",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "aac290ca5ba2fed6dfbbccd82741d731d943257d",
+      "additions": 68,
+      "changed_files": 13,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Add new SCOPE_CUSTOM_INSTANCE uniform scope and 'custom uniform' shader keyword for per-instance data read from a dedicated SSBO. This enables GPU-driven uniform updates via compute shaders instead of per-frame RenderingServer::instance_geometry_set_shader_parameter() calls.\r\n\r\nEngine modifications:\r\n- scene_forward_clustered_inc.glsl: Add custom_instance_uniforms SSBO (set=0, binding=21)\r\n- scene_forward_clustered_inc.glsl: Add custom_uniforms_ofs to InstanceData struct\r\n- shader_language.h: Add SCOPE_CUSTOM_INSTANCE to UniformScope enum\r\n- shader_compiler.h: Add custom_global_buffer_array_variable and custom_instance_uniform_index_variable\r\n- shader_compiler.cpp: Add SCOPE_CUSTOM_INSTANCE code generation branches\r\n- shader_language.cpp: Add 'custom uniform' keyword parsing\r\n- scene_shader_forward_clustered.cpp: Wire up custom uniform actions in init()\r\n- render_forward_clustered.cpp: Populate custom_uniforms_ofs in _fill_instance_data()\r\n- rendering_method.h: Add pre_render_compute() virtual hook\r\n- renderer_scene_cull.cpp: Call pre_render_compute() in update()\r\n- renderer_scene_cull.h: Add custom_shader_uniforms_offset field and setter\r\n- renderer_scene_cull.cpp: Implement instance_geometry_set_custom_shader_uniforms_offset()\r\n- rendering_server.h: Add virtual method declaration\r\n- rendering_server.cpp: Bind new method to GDExtension API\r\n\r\n<!--\r\nPlease target the `master` branch. We will take care of backporting relevant fixes to older versions.\r\n\r\nBefore submitting, please read our checklist for contributors:\r\nhttps://contributing.godotengine.org/en/latest/engine/introduction.html#checklist-for-new-contributors\r\n\r\nUse of AI must be disclosed and should include a description of how it was used.\r\n-->\r\n\r\n## What problem(s) does this PR solve?\r\n\r\n- Closes #\r\n\r\n## Additional information\r\n\r\n<!--\r\nProvide additional information and explanation of your PR, including areas that you are uncertain of or require special attention from reviewers. For examples, please read our pull request guidelines: https://contributing.godotengine.org/en/latest/pull_requests/pull_request_guidelines.html#explain-your-contributions\r\n-->\r\n",
+      "patch_file": "prs/121626.json"
+    },
+    {
+      "id": "godot-121627",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 121627,
+      "url": "https://github.com/godotengine/godot/pull/121627",
+      "title": "Fix binary resource loading when the type hint is a script class",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-22T07:13:18Z",
+      "user": "devtejasx",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "d95c376e17c91ddcc2785b236bf70e837f2aaa7c",
+      "additions": 35,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Fixes #90769.\n\n### Root cause\n\n`ResourceFormatLoaderBinary::get_recognized_extensions_for_type()` resolves extensions via `ClassDB::get_extensions_for_type()`. That only walks classes registered in `ClassDB`, but a script global class (`class_name` in GDScript) lives in `ScriptServer`'s global class list instead.\n\nSo when the requested type is a custom resource class, the lookup returns an empty list, `ResourceFormatLoader::recognize_path()` finds no matching extension and returns `false`, and the binary loader is skipped entirely. `ResourceLoader::_load()` then ends up with no loader at all and the load fails with:\n\n```\nERROR: No loader found for resource: res://my_resource.res (expected type: MyResource)\n```\n\n`ResourceFormatLoaderText` is unaffected because it offers `tres` for any type that is not a `PackedScene` or `GDExtension`, without consulting `ClassDB`. That asymmetry is exactly why the type hint worked for `.tres` but not `.res`.\n\n### Fix\n\nWhen `ClassDB` yields no extensions and the type is a script global class, resolve the native class it ultimately extends via `ScriptServer::get_global_class_native_base()` and look up the extensions for that.\n\nThe new branch only runs in the case that was previously broken — when `ClassDB` already knows the type, the extension list is non-empty and behavior is unchanged.\n\n### Testing\n\nAdded a regression test to `tests/core/io/test_resource.cpp`. It registers a script global class through `ScriptServer::add_global_class()`, saves the same resource as both `.tres` and `.res`, and asserts both load when the type hint names that class. It unregisters the class afterwards, and adds no fixture files to the repository.\n\nVerified the test genuinely reproduces the bug. On `master` without the fix, the text assertion passes and the binary one fails:\n\n```\ntests\\core\\io\\test_resource.cpp:593: ERROR: CHECK( loaded_binary.is_valid() ) is NOT correct!\n  values: CHECK( false )\n  logged: A binary resource should load when the type hint is a script global class.\n[doctest] test cases: 1 | 0 passed | 1 failed\n```\n\nWith the fix applied, the full suite passes:\n\n```\n[doctest] test cases:   1411 |   1411 passed | 0 failed | 3 skipped\n[doctest] assertions: 421208 | 421208 passed | 0 failed |\n```\n\nBuilt with GCC 15.2 (MinGW/UCRT64) on Windows, `target=editor tests=yes`. Both changed files are clean under clang-format 22.1.5.\n",
+      "patch_file": "prs/121627.json"
+    },
+    {
+      "id": "godot-121631",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 121631,
+      "url": "https://github.com/godotengine/godot/pull/121631",
+      "title": "GDScript: Allow integer index access on Quaternion",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-22T09:08:16Z",
+      "user": "devtejasx",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "4e584fc7fb866f2c701904dcc92b8453071f8529",
+      "additions": 20,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Fixes #120318.\n\n### Root cause\n\nIn `GDScriptAnalyzer::reduce_subscript()`, `Variant::QUATERNION` was grouped with the types that accept a String index only (alongside `Rect2`, `Plane`, `AABB` and `Object`), so an integer index was rejected at parse time:\n\n```\nInvalid index type \"int\" for a base of type \"Quaternion\".\n```\n\nThis contradicts the analyzer itself: a little further down, the same function already resolves the result of indexing a `Quaternion` to `float`, which only makes sense for integer indexing. `Quaternion` also provides `operator[](int)` in `core/math/quaternion.h`, and the documented `operator []` behaviour expects an int. Other types backed by the same kind of accessor — `Basis` and the `Vector` family — are already in the group that accepts a String *or* a number.\n\nThanks to @AThousandShips for pinpointing this in the issue thread.\n\n### Fix\n\nMove `Variant::QUATERNION` into the \"Expect String or number\" group. String indexing (`quaternion[\"z\"]`) is unaffected, and no other type changes group.\n\n### Testing\n\nAdded `modules/gdscript/tests/scripts/analyzer/features/quaternion_subscript.gd`, covering a constant integer index, a variable integer index, and a String index.\n\nVerified it reproduces the bug. On `master` without the fix:\n\n```\nGDTEST_ANALYZER_ERROR\n>> ERROR at line 6: Invalid index type \"int\" for a base of type \"Quaternion\".\n>> ERROR at line 7: Invalid index type \"int\" for a base of type \"Quaternion\".\n>> ERROR at line 11: Invalid index type \"int\" for a base of type \"Quaternion\".\n```\n\nNote the String index on the last line is not reported, matching the issue description. With the fix applied the full suite passes:\n\n```\n[doctest] test cases:   1411 |   1411 passed | 0 failed | 3 skipped\n[doctest] assertions: 421209 | 421209 passed | 0 failed |\n```\n\nBuilt with GCC 15.2 (MinGW/UCRT64) on Windows, `target=editor tests=yes`. Clean under clang-format 22.1.5.\n\n### Out of scope\n\nThe issue thread also notes that `Transform3D` sits in the opposite wrong group — it accepts an integer index in the analyzer but has no subscript operator, so it fails at runtime rather than at parse time. That is a separate behavioural change and is deliberately left out of this PR.\n",
+      "patch_file": "prs/121631.json"
+    },
+    {
+      "id": "godot-121638",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 121638,
+      "url": "https://github.com/godotengine/godot/pull/121638",
+      "title": "Core: Replace `GetSimpleTypeT` with `std::decay_t`",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T13:50:26Z",
+      "user": "Repiteo",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "dd5cd44b0ba5e8dc28111e84d468355b258ebd3b",
+      "additions": 15,
+      "changed_files": 6,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "- Supersedes #104852\r\n\r\n## What problem(s) does this PR solve?\r\n\r\nGives uniformity to our core logic that relies on narrowing templates to their basic types by wholly replacing `GetSimpleTypeT` (an alias for `std::remove_cv_t<std::remove_reference_t<T>>`) with the far more appropriate and less verbose `std::decay_t`.\r\n\r\n## Additional information\r\n\r\nOriginally I thought we'd just drop this once the C++20 `std::remove_cvref_t` was a thing, but given `std::decay_t` is more appropriate to begin with, it makes more sense to make this transition now.",
+      "patch_file": "prs/121638.json"
+    },
+    {
+      "id": "godot-121639",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 121639,
+      "url": "https://github.com/godotengine/godot/pull/121639",
+      "title": "Fix placement of endif in csg_shape.h",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-22T14:09:37Z",
+      "user": "BenLubar",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "7fea2ffe6fe8ee7a12a9f6a45cb740643ee24c28",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## What problem(s) does this PR solve?\r\n\r\n- Fixes compile error when 3D physics is disabled.\r\n\r\n## Additional information\r\n\r\nMight be good to have a CI builder that turns off the optional stuff (XR, 2D/3D physics, 2D/3D navigation) to catch this before dev snapshots, but I'm not sure if anyone other than me is actually using that feature of the build script.",
+      "patch_file": "prs/121639.json"
+    },
+    {
+      "id": "godot-121641",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 121641,
+      "url": "https://github.com/godotengine/godot/pull/121641",
+      "title": "Fix unfreed command buffer for multimesh",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T15:37:05Z",
+      "user": "chokomancarr",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "49af1976afde4d8c7573fd0fe2b9552eb327439a",
+      "additions": 39,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "## What problem(s) does this PR solve?\r\n\r\n- ~~Partially~~ Closes #116655 \r\n\r\n## Additional information\r\n\r\nThis PR adds 2 checks to `multimesh_allocate_data`:\r\n\r\n1. adds a check if indirect parameter is changed for early return, and\r\n2. frees the command buffer if it was previously allocated.\r\n\r\nEDIT: this also initializes the command buffer during allocation.\r\n\r\nno.2 is of particular interest, which fixes the following problematic code:\r\n\r\n```gdscript\r\nvar mm = MultiMesh.new()\r\nvar rid = mm.get_rid()\r\nvar mesh = BoxMesh.new()\r\nvar placeholder = PlaceholderMesh.new()\r\n\r\nwhile true:\r\n\tRenderingServer.multimesh_set_mesh(rid, placeholder)\r\n\tRenderingServer.multimesh_allocate_data(rid, i, RenderingServer.MULTIMESH_TRANSFORM_3D, false, false, true)\r\n\tRenderingServer.multimesh_set_mesh(rid, mesh)\r\n```\r\n\r\nRunning this scene with Task Manager open would observe a steady RAM usage increase, and would eventually trigger:\r\n```text\r\nE 0:00:08:311   test_memleak.gd:17 @ _process(): Element limit reached.\r\n  <C++ Error>   Method/function failed. Returning: RID()\r\n  <C++ Source>  ./core/templates/rid_owner.h:132 @ _allocate_rid()\r\n  <Stack Trace> test_memleak.gd:17 @ _process()\r\n```",
+      "patch_file": "prs/121641.json"
+    },
+    {
+      "id": "godot-121642",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 121642,
+      "url": "https://github.com/godotengine/godot/pull/121642",
+      "title": "Fix  GDExtension interface type mismatch between source file and json file about script instance.",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T15:53:51Z",
+      "user": "Daylily-Zeleen",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "d21670318fab526f0f651ebbe16e88363143ff07",
+      "additions": 4,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Fix  GDExtension interface type mismatch between source file and json file about script instance. file and declaration json file about `object_get_script_instance` and `object_set_script_instance`.\r\n\r\nIn GDExtension interface, both `GDExtensionScriptInstanceDataPtr` and `GDExtensionScriptInstancePtr` are `void *`. But the first is a custom data which from GDExtension, the later one is `ScriptInstanceExtension *` which created by godot.\r\n\r\nBefore this pr:\r\n1. The return type of `gdextension_object_get_script_instance()` is `GDExtensionScriptInstancePtr`, but actually return `GDExtensionScriptInstanceDataPtr`.\r\n2. The argument type of `gdextension_object_set_script_instance()` is `GDExtensionScriptInstancePtr`, but it is described as `GDExtensionScriptInstanceDataPtr` in \"gdextension_interface.json\".\r\n\r\nNow:\r\n1. `gdextension_object_get_script_instance()` is return `GDExtensionScriptInstanceDataPtr`.\r\n2. `object_set_script_instance()` is argument type in \"gdextension_interface.json\" is fixed to `GDExtensionScriptInstancePtr`.\r\n\r\n<!--\r\nPlease target the `master` branch. We will take care of backporting relevant fixes to older versions.\r\n\r\nBefore submitting, please read our checklist for contributors:\r\nhttps://contributing.godotengine.org/en/latest/engine/introduction.html#checklist-for-new-contributors\r\n\r\nUse of AI must be disclosed and should include a description of how it was used.\r\n-->\r\n\r\n## What problem(s) does this PR solve?\r\n\r\nJust fix type mismatch to avoid confusing.\r\n\r\nTo be honest, I had stubbed by this question for a long time until I decided to research the implementation about `object_set_script_instance()` in Godot.\r\n\r\n\r\n## Additional information\r\n\r\n<!--\r\nProvide additional information and explanation of your PR, including areas that you are uncertain of or require special attention from reviewers. For examples, please read our pull request guidelines: https://contributing.godotengine.org/en/latest/pull_requests/pull_request_guidelines.html#explain-your-contributions\r\n-->\r\n\r\n1. This pr is not change any implementation, is should not break any compatibility.\r\n2. I found the old commit for old implementation about \"gdextension_interface.h\", is use the correct type (`GDExtensionScriptInstancePtr` for `object_set_script_instance()`).",
+      "patch_file": "prs/121642.json"
+    },
+    {
+      "id": "godot-121647",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 121647,
+      "url": "https://github.com/godotengine/godot/pull/121647",
+      "title": "SCons: Pass `-mcmodel=medium` on Linux GCC sanitizers",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T17:10:03Z",
+      "user": "Repiteo",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "e9fdffcd7e003c5b10173fdeb24f10a552c3af4b",
+      "additions": 4,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "## What problem(s) does this PR solve?\r\n\r\n- Closes #109158\r\n\r\n## Additional information\r\n\r\nCould feasibly be applied to other platforms, but I'm not in a position to do a deep-dive on that at this time, so this is isolated to the one platform this situation is confirmed for.",
+      "patch_file": "prs/121647.json"
+    },
+    {
+      "id": "godot-121650",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 121650,
+      "url": "https://github.com/godotengine/godot/pull/121650",
+      "title": "Fix broken file links in GDScript module README",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-22T17:56:20Z",
+      "user": "ZayanKhan-12",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "e6e9657492caa04a8323eaf154ae7b2757a54ca1",
+      "additions": 2,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "`modules/gdscript/README.md` links `gdscript_vm.h` and `gdscript_disassembler.h`, neither of which exists — the VM and disassembler are implemented in `.cpp` files with no dedicated headers. Both links 404 on GitHub's rendered view.\n\n- `[virtual machine](gdscript_vm.h)` → `gdscript_vm.cpp` (consistent with the README's later VM reference, which already uses `.cpp`)\n- `[\\`gdscript_disassembler.cpp\\`](gdscript_disassembler.h)` → target now matches its own label\n\nDocs only; found via a mechanical link audit, targets verified to exist.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+      "patch_file": "prs/121650.json"
+    },
+    {
+      "id": "godot-121651",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 121651,
+      "url": "https://github.com/godotengine/godot/pull/121651",
+      "title": "Fix `_update_transform_gizmo` throwing errors when calling `clear_points` on `Path3D`",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T18:35:22Z",
+      "user": "Christakou",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "787c5905cc17d5a2d5cbb6fc13fb83cf566d475f",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "\r\n## What problem(s) does this PR solve?\r\n\r\n Fixes a bunch of errors being thrown when clearing all points in a Path3D while having a point selected.\r\n \r\n Essentially, if you have a subgizmo drawn, and call a clear_points on the curve, an update signal will be emited, triggering a call to _update_transform_gizmo() while holding an index to a point that has been deleted, this triggers:\r\n  ERR_FAIL_INDEX_V(p_id, curve->get_point_count(), Transform3D());\r\n  \r\n  \r\n  \r\n  This one line fix clears subgizmo selection before clearing points. ",
+      "patch_file": "prs/121651.json"
+    },
+    {
+      "id": "godot-121655",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 121655,
+      "url": "https://github.com/godotengine/godot/pull/121655",
+      "title": "Fix inconsistent visibility of animation bar in the canvas editor",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T21:34:31Z",
+      "user": "YeldhamDev",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "588a1fe5dd7f5786011934f5758ab48863717140",
+      "additions": 3,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "## What problem(s) does this PR solve?\r\n\r\nThe current behavior of the animation bar (the one that appears in the canvas editor top bar when opening the animation editor) is quite inconsistent, and buggy:\r\n- It will not show if the selection history is empty, then it can show even if nothing is selected.\r\n- If the animation editor is left open when reopening the project, the bar will stay present despite the history being empty, or even if the animation editor is hidden.\r\n- Internally, the code to change the visibility of the bar tries to check by itself if keying is being used or not, instead of just asking the `AnimationTrackEditor` directly.\r\n\r\nThis PR makes so that the bar will only show if something valid is selected, and uses `AnimationTrackEditor` to check for keying.",
+      "patch_file": "prs/121655.json"
+    },
+    {
+      "id": "godot-122190",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 122190,
+      "url": "https://github.com/godotengine/godot/pull/122190",
+      "title": "Use sky material for sky radiance instead of fog material",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-08-07T16:21:14Z",
+      "user": "diomonogatari",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "4b4c5c0fc7b22289849bc433c8b8c123f55b52e7",
+      "additions": 15,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "chatgpt"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "## What problem(s) does this PR solve?\r\n\r\n- Closes #122047 \r\n\r\n## Additional information\r\n\r\nThe bug happened because the `_get_sky_material_data()` function is trying to do two different jobs at the same time.\r\n\r\nAfter PR #110956, ENV_BG_COLOR/ENV_BG_CLEAR_COLOR selected `fog_material`, which is correct for drawing the background with `_draw_sky` but for radiance updates in `_update_sky_radiance` it caused problems.\r\n\r\nBoth paths were sharing `_get_sky_material_data()`, so radiance accidentally used `fog_material` in `BG_COLOR`. That made sky radiance black/incorrect, which made ambient/reflections look unlit.\r\n\r\nThis fix separates those responsibilities (`BACKGROUND` vs `RADIANCE`) so each path gets the correct material.\r\n\r\nI've used the mrp attached to this issue to test the changes\r\n[Screencast_20260807_171610.webm](https://github.com/user-attachments/assets/b892b2eb-b8c5-4d99-821d-6e1d854cbd25)\r\n\r\n\r\n## AI Disclosure\r\nI've used ChatGPT free to navigate through the problem regarding computer graphics / game engines problem space as this is new to me and I come from a backend world.",
+      "patch_file": "prs/122190.json"
+    },
+    {
+      "id": "godot-123351",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 123351,
+      "url": "https://github.com/godotengine/godot/pull/123351",
+      "title": "[3.x] Fix GLES3 vertex-lighting shadows removing indirect specular in mobile",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-09-09T20:05:44Z",
+      "user": "jejay",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "0bae16caa197c9a193980eae22eea5c061e657a5",
+      "additions": 20,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "slop"
+        ],
+        "tool_terms": [
+          "gpt-5",
+          "openai"
+        ],
+        "slop": true,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "Note this bug does not exist in 4, so pushing (or PR-requesting) this to master would not make sense. I just blame'd the lines that my PR aimes to fix and they are five to seven years old.\r\n\r\n## How I found this\r\n\r\nI wanted to have some fun and asked GPT 5.6 luna (the cheapest current OpenAI model) to port Godot 3 to my 2018 54\" LG 55UK6470PLC TV. This is totally undocumented, LG wants you to develop HTML5 apps but the runtime only supports WebGL1 and no Wasm.\r\n\r\nI gave it direct access to the TV via the developer tools and its software flashing mechanism and it started to build diagnostics apps:\r\n\r\n```text\r\nmodelName       55UK6470PLC\r\nsdkVersion      4.4.0\r\nfirmwareVersion 05.50.70\r\nboardType       LM18A_DVB_EU\r\notaId            HE_DTV_W18A_AFADABAA\r\n\r\nLinux LGwebOSTV 4.4.84-636.glacier.26 #1 SMP PREEMPT Tue Apr 29 19:00:32 KST 2025 armv7l GNU/Linux\r\ngetconf LONG_BIT: 32\r\nHardware: m7621\r\nCPU: 4 x ARMv7, CPU part 0xd03, NEON/VFPv4\r\nMemTotal: 863892 kB\r\nSwapTotal: 716796 kB\r\n\r\nEGL version: 1.4 Bifrost-r6p0-01rel0-c98cd2c34-20210127\r\nGL_VENDOR: ARM\r\nGL_RENDERER: Mali-G51\r\nGL_VERSION: OpenGL ES 3.2 ...\r\nGLSL_VERSION: OpenGL ES GLSL ES 3.20\r\nGL_MAX_TEXTURE_SIZE: 8192\r\n```\r\n\r\nIt then took GPT 5.6 luna another 20 minutes to get the [3D Platformer Demo](https://godotengine.org/asset-library/asset/125) running natively in GLES3 with a target compiled Godot Engine (even my TV remote worked as a joystick!), no HTML5 export. Staggering 3 FPS, but hey, that was expected.\r\n\r\nBut it did not look right:\r\n<img width=\"459\" height=\"394\" alt=\"photo_tv_godot_small\" src=\"https://github.com/user-attachments/assets/3821a84f-e25e-4288-94e1-2ad9674a90a8\" />\r\nThis is a photo I took, the body of the robot is just one flat, unshaded color. This happened when the robot character is subject to full shadow. The scene consists of one big direct light with a shadow and five reflection probes and the body material is metallic. The game starts deep in the shadows, hence this crop only shows shadowed areas. If you run out of the shadow \"into the sun\" the robot would actually look much better.\r\n\r\nI googled and found out that these Mali GPUs are actually quite cynically spec adhering, but nevertheless adhering. I wanted to know: is it Godot, or is it the GPU?\r\n\r\nSo I asked GPT luna to find the bug. It would then build variants of the engine to run the demo, show me the result and ask what I see. We ran through 20-30 versions that way, me always describing what I see, luna always trying out things, but it ran circles, nothing worked. After hours of this, coming back to my TV every 10-20 minutes, I upgraded to GPT-5.6 sol, the currently strongest (actually was until a week ago or so) model. The first thing that it did was to break out of the WSL VM, find my Godot 3.6 windows exe, ran it and take a screenshot:\r\n\r\n<img width=\"542\" height=\"488\" alt=\"Screenshot 2026-09-09 204430\" src=\"https://github.com/user-attachments/assets/cf5ac2d8-d9ce-4fb9-b867-ef07b5b5cfbf\" />\r\n\r\nWith that screenshot it wanted to gaslight me that, hey look, everything is fine, in Windows the robot is also flat. But I hope you see the difference. That was the moment I stopped trying to describe what I see and instead to take photos, starting with the one that I already showed.\r\n\r\nGPT sol then started to write some actual debug shaders (photo cropped so you don't see me sitting there in underwear):\r\n\r\n<img width=\"1347\" height=\"567\" alt=\"photo_tv_godot_ambient_shader_cropped\" src=\"https://github.com/user-attachments/assets/37a4d166-b855-467b-9578-e67032e2bf5c\" />\r\n\r\nAt some point I asked it to try to take screenshots (so I could do something else in the meantime) and it then gloriously came up with the idea to encode them as base64 into the log, because it only could flash software and read logs, but no file access. It took another 20 versions, totalling 50-60, until it finally showed me a version that looked exactly like the one on windows. And it claimed to have found the bug, patched the bug, documented the bug.\r\n\r\nThe reason that this appeared in the Mali GPU variant but not the Windows/NVIDIA variant was explained to me the following way: The Godot 3.6 GLES3 render can run in mobile or desktop mode and in mobile mode the lighting is calculated per vertex instead of per fragment. The bug sits in this conditional vertex exeution path. It had nothing to do with my TV specifically and should also be relevant for most android exports.\r\n\r\nThe follwing description is written by luna again, after me grilling it, doubting it and asking to explain it to me. The fix is about ten AI-written lines of code and I read them five times at least. I am now 85% sure that this is correct, mind you that I am not a shader expert, but at least I did write some tiny WebGL1 shaders as coursework seven years ago.\r\n\r\nNote that this is tested as just desribed. There is also a fix included for the toon shader branch, which is untested.\r\n\r\n> ### Problem\r\n> \r\n> In Godot 3’s GLES3 renderer, materials using USE_VERTEX_LIGHTING calculate direct light contributions in the vertex shader. The resulting direct specular lighting is passed to the fragment shader through specular_light_interp.\r\n> \r\n> The fragment shader then adds image-based lighting to the same specular_light accumulator:\r\n> \r\n> ```text\r\n>   specular_light =\r\n>       direct vertex-computed specular\r\n>       + environment/reflection-probe specular\r\n> ```\r\n> \r\n> Directional shadowing is applied afterwards. The shader used specular_light_interp.a to determine how strongly the directional shadow should affect the interpolated direct lighting:\r\n> \r\n> ```glsl\r\n>   specular_light *= mix(vec3(1.0),\r\n>                         light_attenuation,\r\n>                         specular_light_interp.a);\r\n> ```\r\n> \r\n> specular_light_interp.a is a pre-shadow weighting value. It represents the fraction of the direct vertex-computed specular lighting attributable to the directional light. It is not a measure of the fragment’s total lighting and does not indicate whether the fragment is currently lit or shadowed.\r\n> \r\n> With one dominant DirectionalLight, this value is normally close to 1.0. If the shadow map then determines that the fragment is fully shadowed, light_attenuation is approximately zero and the expression becomes:\r\n> \r\n> ```text\r\n>   (direct specular + indirect specular) × 0\r\n> ```\r\n> \r\n> The direct directional highlight is correctly removed, but the environment and reflection-probe specular is removed incorrectly as well.\r\n> \r\n> The intended result is:\r\n> \r\n> ```text\r\n>   (direct specular × shadow factor) + indirect specular\r\n> ```\r\n> \r\n> This can make metallic materials lose their environment reflections in shadows and become unnaturally flat or dark. The remaining constant ambient lighting may still keep them visible, so the result does not necessarily become black.\r\n> \r\n> The fragment-lighting path does not have this accumulation problem. It retains indirect specular in the accumulator and passes shadow attenuation directly to light_compute(), which applies it only while calculating the direct light contribution.\r\n> \r\n> ### Fix\r\n> \r\n> The vertex-lighting path now tracks direct and indirect specular lighting separately.\r\n> \r\n> A new vertex_specular_light variable stores the direct specular value received from the vertex shader:\r\n> \r\n> ```glsl\r\n>   vec3 vertex_specular_light = specular_light_interp.rgb;\r\n>   specular_light = vertex_specular_light;\r\n> ```\r\n> \r\n> Environment and reflection-probe lighting continues to be accumulated into specular_light.\r\n> \r\n> After the existing material/BRDF scaling, the indirect component is derived:\r\n> \r\n> ```glsl\r\n>   vec3 indirect_specular_light =\r\n>       specular_light - vertex_specular_light;\r\n> ```\r\n> \r\n> Directional shadow attenuation is applied only to vertex_specular_light:\r\n> \r\n> ```glsl\r\n>   vertex_specular_light *= mix(vec3(1.0),\r\n>                                light_attenuation,\r\n>                                specular_light_interp.a);\r\n> ```\r\n> \r\n> The two components are then recombined:\r\n> \r\n> ```glsl\r\n>   specular_light =\r\n>       indirect_specular_light + vertex_specular_light;\r\n> ```\r\n> \r\n> The toon and regular BRDF branches both scale vertex_specular_light with the same specular_scale used for specular_light, preserving the existing unshadowed material behavior.\r\n> \r\n> ### Shader variants and performance\r\n> \r\n> The new variables and calculations are guarded by USE_VERTEX_LIGHTING. The fragment-lighting variant remains unchanged.\r\n> \r\n> The patch does not move direct lighting into the fragment shader. Direct light calculations remain vertex-based, with no new per-pixel light loops, texture samples, varyings, or shadow-map lookups.\r\n> \r\n> The vertex-lighting fragment variant performs a small amount of additional vector bookkeeping: separate scaling, subtraction, and recombination. This may slightly increase register pressure, but preserves the intended performance advantage of vertex lighting.\r\n\r\nSo without AI nothing of this would have been possible. And I think I broke the rules by having AI code in my PR, but what do you want me to do, rename the one variable introduced? I think that there are ways to even heavily make use of AI without producing slop. And there was still a lot of human work involved so I feel entitled to the fame and glory of having this PR merged and counted as my contribution. Let me know If you want me to do anything, like testing the toon shader (I have never worked with toon shaders before).",
+      "patch_file": "prs/123351.json"
+    },
+    {
+      "id": "godot-123445",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "issue",
+      "number": 123445,
+      "url": "https://github.com/godotengine/godot/issues/123445",
+      "title": "TileSetAtlasSource.create_tile() is O(n²) - large tilesets take tens of seconds to load",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-09-12T13:11:31Z",
+      "user": "MajorFailz",
+      "cohort": "slop_search",
+      "runnable": false,
+      "head_sha": null,
+      "additions": null,
+      "changed_files": null,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "ai slop"
+        ],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": true,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "### Tested versions\n\n- Reproducible in 4.7.2.stable.official.ed1daf0bf\n- Present in source from at least 4.4-stable through 4.7-stable\n\n### System information\n\nUbuntu 24.04.5 LTS - Intel Core i9-14900KF (32 threads), 62 GB RAM - Godot 4.7.2.stable, GL Compatibility, headless\n\n### Issue description\n\n**Human Foreword:** I had this issue dealing with a large tileset and had claude diagnose, find the fix then generate this ticket. Hope that doesn't count as AI slop-pyness but it is an actual issue was lagging the hell out of my game and the fix worked. I checked that it hadn't already been reported and it still exists in the current build.\n\nLoading a large 16x16 tileset of about 56k tiles took about 43 seconds when running the game and brought the editor to a crawl, after trying different things it wasn't directly that there was a lot of tiles that was the problem, it was due to the godot code resorting every time a tile was initialized and added, splitting the same 56k tiles into separate sheets and then including all of them in the exact same board reduced load to about 1.3s. Problem isn't the large tile count, it's the way they're built internally.\n\nClanker probably wrote it up better below.\n\n---\n\n`TileSetAtlasSource::create_tile()` re-sorts the entire `tiles_ids` vector on every single insertion\n(`scene/resources/2d/tile_set.cpp`, in 4.7-stable at line 5014):\n\n```cpp\n// Create and resize the tile.\ntiles.insert(p_atlas_coords, tad);\ntiles_ids.push_back(p_atlas_coords);\ntiles_ids.sort();          // full re-sort, once per tile\n\n_create_coords_mapping_cache(p_atlas_coords);\n_queue_update_padded_texture();\n```\n\nwith `Vector<Vector2i> tiles_ids;` declared in `scene/resources/2d/tile_set.h`.\n\nBuilding a source of `n` tiles therefore costs `Σ k·log k ≈ (n²/2)·log₂ n` comparisons rather than a\nsingle `O(n log n)` sort at the end. `remove_tile()` (line 5036) and `move_tile_in_atlas()` (line 5387)\nre-sort the same way.\n\nThis is reached once per tile during resource loading. `TileSetAtlasSource::_set()` handles each\n`\"<x>:<y>/0\"` property with:\n\n```cpp\nif (!has_tile(coords)) {\n    create_tile(coords);\n}\n```\n\nso a `.tres` defining `n` tiles pays the full quadratic cost on load.\n\nThe practical effect is that a tileset built from a large commercial atlas — the kind that ships as one\nsheet of tens of thousands of 16×16 tiles — takes tens of seconds to load, and the same cost is paid\nagain on every edit in the TileSet editor. It is not obvious to users that tile *count* is the cause:\nthe natural suspects (texture size, VRAM, `use_texture_padding`, text vs. binary serialisation) are all\nmeasurably irrelevant by comparison.\n\n## Suggested fix\n\nSort lazily rather than eagerly. Replace the `tiles_ids.sort()` calls in `create_tile()`,\n`remove_tile()` and `move_tile_in_atlas()` with a dirty flag, and sort on first read in the accessors\nthat depend on the ordering (`get_tile_id()`, and iteration over `tiles_ids`). That reduces bulk\nconstruction from `O(n² log n)` to `O(n log n)` while leaving observable ordering unchanged.\n\nA smaller change — `tiles_ids.ordered_insert()` in place of `push_back()` + `sort()` — keeps the vector\nsorted at all times and cuts the constant factor substantially, but remains `O(n²)` because of the\nelement shifting.\n\n## Workaround for users\n\nSplit the atlas across multiple `TileSetAtlasSource` entries, or multiple smaller tilesets. Per the\ntable above this gives close to an N× speedup for N sources, with no reduction in the number of tiles\navailable. Many commercial packs that ship a single merged sheet also ship the same art pre-split by\ncategory; importing those instead is the least invasive route.\n\n\n### Steps to reproduce\n\nSelf-contained, no external assets. Run with\n`godot --headless --path <project> --script res://repro.gd`:\n\n```gdscript\nextends SceneTree\n\n\n## Times TileSetAtlasSource.create_tile() as the tile count grows\nfunc _initialize() -> void:\n\tfor tile_target: int in [1000, 2000, 4000, 8000, 16000, 32000]:\n\t\t# Build an empty atlas source over a placeholder texture\n\t\tvar texture := PlaceholderTexture2D.new()\n\t\ttexture.size = Vector2(2816, 8224)\n\t\tvar source := TileSetAtlasSource.new()\n\t\tsource.texture = texture\n\t\tsource.texture_region_size = Vector2i(16, 16)\n\t\tsource.use_texture_padding = false\n\n\t\t# Create tiles one at a time, as the resource loader does\n\t\tvar started_usec: int = Time.get_ticks_usec()\n\t\tvar created: int = 0\n\t\tfor y: int in 514:\n\t\t\tfor x: int in 176:\n\t\t\t\tsource.create_tile(Vector2i(x, y))\n\t\t\t\tcreated += 1\n\t\t\t\tif created >= tile_target:\n\t\t\t\t\tbreak\n\t\t\tif created >= tile_target:\n\t\t\t\tbreak\n\t\tvar elapsed_usec: int = Time.get_ticks_usec() - started_usec\n\n\t\tprint(\"%6d tiles: %8.3f s\" % [created, elapsed_usec / 1000000.0])\n\tquit()\n```\n\nObserved:\n\n| Tiles | Time | × previous |\n|------:|------:|-----------:|\n| 1,000 | 0.008 s | — |\n| 2,000 | 0.036 s | 4.50 |\n| 4,000 | 0.164 s | 4.55 |\n| 8,000 | 0.714 s | 4.35 |\n| 16,000 | 3.020 s | 4.23 |\n| 32,000 | 12.632 s | 4.18 |\n\nEach doubling of tile count roughly quadruples the time, as expected for `O(n²)`.\n\n### Confirmation against a real tileset\n\nA `TileSet` over a 2816×8224 atlas at 16×16, `use_texture_padding = false`, texture pre-warmed and\nexcluded from the measurement, loaded with `CACHE_MODE_IGNORE` in a fresh process (median of 3, or mean\nof 2 above 16,000):\n\n| Tiles | Load |\n|------:|------:|\n| 1,000 | 0.09 s |\n| 4,000 | 0.27 s |\n| 16,000 | 3.19 s |\n| 32,000 | 13.19 s |\n| 56,639 | **41.51 s** |\n\nFitting `t ≈ 1.228×10⁻⁵ n²` ms on the mid-range points predicts 12.6 s and 39.4 s for the last two rows\nagainst measured 13.2 s and 41.5 s — within 5%.\n\nComparing the two tables at 32,000 tiles (12.63 s via the API, 13.19 s via a `.tres`) puts text parsing\nat roughly 4% of load time. Serialising to binary `.res` does not measurably help, and neither does\n`use_texture_padding = false`; both are dominated by this.\n\n### The cost is per source, not per tileset\n\nSplitting the identical 56,639 tiles across more `TileSetAtlasSource` entries in a single `TileSet`\nover the same texture — every file below contains all 56,639 tiles, verified by summing\n`get_tiles_count()` across sources:\n\n| Sources | Tiles each | Load | Speedup |\n|--------:|-----------:|------:|--------:|\n| 1 | 56,639 | 41.51 s | — |\n| 2 | 28,320 | 20.41 s | 2.03× |\n| 4 | 14,160 | 10.03 s | 4.14× |\n| 8 | 7,080 | 4.99 s | 8.32× |\n| 16 | 3,540 | 2.54 s | 16.33× |\n| 32 | 1,770 | 1.34 s | 31.06× |\n\nThe speedup is linear in the number of sources, consistent with `n²` cost accumulating independently\nwithin each source's own `tiles_ids`.\n\n### Minimal reproduction project (MRP)\n\nN/A - Single script in steps to reproduce above",
+      "patch_file": null
+    },
+    {
+      "id": "godot-124675",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 124675,
+      "url": "https://github.com/godotengine/godot/pull/124675",
+      "title": "Rendering: skip redundant per-draw vertex array work",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-19T21:54:08Z",
+      "user": "JezSonic",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "3388f005f03b836c6667cee9c0cf2d4b42a93b69",
+      "additions": 29,
+      "changed_files": 5,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [
+          "ai slop"
+        ],
+        "tool_terms": [],
+        "slop": true,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_slop_discussion",
+        "expect_hard_fail": false,
+        "rationale": "Slop, hallucination, or AI-generated language in the text. Not a patch-marker fail."
+      },
+      "body": "Prior research made for this patch was AI-driven as well as some parts of this code. Although I understand the changes AI made and tried cleaning the code from AI slop, I've used it to speed up writing the patch as well\n## What problem(s) does this PR solve?\n\nWith many draw calls, the Forward+ render list repeats two lookups for every element:\n\n- `add_draw_list_bind_vertex_buffers()` calls `buffer_get_dynamic_offsets()`, which reads every buffer's driver info, although mesh vertex arrays never hold dynamic persistent buffers (the mask is always 0).\n- `_render_list_template()` calls `mesh_surface_get_vertex_arrays_and_format()`, which takes the surface's version_lock, even when the previous element in the sorted list drew the same surface with the same inputs.\n\nIn a scene with about 9 000 draw calls (Vulkan, separate rendering thread), these took about 13% of the rendering thread.\n\nThis PR records in VertexArray whether it has a dynamic buffer and skips the lookup if not. It also reuses the previous element's vertex array when the surface and its inputs are unchanged. The commands sent to the GPU are identical. The frame rate change in my test stayed within noise (paused scene, same build flags: 105.4–108.9 FPS before, 106.9–107.7 after), so the benefit is lower CPU time per draw on the rendering thread.\n\n## Additional information\n\nThis was spotted while I was working on a train sim. Here are some benchmark results from the most \"demanding\" scenery with the mentioned 9 000 draw calls (Vulkan, separate rendering thread):\n4.7.2.stable without a patch: ~8.76 ms per frame\n4.7.2.stable with a patch ~8.45 ms per frame\n",
+      "patch_file": "prs/124675.json"
+    },
+    {
+      "id": "godot-124753",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 124753,
+      "url": "https://github.com/godotengine/godot/pull/124753",
+      "title": "GLES3: Fix index buffer target in mesh_surface_update_index_region",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-21T18:45:19Z",
+      "user": "Nachi28",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "293b875d9b8a541c4948b34ba5a5c67497b5bccd",
+      "additions": 6,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## What problem(s) does this PR solve?\n\nCloses [Trail3D (and mesh_surface_update_index_region) produce no geometry on Web: index buffer is bound to GL_ARRAY_BUFFER #124726](https://github.com/godotengine/godot/issues/124726)\n\nIn `MeshStorage::mesh_surface_update_index_region()`, the index buffer was being bound to `GL_ARRAY_BUFFER` instead of `GL_ELEMENT_ARRAY_BUFFER`.\n\nWhile desktop OpenGL drivers silently tolerate target mismatches for `glBufferSubData()`, OpenGL ES 3.0 and WebGL 2.0 strictly disallow binding a buffer allocated as `GL_ELEMENT_ARRAY_BUFFER` to a different target:\n`WebGL: INVALID_OPERATION: bindBuffer: element array buffers can not be bound to a different target`\n\nThis caused dynamic index updates (such as those done each frame by `Trail3D` or procedural mesh updates) to fail on Web exports, causing the mesh to render no geometry.\n\n## Additional information\n\nThe fix corrects the binding target in `mesh_surface_update_index_region()` to `GL_ELEMENT_ARRAY_BUFFER`.\n\nIn OpenGL ES / WebGL, the element array buffer binding is stored as part of the Vertex Array Object (VAO) state rather than global context state. We unbind the active VAO (`glBindVertexArray(0)`) before binding `GL_ELEMENT_ARRAY_BUFFER` so that unbinding the buffer at the end does not clear the element buffer of whatever VAO is currently active.\n\nAdditionally:\n- Added a check to ensure `mesh->surfaces[p_surface]->index_buffer != 0` before updating to guard non-indexed surfaces safely.\n- In `mesh_add_surface()`, marked `index_buffer` with `GL_DYNAMIC_DRAW` when `ARRAY_FLAG_USE_DYNAMIC_UPDATE` is specified (previously hardcoded to `GL_STATIC_DRAW`), matching how vertex, attribute, and skin buffers are handled.\n\n## AI disclosure\n\nAI was used to help research the WebGL specification constraints and analyze the VAO state binding behavior. I implemented the fix and verified the changes and formatting against the codebase.",
+      "patch_file": "prs/124753.json"
+    },
+    {
+      "id": "godot-124756",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 124756,
+      "url": "https://github.com/godotengine/godot/pull/124756",
+      "title": "Fix error and warning count on debugger toggle button.",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-21T19:34:01Z",
+      "user": "BigFriendlyGeek42",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "da899e733ce0e0495c332f55a88228366ca49370",
+      "additions": 4,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "## What problem(s) does this PR solve?\n\nBefore, the debugger button also counted errors and warnings from inactive debug sessions when displaying the errors and warnings total count on itself.\nNow, it checks that a debug session is active before counting its errors and warnings for the total displayed on the button.\n\n- Closes #124127",
+      "patch_file": "prs/124756.json"
+    },
+    {
+      "id": "godot-124757",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 124757,
+      "url": "https://github.com/godotengine/godot/pull/124757",
+      "title": "[macOS] Fix wrong release/debug template used for universal templates.",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-21T19:36:12Z",
+      "user": "bruvzg",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "3129d5ed1030e88e56ddda58cc605f2c3a4b5ef8",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "## What problem(s) does this PR solve?\n\n- Closes https://github.com/godotengine/godot/issues/124744\n",
+      "patch_file": "prs/124757.json"
+    },
+    {
+      "id": "godot-124760",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 124760,
+      "url": "https://github.com/godotengine/godot/pull/124760",
+      "title": "tinyexr: Bound uncompressed HALF->HALF scanline copy against data_len",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-21T20:11:24Z",
+      "user": "professor-moody",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "aad9fed16555e0c4a2a31823ce5ba202787e8ee8",
+      "additions": 6,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## Summary\n\nIn `thirdparty/tinyexr/tinyexr.h`, `tinyexr::DecodePixelData()` (`lines 5591-5710`) decodes uncompressed scanline pixel data (`compression_type == TINYEXR_COMPRESSIONTYPE_NONE`) across four pixel-type sub-branches. Three of the four sub-branches verify that reading `width` elements from `line_ptr` does not exceed `data_ptr + data_len`:\n\n- **`HALF -> FLOAT`** (`thirdparty/tinyexr/tinyexr.h:5629-5633`):\n  ```cpp\n  if (reinterpret_cast<const unsigned char *>(line_ptr + width) >\n      (data_ptr + data_len)) {\n    // Insufficient data size\n    return false;\n  }\n  ```\n- **`FLOAT -> FLOAT`** (`thirdparty/tinyexr/tinyexr.h:5664-5668`): checks `reinterpret_cast<const unsigned char *>(line_ptr + width) > (data_ptr + data_len)`.\n- **`UINT -> UINT`** (`thirdparty/tinyexr/tinyexr.h:5692-5696`): checks `reinterpret_cast<const unsigned char *>(line_ptr + width) > (data_ptr + data_len)`.\n\nHowever, the first sub-branch — **`HALF -> HALF`** (`channels[c].pixel_type == TINYEXR_PIXELTYPE_HALF && requested_pixel_types[c] == TINYEXR_PIXELTYPE_HALF`, `thirdparty/tinyexr/tinyexr.h:5600-5619`) — omits this check and immediately loops `for (int u = 0; u < width; u++)` calling `tinyexr::cpy2(&(hf.u), line_ptr + u)` (`line 5614`). Because `DecodeChunk` only checks that a scanline chunk's declared `data_len` fits within the remaining input buffer without requiring `data_len >= width * pixel_data_size`, a truncated or malformed uncompressed `HALF` scanline chunk with `data_len < width * sizeof(uint16_t)` causes `LoadEXRImageFromMemory` / `LoadEXRImageFromFile` (which default `requested_pixel_types[c]` to `TINYEXR_PIXELTYPE_HALF`) to read past `data_ptr + data_len` (heap-based buffer over-read, `CWE-125`).\n\n## Impact on Godot\n\n- Similar to `GH-124638` (`3e7eda1f0838c0ac5ce6eac023dbb0df8c40d10b`), Godot's `ImageLoaderTinyEXR::load_image` (`modules/tinyexr/image_loader_tinyexr.cpp:74-80`, `GH-13490`) sets `exr_header.requested_pixel_types[i] = TINYEXR_PIXELTYPE_FLOAT` for `TINYEXR_PIXELTYPE_HALF` channels (taking the guarded `HALF -> FLOAT` branch at line `5629` before converting back to `FORMAT_RH`/`RGH`/`RGBH`/`RGBAH` via `Math::make_half_float`), while `thirdparty/tinyexr/tinyexr.cc` compiles the full `TINYEXR_IMPLEMENTATION` (`LoadEXRImageFromMemory` / `LoadEXRImageFromFile`) with the unguarded `HALF -> HALF` loop in `DecodePixelData`.\n- This PR adds the matching `reinterpret_cast<const unsigned char *>(line_ptr + width) > (data_ptr + data_len)` guard to the `HALF -> HALF` sub-branch (`thirdparty/tinyexr/tinyexr.h:5610`). (If desired, we can also add a corresponding `thirdparty/tinyexr/patches/0003-fix-uncompressed-half-scanline-bounds.patch` file and `thirdparty/README.md` entry referencing this PR number.)\n\n## Testing\n\n- Verified with `SaveEXRImageToMemory` -> `LoadEXRImageFromMemory` native-`HALF` (`TINYEXR_COMPRESSIONTYPE_NONE`) round-trips and truncated-chunk inputs under both Release (`-O3 -DNDEBUG`) and AddressSanitizer + UndefinedBehaviorSanitizer (`-fsanitize=address,undefined`).\n\n---\n*Note: This patch was prepared with AI assistance and verified by human review and local test execution.*\n",
+      "patch_file": "prs/124760.json"
+    },
+    {
+      "id": "godot-124762",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 124762,
+      "url": "https://github.com/godotengine/godot/pull/124762",
+      "title": "macOS: Fix universal export using the wrong template build",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-21T21:28:55Z",
+      "user": "Bit-Byte5",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "48505e152e9ad1eff02196e86e6a3cac140a66bd",
+      "additions": 2,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "cursor"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## What problem(s) does this PR solve?\n\n- Closes #124744\n\nUniversal macOS exports inverted which template binaries they kept. `--export-release` packaged the debug `.arm64` and `.x86_64` slices, and `--export-debug` packaged the release slices. Single-architecture exports were unaffected.\n\n`EditorExportPlatformMacOS::export_project` skips template entries that are not the selected build. The universal branch introduced in #124408 skipped files that *did* match `binary_to_use_base` (`godot_macos_release.` or `godot_macos_debug.`). This negates that test so both architecture slices of the requested build are kept and the other build is skipped, matching the non-universal branch.\n\n## Additional information\n\nUse of AI: an autonomous coding assistant (Cursor, Grok) located the inverted `begins_with` check from issue #124744, applied the one-line condition change, and opened this pull request on behalf of Bit-Byte5. The diagnosis and the proposed negation come from the issue report; the change was not otherwise verified by running a macOS export locally.\n\n\nMade with [Cursor](https://cursor.com)",
+      "patch_file": "prs/124762.json"
+    },
+    {
+      "id": "godot-124763",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 124763,
+      "url": "https://github.com/godotengine/godot/pull/124763",
+      "title": "r128: Update to 1.6.2",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-21T22:10:34Z",
+      "user": "Chubercik",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "03741896869f489191573c1b6cb6ea9760446a1b",
+      "additions": 18,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "Diff: https://github.com/fahickman/r128/compare/6fc177671c47640d5bb69af10cf4ee91050015a1...v1.6.2\r\n\r\nI'm not sure why `r128.c` was thought to be pulled from upstream - it's not, it's ours; see the projects' [`README.md`](https://github.com/fahickman/r128/blob/69ba68f1ea666c9136cf56e0105b0cbbe9cd1534/README.md):\r\n\r\n```\r\nThere is no separate .c file for this library.\r\n```\r\n\r\n---\r\n\r\nAs for the changes since we last updated:\r\n\r\n1.6.1 - 2024/12/27\r\n- Fix mingw/clang-cl intrinsics-related compile errors.\r\n\r\n1.6.2 - 2026/9/21:\r\n- Fix compile errors around intrinsics on non-MSVC compilers.\r\n",
+      "patch_file": "prs/124763.json"
+    },
+    {
+      "id": "godot-124768",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 124768,
+      "url": "https://github.com/godotengine/godot/pull/124768",
+      "title": "Some funny messages. Useless, but funny :D",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-22T05:35:48Z",
+      "user": "Levonze",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "1a3672bdfb3a56042ae8a2600a71262590ecb0a9",
+      "additions": 31,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "## What problem(s) does this PR solve?\r\n\r\n- Closes problem of everyday boredom, and just makes Godot more friendly by joking, how they say: \"Beginner Friendly\". Though it is now heavier on a few kilobytes...\r\n\r\n## Additional information\r\nWhen creating project, Godot will show you a joke message about name of it\r\n\r\n## Usage of AI\r\n- For commit description and name. Code made by me",
+      "patch_file": "prs/124768.json"
+    },
+    {
+      "id": "godot-124776",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 124776,
+      "url": "https://github.com/godotengine/godot/pull/124776",
+      "title": "Fix OpenXR exit crash",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-22T12:05:09Z",
+      "user": "KoBeWi",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "3bca806235e2f7e462412348b3efd3be9717e2b1",
+      "additions": 4,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "<!--\nPlease target the `master` branch. We will take care of backporting relevant fixes to older versions.\n\nBefore submitting, please read our checklist for contributors:\nhttps://contributing.godotengine.org/en/latest/development/engine/introduction.html#checklist-for-new-contributors\n\nUse of AI must be disclosed and should include a description of how it was used.\n-->\n\n## What problem(s) does this PR solve?\n\n- Closes #124496\n\n<!--\nProvide additional information and explanation of your PR, including areas that you are uncertain of or require special attention from reviewers. For examples, please read our pull request guidelines: https://contributing.godotengine.org/en/latest/development/contribution_rules.html#explain-your-contributions\n-->\n",
+      "patch_file": "prs/124776.json"
+    },
+    {
+      "id": "godot-124778",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 124778,
+      "url": "https://github.com/godotengine/godot/pull/124778",
+      "title": "Fix texture type validation error when using auto exposure with XR.",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-22T12:29:10Z",
+      "user": "blueskythlikesclouds",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "03bb59524f2b8f645d7b7c58b85a754c15b76dcd",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "## What problem(s) does this PR solve?\r\n\r\n- Closes #124769\r\n\r\nExplicitly passes the left eye texture to the luminance reduction shader to fix the texture type validation error. It already worked like this before on GPU drivers that didn't care about the texture type, so this is more of a regression fix. #69000 would likely require a separate fix with a very different implementation.\r\n\r\n## Additional information\r\n\r\nN/A.",
+      "patch_file": "prs/124778.json"
+    },
+    {
+      "id": "godot-124791",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 124791,
+      "url": "https://github.com/godotengine/godot/pull/124791",
+      "title": "CI: Fix `make_rst.py` typo",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-22T19:20:50Z",
+      "user": "Repiteo",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "67a1d3ddc476269d6c80053642115966c81f2187",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged, no filled disclosure, no slop language, no hard markers."
+      },
+      "body": "- Follow-up to #124752\r\n\r\n## What problem(s) does this PR solve?\r\n\r\nFixes a typo that caused the wrong `set` function to be called. `remove()` was used when `discard()` was intended, as the former raises a KeyError while the latter does not",
+      "patch_file": "prs/124791.json"
+    },
+    {
+      "id": "godot-124793",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 124793,
+      "url": "https://github.com/godotengine/godot/pull/124793",
+      "title": "🤖 Filter stage-specific shader inputs from group menus",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-22T20:21:13Z",
+      "user": "oovz",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "b032b141f18ad5ccfd4f351b6e7591ffca7dbbba",
+      "additions": 15,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "> [!INFO] *AI disclosure*: This contribution was authored by on an autonomous AI agent, on behalf of a user to fix invalid input presets in visual shader groups.\n\n## What problem(s) does this PR solve?\n\nThe Create Shader Node menu offers stage-specific inputs inside groups, although the Input dropdown excludes them. Filter named presets through the existing group input list. Keep global inputs such as TIME and the generic Input node available.\n\n- Closes #124755.\n\n## Additional information\n\nValidation: formatting, include validation, diff checks, and MSVC compilation of the changed translation unit passed. Compilation used `debug_symbols=no` after the local PDB manager failed with C1902. Full editor menu verification remains pending.\n\nThis draft needs menu checks in standalone and nested groups, including search, connection suggestions, and favorites. Source review and the patch were produced with AI assistance.\n",
+      "patch_file": "prs/124793.json"
+    },
+    {
+      "id": "godot-124797",
+      "source": "github",
+      "repo": "godotengine/godot",
+      "kind": "pull_request",
+      "number": 124797,
+      "url": "https://github.com/godotengine/godot/pull/124797",
+      "title": "Fix shader group input menu #124755",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-10-22T21:52:50Z",
+      "user": "oovz",
+      "cohort": "closed_unmerged",
+      "runnable": true,
+      "head_sha": "436e12e443546b422f4e4eb9b0692a4003380d84",
+      "additions": 200,
+      "changed_files": 5,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "closed_unmerged_sample",
+        "expect_hard_fail": false,
+        "rationale": "Closed without merge. Population sample, not a slop label."
+      },
+      "body": "Use the existing group input list when checking named Input presets. Preserve global inputs and the generic Input option in groups.\n\n## What problem(s) does this PR solve?\n\n- Closes #124755 \n\n## Additional information\n\nThis PR now checks for the eligibility of input with the shared utility. A new test `modules/visual_shader/tests/test_visual_shader_input.h` is created.\n\nAI is used in asserting my previous naive approach and propose the new fix, including test file completion. Implementation is done and reviewed by me\n",
+      "patch_file": "prs/124797.json"
+    }
+  ],
+  "mail_threads": []
+}

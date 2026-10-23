@@ -1,0 +1,2056 @@
+{
+  "schema_version": 1,
+  "bench": 2,
+  "project": "flink",
+  "repo": "apache/flink",
+  "window": "2025-10-22..2026-10-22",
+  "generated_at": "2026-10-22T16:53:28.909322+00:00",
+  "why": "Dev list discussed AI-assisted contributions, AGENTS.md, and a disclosure checkbox in 2026.",
+  "sampling": "Up to a fixed number of latest matches per quarter. Not a census. A zero-hit quarter is split before it is trusted.",
+  "not_claimed": [
+    "A tool mention or filled Generated-by line is not proof the change should fail.",
+    "Slop language in discussion is not proof the attached patch is slop.",
+    "Search totals are not the percent of the project that is AI-authored."
+  ],
+  "stats": {
+    "cases": 51,
+    "runnable_prs": 51,
+    "by_class": {
+      "merged_control": 21,
+      "ai_disclosed": 24,
+      "ai_tool_mention": 6
+    },
+    "objective_slop": 0,
+    "ai_slop_discussion": 0,
+    "ai_disclosed": 24,
+    "merged_control": 21,
+    "mail_threads": 2,
+    "mail_slop_language": 0
+  },
+  "cases": [
+    {
+      "id": "flink-27319",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27319,
+      "url": "https://github.com/apache/flink/pull/27319",
+      "title": "[FLINK-38776][table] Fix incorrect auxiliary group field names",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-12-04T11:24:09Z",
+      "user": "dylanhz",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "d0b0dd0659282eaf361a1c4be640a1da606234ed",
+      "additions": 61,
+      "changed_files": 5,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "<!--\r\n*Thank you very much for contributing to Apache Flink - we are happy that you want to help us improve Flink. To help the community review your contribution in the best possible way, please go through the checklist below, which will get the contribution into a shape in which it can be best reviewed.*\r\n\r\n*Please understand that we do not do this to make contributions to Flink a hassle. In order to uphold a high standard of quality for code contributions, while at the same time managing a large number of contributions, we need contributors to prepare the contributions well, and give reviewers enough contextual information for the review. Please also understand that contributions that do not follow this guide will take longer to review and thus typically be picked up with lower priority by the community.*\r\n\r\n## Contribution Checklist\r\n\r\n  - Make sure that the pull request corresponds to a [JIRA issue](https://issues.apache.org/jira/projects/FLINK/issues). Exceptions are made for typos in JavaDoc or documentation files, which need no JIRA issue.\r\n  \r\n  - Name the pull request in the form \"[FLINK-XXXX] [component] Title of the pull request\", where *FLINK-XXXX* should be replaced by the actual issue number. Skip *component* if you are unsure about which is the best component.\r\n  Typo fixes that have no associated JIRA issue should be named following this pattern: `[hotfix] [docs] Fix typo in event time introduction` or `[hotfix] [javadocs] Expand JavaDoc for PuncuatedWatermarkGenerator`.\r\n\r\n  - Fill out the template below to describe the changes contributed by the pull request. That will give reviewers the context they need to do the review.\r\n  \r\n  - Make sure that the change passes the automated tests, i.e., `mvn clean verify` passes. You can set up Azure Pipelines CI to do that following [this guide](https://cwiki.apache.org/confluence/display/FLINK/Azure+Pipelines#AzurePipelines-Tutorial:SettingupAzurePipelinesforaforkoftheFlinkrepository).\r\n\r\n  - Each pull request should address only one issue, not mix up code from multiple issues.\r\n  \r\n  - Each commit in the pull request has a meaningful commit message (including the JIRA id)\r\n\r\n  - Once all items of the checklist are addressed, remove the above text and this checklist, leaving only the filled out template below.\r\n\r\n\r\n**(The sections below can be removed for hotfixes of typos)**\r\n-->\r\n\r\n## What is the purpose of the change\r\n\r\nFix incorrect auxiliary group field names.\r\n\r\n## Brief change log\r\n\r\n\r\n## Verifying this change\r\n\r\n`AggregateReduceGroupingTest`\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): (no)\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: (no)\r\n  - The serializers: (no)\r\n  - The runtime per-record code paths (performance sensitive): (no)\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: (no)\r\n  - The S3 file system connector: (no)\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? (no)\r\n  - If yes, how is the feature documented? (not documented)\r\n",
+      "patch_file": "prs/27319.json"
+    },
+    {
+      "id": "flink-27320",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27320,
+      "url": "https://github.com/apache/flink/pull/27320",
+      "title": "[FLINK-38771][table] Allow scalar args for multi-table PTFs",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-12-04T16:51:42Z",
+      "user": "twalthr",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "07e9edf1c4cba2cbdafd2091fca31d15d4b7e745",
+      "additions": 52,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nFixes a bug in validation of PTF args that did not allow scalar args next to multiple table args.\r\n\r\n## Brief change log\r\n\r\nUpdated validation.\r\n\r\n## Verifying this change\r\n\r\nThis change added tests and can be verified as follows: `ProcessTableFunctionSemanticTests`\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): no\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\r\n  - The serializers: no\r\n  - The runtime per-record code paths (performance sensitive): no\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\r\n  - The S3 file system connector: no\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? no\r\n  - If yes, how is the feature documented? not applicable\r\n",
+      "patch_file": "prs/27320.json"
+    },
+    {
+      "id": "flink-27322",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27322,
+      "url": "https://github.com/apache/flink/pull/27322",
+      "title": "[hotfix][table] Fix incorrect error message of RootArgumentTypeStrategy",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-12-05T03:30:17Z",
+      "user": "dylanhz",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "f3284ebd21c4207fe75b6521d30dfa96ab2e4b3b",
+      "additions": 2,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "<!--\r\n*Thank you very much for contributing to Apache Flink - we are happy that you want to help us improve Flink. To help the community review your contribution in the best possible way, please go through the checklist below, which will get the contribution into a shape in which it can be best reviewed.*\r\n\r\n*Please understand that we do not do this to make contributions to Flink a hassle. In order to uphold a high standard of quality for code contributions, while at the same time managing a large number of contributions, we need contributors to prepare the contributions well, and give reviewers enough contextual information for the review. Please also understand that contributions that do not follow this guide will take longer to review and thus typically be picked up with lower priority by the community.*\r\n\r\n## Contribution Checklist\r\n\r\n  - Make sure that the pull request corresponds to a [JIRA issue](https://issues.apache.org/jira/projects/FLINK/issues). Exceptions are made for typos in JavaDoc or documentation files, which need no JIRA issue.\r\n  \r\n  - Name the pull request in the form \"[FLINK-XXXX] [component] Title of the pull request\", where *FLINK-XXXX* should be replaced by the actual issue number. Skip *component* if you are unsure about which is the best component.\r\n  Typo fixes that have no associated JIRA issue should be named following this pattern: `[hotfix] [docs] Fix typo in event time introduction` or `[hotfix] [javadocs] Expand JavaDoc for PuncuatedWatermarkGenerator`.\r\n\r\n  - Fill out the template below to describe the changes contributed by the pull request. That will give reviewers the context they need to do the review.\r\n  \r\n  - Make sure that the change passes the automated tests, i.e., `mvn clean verify` passes. You can set up Azure Pipelines CI to do that following [this guide](https://cwiki.apache.org/confluence/display/FLINK/Azure+Pipelines#AzurePipelines-Tutorial:SettingupAzurePipelinesforaforkoftheFlinkrepository).\r\n\r\n  - Each pull request should address only one issue, not mix up code from multiple issues.\r\n  \r\n  - Each commit in the pull request has a meaningful commit message (including the JIRA id)\r\n\r\n  - Once all items of the checklist are addressed, remove the above text and this checklist, leaving only the filled out template below.\r\n\r\n\r\n**(The sections below can be removed for hotfixes of typos)**\r\n-->\r\n\r\n## What is the purpose of the change\r\n\r\n\r\n## Brief change log\r\n\r\n\r\n## Verifying this change\r\n\r\n`InputTypeStrategiesTest`\r\n\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): (no)\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: (no)\r\n  - The serializers: (no)\r\n  - The runtime per-record code paths (performance sensitive): (no)\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: (no)\r\n  - The S3 file system connector: (no)\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? (no)\r\n  - If yes, how is the feature documented? (not documented)\r\n",
+      "patch_file": "prs/27322.json"
+    },
+    {
+      "id": "flink-27323",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27323,
+      "url": "https://github.com/apache/flink/pull/27323",
+      "title": "[hotfix] Cherry-pick a few fixes to 2.2 release",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-12-05T03:40:59Z",
+      "user": "lihaosky",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "ea2763862ee02d7e93ad35f6d12a8fe285818900",
+      "additions": 184,
+      "changed_files": 10,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "CP https://github.com/apache/flink/pull/27311, https://github.com/apache/flink/pull/27304 and https://github.com/apache/flink/pull/27296",
+      "patch_file": "prs/27323.json"
+    },
+    {
+      "id": "flink-27324",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27324,
+      "url": "https://github.com/apache/flink/pull/27324",
+      "title": "[FLINK-38759][runtime] Refactor application mode with PackagedProgramApplication",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-12-05T06:56:20Z",
+      "user": "eemario",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "e1dd6fe629413cdcb489c9b27eba1c976da15a53",
+      "additions": 746,
+      "changed_files": 21,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nThis pull request refactors Application Mode and use PackagedProgramApplication instead of ApplicationDispatcherBootstrap.\r\n\r\n\r\n## Brief change log\r\n\r\n- Use PackagedProgramApplication to bootstrap the Dispatcher in Application Mode\r\n- Update StreamContextEnvironment, ExecutionPlan and Dispatcher to associate jobs with their owning application\r\n\r\n\r\n## Verifying this change\r\n\r\nThis change added tests and can be verified as follows:\r\n\r\n- Added test that validates the behavior of the Dispatcher bootstrap\r\n- Updated integration tests for end-to-end Application Mode execution\r\n- Manually verified the change by running in Standalone Application Mode\r\n\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): (no)\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: (no)\r\n  - The serializers: (no)\r\n  - The runtime per-record code paths (performance sensitive): (no)\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: (no)\r\n  - The S3 file system connector: (no)\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? (no)\r\n  - If yes, how is the feature documented? (not applicable)\r\n",
+      "patch_file": "prs/27324.json"
+    },
+    {
+      "id": "flink-27325",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27325,
+      "url": "https://github.com/apache/flink/pull/27325",
+      "title": "[FLINK-38740][table] Introduce Welford's online algorithm for variance related functions to avoid catastrophic cancellation in naive algorithm",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-12-05T09:18:49Z",
+      "user": "dylanhz",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "6f351d07bc6f8663f38aa6acfeec63ad77941e3a",
+      "additions": 1138,
+      "changed_files": 20,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "<!--\r\n*Thank you very much for contributing to Apache Flink - we are happy that you want to help us improve Flink. To help the community review your contribution in the best possible way, please go through the checklist below, which will get the contribution into a shape in which it can be best reviewed.*\r\n\r\n*Please understand that we do not do this to make contributions to Flink a hassle. In order to uphold a high standard of quality for code contributions, while at the same time managing a large number of contributions, we need contributors to prepare the contributions well, and give reviewers enough contextual information for the review. Please also understand that contributions that do not follow this guide will take longer to review and thus typically be picked up with lower priority by the community.*\r\n\r\n## Contribution Checklist\r\n\r\n  - Make sure that the pull request corresponds to a [JIRA issue](https://issues.apache.org/jira/projects/FLINK/issues). Exceptions are made for typos in JavaDoc or documentation files, which need no JIRA issue.\r\n  \r\n  - Name the pull request in the form \"[FLINK-XXXX] [component] Title of the pull request\", where *FLINK-XXXX* should be replaced by the actual issue number. Skip *component* if you are unsure about which is the best component.\r\n  Typo fixes that have no associated JIRA issue should be named following this pattern: `[hotfix] [docs] Fix typo in event time introduction` or `[hotfix] [javadocs] Expand JavaDoc for PuncuatedWatermarkGenerator`.\r\n\r\n  - Fill out the template below to describe the changes contributed by the pull request. That will give reviewers the context they need to do the review.\r\n  \r\n  - Make sure that the change passes the automated tests, i.e., `mvn clean verify` passes. You can set up Azure Pipelines CI to do that following [this guide](https://cwiki.apache.org/confluence/display/FLINK/Azure+Pipelines#AzurePipelines-Tutorial:SettingupAzurePipelinesforaforkoftheFlinkrepository).\r\n\r\n  - Each pull request should address only one issue, not mix up code from multiple issues.\r\n  \r\n  - Each commit in the pull request has a meaningful commit message (including the JIRA id)\r\n\r\n  - Once all items of the checklist are addressed, remove the above text and this checklist, leaving only the filled out template below.\r\n\r\n\r\n**(The sections below can be removed for hotfixes of typos)**\r\n-->\r\n\r\n## What is the purpose of the change\r\n\r\nFix catastrophic cancellation in naive algorithm of variance related functions.\r\n\r\n\r\n## Brief change log\r\n\r\n- Introduce Welford's online algorithm for variance related functions.\r\n- Add a new internal built-in agg function WELFORD_M2.\r\n- Add new rewrite rule to reuse the intermediate result welford_m2 for all variance related functions.\r\n\r\n## Verifying this change\r\n\r\nNew test class: `MathAggFunctionITCase`.\r\nUpdate some existing tests using variance related functions.\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): (no)\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: (yes)\r\n  - The serializers: (no)\r\n  - The runtime per-record code paths (performance sensitive): (no)\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: (no)\r\n  - The S3 file system connector: (no)\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? (no)\r\n  - If yes, how is the feature documented? (not documented)\r\n",
+      "patch_file": "prs/27325.json"
+    },
+    {
+      "id": "flink-27735",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27735,
+      "url": "https://github.com/apache/flink/pull/27735",
+      "title": "[FLINK-39201] Add test coverage for null values and error constraint",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-04T12:53:20Z",
+      "user": "fapaul",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "66993e488aeca40034ae395f5772353e72f1ee8c",
+      "additions": 61,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "<!--\r\n*Thank you very much for contributing to Apache Flink - we are happy that you want to help us improve Flink. To help the community review your contribution in the best possible way, please go through the checklist below, which will get the contribution into a shape in which it can be best reviewed.*\r\n\r\n*Please understand that we do not do this to make contributions to Flink a hassle. In order to uphold a high standard of quality for code contributions, while at the same time managing a large number of contributions, we need contributors to prepare the contributions well, and give reviewers enough contextual information for the review. Please also understand that contributions that do not follow this guide will take longer to review and thus typically be picked up with lower priority by the community.*\r\n\r\n## Contribution Checklist\r\n\r\n  - Make sure that the pull request corresponds to a [JIRA issue](https://issues.apache.org/jira/projects/FLINK/issues). Exceptions are made for typos in JavaDoc or documentation files, which need no JIRA issue.\r\n  \r\n  - Name the pull request in the form \"[FLINK-XXXX] [component] Title of the pull request\", where *FLINK-XXXX* should be replaced by the actual issue number. Skip *component* if you are unsure about which is the best component.\r\n  Typo fixes that have no associated JIRA issue should be named following this pattern: `[hotfix] [docs] Fix typo in event time introduction` or `[hotfix] [javadocs] Expand JavaDoc for PuncuatedWatermarkGenerator`.\r\n\r\n  - Fill out the template below to describe the changes contributed by the pull request. That will give reviewers the context they need to do the review.\r\n  \r\n  - Make sure that the change passes the automated tests, i.e., `mvn clean verify` passes. You can set up Azure Pipelines CI to do that following [this guide](https://cwiki.apache.org/confluence/display/FLINK/Azure+Pipelines#AzurePipelines-Tutorial:SettingupAzurePipelinesforaforkoftheFlinkrepository).\r\n\r\n  - Each pull request should address only one issue, not mix up code from multiple issues.\r\n  \r\n  - Each commit in the pull request has a meaningful commit message (including the JIRA id)\r\n\r\n  - Once all items of the checklist are addressed, remove the above text and this checklist, leaving only the filled out template below.\r\n\r\n\r\n**(The sections below can be removed for hotfixes of typos)**\r\n-->\r\n\r\n## What is the purpose of the change\r\n\r\nAdd more tests requested in https://github.com/apache/flink/pull/27730\r\n\r\n\r\n## Brief change log\r\n\r\n  - Add two new tests covering the the correct handling of skipping null values for length constraint even if error is enabled\r\n\r\n\r\n\r\n## Verifying this change\r\n\r\nN/A change itself is test only\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): (yes / **no**)\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: (yes / **no**)\r\n  - The serializers: (yes / **no** / don't know)\r\n  - The runtime per-record code paths (performance sensitive): (yes / **no** / don't know)\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: (yes / **no** / don't know)\r\n  - The S3 file system connector: (yes / **no** / don't know)\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? (yes / **no**)\r\n  - If yes, how is the feature documented? (not applicable / docs / JavaDocs / not documented)\r\n",
+      "patch_file": "prs/27735.json"
+    },
+    {
+      "id": "flink-27739",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27739,
+      "url": "https://github.com/apache/flink/pull/27739",
+      "title": "[BP-2.2][FLINK-39150][runtime] Fix join operator crashes jobs when using custom types or custom type serializers",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-05T11:36:48Z",
+      "user": "noorall",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "bd48f7dc867102aaaf7d9bf6a7d10c98199c9a65",
+      "additions": 360,
+      "changed_files": 12,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nThis bug is caused by two factors that jointly lead to deserialization failures:\r\n\r\n**Cause 1: The whitelist-based routing strategy of `PlannerComponentClassLoader` prevents fallback to the parent for non-whitelisted classes.**  \r\n`PlannerComponentClassLoader` uses a strict **whitelist-based** routing strategy: only whitelisted packages are loaded according to the configured lookup order (e.g., parent-first/component-first) and are allowed to fall back to the parent `ClassLoader` when not found.  \r\nFor **non-whitelisted** packages (e.g., user-defined POJOs), it defaults to **component-only** lookup and does not fall back to the parent. Since these user classes exist only in the user JAR (typically visible to the parent/user class loader) and not in the isolated `table-planner-*.jar` (the component), deserialization fails with a `ClassNotFoundException`.\r\n\r\n**Cause 2: Deserialization incorrectly uses the current thread’s class loader instead of the user class loader.**  \r\nDuring deserialization of join-type related objects (and similar operator metadata), the code uses `Thread.currentThread().getContextClassLoader()` rather than the user class loader. In E2E scenarios, classes from the user JAR are only visible to the user class loader and are not necessarily present in the current thread’s class loader. As a result, operators that use user-jar-defined classes as join types cannot be deserialized correctly.\r\n\r\n**Required fix:**  \r\n1. Change the default loading behavior for non-whitelisted packages so that for non-whitelisted packages, it will automatically fall back to the parent/component `ClassLoader`. This ensures custom user types can be resolved during the AdaptiveJoin deserialization.\r\n2. Use `UserClassLoader` instead of the current thread context `ClassLoader`.\r\n\r\n## Brief change log\r\n\r\n  - *Fix join operator crashes jobs when using custom types or custom type serializers*\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): (yes / **no**)\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: (yes / **no**)\r\n  - The serializers: (yes / **no** / don't know)\r\n  - The runtime per-record code paths (performance sensitive): (yes / **no** / don't know)\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: (yes / **no** / don't know)\r\n  - The S3 file system connector: (yes / **no** / don't know)\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? (yes / **no**)\r\n  - If yes, how is the feature documented? (not applicable / docs / JavaDocs / **not documented**)\r\n",
+      "patch_file": "prs/27739.json"
+    },
+    {
+      "id": "flink-27740",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27740,
+      "url": "https://github.com/apache/flink/pull/27740",
+      "title": "[FLINK-39182][runtime/test] Fix the flaky test class ExecutionGraphRestartTest",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-05T13:01:10Z",
+      "user": "Izeren",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "0d46bb00e992c068808bbaefac6f69855b767a44",
+      "additions": 325,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "# Reopen of #27719\r\n\r\n## What is the purpose of the change\r\n\r\nFix the flaky test class `ExecutionGraphRestartTest`.\r\n\r\n**Root cause:** The original test used `ComponentMainThreadExecutorServiceAdapter.forMainThread()` which wraps a `DirectScheduledExecutorService` — its `execute(Runnable)` runs inline on the **calling** thread. When the `EXECUTOR_RESOURCE` thread ran deployment callbacks via `mainThreadExecutor.execute(callback)`, the callback executed on the `EXECUTOR_RESOURCE` thread while the test thread simultaneously mutated `ExecutionGraph` state, causing a race condition.\r\n\r\n## Brief change log\r\n\r\n- Use a dedicated single-thread executor instead of `forMainThread()` to serialize all `ExecutionGraph` state mutations on one thread\r\n- Use `runInMainThread` helper with `.join()` for exception propagation\r\n- Add `offerSlotsFromMainThread` / `tryOfferSlotsFromMainThread` methods to `SlotPoolUtils` for callers already on the main thread (avoids self-deadlock from re-entrant `CompletableFuture.runAsync().join()`)\r\n- Create slot pool with correct `mainThreadExecutor` via `DeclarativeSlotPoolBridgeBuilder.setMainThreadExecutor()`\r\n- Move slot pool lifecycle to `@BeforeEach` / `@AfterEach`\r\n- Extract `createSchedulerBuilder` helper to reduce per-test boilerplate\r\n- Split `testFailingExecutionAfterRestart` into two phases to account for async restart callback queuing\r\n\r\n## Verifying this change\r\n\r\nThis change was verified by running `@RepeatedTest(300)` on all 7 test methods (2100 total executions) with 0 failures.\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): **no**\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: **no**\r\n  - The serializers: **no**\r\n  - The runtime per-record code paths (performance sensitive): **no**\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: **no**\r\n  - The S3 file system connector: **no**\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? **no**\r\n  - If yes, how is the feature documented? **not applicable**",
+      "patch_file": "prs/27740.json"
+    },
+    {
+      "id": "flink-27742",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27742,
+      "url": "https://github.com/apache/flink/pull/27742",
+      "title": "[FLINK-39221][table] Add AGGREGATE_VALUES rule for constant folding o…",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-06T10:30:46Z",
+      "user": "fapaul",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "1adeecc2e239094aa8f29de63ec6db3f6ea821a6",
+      "additions": 159,
+      "changed_files": 7,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "…f global aggregates\r\n\r\n\r\n\r\n<!--\r\n*Thank you very much for contributing to Apache Flink - we are happy that you want to help us improve Flink. To help the community review your contribution in the best possible way, please go through the checklist below, which will get the contribution into a shape in which it can be best reviewed.*\r\n\r\n*Please understand that we do not do this to make contributions to Flink a hassle. In order to uphold a high standard of quality for code contributions, while at the same time managing a large number of contributions, we need contributors to prepare the contributions well, and give reviewers enough contextual information for the review. Please also understand that contributions that do not follow this guide will take longer to review and thus typically be picked up with lower priority by the community.*\r\n\r\n## Contribution Checklist\r\n\r\n  - Make sure that the pull request corresponds to a [JIRA issue](https://issues.apache.org/jira/projects/FLINK/issues). Exceptions are made for typos in JavaDoc or documentation files, which need no JIRA issue.\r\n  \r\n  - Name the pull request in the form \"[FLINK-XXXX] [component] Title of the pull request\", where *FLINK-XXXX* should be replaced by the actual issue number. Skip *component* if you are unsure about which is the best component.\r\n  Typo fixes that have no associated JIRA issue should be named following this pattern: `[hotfix] [docs] Fix typo in event time introduction` or `[hotfix] [javadocs] Expand JavaDoc for PuncuatedWatermarkGenerator`.\r\n\r\n  - Fill out the template below to describe the changes contributed by the pull request. That will give reviewers the context they need to do the review.\r\n  \r\n  - Make sure that the change passes the automated tests, i.e., `mvn clean verify` passes. You can set up Azure Pipelines CI to do that following [this guide](https://cwiki.apache.org/confluence/display/FLINK/Azure+Pipelines#AzurePipelines-Tutorial:SettingupAzurePipelinesforaforkoftheFlinkrepository).\r\n\r\n  - Each pull request should address only one issue, not mix up code from multiple issues.\r\n  \r\n  - Each commit in the pull request has a meaningful commit message (including the JIRA id)\r\n\r\n  - Once all items of the checklist are addressed, remove the above text and this checklist, leaving only the filled out template below.\r\n\r\n\r\n**(The sections below can be removed for hotfixes of typos)**\r\n-->\r\n\r\n## What is the purpose of the change\r\n\r\nAdd CoreRules.AGGREGATE_VALUES to PRUNE_EMPTY_RULES so the planner can replace a global aggregate over statically empty input (e.g. WHERE 1=0) with literal default Values at plan time (COUNT(*)=0, SUM=null, etc.), eliminating the GroupAggregate node entirely.\r\n\r\n\r\n## Brief change log\r\n\r\n- Enable new planner rule CoreRules.AGGREGATE_VALUES\r\n- Add plan test to verify constant folding is applied to empty aggregates\r\n\r\n\r\n## Verifying this change\r\n\r\n- New plan test\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): (yes / **no**)\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: (yes / **no**)\r\n  - The serializers: (yes / **no** / don't know)\r\n  - The runtime per-record code paths (performance sensitive): (yes / **no** / don't know)\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: (yes / **no** / don't know)\r\n  - The S3 file system connector: (yes / **no** / don't know)\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? (yes / **no**)\r\n  - If yes, how is the feature documented? (**not applicable** / docs / JavaDocs / not documented)\r\n",
+      "patch_file": "prs/27742.json"
+    },
+    {
+      "id": "flink-27743",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27743,
+      "url": "https://github.com/apache/flink/pull/27743",
+      "title": "[FLINK-38704][metrics] Fix MetricConfig.getString() to handle numeric values",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-06T11:31:07Z",
+      "user": "mukul-8",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "66dbd7880a51a979f6f73f3bf72067733f0d8253",
+      "additions": 22,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "<!--\r\n*Thank you very much for contributing to Apache Flink - we are happy that you want to help us improve Flink. To help the community review your contribution in the best possible way, please go through the checklist below, which will get the contribution into a shape in which it can be best reviewed.*\r\n\r\n*Please understand that we do not do this to make contributions to Flink a hassle. In order to uphold a high standard of quality for code contributions, while at the same time managing a large number of contributions, we need contributors to prepare the contributions well, and give reviewers enough contextual information for the review. Please also understand that contributions that do not follow this guide will take longer to review and thus typically be picked up with lower priority by the community.*\r\n\r\n## Contribution Checklist\r\n\r\n  - Make sure that the pull request corresponds to a [JIRA issue](https://issues.apache.org/jira/projects/FLINK/issues). Exceptions are made for typos in JavaDoc or documentation files, which need no JIRA issue.\r\n  \r\n  - Name the pull request in the form \"[FLINK-XXXX] [component] Title of the pull request\", where *FLINK-XXXX* should be replaced by the actual issue number. Skip *component* if you are unsure about which is the best component.\r\n  Typo fixes that have no associated JIRA issue should be named following this pattern: `[hotfix] [docs] Fix typo in event time introduction` or `[hotfix] [javadocs] Expand JavaDoc for PuncuatedWatermarkGenerator`.\r\n\r\n  - Fill out the template below to describe the changes contributed by the pull request. That will give reviewers the context they need to do the review.\r\n  \r\n  - Make sure that the change passes the automated tests, i.e., `mvn clean verify` passes. You can set up Azure Pipelines CI to do that following [this guide](https://cwiki.apache.org/confluence/display/FLINK/Azure+Pipelines#AzurePipelines-Tutorial:SettingupAzurePipelinesforaforkoftheFlinkrepository).\r\n\r\n  - Each pull request should address only one issue, not mix up code from multiple issues.\r\n  \r\n  - Each commit in the pull request has a meaningful commit message (including the JIRA id)\r\n\r\n  - Once all items of the checklist are addressed, remove the above text and this checklist, leaving only the filled out template below.\r\n\r\n\r\n**(The sections below can be removed for hotfixes of typos)**\r\n-->\r\n\r\n## What is the purpose of the change\r\n\r\nFixes the Prometheus metrics reporter (and potentially other reporters) not loading configured port values.\r\n\r\nThe issue occurs because numeric YAML configuration values are stored as Integer/Long objects, but `Properties.getProperty()` only returns Strings. When `MetricConfig.getString()` is called for numeric values like `metrics.reporter.prom.port`, it returns null, causing reporters to fall back to default values.\r\n\r\n**Note:** The bug only reproduces when a single number is assigned to the port (e.g., `9999`). It works correctly when a port-range is used (e.g., `9000-9100`) because ranges are stored as Strings.\r\n\r\n**Workaround:** Quote the port value in YAML configuration: `metrics.reporter.prom.port: \"9999\"`\r\n\r\n## Brief change log\r\n\r\n- Changed `MetricConfig.getString()` to use `get()` instead of `getProperty()`, matching the pattern of `getInteger()`, `getLong()`, etc. Added test cases to verify the fix.\r\n\r\n## Verifying this change\r\n\r\nThis change fixes the bug where:\r\n- Configuration loads: `metrics.reporter.prom.port=9999`\r\n- But reporter starts on default port 9249 instead\r\n\r\nAfter the fix, the configured port is correctly applied.\r\n\r\nAdded test case to verify this change is working fine.\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): no\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\r\n  - The serializers: no \r\n  - The runtime per-record code paths (performance sensitive): no\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\r\n  - The S3 file system connector: no\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? no\r\n  - If yes, how is the feature documented? (not applicable / docs / JavaDocs / not documented)\r\n",
+      "patch_file": "prs/27743.json"
+    },
+    {
+      "id": "flink-27745",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27745,
+      "url": "https://github.com/apache/flink/pull/27745",
+      "title": "[FLINK-39191][runtime-web] Upgrade monaco-editor to 0.55.1",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-06T15:55:46Z",
+      "user": "gkomlossi",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "d693e1a5c9271c7cb85bb6991de53a40a0198168",
+      "additions": 331,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nUpgrade the monaco-editor to version 0.55.1 to avoid CVEs caused by DOMPurify, which monaco-editor depends on.  DOMPurify is affected by the following vulnerabilities: CVE-2024-47875 (Critical), CVE-2024-48910 (Medium/High), CVE-2024-45801(High) and CVE-2025-26791 (Medium)\r\nUpgrading the monaco-editor to version 0.55.1 will resolve these CVEs.\r\n\r\n## Brief change log\r\n\r\n  - the monaco-editor version is updated in package.json and package-lock.json has been regenerated.\r\n  - minor code change is required in `task-manager-thread-dump.component.ts` due to the new version of the editor API.\r\n\r\n\r\n## Verifying this change\r\n\r\nI tested the change locally and verified the thread-dump with the new monaco-editor page manually.\r\n\r\nThis change is a trivial rework / code cleanup without any test coverage.\r\n\r\nThe manual testing covered:\r\n1. **Task Manager → Thread Dump**\r\n- Confirmed the Monaco editor loads and shows thread dump text\r\n- Clicked reload and verify it refreshes\r\n- Tested the download link\r\n\r\n2. **Backpressure → Dump link**\r\n- Tested vertexName query param + Monaco search\r\n- Confirmed the editor highlights/finds the matching thread name\r\n\r\n3. **Job Manager → Thread Dump**\r\n- Sanity check for Monaco\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): yes\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\r\n  - The serializers: no\r\n  - The runtime per-record code paths (performance sensitive): no\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\r\n  - The S3 file system connector: no\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? no\r\n  - If yes, how is the feature documented? not applicable\r\n",
+      "patch_file": "prs/27745.json"
+    },
+    {
+      "id": "flink-27776",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27776,
+      "url": "https://github.com/apache/flink/pull/27776",
+      "title": "[FLINK-39477][docs] Add AGENTS.md and AI disclosure to PR template",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-16T11:21:34Z",
+      "user": "MartijnVisser",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "c1ababba3caee91f1430345f507fd4ef1bd84dcf",
+      "additions": 554,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code 2.1.112 (Claude Opus 4.7, 1M context)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nMake the Flink codebase accessible to AI coding agents and establish lightweight guidelines for AI-assisted contributions. \r\n\r\n## Brief change log\r\n\r\n- Added AGENTS.md at the repository root with guidelines for AI coding agents: prerequisites, build/test commands, repository structure, architecture boundaries, common change patterns, coding standards, testing standards, commit conventions, and boundaries\r\n- Added a dedicated AI disclosure section to the PR template with a checkbox and commented-out Generated-by tag, aligned with the ASF Generative Tooling Guidance\r\n\r\n## Verifying this change\r\n\r\nThis change is a trivial rework / code cleanup without any test coverage.\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): (yes / **no**)\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: (yes / **no**)\r\n  - The serializers: (yes / **no** / don't know)\r\n  - The runtime per-record code paths (performance sensitive): (yes / **no** / don't know)\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: (yes / **no** / don't know)\r\n  - The S3 file system connector: (yes / **no** / don't know)\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? (yes / **no**)\r\n  - If yes, how is the feature documented? (**not applicable** / docs / JavaDocs / not documented)\r\n\r\n#### Was generative AI tooling used to co-author this PR?\r\n\r\n\r\n- [X] Yes (please specify the tool below)\r\n\r\nGenerated-by: Claude Code 2.1.112 (Claude Opus 4.7, 1M context)\r\n\r\n",
+      "patch_file": "prs/27776.json"
+    },
+    {
+      "id": "flink-27840",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27840,
+      "url": "https://github.com/apache/flink/pull/27840",
+      "title": "[FLINK-39341][jdbc-driver] Implement DatabaseMetaData methods for DBeaver",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-03-27T07:57:59Z",
+      "user": "navis",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "e83f320efbf0f150f5e93a393240649e790046a6",
+      "additions": 651,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "The most of codes/descriptions are made by claude\r\n\r\n## DatabaseMetaData\r\n- getTables(catalog, schemaPattern, tableNamePattern, types) — Lists tables and views across catalogs/schemas using SHOW TABLES and SHOW VIEWS SQL statements. Supports filtering by table name pattern (SQL % and _ wildcards) and table type (TABLE, VIEW).\r\n- getColumns(catalog, schemaPattern, tableNamePattern, columnNamePattern) — Retrieves column metadata (name, JDBC type, nullability, ordinal position) by executing SELECT * FROM <table> LIMIT 0 and inspecting the ResolvedSchema. Maps Flink logical types to JDBC java.sql.Types constants.\r\n- getSchemas(catalog, schemaPattern) — Previously threw UnsupportedOperationException. Now properly implemented with catalog and schema pattern filtering via SHOW DATABASES IN <catalog>. The no-arg getSchemas() is refactored to delegate to this method.\r\n- getPrimaryKeys(catalog, schema, table) — Returns primary key information from the table's ResolvedSchema when available.\r\n- getTableTypes() — Returns the supported table types: TABLE and VIEW.\r\n\r\n## FlinkResultSet\r\n  - ROW type — Converted to Map<String, Object> preserving field names and values.\r\n  - ARRAY type — Converted to List<Object> with proper element type conversion.",
+      "patch_file": "prs/27840.json"
+    },
+    {
+      "id": "flink-27895",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27895,
+      "url": "https://github.com/apache/flink/pull/27895",
+      "title": "[FLINK-39399] Fix integer overflow in HyperLogLogPlusPlus causing APPROX_COUNT_DISTINCT undercount",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-03T19:20:25Z",
+      "user": "jnh5y",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "c2a21c1025143df37fed300ac885fab4c0335eeb",
+      "additions": 32,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Opus 4.6 (1M context)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nIn HyperLogLogPlusPlus.query(), the expression \"1 << mIdx\" uses int shift which wraps modulo 32. At high cardinality \r\n(~100M+ distinct values), some registers accumulate values >= 32, causing the shift to produce incorrect zInverse contributions and wildly wrong estimates.\r\n\r\n## Brief change log\r\n\r\nIn `HyperLogLogPlusPlus.java`, change \"1 << mIdx\" to \"1L << mIdx\" to use long shift arithmetic.\r\n\r\n## Verifying this change\r\n\r\nThis change added a test in `HyperLogLogPlusPlusTest.java`.\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): (no)\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: (no)\r\n  - The serializers: (no)\r\n  - The runtime per-record code paths (performance sensitive): (no)\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: (no)\r\n  - The S3 file system connector: (no)\r\n\r\n## Documentation\r\n  - Does this pull request introduce a new feature? (no)\r\n\r\nGenerated-by: Claude Opus 4.6 (1M context)",
+      "patch_file": "prs/27895.json"
+    },
+    {
+      "id": "flink-27912",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27912,
+      "url": "https://github.com/apache/flink/pull/27912",
+      "title": "[FLINK-39420][table] Reject temporal joins in batch mode with a clear error",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-10T13:59:14Z",
+      "user": "jnh5y",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "70968e9bcdc7e75704a8a6cd4766ada1d64a78d3",
+      "additions": 142,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "anthropic",
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nBatch mode only supports lookup joins. General temporal joins (event-time or processing-time on non-lookup sources) previously left an unresolved LogicalCorrelate in the plan, causing a confusing \"unexpected correlate variable\" error from FlinkDecorrelateProgram.\r\n\r\nAdd RejectTemporalJoinInBatchRule to the batch EXPAND_PLAN_RULES. The lookup join rules fire first and rewrite valid lookup joins; any remaining Correlate+Snapshot pattern is unconditionally rejected with an actionable message pointing users to lookup joins or streaming mode.\r\n\r\n## Brief change log\r\n\r\n- Added `RejectTemporalJoinInBatchRule` to the batch `EXPAND_PLAN_RULES` — unconditionally rejects any `LogicalCorrelate` + `LogicalSnapshot` remaining after lookup join rules fire\r\n- Registered `WITH_FILTER` and `WITHOUT_FILTER` variants in `FlinkBatchRuleSets`\r\n\r\n## Verifying this change\r\n\r\nThis change is already covered by existing tests, such as `TemporalJoinTest` (batch) which already asserted that a `TableException` is thrown. The tests now additionally verify the specific error message from `RejectTemporalJoinInBatchRule`. Batch `LookupJoinTest` (19 tests) confirms lookup joins are unaffected. Streaming `TemporalJoinTest` (24 tests) confirms no regression.\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): no\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\r\n  - The serializers: no\r\n  - The runtime per-record code paths (performance sensitive): no\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\r\n  - The S3 file system connector: no\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? no\r\n  - If yes, how is the feature documented? not applicable\r\n\r\nGenerated-by: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+      "patch_file": "prs/27912.json"
+    },
+    {
+      "id": "flink-27913",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27913,
+      "url": "https://github.com/apache/flink/pull/27913",
+      "title": "[FLINK-39421] Metadata filter push-down for table sources",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-10T19:40:18Z",
+      "user": "jnh5y",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "eb1b6fce33c7b8d41a39b9eb53ba2a9944affa74",
+      "additions": 1300,
+      "changed_files": 10,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "Add dedicated metadata filter push-down path through SupportsReadingMetadata. Metadata predicates are classified separately from physical predicates and pushed via applyMetadataFilters() with a dedicated MetadataFilterResult type.\n\nMetadataFilterPushDownSpec stores a metadata-only predicateRowType whose field names are metadata keys (not SQL aliases). Physical columns are not included, which avoids name collisions with metadata keys (e.g. `offset INT, msg_offset INT METADATA FROM 'offset'`). Predicate RexInputRefs are remapped to index into the metadata-only row during rule application, so the serialized spec is self-contained and does not need a column-to-key map.\n\nGenerated-by: Claude Code\n\n## What is the purpose of the change\n\nPredicates on metadata columns (e.g., Kafka `offset`, `timestamp`, `partition`) cannot be pushed through the existing `SupportsFilterPushDown` path because `FilterPushDownSpec`'s serialized `RexInputRef` indices break during compiled plan restoration when `ProjectPushDownSpec` narrows the row type. This PR adds a dedicated metadata filter push-down path that solves the serialization problem and enables metadata-aware source optimizations. See [FLIP-574](https://cwiki.apache.org/confluence/display/FLINK/FLIP-574+Metadata+Filter+Push-Down+for+Table+Sources) for the full design.\n\n## Brief change log\n\n  - Extended `SupportsReadingMetadata` with `supportsMetadataFilterPushDown()` and `applyMetadataFilters()` default methods and a `MetadataFilterResult` type\n  - Added `MetadataFilterPushDownSpec` that stores a metadata-only predicate row type (field names are metadata keys) and re-verifies `supportsMetadataFilterPushDown()` on plan restore\n  - Extended `PushFilterIntoTableSourceScanRule` to classify predicates as physical, metadata, or mixed, with a two-path push-down flow\n  - `PushFilterIntoSourceScanRuleBase` builds a metadata-only row type and `RexShuttle`-remaps `RexInputRef` indices so the stored predicates reference only metadata columns — avoids field-name collisions with physical columns of the same name\n  - Extracted `FilterPushDownSpec.resolvePredicates()` as a package-private helper shared between the physical and metadata paths\n\n## Verifying this change\n\nThis change added tests and can be verified as follows:\n\n  - Added `MetadataFilterInReadingMetadataTest` with 7 planner rule tests: basic push-down, opt-out when unsupported, aliased metadata keys, mixed physical+metadata separation, partial acceptance, interaction with projection push-down, and physical-vs-metadata field name collision\n  - Added a `MetadataFilterPushDownSpec` entry to the existing parameterized `testDynamicTableSinkSpecSerde` list in `DynamicTableSourceSpecSerdeTest` (spec3) to verify serde round-trip and full source apply\n  - Added an `enable-metadata-filter-push-down` option to `TestValuesTableFactory` (mirrors `enable-watermark-push-down`) to gate the new capability in tests\n  - Existing physical filter push-down tests continue to pass unchanged\n\n## Does this pull request potentially affect one of the following parts:\n\n  - Dependencies (does it add or upgrade a dependency): no\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: yes — new default methods on `@PublicEvolving` interface `SupportsReadingMetadata`\n  - The serializers: no\n  - The runtime per-record code paths (performance sensitive): no\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\n  - The S3 file system connector: no\n\n## Documentation\n\n  - Does this pull request introduce a new feature? yes\n  - If yes, how is the feature documented? JavaDocs",
+      "patch_file": "prs/27913.json"
+    },
+    {
+      "id": "flink-27981",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27981,
+      "url": "https://github.com/apache/flink/pull/27981",
+      "title": "[FLINK-39503][runtime-web] Auto-fit Job Overview DAG height and add recenter control",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-20T18:10:31Z",
+      "user": "spuru9",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "7c4809d54b3124039b96b96bc4f9c163cd8eb7a7",
+      "additions": 51,
+      "changed_files": 5,
+      "disclosure": {
+        "signals": [
+          "checkbox_yes",
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code (Claude Opus 4.7)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nThe Job Overview page's DAG graph opens at a fixed default height (500px). A horizontal divider lets users drag it, but until they do, the default doesn't adapt to the viewport — it feels cramped on shorter screens and leaves usable space unused on taller ones. Users who pan or zoom the DAG also have no quick way to restore its centered view.\r\n\r\nThis pull request makes the default graph height auto-fit the viewport and adds a recenter affordance.\r\n\r\n## Brief change log\r\n\r\n- Default graph height auto-fits the viewport (`clamp(280, innerHeight * 0.4, 500)`); preserved once the user drags the divider.\r\n\r\n## Verifying this change\r\n\r\nUI-only change, no unit tests. Verified manually: graph height adapts on load and window resize; manual drag is preserved; recenter button and shortcut both re-center the DAG after pan/zoom.\r\n\r\nBefore (Default opening in MacBook 13\" 100%):\r\n<img width=\"1470\" height=\"956\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fc18c5e6-bec4-4689-9a77-40cfeb763fd4\" />\r\n\r\nAfter:\r\n<img width=\"1470\" height=\"956\" alt=\"image\" src=\"https://github.com/user-attachments/assets/518febf6-80e1-4e31-9fc6-80f69f0f11f6\" />\r\n\r\nAdded for recentering and moving to the default zoom.\r\n<img width=\"561\" height=\"177\" alt=\"Screenshot 2026-04-21 at 12 08 38 AM\" src=\"https://github.com/user-attachments/assets/b9ece923-fa07-4c12-bbdd-f210c9007d21\" />\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): no\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\r\n  - The serializers: no\r\n  - The runtime per-record code paths (performance sensitive): no\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\r\n  - The S3 file system connector: no\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? yes (minor UI affordances: auto-fit graph height + recenter button/shortcut)\r\n  - If yes, how is the feature documented? not documented — visible UI affordances only\r\n\r\n---\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n- [X] Yes (Claude Code / Claude Opus 4.7)\r\n\r\nGenerated-by: Claude Code (Claude Opus 4.7)",
+      "patch_file": "prs/27981.json"
+    },
+    {
+      "id": "flink-27989",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27989,
+      "url": "https://github.com/apache/flink/pull/27989",
+      "title": "[FLINK-39127][metrics] Truncate OTel attribute values via config",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-21T14:47:21Z",
+      "user": "Izeren",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "3c6ae9efc0de89ddf7c521111b47eb5d38ada256",
+      "additions": 1016,
+      "changed_files": 7,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code (Opus 4.6)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nPart 3 of [FLIP-553](https://cwiki.apache.org/confluence/display/FLINK/FLIP-553). Large OpenTelemetry metric attribute values can be rejected by OTel collectors as oversized payloads. This PR adds two configuration options to the OpenTelemetry metric reporter to keep attribute values within safe bounds and to track post-truncation metric name collisions without unbounded heap growth.\r\n\r\n## Brief change log\r\n\r\n- New option `transform.attribute-value-length-limits.<attribute-name>` (with `*` as the global key) truncates metric attribute values to the configured length. `0` drops the attribute, negative values disable the limit for that attribute, and the `*` global key applies to any attribute without an explicit entry.\r\n- New option `transform.collision-tracking-max-slots` (default `50000`) bounds the memory footprint of the post-truncation collision tracker via an access-ordered LRU. `0` disables collision tracking. Malformed or negative values `WARN` and fall back to the default — a typo should not tear down metric reporting at JobManager startup.\r\n- New package-private `MetricAttributeTransformer` applies the limits and tracks collisions. Serialized via the existing reporter lock (`@NotThreadSafe`).\r\n- `OpenTelemetryMetricReporter.open()` builds the transformer from reporter config; `notifyOfAddedMetric` applies it before registration.\r\n- Options live in `OpenTelemetryReporterOptions`, which is shared with the trace and event reporters. Their descriptions explicitly state that these two options apply only to the metric reporter and are ignored by the trace and event reporters.\r\n- Empty-string attribute values are preserved under any non-zero configured limit.\r\n\r\n## Verifying this change\r\n\r\nThis change added tests and can be verified as follows:\r\n\r\n- Unit tests in `MetricAttributeTransformerTest` covering: empty attribute values preserved under non-zero limits, access-ordered LRU hot-slot survives eviction, bounded slot tracking under `maxSlots * 4` distinct-slot load, malformed `NumberFormatException` path falls back to default, negative `max-slots` falls back to default, global vs per-attribute limit interaction, `0` drop semantics, and negative-limit disable semantics.\r\n- Unit tests in `OpenTelemetryMetricReporterTest` covering the reporter-level wiring.\r\n- Integration test `OpenTelemetryMetricReporterITCase#testAttributeValueTruncation` verifying truncated attribute values reach the exporter.\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): no\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no (the new `ConfigOption`s are `@PublicEvolving`; the transformer class is package-private)\r\n  - The serializers: no\r\n  - The runtime per-record code paths (performance sensitive): no (metric reporter registration path only)\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\r\n  - The S3 file system connector: no\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? yes\r\n  - If yes, how is the feature documented? docs (option descriptions regenerated into `docs/layouts/shortcodes/generated/open_telemetry_reporter_configuration.html`) and JavaDocs on `MetricAttributeTransformer` and the new `ConfigOption`s in `OpenTelemetryReporterOptions`.\r\n\r\n---\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n- [X] Yes (please specify the tool below)\r\n\r\nGenerated-by: Claude Code (Opus 4.6)\r\n",
+      "patch_file": "prs/27989.json"
+    },
+    {
+      "id": "flink-27994",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27994,
+      "url": "https://github.com/apache/flink/pull/27994",
+      "title": "[FLINK-39261][table] Add `error_handling` parameter to FROM_CHANGELOG PTF",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T08:36:51Z",
+      "user": "raminqaf",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "5c8bec629d4c642f1d470bc36a6524dbbb4faeb7",
+      "additions": 322,
+      "changed_files": 12,
+      "disclosure": {
+        "signals": [
+          "checkbox_yes",
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code (Opus 4.7)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "  ## What is the purpose of the change                                                                                                             \r\n   \r\nAdd an optional `invalid_op_handling` parameter to the `FROM_CHANGELOG` built-in process table function. Until now, FROM_CHANGELOG fails the job whenever a row carries an operation code that is `NULL` or absent from the active `op_mapping`. With this parameter, users can opt into silently dropping such rows instead. This is useful when a CDC source occasionally emits unmapped or sentinel events that should not tear the pipeline down.                                                     \r\n\r\n  ## Brief change log                                                                                                                              \r\n   \r\n  - Added an optional `invalid_op_handling` STRING parameter to `BuiltInFunctionDefinitions.FROM_CHANGELOG` with two case-sensitive values: `FAIL` (default) and `SKIP`.                                     \r\n  - `FAIL` preserves prior behavior — throw a `TableRuntimeException` on NULL or unmapped op codes.                                                \r\n  - `SKIP` silently drops the offending row and continues processing.                                                                              \r\n  - Both NULL op codes and unmapped op codes now go through the same `invalid_op_handling` switch. Previously the NULL path was hard-coded to throw, so `SKIP` users would still see the job fail on a NULL op.                                                                                \r\n  - Validation is strict: the value must be exactly `FAIL` or `SKIP` (matching the runtime `Enum.valueOf` behavior), and validation errors surface the user's literal input verbatim instead of an upper-cased copy.                                                                                \r\n  - Updated SQL reference docs (`docs/content/docs/sql/reference/queries/changelog.md`), the public `Table.fromChangelog` Javadoc, the Python `from_changelog` docstring, and the `InvalidOpHandlingMode` enum Javadoc to describe the new parameter and its case-sensitive contract.          \r\n                                                            \r\n  ## Verifying this change                                                                                                                         \r\n                                                            \r\n  Please make sure both new and modified tests in this PR follow [the conventions for tests defined in our code quality                            \r\n  guide](https://flink.apache.org/how-to-contribute/code-style-and-quality-common/#7-testing).\r\n                                                                                                                                                   \r\n  This change added tests and can be verified as follows:   \r\n\r\n  - Added input-strategy unit tests in `FromChangelogInputTypeStrategyTest` covering the case-sensitivity contract (`Lowercase invalid_op_handling \r\n  mode is rejected`, `Mixed-case invalid_op_handling mode is rejected`) and the existing `INVALID_MODE` rejection (now asserting `Valid values are:\r\n   FAIL, SKIP.`).                                                                                                                                  \r\n  - Added a semantic test program `SKIP_NULL_OP_CODE` in `FromChangelogTestPrograms` that interleaves a NULL op code between two valid `INSERT`\r\n  rows and asserts only the two valid rows reach the sink under `invalid_op_handling => 'SKIP'`. Registered in `FromChangelogSemanticTests`.       \r\n  - Existing semantic tests continue to cover FAIL-on-NULL (`NULL_OP_CODE`), FAIL-on-unmapped (`INVALID_OP_CODE`), and SKIP-on-unmapped\r\n  (`SKIP_INVALID_OP_HANDLING`).                                                                                                                    \r\n                                                            \r\n  ## Does this pull request potentially affect one of the following parts:                                                                         \r\n                                                            \r\n  - Dependencies (does it add or upgrade a dependency): no                                                                                       \r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: yes — adds an optional named argument to the public\r\n`Table.fromChangelog` API and its Python equivalent.                                                                                             \r\n  - The serializers: no\r\n  - The runtime per-record code paths (performance sensitive): yes — `FromChangelogFunction.eval()` runs per record. The refactor consolidates   \r\ntwo duplicated `switch` blocks into a single helper without adding per-record allocations; the happy path now executes one fewer branch.         \r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\r\n  - The S3 file system connector: no                                                                                                             \r\n                                                            \r\n  ## Documentation                                                                                                                                 \r\n                                                            \r\n  - Does this pull request introduce a new feature? yes\r\n  - If yes, how is the feature documented? docs + JavaDocs (Java `Table.fromChangelog`, `InvalidOpHandlingMode`) + Python docstring (`Table.from_changelog`)                                                                                                                         \r\n   \r\n  ---                                                                                                                                              \r\n                                                            \r\n  ##### Was generative AI tooling used to co-author this PR?                                                                                       \r\n   \r\n  - [X] Yes (Claude Code, Opus 4.7)                                                                                                                \r\n                                                            \r\n  <!--                                                                                                                                             \r\n  Generated-by: Claude Code (Opus 4.7)                      \r\n  -->\r\n",
+      "patch_file": "prs/27994.json"
+    },
+    {
+      "id": "flink-27996",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 27996,
+      "url": "https://github.com/apache/flink/pull/27996",
+      "title": "[FLINK-39515][table] Fix compiled plan restore for built-in PTFs with default args",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-04-22T11:29:41Z",
+      "user": "gustavodemorais",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "6e34eb5160131451d1c0c5f189a715285a1dc186",
+      "additions": 428,
+      "changed_files": 10,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "<!--\r\n*Thank you very much for contributing to Apache Flink - we are happy that you want to help us improve Flink. To help the community review your contribution in the best possible way, please go through the checklist below, which will get the contribution into a shape in which it can be best reviewed.*\r\n\r\n*Please understand that we do not do this to make contributions to Flink a hassle. In order to uphold a high standard of quality for code contributions, while at the same time managing a large number of contributions, we need contributors to prepare the contributions well, and give reviewers enough contextual information for the review. Please also understand that contributions that do not follow this guide will take longer to review and thus typically be picked up with lower priority by the community.*\r\n\r\n## Contribution Checklist\r\n\r\n  - Make sure that the pull request corresponds to a [JIRA issue](https://issues.apache.org/jira/projects/FLINK/issues). Exceptions are made for typos in JavaDoc or documentation files, which need no JIRA issue.\r\n  \r\n  - Name the pull request in the form \"[FLINK-XXXX] [component] Title of the pull request\", where *FLINK-XXXX* should be replaced by the actual issue number. Skip *component* if you are unsure about which is the best component.\r\n  Typo fixes that have no associated JIRA issue should be named following this pattern: `[hotfix] [docs] Fix typo in event time introduction` or `[hotfix] [javadocs] Expand JavaDoc for PuncuatedWatermarkGenerator`.\r\n\r\n  - Fill out the template below to describe the changes contributed by the pull request. That will give reviewers the context they need to do the review.\r\n  \r\n  - Make sure that the change passes the automated tests, i.e., `mvn clean verify` passes. You can set up Azure Pipelines CI to do that following [this guide](https://cwiki.apache.org/confluence/display/FLINK/Azure+Pipelines#AzurePipelines-Tutorial:SettingupAzurePipelinesforaforkoftheFlinkrepository).\r\n\r\n  - Each pull request should address only one issue, not mix up code from multiple issues.\r\n  \r\n  - Each commit in the pull request has a meaningful commit message (including the JIRA id)\r\n\r\n  - Once all items of the checklist are addressed, remove the above text and this checklist, leaving only the filled out template below.\r\n\r\n\r\n**(The sections below can be removed for hotfixes of typos)**\r\n-->\r\n\r\n## What is the purpose of the change\r\n\r\nWhen restoring a compiled plan whose query calls a built-in PTF with unprovided optional args (e.g. TO_CHANGELOG(input => TABLE t) without op / op_mapping), code generation fails: Unsupported call: DEFAULT()\r\n\r\nCause: Unprovided slots are filled by SqlDefaultArgOperator, a per-call-site instance that carries the expected return type. It's not registered in any operator table, so on restore RexNodeJsonDeserializer falls through to Calcite's stock SqlStdOperatorTable.DEFAULT_OPERATOR. Codegen's op instanceof SqlDefaultArgOperator check (StringCallGen.scala:242) misses, and the call hits the generic unsupported branch.\r\n\r\nThe same bug affects any built-in PTF that exposes optional user-level args (those survive toUdfCall and reach codegen). Existing user-defined PTF restore tests don't catch it because their DEFAULT() operands are system args (uid, on_time) that toUdfCall strips.\r\n\r\nFix: In RexNodeJsonDeserializer.deserializeCall, when the deserialized operator's kind is SqlKind.DEFAULT, rebuild it as new SqlDefaultArgOperator(callType) so the typed Flink instance reaches codegen.\r\n\r\n\r\n## Brief change log\r\n\r\n- Added fix to RexNodejsonDeserializer\r\n- Added restore tests\r\n\r\n\r\n## Verifying this change\r\n\r\nRepro / coverage: New restore tests ToChangelogRestoreTest and FromChangelogRestoreTest, each running a RETRACT_RESTORE program. Both fail with Unsupported call: DEFAULT() without the fix and pass with it.\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): (no)\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: (no)\r\n  - The serializers: (yes)\r\n  - The runtime per-record code paths (performance sensitive): (no)\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: (no)\r\n  - The S3 file system connector: (no)\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? (no)\r\n  - If yes, how is the feature documented? (not applicable)\r\n\r\n---\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n<!--\r\nIf generative AI tooling has been used in the process of authoring this PR, please\r\nchange the checkbox below to `[X]` followed by the name of the tool, and uncomment the\r\n\"Generated-by\" line. See the ASF Generative Tooling Guidance for details:\r\nhttps://www.apache.org/legal/generative-tooling.html\r\n\r\nYou are responsible for the quality and correctness of every change in this PR\r\nregardless of the tooling used. Low-effort AI-generated PRs will be closed. See\r\nAGENTS.md for the full guidance.\r\n-->\r\n\r\n- [x] Yes (please specify the tool below)\r\n\r\n<!--\r\nGenerated-by: [2.1.117 (Claude Code)]\r\n-->\r\n",
+      "patch_file": "prs/27996.json"
+    },
+    {
+      "id": "flink-28330",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 28330,
+      "url": "https://github.com/apache/flink/pull/28330",
+      "title": "[FLINK-40378] add GROUP BY ALL support",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-06-05T17:46:21Z",
+      "user": "tisyabhatia",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "4417f26c08899dfd347a2ca1b69ff8cba6f18919",
+      "additions": 261,
+      "changed_files": 7,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nThis pull request adds initial support for the GROUP BY ALL clause in Flink SQL. When GROUP BY ALL is used with no grouping items, the query groups by every expression in the SELECT clause that is not an aggregate or window function.\r\n\r\nThe change adds parser support (a `SqlGroupByAllOperator` marker) and a validator-level rewrite that expands the marker into the concrete grouping expressions, gated behind a new table config option (default off). It includes parser and batch SQL execution test coverage. The scope is intentionally limited to bare `GROUP BY ALL`: `SELECT * `is rejected with a clear error, and positional `GROUP BY <n>` and `ORDER BY ALL` will be introduced in the future.\r\n\r\nThe parser grammar is being upstreamed to Apache Calcite (CALCITE-7594); once merged there, the Flink side will switch to a Calcite backport. This work is backed by an internal design doc and a FLIP (currently under review).\r\n\r\n## Brief change log\r\n- Add parser support for `GROUP BY ALL` via. `SqlGroupByAllOperator` marker\r\n- Extend `FlinkCalciteSqlValidator` to recognize and rewrite `GROUP BY ALL` into the non-aggregated `SELECT` expressions\r\n- Add table config option table.group-by-all-enabled (default false) gating the behavior\r\n- Add parser tests in `FlinkSqlParserImplTest`\r\n- Add batch SQL execution tests in `GroupByAllTest`\r\n\r\n## Verifying this change\r\nThis change added tests and can be verified as follows:\r\n- Parser coverage in `FlinkSqlParserImplTest`\r\n- Batch SQL execution coverage in `GroupByAllTest` (parametrized: grouping by columns, grouping by a whole expression, only-aggregates -> one global group, window-function exclusion; plus\r\nthe flag-off error and the a + error)\r\n- Verified the feature is gated by the `table.group-by-all-enabled` config option\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n- Dependencies: no\r\n- `@Public(Evolving) `API: no\r\n- Serializers: no\r\n- Runtime per-record code paths: no\r\n- Deployment/recovery (JobManager, Checkpointing, K8s/Yarn, ZK): no\r\n- S3 file system connector: no\r\n\r\n## Documentation\r\n- Introduces a new feature? yes\r\n- How documented? Not documented in this PR; design is captured in the internal design doc\r\nand FLIP (under review).\r\n\r\nWas generative AI tooling used to co-author this PR? Yes - Generated-by: Claude Code",
+      "patch_file": "prs/28330.json"
+    },
+    {
+      "id": "flink-28333",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 28333,
+      "url": "https://github.com/apache/flink/pull/28333",
+      "title": "[FLINK-39875][table-gateway] Restore thread interrupt status in ResultStore",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-06-05T22:30:56Z",
+      "user": "jubins",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "11aa6f334e2f6e0bd22db86d37141a4745d3269e",
+      "additions": 198,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [
+          "checkbox_yes",
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "** Claude Opus 4.8"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nFixes FLINK-39875 — The `processRecord()` method in `ResultStore` catches `InterruptedException` but does not restore the thread's interrupt status, which violates Java concurrency best practices and could prevent proper shutdown or cancellation of the result retrieval thread.\r\n\r\nWhen a thread's `wait()` is interrupted, the interrupt status is cleared. According to Java concurrency best practices, when catching `InterruptedException`, code should either propagate the exception or restore the interrupt status by calling `Thread.currentThread().interrupt()`. Failing to do so can cause the `ResultRetrievalThread` to not respond properly to shutdown signals sent by the `close()` method.\r\n\r\nThis PR restores the interrupt status and ensures the thread exits promptly when interrupted.\r\n\r\n## Brief change log\r\n\r\n- Added `Thread.currentThread().interrupt()` in `processRecord()` catch block to restore interrupt status\r\n- Added early `return` to skip record processing when interrupted  \r\n- Enhanced `ResultRetrievalThread` loop condition to check `!Thread.interrupted()`\r\n- Added debug logging for interrupt events\r\n- Created `ResultStoreTest` with 4 comprehensive test cases:\r\n  - `testInterruptHandling()` — Verifies proper interrupt handling during execution\r\n  - `testProcessRecordWithFullBuffer()` — Tests buffer management with multiple records\r\n  - `testInterruptDuringBufferWait()` — Validates interrupt response when waiting for buffer space\r\n  - `testGracefulShutdown()` — Ensures quick and clean shutdown\r\n\r\n## Verifying this change\r\n\r\nThis change is covered by 4 new unit tests in `ResultStoreTest`:\r\n\r\n- **`testInterruptHandling()`** — Verifies that when the ResultStore is closed, the retrieval thread properly handles the interrupt and stops running\r\n- **`testProcessRecordWithFullBuffer()`** — Tests that records are processed correctly when the buffer fills up and waits are required\r\n- **`testInterruptDuringBufferWait()`** — Validates that interrupts are handled promptly even when the thread is waiting for buffer space\r\n- **`testGracefulShutdown()`** — Ensures that closing the ResultStore completes quickly (under 1 second), demonstrating proper interrupt handling\r\n\r\nAll tests use timeout guards (10 seconds) to prevent hanging if interrupt handling fails.\r\n\r\n## Does this pull request potentially affect one of the following parts\r\n\r\n- Dependencies (does it add or upgrade a dependency): **no**\r\n- The public API, i.e., is any changed class annotated with `@Public(Evolving)`: **no** — `ResultStore` is an internal class in the SQL Gateway\r\n- The serializers: **no**\r\n- The runtime per-record code paths (performance sensitive): **no** — only affects error/shutdown paths\r\n- Anything that affects deployment or recovery (JobManager, Checkpointing, Kubernetes/Yarn, ZooKeeper): **no** — limited to SQL Gateway result handling\r\n- The S3 file system connector: **no**\r\n\r\n## Documentation\r\n\r\n- Does this pull request introduce a new feature? **no**\r\n- If yes, how is the feature documented? **not applicable**\r\n\r\n## Was generative AI tooling used to co-author this PR?\r\n\r\n- [x] Yes — Claude Code was used as a pair-programming assistant. All code was written, understood, and verified by the author.\r\n\r\n**Generated-by:** Claude Opus 4.8",
+      "patch_file": "prs/28333.json"
+    },
+    {
+      "id": "flink-28775",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 28775,
+      "url": "https://github.com/apache/flink/pull/28775",
+      "title": "[FLINK-40166][table] SQL query parsing fails if current catalog unreachable",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-17T20:45:19Z",
+      "user": "dalelane",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "3827ebcacad71117b5ea9398c213dfbd1fcc32a5",
+      "additions": 123,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Sonnet 5"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nIf the current catalog is unreachable, any SQL query fails to parse - even queries that make fully-qualified accesses to catalogs that are reachable.\r\n\r\nThis is because we make a call to databaseExists in the current catalog as part of parsing the statement.\r\n\r\n## Brief change log\r\n\r\nThis commit wraps the call to databaseExists in a try..catch so it doesn't block the remainder of the parsing.\r\n\r\n## Verifying this change\r\n\r\nThis change added tests and can be verified as follows:\r\n\r\n- Added unit tests\r\n- Manually verified using the attached recreate: [flink-catalog-repro.zip](https://github.com/user-attachments/files/30140283/flink-catalog-repro.zip)\r\n\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): no\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\r\n  - The serializers: no \r\n  - The runtime per-record code paths (performance sensitive): no \r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no \r\n  - The S3 file system connector: no \r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? no\r\n  - If yes, how is the feature documented? not applicable\r\n\r\n---\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n- [X] Yes \r\nGenerated-by: Claude Sonnet 5\r\n",
+      "patch_file": "prs/28775.json"
+    },
+    {
+      "id": "flink-28786",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 28786,
+      "url": "https://github.com/apache/flink/pull/28786",
+      "title": "[FLINK-40200][Checkpoint] Checkpoint sync phase timeout",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-21T13:43:34Z",
+      "user": "Efrat19",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "3f04c07d924ef3147d0e48637b30bad155d57030",
+      "additions": 335,
+      "changed_files": 8,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nFor TaskManagers locking up in rocksDB native calls during checkpoint sync phase, the best mitigation would be to cancel the task and restart. A lenient checkpoint timeout X {execution.checkpointing.tolerable-failed-checkpoints} means it can take days for JM to restart the job out of the deadlock. Setting checkpoint sync timeout, after which a task failure is triggered, will address thread bloackages faster and without manual intervention.\r\n\r\n## Brief change log\r\n\r\n- Added an opt-in checkpoint sync phase timeout logic for aborting stuck checkpoint through task failure\r\n\r\n## Verifying this change\r\n\r\nThis change added tests and can be verified as follows:\r\n\r\nUnit tests:\r\n- `SubtaskCheckpointCoordinatorTest.testSyncPhaseCompletedOnTime`\r\n- `SubtaskCheckpointCoordinatorTest.testSyncPhaseWatchDogFailsStuckTask`\r\nITCase\r\n- `CheckpointSyncPhaseTimeoutITCase.testStuckSyncPhaseFailsJob`\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): no\r\n  - The public API, i.e., is any changed class annotated with no\r\n  - The serializers: no\r\n  - The runtime per-record code paths (performance sensitive): no\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\r\n  - The S3 file system connector: no\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? yes\r\n  - If yes, how is the feature documented?  docs\r\n\r\n---\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n- [X] Yes (please specify the tool below)\r\n\r\n\r\nCo-Generated-by: claude-sonnet-5\r\n\r\n",
+      "patch_file": "prs/28786.json"
+    },
+    {
+      "id": "flink-28791",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 28791,
+      "url": "https://github.com/apache/flink/pull/28791",
+      "title": "[FLINK-38262][table] show create connection operation",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-21T17:07:17Z",
+      "user": "Shekharrajak",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "798b2c9e807c91fc53c3411e8a72d1bef9e74d4d",
+      "additions": 515,
+      "changed_files": 11,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "\r\n## What is the purpose of the change\r\n\r\nAdds resolved connection lookup and SHOW CREATE CONNECTION support, formatting connection DDL while filtering internal/sensitive options.\r\n\r\n\r\n## Brief change log\r\n\r\nAdd SHOW CREATE CONNECTION operation\r\n\r\n## Verifying this change\r\n\r\nUnit tests and IT\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): (yes / no) no\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: (yes / no) no\r\n  - The serializers: (yes / no / don't know) no\r\n  - The runtime per-record code paths (performance sensitive): (yes / no / don't know) no\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: (yes / no / don't know) no\r\n  - The S3 file system connector: (yes / no / don't know) no\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? (yes / no) yes\r\n  - If yes, how is the feature documented? (not applicable / docs / JavaDocs / not documented)\r\n\r\n---\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n\r\n- [x] Yes \r\n\r\n\r\n",
+      "patch_file": "prs/28791.json"
+    },
+    {
+      "id": "flink-28792",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 28792,
+      "url": "https://github.com/apache/flink/pull/28792",
+      "title": "[FLINK-38262][table] describe connection operation",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-21T17:07:50Z",
+      "user": "Shekharrajak",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "30d292cdfd156673be804efcefe6278baf89e7a9",
+      "additions": 234,
+      "changed_files": 7,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "\r\n## What is the purpose of the change\r\n\r\nAdds DescribeConnectionOperation and converter support for DESCRIBE CONNECTION, with masked sensitive values and extended metadata.\r\n\r\n\r\n## Brief change log\r\n\r\nAdd DESCRIBE CONNECTION operation\r\n\r\n## Verifying this change\r\n\r\nUnit tests and IT\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): (yes / no) no\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: (yes / no) no\r\n  - The serializers: (yes / no / don't know) no\r\n  - The runtime per-record code paths (performance sensitive): (yes / no / don't know) no\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: (yes / no / don't know) no\r\n  - The S3 file system connector: (yes / no / don't know) no\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? (yes / no) yes\r\n  - If yes, how is the feature documented? (not applicable / docs / JavaDocs / not documented)\r\n\r\n---\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n\r\n- [x] Yes ",
+      "patch_file": "prs/28792.json"
+    },
+    {
+      "id": "flink-28795",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 28795,
+      "url": "https://github.com/apache/flink/pull/28795",
+      "title": "[FLINK-40214][table] Preserve JSON_OBJECTAGG key when wrapping value",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T02:57:34Z",
+      "user": "Au-Miner",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "60a8f9c87592bf2a43336466c60d227c726d38f8",
+      "additions": 55,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nThis PR fixes incorrect `JSON_OBJECTAGG` results when the key and value reference the same input field. Previously, object keys could contain additional escaped quotation marks.\r\n\r\n## Brief change log\r\n\r\n- Update `WrapJsonAggFunctionArgumentsRule#wrapJsonAggregate` to replace only the value argument with its wrapped projection while preserving the original `JSON_OBJECTAGG` key argument.\r\n- Update the optimized plan snapshots for regular, group-window, and window TVF aggregations.\r\n\r\n## Verifying this change\r\n\r\n`JsonAggregationFunctionsITCase` adds regression coverage for regular and tumbling-window aggregations where the key and value use the same field.\r\n\r\nThe expected result is:\r\n\r\n`{\"A\":\"A\",\"B\":\"B\"}`\r\n\r\nThe `WrapJsonAggFunctionArgumentsRuleTest` plan snapshots verify that only the value argument references the `JSON_STRING` projection.\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): no\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\r\n  - The serializers: no\r\n  - The runtime per-record code paths (performance sensitive): no\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\r\n  - The S3 file system connector: no\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? no\r\n  - If yes, how is the feature documented? not applicable",
+      "patch_file": "prs/28795.json"
+    },
+    {
+      "id": "flink-28796",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 28796,
+      "url": "https://github.com/apache/flink/pull/28796",
+      "title": "[FLINK-40168][table] Thread the EARLY_FIRE hint into the interval join",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T04:28:15Z",
+      "user": "weiqingy",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "a8564016f2d169410d25442b6781de467e0b159d",
+      "additions": 669,
+      "changed_files": 6,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code (Anthropic)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "anthropic",
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "Part of the FLIP-497 implementation stack under umbrella [FLINK-36953](https://issues.apache.org/jira/browse/FLINK-36953). Landing order:\n\n| Step | Sub-task | Scope |\n| --- | --- | --- |\n| PR-1a | [FLINK-40167](https://issues.apache.org/jira/browse/FLINK-40167) | EARLY_FIRE hint surface + option validation (#28353, merged) |\n| **PR-1b (this PR)** | [FLINK-40168](https://issues.apache.org/jira/browse/FLINK-40168) | Thread the hint into the interval join (planner → ExecNode) |\n| PR-2 | [FLINK-40169](https://issues.apache.org/jira/browse/FLINK-40169) | `target` option |\n| PR-3 | [FLINK-40170](https://issues.apache.org/jira/browse/FLINK-40170) | Update-producing changelog mode + insert-only guard |\n| PR-4 | [FLINK-40171](https://issues.apache.org/jira/browse/FLINK-40171) | Runtime early-fire emit + retraction |\n| PR-5 | [FLINK-40172](https://issues.apache.org/jira/browse/FLINK-40172) | Processing-time early fire on an event-time join |\n| PR-6 | [FLINK-40173](https://issues.apache.org/jira/browse/FLINK-40173) | State restore coverage |\n| PR-7 | [FLINK-40174](https://issues.apache.org/jira/browse/FLINK-40174) | User-facing documentation |\n\n## What is the purpose of the change\n\nThreads the (already-registered) `EARLY_FIRE` hint through the planner to the ExecNode. `StreamPhysicalIntervalJoinRule` reads the hint, resolves the effective time mode from the join's time domain, validates the domain combinations, and threads the delay and time mode into `StreamExecIntervalJoin` as NON_NULL JSON fields. The operator receives the parameters but ignores them; runtime behavior lands in PR-4.\n\n## Brief change log\n\n  - `StreamPhysicalIntervalJoinRule` reads the hint, resolves the effective time mode, rejects row-time triggering on a processing-time join, and rejects (for now) processing-time triggering on an event-time join.\n  - Thread `earlyFireDelay`/`earlyFireTimeMode` through `StreamPhysicalIntervalJoin` into `StreamExecIntervalJoin` as NON_NULL JSON fields.\n\n## Verifying this change\n\nThis change added tests and can be verified as follows:\n\n  - `EarlyFireJoinHintTest`: `earlyFireDelay`/`earlyFireTimeMode` reach the exec plan for both a row-time (default `ROWTIME`) and a processing-time (default `PROCTIME`) interval join; row-time-on-proctime and processing-time-on-rowtime are rejected; a compiled-plan JSON round-trip covers serialization of the new ExecNode fields.\n\n## Does this pull request potentially affect one of the following parts:\n\n  - Dependencies (does it add or upgrade a dependency): no\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\n  - The serializers: yes (compiled-plan ExecNode JSON only; no state serializer change)\n  - The runtime per-record code paths (performance sensitive): no\n  - Anything that affects deployment or recovery: no\n  - The S3 file system connector: no\n\n## Documentation\n\n  - Does this pull request introduce a new feature? no (planner threading for the FLIP-497 hint)\n  - If yes, how is the feature documented? not applicable\n\n---\n\n##### Was generative AI tooling used to co-author this PR?\n\n- [X] Yes (please specify the tool below)\n\nGenerated-by: Claude Code (Anthropic)\n",
+      "patch_file": "prs/28796.json"
+    },
+    {
+      "id": "flink-28799",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 28799,
+      "url": "https://github.com/apache/flink/pull/28799",
+      "title": "[FLINK-40208] Add JobMdcRegistry for config-driven MDC enrichment",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T10:23:36Z",
+      "user": "Izeren",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "a3cd0e2bc84cb2eeefb5a16e3bf91b6e64380a63",
+      "additions": 1004,
+      "changed_files": 16,
+      "disclosure": {
+        "signals": [
+          "checkbox_yes",
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nAdd `JobMdcRegistry`, a process-wide registry that maps `JobID` to an enriched MDC context derived from job configuration. This enables operators to surface custom job config values (e.g. org ID, environment) in Flink's JVM logs via MDC.\r\n\r\n## Brief change log\r\n\r\n- Add `MdcOptions` with `mdc.job-configuration-to-mdc-keys` (`Map<String,String>`) config option\r\n- Add `JobMdcRegistry`: static registry populated in `Dispatcher` and `TaskExecutor`\r\n- Update `MdcUtils.asContextData(JobID)` to consult the registry before falling back to the plain job-id singleton\r\n- Add `JobIDLoggingITCase.testEnrichedMdcLogging` to verify enriched keys appear in log output\r\n\r\n## Verifying this change\r\n\r\nThis change added tests and can be verified as follows:\r\n\r\n- Added `JobMdcRegistryTest` covering register, overwrite, unregister, and isolation between jobs\r\n- Extended `MdcUtilsTest` with parameterized tests for config extraction and registry-first lookup\r\n- Added `JobIDLoggingITCase.testEnrichedMdcLogging` as an end-to-end integration test\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n- Dependencies (does it add or upgrade a dependency): no\r\n- The public API, i.e., is any changed class annotated with `@Public(Evolving)`: yes (`MdcOptions` is `@PublicEvolving`)\r\n- The serializers: no\r\n- The runtime per-record code paths (performance sensitive): no\r\n- Anything that affects deployment or recovery: no\r\n- The S3 file system connector: no\r\n\r\n## Documentation\r\n\r\n- Does this pull request introduce a new feature? yes\r\n- If yes, how is the feature documented? JavaDocs + config docs auto-generated from `ConfigOption`\r\n\r\n---\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n- [X] Yes (Claude Code)\r\n\r\nGenerated-by: Claude Code\r\n",
+      "patch_file": "prs/28799.json"
+    },
+    {
+      "id": "flink-28800",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 28800,
+      "url": "https://github.com/apache/flink/pull/28800",
+      "title": "[FLINK-33186][checkpoint/tests] Fix flakiness in CheckpointAfterAllTasksFinishedITCase.testRestoreAfterSomeTasksFinished",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T10:47:49Z",
+      "user": "Efrat19",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "6ec03c995a625cc22c3cdeb5076b0ca2d5329c3e",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nI traced the flakiness to task finished after the checkpoint plan was calculated but before triggerCheckpoint.\r\nThe task is already removed from `TaskExecutor#taskSlotTable` so `TaskExecutor#triggerCheckpoint` fails the checkpoint with error `TaskManager received a checkpoint request for unknown task <>`.\r\n\r\nAs per offline discussion with @pnowojski tasks finished mid checkpoint is a known limitation and production systems are expected to tolerate an occasional checkpoint failure due to that, so we should address the flakiness without changes to this logic.\r\n\r\nThe test provisions 2 sources `passA` that finishes quickly, and `passB` that blocks forever\r\nand non-deterministically waits for at least one of passA subtasks to finish, which introduces the race.\r\nThe fix here makes this test wait for all subtasks of `passA` to finish before triggering savepoint to avoid the race \r\nbut still achieve the test goal with `passB` subtasks still blocking.\r\n\r\n## Brief change log\r\n\r\nMake `CheckpointAfterAllTasksFinishedITCase.testRestoreAfterSomeTasksFinished` wait for all subtasks of `passA` to finish before triggering savepoint, to avoid the race but still achieve the test goal with passB subtasks still blocking.\r\n\r\n\r\n## Verifying this change\r\n\r\nThis change is a trivial rework / code cleanup without any test coverage.\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): no\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\r\n  - The serializers: no\r\n  - The runtime per-record code paths (performance sensitive): no\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\r\n  - The S3 file system connector: no\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? no\r\n  - If yes, how is the feature documented? not applicable\r\n\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n- [X] Yes (please specify the tool below)\r\n\r\nCo-Generated-by: cloud-sonnet-5\r\n",
+      "patch_file": "prs/28800.json"
+    },
+    {
+      "id": "flink-28801",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 28801,
+      "url": "https://github.com/apache/flink/pull/28801",
+      "title": "FLINK-37686 - Do not fail on NOT_OWNED deleted files",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T11:06:36Z",
+      "user": "francis-a",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "b85bade496223e58ca63170e58204378100f1191",
+      "additions": 104,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nThis PR aims to fix the issue documented in https://issues.apache.org/jira/browse/FLINK-37686 where remote objects cleaned up by the JM cause checkpoint failures even when the object is marked as `NOT_OWNED`.\r\n\r\n\r\n## Brief change log\r\n\r\n  - Added a `FileNotFoundException` catch block to `ForStFlinkFileSystem::listStatus`\r\n  - In this catch block we verify the object is `NOT_OWNED`\r\n  - If true, we assume the JM removed this object and delete it using the `FileMappingManager`\r\n  - Tests have been added to cover this case as well as ensuring the exception still bubbles up if the object is **not** `NOT_OWNED`\r\n\r\n\r\n## Verifying this change\r\n\r\nThis change added tests and can be verified as follows:\r\n- Added two new tests to `ForStFlinkFileSystemTest`,  `testListStatusDropsDeletedNotOwnedEntryAfterGiveUpOwnership` and `testListStatusStillFailsForDeletedDbOwnedFile`\r\n- These tests cover the `NOT_OWNED` and verify the removed object is also removed from the `FileMappingManager`, the other test verifies the baseline hasn't changed for other object types\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): (no)\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: (no)\r\n  - The serializers: (yes / no / don't know)\r\n  - The runtime per-record code paths (performance sensitive): (don't know)\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: (no)\r\n  - The S3 file system connector: (no)\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? (no)\r\n\r\n---\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n\r\n- [X] Yes\r\n\r\nGenerated-by: [Claude Opus]\r\n\r\n",
+      "patch_file": "prs/28801.json"
+    },
+    {
+      "id": "flink-28803",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 28803,
+      "url": "https://github.com/apache/flink/pull/28803",
+      "title": "[FLINK-40219][table] Fix outputType computation of LateralSnapshotJoin",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-07-22T12:44:25Z",
+      "user": "fhueske",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "f0c566533fb9c9aa99ba3029059b6e43ce5a8a1d",
+      "additions": 205,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code 2.1.200 (Opus 4.8)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nTimeIndicatorRelDataType.getOriginalType() does not reliably provide the correct nullability. The planner might have changed the nullability on the time indicator type without updating the nested original type. This change fixes the outputType computation to use the same rowtime type conversion as RelTimeIndicatorConverter.\r\n\r\n## Brief change log\r\n\r\n* fix logic to convert a time indicator type into a regular timestamp preserving its actual nullability\r\n* conversion logic is derived from `RelTimeIndicatorConverter`\r\n\r\n## Verifying this change\r\n\r\n* added unit tests to assert correct computation of lateral snapshot join output type\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): no\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\r\n  - The serializers: no\r\n  - The runtime per-record code paths (performance sensitive): no\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\r\n  - The S3 file system connector: no\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? no\r\n  - If yes, how is the feature documented? n/a\r\n\r\n---\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n- [X] Yes (please specify the tool below)\r\n\r\nGenerated-by: Claude Code 2.1.200 (Opus 4.8)",
+      "patch_file": "prs/28803.json"
+    },
+    {
+      "id": "flink-28808",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 28808,
+      "url": "https://github.com/apache/flink/pull/28808",
+      "title": "[FLINK-40217][core] Reject non-finite numbers in Variant JSON conversion",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-07-22T16:09:35Z",
+      "user": "raminqaf",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "0ec10ad6869c71558f2e8aa659314053b6871464",
+      "additions": 103,
+      "changed_files": 5,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code (Claude Opus 4.8)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\r\n\r\n`PARSE_JSON` accepted JSON numbers outside the double range, such as `1e400`, and silently stored them as `±Infinity`. `Variant.toJson()` then emitted bare `Infinity` / `-Infinity` tokens, which are invalid JSON and cannot be parsed back by `PARSE_JSON`. This closes that gap by rejecting non-finite values on both the parse and the serialize side.\r\n\r\n## Brief change log\r\n\r\n  - `BinaryVariantInternalBuilder.parseFloatingPoint()` now rejects a non-finite result from `getDoubleValue()` with a clear parse error. `PARSE_JSON('1e400')` fails loudly and `TRY_PARSE_JSON('1e400')` returns `NULL`, so a parsed Variant can never hold a non-finite value.\r\n  - `BinaryVariant.toJson()` now throws a `VariantTypeException` for non-finite `DOUBLE` and `FLOAT` values instead of appending invalid `Infinity` / `NaN` tokens. This guards the builder API, which is the only remaining way to inject a non-finite value.\r\n  - `parseJson` reuses a single static `JsonFactory` instead of allocating one per call.\r\n\r\n## Verifying this change\r\n\r\nThis change added tests and can be verified as follows:\r\n\r\n  - Added `BinaryVariantInternalBuilderTest#testParseJsonRejectsNonFiniteNumbers`, parameterized over `NaN`, `Infinity`, `-Infinity`, `1e400`, and `-1e400`, asserting `parseJson` throws (invalid JSON tokens and finite-but-overflowing numbers alike).\r\n  - Added `BinaryVariantTest#testToJsonRejectsNonFiniteDouble` and `#testToJsonRejectsNonFiniteFloat`, parameterized over the infinities and `NaN`, asserting `toJson()` throws instead of emitting invalid JSON.\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): **no**\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: **no** (both changed classes are `@Internal`; the user-visible effect is a semantics change to the `PARSE_JSON` / `TRY_PARSE_JSON` SQL functions on out-of-range numbers)\r\n  - The serializers: **no** (the Variant binary encoding is unchanged)\r\n  - The runtime per-record code paths (performance sensitive): **yes** (on the `PARSE_JSON` / `toJson()` paths; the only added cost is a constant-time finite check, and reusing `JsonFactory` removes a per-call allocation)\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: **no**\r\n  - The S3 file system connector: **no**\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? **no**\r\n  - If yes, how is the feature documented? **not applicable**\r\n\r\n---\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n- [X] Yes (please specify the tool below)\r\n\r\n<!--\r\nGenerated-by: Claude Code (Claude Opus 4.8)\r\n-->",
+      "patch_file": "prs/28808.json"
+    },
+    {
+      "id": "flink-29096",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29096,
+      "url": "https://github.com/apache/flink/pull/29096",
+      "title": "[BP-2.1][FLINK-40548][ci] Use image with ubuntu 24.04",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-09-03T18:01:35Z",
+      "user": "snuyanzin",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "0a72fb04c0e6b509ae8f3d41c217f73743f06db4",
+      "additions": 7,
+      "changed_files": 5,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "backport of https://github.com/apache/flink/pull/29093",
+      "patch_file": "prs/29096.json"
+    },
+    {
+      "id": "flink-29097",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29097,
+      "url": "https://github.com/apache/flink/pull/29097",
+      "title": "[BP-1.20][FLINK-40548][ci] Use image with ubuntu 24.04",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-09-03T18:04:17Z",
+      "user": "snuyanzin",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "93e4fe81047d79cfdf497bb14125b37fec9d282d",
+      "additions": 7,
+      "changed_files": 5,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "backport of https://github.com/apache/flink/pull/29093",
+      "patch_file": "prs/29097.json"
+    },
+    {
+      "id": "flink-29100",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29100,
+      "url": "https://github.com/apache/flink/pull/29100",
+      "title": "Revert \"[FLINK-39977][runtime] Add ITCase for file-merged channel state recovery\"",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-09-04T05:36:17Z",
+      "user": "snuyanzin",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "c6d9aed2a624d510669335828eb986cbbaee3de0",
+      "additions": 4,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "The PR reverts https://github.com/apache/flink/pull/29043\r\nthe reason is that CI is very unstable after that\r\nfor instance\r\nhttps://dev.azure.com/apache-flink/apache-flink/_build/results?buildId=78673&view=logs&j=5c8e7682-d68f-54d1-16a2-a09310218a49&s=ae4f8708-9994-57d3-c2d7-b892156e7812&t=9d734c8c-6253-55e6-3bce-47e7cdf68ac4&l=7778\r\n\r\nhttps://dev.azure.com/apache-flink/apache-flink/_build/results?buildId=78686&view=logs&j=5c8e7682-d68f-54d1-16a2-a09310218a49&t=9d734c8c-6253-55e6-3bce-47e7cdf68ac4&l=7775\r\n\r\nhttps://dev.azure.com/apache-flink/apache-flink/_build/results?buildId=78678&view=logs&j=5c8e7682-d68f-54d1-16a2-a09310218a49&t=9d734c8c-6253-55e6-3bce-47e7cdf68ac4&l=7240",
+      "patch_file": "prs/29100.json"
+    },
+    {
+      "id": "flink-29108",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29108,
+      "url": "https://github.com/apache/flink/pull/29108",
+      "title": "[hotfix][docs] Add 2.3 to PreviousDocs list",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-09-04T15:59:29Z",
+      "user": "gustavodemorais",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "d6d570c3fe7cffc9991ce3f9fc7977a0f25e4f9d",
+      "additions": 1,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Realized we’re still missing a link to the 2.3 docs when browsing 2.4 snapshot docs.",
+      "patch_file": "prs/29108.json"
+    },
+    {
+      "id": "flink-29115",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29115,
+      "url": "https://github.com/apache/flink/pull/29115",
+      "title": "[BP-2.3][FLINK-40350][table-runtime] `LPAD`/`RPAD` split supplementary-plane characters into unpaired surrogates",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-09-06T04:49:17Z",
+      "user": "SEPURI-SAI-KRISHNA",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "70d47c5b12308305486148886c6da92c6efd8a40",
+      "additions": 80,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "merged_control",
+        "expect_hard_fail": false,
+        "rationale": "Merged control."
+      },
+      "body": "Clean cherry-pick of https://github.com/apache/flink/pull/29004 to `release-2.3`, no conflicts — `lpad`, `rpad`, and the `testLpad`/`testRpad` bodies are byte-identical on `release-2.3` and on master's parent of 30b5f50.",
+      "patch_file": "prs/29115.json"
+    },
+    {
+      "id": "flink-29116",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29116,
+      "url": "https://github.com/apache/flink/pull/29116",
+      "title": "[FLINK-40567][tests] Avoid @TempDir cleanup race in HistoryServerArchiveFetcherTest",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-09-06T06:04:53Z",
+      "user": "spuru9",
+      "cohort": "merged_control",
+      "runnable": true,
+      "head_sha": "1ab2517072fbc803f00386bea1279e39e1eafa40",
+      "additions": 24,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [],
+        "disclosed": false,
+        "generated_by": null
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_tool_mention",
+        "expect_hard_fail": false,
+        "rationale": "Names an LLM tool. Not labeled slop."
+      },
+      "body": "## What is the purpose of the change\n\nFixes the flaky `HistoryServerArchiveFetcherTest`, which intermittently fails in CI during JUnit teardown (seen on `testLazyFetchArchiveProactively`):\n\n```\norg.junit.platform.commons.JUnitException: Failed to close extension context\nCaused by: java.io.IOException: Failed to delete temp directory /tmp/junit-....\n  The following paths could not be deleted: <root>, jobs\n    Suppressed: java.nio.file.DirectoryNotEmptyException: /tmp/junit-.../jobs\n```\n\nEach test creates a `HistoryServerArchiveFetcher`, which owns two fixed thread pools that write archives into `localArchiveRootPath` (a `@TempDir`). The fetcher was never closed — `tearDown()` only closed the storage — so its executor threads could still be creating files under `jobs/` while JUnit was deleting the temp directory, causing the `DirectoryNotEmptyException`.\n\n## Brief change log\n\n- Track the per-test `HistoryServerArchiveFetcher` in a field.\n- Close it in `@AfterEach` before closing the storage, so `HistoryServerArchiveFetcher#close()` (`ExecutorUtils.gracefulShutdown`) drains both thread pools before the `@TempDir` is removed. This also removes the same latent executor leak in the other test methods.\n\nTest-only change; no production code is touched.\n\n## Verifying this change\n\nThis change is a test-stability fix, verified by running the affected test in a loop on the exact commit that failed in CI (JDK 17):\n\n- `HistoryServerArchiveFetcherTest` (10 methods × 2 storage backends) passed **62 consecutive runs** with **0** temp-directory cleanup failures.\n\n## Does this pull request potentially affect one of the following parts:\n\n  - Dependencies (does it add or upgrade a dependency): **no**\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: **no**\n  - The serializers: **no**\n  - The runtime per-record code paths (performance sensitive): **no**\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: **no**\n  - The S3 file system connector: **no**\n\n## Documentation\n\n  - Does this pull request introduce a new feature? **no**\n  - If yes, how is the feature documented? **not applicable**\n\n## AI usage disclosure\n\n- Claude Code\n",
+      "patch_file": "prs/29116.json"
+    },
+    {
+      "id": "flink-29526",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29526,
+      "url": "https://github.com/apache/flink/pull/29526",
+      "title": "[FLINK-41032][python] Preserve column dtypes when converting empty tables to pandas",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-19T15:25:52Z",
+      "user": "bgeng777",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "ad1abb574569a470b690774642a3a7372fbc7bc8",
+      "additions": 38,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Codex (GPT-6)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "codex",
+          "gpt-6"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\n\nFix [FLINK-41032](https://issues.apache.org/jira/browse/FLINK-41032): `Table.to_pandas()` currently returns `object` dtypes for every column when the result is empty. Preserve schema-derived dtypes, including timestamp precision and local timezone information.\n\n## Brief change log\n\n- Build empty results from the Arrow schema and share pandas conversion and timezone handling with non-empty results.\n- Initialize the local timezone only when the schema contains `TIMESTAMP_LTZ` columns.\n- Extend batch and streaming tests to compare empty and non-empty result dtypes, including timestamp precisions 0/3/6/9 and UTC/Asia/Shanghai timezones.\n\n## Verifying this change\n\n- Confirmed that the regression tests fail before the fix and pass afterward.\n- Passed all eight targeted cases: `test_empty_to_pandas`, `test_empty_to_pandas_with_timestamps`, `test_to_pandas`, and `test_to_pandas_for_retract_table` in both `BatchPandasConversionTests` and `StreamPandasConversionTests`.\n- Tests ran against the changed Python source using Python 3.12.7, pandas 2.2.3, PyArrow 16.1.0, Java 17, and an existing local Flink 2.3-SNAPSHOT Java build. Re-ran the eight cases after rebasing onto the latest master.\n- Flake8 and git diff checks passed.\n- Full `./mvnw clean verify` was attempted but stopped at the root Apache RAT check on 11 pre-existing untracked local research files and Python packaging artifacts. None of those files is included in this PR; full reactor verification remains pending.\n\n## Does this pull request potentially affect one of the following parts:\n\n- Dependencies: no.\n- Public API: yes, corrects the result dtypes of `Table.to_pandas()`; no signature changes.\n- Serializers: no serialization format changes.\n- Runtime per-record code paths: no.\n- Deployment or recovery: no.\n- S3 file system connector: no.\n\n## Documentation\n\n- Does this pull request introduce a new feature? No; this is a bug fix.\n- If yes, how is the feature documented? Not applicable.\n- Suggested release note: PyFlink `Table.to_pandas()` now preserves schema-derived column dtypes for empty results, including timestamp timezone information.\n\n---\n\n##### Was generative AI tooling used to co-author this PR?\n\n- [X] Yes\n\nGenerated-by: Codex (GPT-6)\n",
+      "patch_file": "prs/29526.json"
+    },
+    {
+      "id": "flink-29532",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29532,
+      "url": "https://github.com/apache/flink/pull/29532",
+      "title": "[FLINK-41034][table] Don't store rows whose join key can never match in streaming joins",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-10-20T13:37:57Z",
+      "user": "rionmonster",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "fe65c8752cd7cf2e2224d46769fb6164ad235a8c",
+      "additions": 373,
+      "changed_files": 11,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code (Claude Opus 5.5)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\n\nA streaming equi-join row whose join key has a NULL in a field that is not null-safe can never match. The streaming joins already never match it, but they still added it to their state, where it stayed until state TTL removed it. Every NULL key is the same key, so all of these rows end up in the state of one subtask. Fact tables with NULL foreign keys (e.g. TPC-DS `store_sales`) put all their unmatched rows on a single join subtask.\n\nThis PR stops storing such rows. Output is unchanged.\n\n**Why in the runtime and not as an `IS NOT NULL` filter in the planner:** a filter cannot drop the preserved side of an outer join or the left side of an anti join, because those rows must still be emitted. `JoinDeriveNullFilterRule` is also only in the batch rule sets, only handles inner joins, and only fires above 2,000,000 NULLs from statistics. The runtime check covers every join type and side without changing plans.\n\n## Brief change log\n\n- `JoinConditionWithNullFilters#currentKeyCannotMatch()`, extracted from `apply()` and reusing `NullAwareJoinHelper.shouldFilter`.\n- `StreamingJoinOperator` (and so `MiniBatchStreamingJoinOperator`): an accumulate message whose key can never match returns early. It is null padded on an outer side, not stored, and the state lookups for it are skipped.\n- `StreamingSemiAntiJoinOperator` and `AsyncStateStreamingJoinOperator`: such rows are not stored.\n- Retractions are unchanged, so a row stored by an earlier version is still removed.\n- `[hotfix]` commit: `HandwrittenKeySelector` checked the null bit at the key index instead of the key field.\n\n## Verifying this change\n\nThis change added tests:\n\n- `StreamingJoinOperatorTest` covers inner, left, right and full outer joins, with each input side spec (no unique key, unique key, unique key contained by the join key), sync and async state:\n  - NULL-key rows are emitted as before and not stored;\n  - a NULL-safe join still stores and matches them;\n  - a NULL-key row restored from state is still removed by its retraction.\n- `StreamingSemiAntiJoinOperatorTest` (semi and anti) and `StreamingMiniBatchJoinOperatorTest` (a bundle with NULL keys).\n- `JoinConditionWithNullFiltersTest` covers a key mixing `=` and `IS NOT DISTINCT FROM` fields.\n\nEach test asserts that a row with a non-null key *is* stored. All new tests except the NULL-safe, restore and unit tests fail without the fix.\n\nExisting coverage: `JoinRestoreTest` runs `JoinTestPrograms`, which contain NULL join keys for inner, outer, semi and anti joins and a NULL-safe join, against savepoints taken before this change.\n\nRan the full `flink-table-runtime` test suite and the planner's join restore, semantic, plan and ITCase tests.\n\n## Does this pull request potentially affect one of the following parts:\n\n- Dependencies (does it add or upgrade a dependency): no\n- The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\n- The serializers: no\n- The runtime per-record code paths (performance sensitive): yes. One null-bit check on the current key per accumulate message. A harness micro-benchmark of a left outer join on keys that are never NULL (200k records, three interleaved runs per variant) showed no measurable difference: a median of 20.6–20.9 µs/record with the change and 20.7–20.9 without.\n- Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no. The state layout and the compiled plan are unchanged, and existing savepoints restore. NULL-key rows stored by an earlier version stay until their retraction or state TTL removes them.\n- The S3 file system connector: no\n\n## Documentation\n\n- Does this pull request introduce a new feature? no\n- If yes, how is the feature documented? not applicable\n\n---\n\n##### Was generative AI tooling used to co-author this PR?\n\n- [X] Yes (please specify the tool below)\n\nGenerated-by: Claude Code (Claude Opus 5.5)\n",
+      "patch_file": "prs/29532.json"
+    },
+    {
+      "id": "flink-29546",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29546,
+      "url": "https://github.com/apache/flink/pull/29546",
+      "title": "[FLINK-41063][runtime] Extract only sorting fields for large byte-key records",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-21T12:38:37Z",
+      "user": "ddebowczyk92",
+      "cohort": "slop_search",
+      "runnable": true,
+      "head_sha": "9cbe63949ed4a83c3102b5ebc1ec1a8e04ed95ba",
+      "additions": 241,
+      "changed_files": 3,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Xirp Agent (gpt-6-astra)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [],
+        "slop": false,
+        "tool": false
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "\n\n\n<!--\n*Thank you very much for contributing to Apache Flink - we are happy that you want to help us improve Flink. To help the community review your contribution in the best possible way, please go through the checklist below, which will get the contribution into a shape in which it can be best reviewed.*\n\n*Please understand that we do not do this to make contributions to Flink a hassle. In order to uphold a high standard of quality for code contributions, while at the same time managing a large number of contributions, we need contributors to prepare the contributions well, and give reviewers enough contextual information for the review. Please also understand that contributions that do not follow this guide will take longer to review and thus typically be picked up with lower priority by the community.*\n\n## Contribution Checklist\n\n  - Make sure that the pull request corresponds to a [JIRA issue](https://issues.apache.org/jira/projects/FLINK/issues). Exceptions are made for typos in JavaDoc or documentation files, which need no JIRA issue.\n  \n  - Name the pull request in the form \"[FLINK-XXXX] [component] Title of the pull request\", where *FLINK-XXXX* should be replaced by the actual issue number. Skip *component* if you are unsure about which is the best component.\n  Typo fixes that have no associated JIRA issue should be named following this pattern: `[hotfix] [docs] Fix typo in event time introduction` or `[hotfix] [javadocs] Expand JavaDoc for PuncuatedWatermarkGenerator`.\n\n  - Fill out the template below to describe the changes contributed by the pull request. That will give reviewers the context they need to do the review.\n  \n  - Make sure that the change passes the automated tests, i.e., `mvn clean verify` passes. You can set up Azure Pipelines CI to do that following [this guide](https://cwiki.apache.org/confluence/display/FLINK/Azure+Pipelines#AzurePipelines-Tutorial:SettingupAzurePipelinesforaforkoftheFlinkrepository).\n\n  - Each pull request should address only one issue, not mix up code from multiple issues.\n  \n  - Each commit in the pull request has a meaningful commit message (including the JIRA id)\n\n  - Once all items of the checklist are addressed, remove the above text and this checklist, leaving only the filled out template below.\n\n\n**(The sections below can be removed for hotfixes of typos)**\n-->\n\n## What is the purpose of the change\n\nFix unnecessary payload serializer inference during DataStream large-record sorting. Both byte-key comparators currently extract the entire record as a sort key, although comparison only uses the byte-array key and timestamp. Consequently, `LargeRecordHandler` infers a serializer for the payload instead of using only the actual sorting fields. This can trigger unexpected Kryo usage or failures when generic types are disabled, despite a valid supplied record serializer.\n\n## Brief change log\n- Change `FixedLengthByteKeyComparator` and `VariableLengthByteKeyComparator` to extract the byte-array key and timestamp separately.\n- Return matching flat comparators, preserving existing ordering.\n- Add regression coverage for large-record spilling with a custom payload serializer and generic types disabled.\n\n## Verifying this change\n\nThis change added tests and can be verified as follows:\n-  Manually verified with an Apache Beam pipeline using the Flink Runner and `taskmanager.runtime.large-record-handler=true`. Without the fix, large-record spilling unexpectedly initialized Kryo for the Beam payload and failed with a classloader conflict, surfaced as “The sorter is closed already.” JFR revealed the underlying exception. The pipeline ran successfully with the patched build.\n- `ByteKeyComparatorLargeRecordTest` covers both comparator variants, signed-byte and variable-length key ordering, timestamp tie-breaking, and payload round-tripping through large-record spilling.\n\n## Does this pull request potentially affect one of the following parts:\n\n  - Dependencies (does it add or upgrade a dependency): no\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\n  - The serializers: yes\n  - The runtime per-record code paths (performance sensitive): yes\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\n  - The S3 file system connector: no\n\n## Documentation\n\n  - Does this pull request introduce a new feature? no\n  - If yes, how is the feature documented? not applicable\n\n---\n\n##### Was generative AI tooling used to co-author this PR?\n\n<!--\nIf generative AI tooling has been used in the process of authoring this PR, please\nchange the checkbox below to `[X]` and replace the placeholder in the \"Generated-by\"\nline with the tool name and version. Otherwise remove the \"Generated-by\" line.\nSee the ASF Generative Tooling Guidance for details:\nhttps://www.apache.org/legal/generative-tooling.html\n\nYou are responsible for the quality and correctness of every change in this PR\nregardless of the tooling used. Low-effort AI-generated PRs will be closed. See\nAGENTS.md for the full guidance.\n-->\n\n- [x] Yes (please specify the tool below)\n\nGenerated-by: Xirp Agent (gpt-6-astra)\n",
+      "patch_file": "prs/29546.json"
+    },
+    {
+      "id": "flink-29558",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29558,
+      "url": "https://github.com/apache/flink/pull/29558",
+      "title": "[FLINK-41067][table] Don't store rows whose join key can never match in window and interval joins",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-21T21:21:30Z",
+      "user": "rionmonster",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "94463a6208966d7b6902abe41fc18beda4437ac0",
+      "additions": 256,
+      "changed_files": 9,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code (Claude Opus 5.5)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nThe window join and the interval join stored rows whose join key has a NULL in a field that isn't null-safe. Such rows can never match. They all share one key, so they piled up in a single subtask until the window fired or the interval expired. This is the follow-up to FLINK-41034 for these two operators.\r\n\r\n## Brief change log\r\n\r\n- `WindowJoinHelper` (used by `WindowJoinOperator` and `AsyncStateWindowJoinOperator`) doesn't store such a row on an input whose unmatched rows are never emitted. It uses `JoinConditionWithNullFilters#currentKeyCannotMatch` from FLINK-41034.\r\n- `TimeIntervalJoin` doesn't cache such a row on a non-preserved side. The NULL check in `IntervalJoinFunction#join` moves into `currentKeyCannotMatch()` so the operator can reuse it.\r\n- The preserved side of an outer join, and the left side of an anti window join, still store these rows. Today they are emitted when the window fires or the interval expires, and the docs describe that timing, so it doesn't change.\r\n\r\n## Verifying this change\r\n\r\nThis change added tests:\r\n\r\n- `WindowJoinOperatorTest#testDoesNotStoreRecordsThatCanNeverMatch` checks state size and output for every join type, with and without async state.\r\n- `RowTimeIntervalJoinTest#testDoesNotCacheRowsThatCanNeverMatch` and `ProcTimeIntervalJoinTest#testDoesNotCacheRowsThatCanNeverMatch` check the same for INNER, LEFT, RIGHT and FULL.\r\n- `WindowJoinOperatorTest#testStoresRecordsWithNullSafeKeys` and `RowTimeIntervalJoinTest#testCachesRowsWithNullSafeKeys` check that a NULL key compared null-safely (as with `IS NOT DISTINCT FROM`) is still stored and joined. They guard against dropping rows that can match, which would lose output.\r\n\r\nThe first three tests fail without the change. The null-safe tests fail if null-safe keys are treated as never matching. The existing window and interval join tests pass: the runtime join tests, `WindowJoinITCase`, `IntervalJoinITCase` and the restore tests.\r\n\r\nNo new restore test is needed, because the state layout doesn't change. NULL-key rows stored by an earlier version are still emitted or cleaned up when their window fires or their interval expires.\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n- Dependencies (does it add or upgrade a dependency): no\r\n- The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\r\n- The serializers: no\r\n- The runtime per-record code paths (performance sensitive): yes. It adds one null check per stored row, and in return it skips the state write for rows that can never match.\r\n- Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\r\n- The S3 file system connector: no\r\n\r\n## Documentation\r\n\r\n- Does this pull request introduce a new feature? no\r\n- If yes, how is the feature documented? not applicable\r\n\r\n---\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n- [X] Yes (please specify the tool below)\r\n\r\nGenerated-by: Claude Code (Claude Opus 5.5)\r\n",
+      "patch_file": "prs/29558.json"
+    },
+    {
+      "id": "flink-29559",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29559,
+      "url": "https://github.com/apache/flink/pull/29559",
+      "title": "[FLINK-41078][runtime] Complete slot manager debounce futures on failure",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-21T21:44:41Z",
+      "user": "MartijnVisser",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "e02c3dfc3b4c1cca537876c3dc6d5b460538f399",
+      "additions": 86,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code (Claude Fable 5.1)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\n\nOne exception inside the delayed requirements check or the delayed resource declaration leaves its debounce future incomplete, so `FineGrainedSlotManager` never schedules that check again for the rest of the ResourceManager's life. Details in FLINK-41078.\n\n## Brief change log\n\n  - Complete `requirementsCheckFuture` and `declareNeededResourceFuture` in a `finally`.\n\n## Verifying this change\n\nThis change added tests and can be verified as follows:\n\n  - Two new tests in `FineGrainedSlotManagerTest`, one per path: the first delayed check or declaration throws, the second must still run. Both time out after 5 s on the unmodified tree and pass with the change.\n  - `FineGrainedSlotManagerTest` 22 of 22 and `FineGrainedSlotManagerDefaultResourceAllocationStrategyITCase` 18 of 18, none skipped.\n\n## Does this pull request potentially affect one of the following parts:\n\n  - Dependencies (does it add or upgrade a dependency): no\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\n  - The serializers: no\n  - The runtime per-record code paths (performance sensitive): no\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: yes\n  - The S3 file system connector: no\n\n## Documentation\n\n  - Does this pull request introduce a new feature? no\n  - If yes, how is the feature documented? not applicable\n\n---\n\n##### Was generative AI tooling used to co-author this PR?\n\n- [X] Yes (please specify the tool below)\n\nGenerated-by: Claude Code (Claude Fable 5.1)\n",
+      "patch_file": "prs/29559.json"
+    },
+    {
+      "id": "flink-29560",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29560,
+      "url": "https://github.com/apache/flink/pull/29560",
+      "title": "[FLINK-34224][state] Fix mailbox handling in changelog storage metrics tests",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-22T03:46:54Z",
+      "user": "rakeshkodathala",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "a683d4e9bdca36a1393c7b5c2536f93a7adf129c",
+      "additions": 48,
+      "changed_files": 1,
+      "disclosure": {
+        "signals": [
+          "checkbox_yes",
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Codex (GPT-6)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "codex",
+          "gpt-6"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\n\nFix FLINK-34224: asynchronous uploads in `ChangelogStorageMetricsTest` use `SyncMailboxExecutor`, which runs completion callbacks on the uploader thread. This can race with the test thread accessing the non-thread-safe `FsStateChangelogWriter`.\n\n## Brief change log\n\n- Use a mailbox bound to the test thread in the upload batch-size and retry-metrics tests.\n- Drain the mailbox while waiting for upload futures, propagating upload failures.\n- Wait for every writer's upload to complete before starting the next batch.\n\n## Verifying this change\n\nThe affected tests are `testUploadBatchSizes`, `testAttemptsPerUpload`, and `testTotalAttemptsPerUpload` in `ChangelogStorageMetricsTest`.\n\n- Passed: `./mvnw -B -pl flink-dstl/flink-dstl-dfs spotless:check` (Java 17).\n- Passed: `git diff --check origin/master...HEAD`.\n- Passed: `./mvnw -B -pl flink-dstl/flink-dstl-dfs -am -Dtest=ChangelogStorageMetricsTest -Dsurefire.failIfNoSpecifiedTests=false test` (Java 17): all 7 tests passed, with no failures, errors, or skips.\n- Passed: [Azure Pipelines build #80391](https://dev.azure.com/apache-flink/apache-flink/_build/results?buildId=80391&view=results): all 13 jobs succeeded for commit `a683d4e9bdca36a1393c7b5c2536f93a7adf129c`.\n- Local full verification (`./mvnw -B clean verify`, Java 17) was interrupted after it stopped making progress in `CollectSinkFunctionRandomITCase`; the CI result above completed successfully.\n- The original intermittent failure has not been reproduced before the fix in this validation session.\n\n## Does this pull request potentially affect one of the following parts:\n\n- Dependencies: no.\n- Public API: no.\n- Serializers: no.\n- Runtime per-record code paths: no.\n- Deployment or recovery: no production changes; this change only updates tests.\n- S3 file system connector: no.\n\n## Documentation\n\n- Introduces a new feature: no.\n- Documentation: not applicable; the test helper explains the threading requirement.\n\n---\n\n##### Was generative AI tooling used to co-author this PR?\n\n- [X] Yes — Codex (GPT-6) assisted with PR preparation and validation.\n\nGenerated-by: Codex (GPT-6)\n",
+      "patch_file": "prs/29560.json"
+    },
+    {
+      "id": "flink-29562",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29562,
+      "url": "https://github.com/apache/flink/pull/29562",
+      "title": "[FLINK-41077][rpc] Rethrow scheduled task failures in the main thread",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-22T08:02:56Z",
+      "user": "MartijnVisser",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "afeba60914eebdfff2c29b7d823811c08ecf5286",
+      "additions": 140,
+      "changed_files": 2,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code (Claude Fable 5.1)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\n\n`RpcEndpoint.MainThreadExecutor#schedule` runs the task as a `FutureTask`, which stores what the task throws, so the RPC actor never logs the failure and a fatal error does not exit the process, unlike for `execute()`. Details in FLINK-41077.\n\n## Brief change log\n\n  - Rethrow a scheduled task's failure in the main thread after it ran, unless the task was cancelled; the returned future still carries it.\n\n## Verifying this change\n\nThis change added tests and can be verified as follows:\n\n  - Three new tests in `RpcEndpointTest`: a `RuntimeException` and an `Error` from a runnable and a checked exception from a callable must each reach the gateway and fail the returned future. All three fail on the unmodified tree and pass with the change.\n  - `RpcEndpointTest` 19 of 19, the test classes of the in-tree callers and `ResourceManagerTest` 168 of 168, flink-rpc-core 8 of 8 and flink-rpc-akka 120 of 120, none skipped.\n\n## Does this pull request potentially affect one of the following parts:\n\n  - Dependencies (does it add or upgrade a dependency): no\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\n  - The serializers: no\n  - The runtime per-record code paths (performance sensitive): no\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: yes\n  - The S3 file system connector: no\n\n## Documentation\n\n  - Does this pull request introduce a new feature? no\n  - If yes, how is the feature documented? not applicable\n\n---\n\n##### Was generative AI tooling used to co-author this PR?\n\n- [X] Yes (please specify the tool below)\n\nGenerated-by: Claude Code (Claude Fable 5.1)\n",
+      "patch_file": "prs/29562.json"
+    },
+    {
+      "id": "flink-29563",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29563,
+      "url": "https://github.com/apache/flink/pull/29563",
+      "title": "[FLINK-41059][runtime] Schedule slot manager work on the main thread",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-22T08:03:02Z",
+      "user": "MartijnVisser",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "c08cac524dff3e845fbc6a363a6f24f477d7fe50",
+      "additions": 587,
+      "changed_files": 8,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code (Claude Fable 5.1)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\n\n`FineGrainedSlotManager` ran its delayed checks and periodic work on the RPC service's scheduler, which outlives the ResourceManager, and `suspend()` stopped only part of it. Everything now runs through the ResourceManager's main thread executor and stops in `suspend()`. Details in FLINK-41059.\n\n## Brief change log\n\n  - The test Context drives the slot manager through a `ComponentMainThreadExecutor`, optionally on the test thread.\n  - Schedule delayed checks and periodic work on the main thread executor; cancel them in `suspend()`.\n  - Clear the job state in `suspend()`; `clearResourceRequirements()` checks `started`, the `canBeReleased` reply checks the registration.\n  - FLINK-34589: log a failed check and keep running.\n  - FLINK-34588: the comments from #24309 on the ignored reconcile result.\n  - `checkInit()`, `start()` and `suspend()` assert the main thread.\n\n## Verifying this change\n\nThis change added tests and can be verified as follows:\n\n  - Eight new tests in `FineGrainedSlotManagerTest`; the five for the guards and the logging fail without them.\n  - `FineGrainedSlotManagerTest` 30 of 30, `FineGrainedSlotManagerDefaultResourceAllocationStrategyITCase` 18 of 18, `ResourceManagerTest`, `StandaloneResourceManagerTest` and `ActiveResourceManagerTest` 34 of 34, the `resourcemanager` package under `verify` 206 of 206, flink-runtime ITCases 403 of 403, none skipped.\n\n## Does this pull request potentially affect one of the following parts:\n\n  - Dependencies (does it add or upgrade a dependency): no\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\n  - The serializers: no\n  - The runtime per-record code paths (performance sensitive): no\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: yes\n  - The S3 file system connector: no\n\n## Documentation\n\n  - Does this pull request introduce a new feature? no\n  - If yes, how is the feature documented? not applicable\n\n---\n\n##### Was generative AI tooling used to co-author this PR?\n\n- [X] Yes (please specify the tool below)\n\nGenerated-by: Claude Code (Claude Fable 5.1)\n",
+      "patch_file": "prs/29563.json"
+    },
+    {
+      "id": "flink-29564",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29564,
+      "url": "https://github.com/apache/flink/pull/29564",
+      "title": "[FLINK-41054][metrics] Add exclude filter for the metric query service",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-22T10:06:02Z",
+      "user": "ctrlaltdilj",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "b8347080602e19b1430b7c2db527d085592de036",
+      "additions": 265,
+      "changed_files": 8,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code (Claude Fable 5.1)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\n\nThe JobManager's `MetricStore` only ever adds metrics; entries are retained until the job is removed. Metrics registered under a dynamically created group therefore accumulate indefinitely in the REST API. The per-split watermark metrics introduced by FLIP-513 are keyed by split id, so for sources with many splits `/jobs/:jobid/vertices/:vertexid/subtasks/metrics` keeps returning entries for every split the source has ever read, even though the TaskManager side closes the split metric group once the split finishes (FLINK-37596, FLINK-40549).\n\nThis PR introduces `metrics.internal.query-service.filter.excludes`, a filter applied before a metric is handed to the `MetricQueryService`. It mirrors the existing per-reporter `filter.excludes` syntax. Excluded metrics are still delivered to metric reporters, which receive proper unregister notifications and are therefore unaffected by the leak. The option defaults to excluding the split watermark metrics (`*.operator.split.watermark:*:*`); an empty value exposes them again.\n\nThis is a mitigation for the specific unbounded case rather than a fix of the add-only `MetricStore`. Fixing the store to drop metrics that no longer appear in a TaskManager dump is a larger change that can be tracked separately.\n\n## Brief change log\n\n  - Add `MetricOptions.QUERY_SERVICE_EXCLUDES` (`metrics.internal.query-service.filter.excludes`), a list option using the reporter filter format, defaulting to the split watermark scope.\n  - Add `DefaultReporterFilters.queryServiceMetricsFromConfiguration`, which builds a `ReporterFilter<Metric>` with an implicit include-all and the configured excludes.\n  - `MetricRegistryConfiguration` parses the filter once at startup, logs the resolved exclude list at INFO, and falls back to the default with a WARN if the value cannot be parsed.\n  - `MetricRegistryImpl.register` evaluates the filter against the metric's logical scope before calling `MetricQueryService.addMetric`. Reporter notification and unregistration are unchanged.\n  - Document the option (regenerated `metric_configuration.html`) and note on the Split metrics table in `docs/content/docs/ops/metrics.md` that these metrics reach reporters only by default.\n\n## Verifying this change\n\nThis change added tests and can be verified as follows:\n\n  - `MetricRegistryImplTest#testQueryServiceExcludesSplitWatermarkMetricsByDefault` registers a gauge under a real `taskmanager.job.task.operator.split.watermark` group hierarchy and asserts that a reporter receives it while the query service dump does not.\n  - `MetricRegistryImplTest#testQueryServiceExcludesAreConfigurable` asserts that a configured pattern excludes a matching metric from the query service dump while others remain.\n  - `DefaultReporterFiltersTest#testQueryServiceFilterExcludesSplitWatermarkMetricsByDefault` and `#testQueryServiceFilterFromConfiguration` cover the default filter, multiple entries, type-scoped entries, and that a configured list replaces the default rather than extending it.\n  - `DefaultReporterFiltersTest#testQueryServiceFilterWithoutExcludesExposesSplitWatermarkMetrics` covers both the empty list and the empty flat string form.\n  - Both registry tests were verified to fail with the filter check removed and to pass with it.\n  - `ConfigOptionsDocsCompletenessITCase` passes against the regenerated documentation.\n\n## Does this pull request potentially affect one of the following parts:\n\n  - Dependencies (does it add or upgrade a dependency): no\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: yes, a new option is added to `MetricOptions` (`@PublicEvolving`). No existing option or signature changes.\n  - The serializers: no\n  - The runtime per-record code paths (performance sensitive): no. The filter runs once per metric registration, in the same place the reporter filters already run.\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\n  - The S3 file system connector: no\n\n## Documentation\n\n  - Does this pull request introduce a new feature? yes\n  - If yes, how is the feature documented? docs (generated config reference and the Split section of the metrics page) and JavaDocs\n\n---\n\n##### Was generative AI tooling used to co-author this PR?\n\n- [X] Yes (please specify the tool below)\n\nGenerated-by: Claude Code (Claude Fable 5.1)",
+      "patch_file": "prs/29564.json"
+    },
+    {
+      "id": "flink-29565",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29565,
+      "url": "https://github.com/apache/flink/pull/29565",
+      "title": "[FLINK-41068][table] Don't store build rows whose join key can never match in LATERAL SNAPSHOT joins",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-22T15:04:54Z",
+      "user": "rionmonster",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "e09288c3230052e7dd702ba0c4e3994c2a7dfbc1",
+      "additions": 55,
+      "changed_files": 4,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code (Claude Opus 5.5)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\r\n\r\n`LateralSnapshotJoinOperator` stored build rows whose join key has a NULL in a field that isn't null-safe. Such rows can never match. Unlike in the window and interval joins, nothing bounds this state except state TTL: a row stays until the build side retracts it, or until TTL removes it if TTL is configured. All such rows share one key, so they pile up in a single subtask, and every probe with a NULL key scans all of them. This is the follow-up to FLINK-41034 for this operator.\r\n\r\n## Brief change log\r\n\r\n- `processElement2` doesn't buffer an INSERT or UPDATE_AFTER build change when `JoinConditionWithNullFilters#currentKeyCannotMatch` is true. The build side is never preserved, so the output doesn't change. The idle-flip timer is still armed first, because any build record counts as a build-side signal.\r\n- Retractions are still buffered and applied, so a row that an earlier version stored is removed.\r\n- `applyBuildChanges` doesn't count a retraction of such a row in `numUnmatchedBuildRetractions` when it finds nothing. Otherwise the metric would count every NULL-key delete. The metric's description in the docs (English and Chinese) says so. Non-NULL keys are counted as before.\r\n- The probe side doesn't change. A NULL-key probe now scans an empty build table for its key.\r\n\r\n## Verifying this change\r\n\r\nThis change added tests:\r\n\r\n- `LateralSnapshotJoinOperatorTest#joinRespectsNullKeysFilter` now also checks that a NULL-key build row isn't stored, for INNER and LEFT joins. With a null-safe key the row is still stored, which is the positive control.\r\n- `LateralSnapshotJoinOperatorTest#retractsNullKeyBuildRowStoredByEarlierVersion` restores state with a stored NULL-key row, on the heap and RocksDB backends. It checks that the row's retraction still removes it, and that a retraction of a row that was never stored isn't counted in the metric.\r\n\r\nThe new checks fail if NULL-key rows are stored, if their retractions are dropped too, or if those retractions are counted. The existing LATERAL SNAPSHOT tests pass: the runtime join tests, and the planner plan, semantic, restore and ITCase tests.\r\n\r\nNo new restore test is needed, because the state layout doesn't change. NULL-key rows stored by an earlier version stay until they are retracted or TTL removes them, as before.\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n- Dependencies (does it add or upgrade a dependency): no\r\n- The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\r\n- The serializers: no\r\n- The runtime per-record code paths (performance sensitive): yes. It adds one null check per build-side accumulation, and in return it skips buffering and storing rows that can never match.\r\n- Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\r\n- The S3 file system connector: no\r\n\r\n## Documentation\r\n\r\n- Does this pull request introduce a new feature? no\r\n- If yes, how is the feature documented? not applicable. The description of `numUnmatchedBuildRetractions` is updated.\r\n\r\n---\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n- [X] Yes (please specify the tool below)\r\n\r\nGenerated-by: Claude Code (Claude Opus 5.5)",
+      "patch_file": "prs/29565.json"
+    },
+    {
+      "id": "flink-29566",
+      "source": "github",
+      "repo": "apache/flink",
+      "kind": "pull_request",
+      "number": 29566,
+      "url": "https://github.com/apache/flink/pull/29566",
+      "title": "[FLINK-41065][table] Allow process table functions to exclude state entries per call",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-10-22T15:38:35Z",
+      "user": "twalthr",
+      "cohort": "disclosure_search",
+      "runnable": true,
+      "head_sha": "7192157a42e5b95db92e6040dfeb3856fbd9bd95",
+      "additions": 220,
+      "changed_files": 7,
+      "disclosure": {
+        "signals": [
+          "generated_by_filled"
+        ],
+        "disclosed": true,
+        "generated_by": "Claude Code (claude-sonnet-5-5)"
+      },
+      "flags": {
+        "slop_terms": [],
+        "tool_terms": [
+          "claude"
+        ],
+        "slop": false,
+        "tool": true
+      },
+      "markers_in_patch": [],
+      "label": {
+        "class": "ai_disclosed",
+        "expect_hard_fail": false,
+        "rationale": "Filled Generated-by or AI checkbox. Disclosure is not a fail label."
+      },
+      "body": "## What is the purpose of the change\r\n\r\nProcess table functions with a custom `TypeInference` can declare several state entries via `StateTypeStrategy`. Until now, every declared entry had to be inferable: a `StateTypeStrategy#inferType` returning `Optional.empty()` failed planning with \"Could not infer a data type for state entry '...'\".\r\n\r\nThis PR gives `Optional.empty()` a meaning for process table functions: the state entry is not used by this call. A function can therefore declare a superset of state entries and let the type inference decide which ones a specific call needs, with matching `eval()` / `onTimer()` overloads.\r\n\r\nThis slight behavioral change allows built-in functions to dynamically adjust state. We could have build this into code generation might also be beneficial for advanced use cases that implement custom type inference.\r\n\r\n## Brief change log\r\n\r\n  - `TypeInferenceUtil#inferStateInfos` excludes state entries whose `StateTypeStrategy` returns `Optional.empty()`. `ProcessTableRunnerGenerator` and `StreamExecProcessTableFunction` derive state positions and names from the resulting map, so `eval()` / `onTimer()` resolve to the overload without a parameter for the excluded entry.\r\n  - An empty accumulator (`acc`) of aggregating functions and an untyped `NULL` still fail with a `ValidationException`.\r\n  - `StateTypeStrategy` explicitly overrides `inferType` and documents the semantics for PTFs and aggregating functions.\r\n  - `ProcessTableFunctionTestHarness` skips excluded state entries instead of throwing.\r\n\r\n## Verifying this change\r\n\r\nThis change added tests and can be verified as follows:\r\n\r\n  - Added `process-optional-state` to `ProcessTableFunctionSemanticTests`.\r\n  - Added `ProcessTableFunctionTestHarnessTest#testStateEntryExcludedByTypeInference`.\r\n\r\n## Does this pull request potentially affect one of the following parts:\r\n\r\n  - Dependencies (does it add or upgrade a dependency): no\r\n  - The public API, i.e., is any changed class annotated with `@Public(Evolving)`: no\r\n  - The serializers: no\r\n  - The runtime per-record code paths (performance sensitive): no\r\n  - Anything that affects deployment or recovery: JobManager (and its components), Checkpointing, Kubernetes/Yarn, ZooKeeper: no\r\n  - The S3 file system connector: no\r\n\r\n## Documentation\r\n\r\n  - Does this pull request introduce a new feature? yes\r\n  - If yes, how is the feature documented? JavaDocs\r\n\r\n---\r\n\r\n##### Was generative AI tooling used to co-author this PR?\r\n\r\n- [X] Yes (please specify the tool below)\r\n\r\nGenerated-by: Claude Code (claude-sonnet-5-5)\r\n",
+      "patch_file": "prs/29566.json"
+    }
+  ],
+  "mail_threads": [
+    {
+      "tid": "7b78yynctz6qq52h275g0c4f3otnxxd9",
+      "subject": "Re: [Discuss] FLIP-XXX: Dynamic Rate Limiting for FLIP-27 Source",
+      "date": "2026-10-08T10:10:49+00:00",
+      "url": "https://lists.apache.org/thread/7b78yynctz6qq52h275g0c4f3otnxxd9",
+      "replies": 2,
+      "slop_terms": [],
+      "tool_terms": [
+        "llm"
+      ]
+    },
+    {
+      "tid": "9vh2s0zfrcf932kqb2gkk4d50n98ozcm",
+      "subject": "Re: [PR] [FLINK-40775][ci] Add a PR template with AI disclosure [flink-ci-docker]",
+      "date": "2026-09-28T14:55:46+00:00",
+      "url": "https://lists.apache.org/thread/9vh2s0zfrcf932kqb2gkk4d50n98ozcm",
+      "replies": 0,
+      "slop_terms": [],
+      "tool_terms": []
+    }
+  ]
+}
