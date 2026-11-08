@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AIV Integrity Gate — Airflow Bench Report</title>
-  <meta name="description" content="Independent, reproducible AIV product benchmark: labeled 50-case fixtures, abandoned Airflow PR labels, and live GitHub recreation." />
+  <meta name="description" content="AIV Integrity Gate bench: full 2,098 stored-patch run plus separate labeled 50-case fixture proof. Do not mix the two denominators." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
@@ -29,19 +29,74 @@
 
   <main class="wrap">
     <section class="hero">
-      <div class="eyebrow">Product benchmark · VERIFIED</div>
-      <h1>Prove the gate. <em>Not the rumor.</em></h1>
+      <div class="eyebrow">Full corpus run · not the 50-case fixtures</div>
+      <h1>Every stored patch file was scored.</h1>
       <p class="lede">
-        Honest claims from labeled ground truth and real abandoned Airflow PRs —
-        recreated live on this repo so anyone can re-run the checks, open the Actions logs,
-        and audit every number against the published JSON.
+        This is the full end-to-end run on every <code>prs/*.json</code> file in this repo:
+        <strong>2,098 files</strong>, not the labeled 50-case fixtures and not a sample.
+        The 15,575-row Airflow index has no diffs, so it was not executed.
       </p>
       <div class="ctas">
-        <a class="btn btn-primary" href="airflow-benchmark/index.html">Open the full walkthrough</a>
-        <a class="btn btn-ghost" href="benchmark/index.html">Measured 2,098-file run</a>
-        <a class="btn btn-ghost" href="#validate">Validate independently</a>
+        <a class="btn btn-primary" href="benchmark/index.html">Open the 2,098-file results</a>
+        <a class="btn btn-ghost" href="airflow-benchmark/index.html">Walkthrough</a>
+        <a class="btn btn-ghost" href="#proof">Separate 50-case fixture proof</a>
         <a class="btn btn-ghost" href="https://github.com/vaquarkhan/aiv-integrity-gate" target="_blank" rel="noopener">Gate source</a>
       </div>
+      <div class="metric-row">
+        <div class="metric">
+          <div class="label">Stored files scored</div>
+          <div class="value">2,098</div>
+          <div class="hint">all corpus prs/*.json files</div>
+        </div>
+        <div class="metric">
+          <div class="label">Blocked</div>
+          <div class="value">113</div>
+          <div class="hint">gate findings, not “AI slop”</div>
+        </div>
+        <div class="metric">
+          <div class="label">Passed</div>
+          <div class="value">1,803</div>
+          <div class="hint">182 could not be scored</div>
+        </div>
+        <div class="metric">
+          <div class="label">Index not executed</div>
+          <div class="value">15,575</div>
+          <div class="hint">Airflow metadata only, no diffs</div>
+        </div>
+      </div>
+      <div class="callout" style="margin-top:1.25rem">
+        <strong>Do not mix denominators.</strong>
+        The 35/35 / 0/15 numbers below are a separate designed fixture suite.
+        They are not the 2,098-file full run. The full-run receipt is
+        <a href="data/full-stored-patch-latest.json"><code>full-stored-patch-latest.json</code></a>.
+      </div>
+    </section>
+
+    <section class="block" id="full-run">
+      <h2>1) Full stored-patch run <span class="tag tag-verified">VERIFIED</span></h2>
+      <p class="section-lead">
+        Every stored patch file under <code>corpus/**/prs/</code> was executed with local aiv-cli 2.0.
+        That includes Airflow e2e-proof (726), Airflow year folder (493), and six other projects (879).
+        Total files 2,098 / unique PRs 2,080. Primary blocks: assertion-free tests 50, AI-generated markers 38,
+        placeholder text 15, syntax 7, plus 3 other invariant rules.
+      </p>
+      <div class="metric-row">
+        <div class="metric"><div class="label">Stored files</div><div class="value">2,098</div><div class="hint">full corpus, not a sample</div></div>
+        <div class="metric"><div class="label">Blocked</div><div class="value">113</div><div class="hint">gate findings</div></div>
+        <div class="metric"><div class="label">Passed</div><div class="value">1,803</div><div class="hint">182 unscored</div></div>
+        <div class="metric"><div class="label">Airflow files</div><div class="value">1,219</div><div class="hint">91 blocked</div></div>
+      </div>
+      <p style="margin-top:1rem">
+        <a class="btn btn-primary" href="benchmark/index.html">Every project table</a>
+        <a class="btn btn-ghost" href="benchmark/results.html">Every blocked PR</a>
+        <a class="btn btn-ghost" href="airflow-benchmark/index.html">Walkthrough</a>
+        · Raw: <a href="data/full-stored-patch-latest.json"><code>full-stored-patch-latest.json</code></a>
+      </p>
+    </section>
+
+    <section class="block" id="proof">
+      <h2>2) Labeled 50-case fixtures <span class="tag tag-verified">VERIFIED</span> · separate suite</h2>
+      <p class="section-lead" id="labeled-statement">Designed ground-truth fixtures only. Not the 2,098-file full run.</p>
       <div class="metric-row" id="hero-metrics">
         <div class="metric">
           <div class="label">Labeled recall</div>
@@ -56,42 +111,16 @@
         <div class="metric">
           <div class="label">Abandoned clean</div>
           <div class="value" id="m-clean">—</div>
-          <div class="hint">most are not marker slop</div>
+          <div class="hint">separate abandoned sample</div>
         </div>
         <div class="metric">
           <div class="label">Hard-fail in sample</div>
           <div class="value" id="m-hard">—</div>
-          <div class="hint">head + full AIV config</div>
+          <div class="hint">abandoned sample only</div>
         </div>
       </div>
-      <p class="loading" id="load-status" style="margin-top:1rem">Loading verified datasets…</p>
+      <p class="loading" id="load-status" style="margin-top:1rem">Loading fixture datasets…</p>
       <p class="loading" id="generated-at"></p>
-    </section>
-
-    <section class="block" id="full-run">
-      <h2>0) Full stored-patch run <span class="tag tag-verified">VERIFIED</span></h2>
-      <p class="section-lead">
-        Every stored <code>prs/*.json</code> file in this repo’s corpus was scored by local aiv-cli 2.0:
-        2,098 files, 2,080 unique pull requests. 113 blocked, 1,803 passed, 182 unscored.
-        The 15,575-row Airflow index has no diffs, so it was not executed.
-      </p>
-      <div class="metric-row">
-        <div class="metric"><div class="label">Stored files</div><div class="value">2,098</div><div class="hint">not the 55-case subset</div></div>
-        <div class="metric"><div class="label">Blocked</div><div class="value">113</div><div class="hint">gate findings</div></div>
-        <div class="metric"><div class="label">Passed</div><div class="value">1,803</div><div class="hint">182 unscored</div></div>
-        <div class="metric"><div class="label">Airflow files</div><div class="value">1,219</div><div class="hint">91 blocked</div></div>
-      </div>
-      <p style="margin-top:1rem">
-        <a class="btn btn-primary" href="airflow-benchmark/index.html">Walkthrough</a>
-        <a class="btn btn-ghost" href="benchmark/index.html">Every project table</a>
-        <a class="btn btn-ghost" href="benchmark/results.html">Every blocked PR</a>
-        · Raw: <a href="data/full-stored-patch-latest.json"><code>full-stored-patch-latest.json</code></a>
-      </p>
-    </section>
-
-    <section class="block" id="proof">
-      <h2>1) Labeled 50-case fixtures <span class="tag tag-verified">VERIFIED</span></h2>
-      <p class="section-lead" id="labeled-statement">Primary product proof on known ground truth.</p>
       <div class="grid-2">
         <div>
           <p><strong>Cohorts</strong></p>
@@ -113,7 +142,7 @@
     </section>
 
     <section class="block" id="abandoned">
-      <h2>2) Abandoned Airflow PRs → labels → AIV</h2>
+      <h2>3) Abandoned Airflow PRs → labels → AIV</h2>
       <p class="section-lead" id="abandoned-statement">Same diffs, labeled and pushed through AIV.</p>
       <div class="grid-2">
         <div>
@@ -167,7 +196,7 @@
     </section>
 
     <section class="block" id="chatgpt">
-      <h2>3) Confirmed ChatGPT gold set <span class="tag tag-verified">VERIFIED</span></h2>
+      <h2>4) Confirmed ChatGPT gold set <span class="tag tag-verified">VERIFIED</span></h2>
       <p class="section-lead" id="chatgpt-statement">Tiny confirmed-disclosure cohort.</p>
       <p>Raw: <a href="data/airflow-chatgpt-true-latest.json"><code>airflow-chatgpt-true-latest.json</code></a></p>
     </section>
@@ -227,13 +256,17 @@
         <a href="https://github.com/vaquarkhan/aiv-integrity-gate">aiv-integrity-gate</a>.
       </p>
       <div class="links" style="margin-bottom:1.2rem">
+        <a class="link-card" href="data/full-stored-patch-latest.json">
+          Full 2,098-file receipt
+          <small>full-stored-patch-latest.json</small>
+        </a>
         <a class="link-card" href="data/product-benchmark-latest.json">
           Master claims JSON
           <small>product-benchmark-latest.json</small>
         </a>
         <a class="link-card" href="data/labeled-latest.json">
-          Labeled 50 results
-          <small>TP/FP/TN per case</small>
+          Labeled 50 fixtures
+          <small>TP/FP/TN per case — separate suite</small>
         </a>
         <a class="link-card" href="data/abandoned-labeled-latest.json">
           Abandoned ledger
